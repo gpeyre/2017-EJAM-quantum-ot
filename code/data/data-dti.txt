@@ -1,0 +1,7 @@
+- MGH Adult Diffusion Data Acquisition Details
+http://www.humanconnectome.org/documentation/MGH-diffusion/index.html
+db.humanconnectome.org/data/projects/MGH_DIFF
+
+https://db.humanconnectome.org/app/template/Login.vm;jsessionid=5F700666D47ADF17F74A93B5C855E1CC
+
+http://cvrgrid.org/data/ex-vivo
