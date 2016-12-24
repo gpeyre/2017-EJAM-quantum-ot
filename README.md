@@ -1,6 +1,6 @@
-This toolbox reproduces the numerical illustrations of the paper:
+This toolbox reproduces the numerical illustrations of [our paper](paper/TensorOT.pdf):
 
-G. Peyré, L. Chizat, F-X. Vialard, J. Solomon, Quantum Optimal Transport for Tensor Field Processing, Arxiv, 2016
+G. Peyré, L. Chizat, F-X. Vialard, J. Solomon, [Quantum Optimal Transport for Tensor Field Processing](paper/TensorOT.pdf), Arxiv, 2016
 
 ![Example of tensor-valued interpolation](img/interpolation.png)
 
