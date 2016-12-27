@@ -1,6 +1,6 @@
 function [idx,p] = selectPoint(V)
 
-% idx=selectPoint(figure, mesh)
+% idx=selectPoint(V)
 
 datacursormode on
 dcm_obj = datacursormode(gcf); 

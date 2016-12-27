@@ -6,6 +6,7 @@ function mu = load_tensors_pair(name,N, options)
 %
 %   Copyright (c) 2016 Gabriel Peyre
 
+options.null = 0;
 normalize = @(x)x/sum(x(:));
 % generation of tensor from angle/aniso/scale
 tensor = @(t,r,s)tensor_mult(tensor_creation(r, t), tensor_diag(s,s) );
@@ -20,7 +21,8 @@ dirac = @(i)[zeros(i-1,1); 1; zeros(n-i,1)];
 
 % helpers 2D
 [Y,X] = meshgrid(x,x);
-gaussian2d = @(m,s)exp( -( (X-m(1)).^2 + (Y-m(2)).^2 )/(2*s^2) );
+gaussian2d    = @(m,s)exp( -( (X-m(1)).^2 + (Y-m(2)).^2 )/(2*s^2) );
+gaussian2dani = @(m,s)exp( -(X-m(1)).^2/(2*s(1)^2) - (Y-m(2)).^2/(2*s(2)^2) );
 
 % orient / aniso / scale 
 t = {}; r = {}; s = {}; 
@@ -111,7 +113,27 @@ switch name
         r = {ones(n)*.8, zeros(n)};
         sigma = .13;
         sigmar = .13;
-        s = {exp(-(R-.7).^2/(2*sigmar^2)), gaussian2d([.5 .5], sigma)};        
+        s = {exp(-(R-.7).^2/(2*sigmar^2)), gaussian2d([.5 .5], sigma)};    
+        
+        
+    case '2d-corners-bar'
+        t = linspace(-1,1,n);
+        [Y,X] = meshgrid(t,t); R = sqrt(X.^2+Y.^2); T = atan2(Y,X)*2;
+        t = {zeros(n)+pi, T}; % orient
+        r = {ones(n)*.8, ones(n)*.8};
+        sigma = .06; % for bumps in corners
+        sigmar = .13; v = .15;
+        s = {gaussian2dani([.5 .5], [.07 10]), ...
+            gaussian2d([v v], sigma) + ...
+            gaussian2d([1-v v], sigma) + ...
+            gaussian2d([v 1-v], sigma) + ...
+            gaussian2d([1-v 1-v], sigma) ...
+            }; 
+        
+    case '2d-bary'
+        C1 = load_tensors_pair('2d-corners-bar',N, options);
+        C2 = load_tensors_pair('2d-bump-donut',N, options);
+        mu = { C1{:}, C2{:} };
         
     case {'plate-elong' 'aniso-iso-3x3'}
         %%% 3D %%%

@@ -5,6 +5,9 @@ function [e1,e2,l1,l2] = tensor_eigendecomp(T)
 %   [e1,e2,l1,l2] = tensor_eigendecomp(T);
 %
 %   T is of size 2x2xNxP
+%   e1 and e2 are of size NxPx2
+%   l1 and l2 are of size NxP
+%   eigenvalues are ordered so that l1>l2
 %
 %   Copyright (c) 2016 Gabriel Peyre
 

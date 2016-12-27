@@ -8,6 +8,10 @@
 %     http://www.sci.utah.edu/~gk/DTI-data/
 % - http://www.humanconnectome.org/data/
 %       db.humanconnectome.org/data/projects/MGH_DIFF
+% - http://www.mri-resource.kennedykrieger.org/databases
+% - http://www.nitrc.org/projects/multimodal
+
+% - http://sciviscontest.ieeevis.org/2010/
 
 
 addpath('toolbox/');

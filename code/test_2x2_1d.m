@@ -16,7 +16,7 @@ trM = @(x)squeeze( x(1,1,:,:)+x(2,2,:,:) );
 global logexp_fast_mode;
 logexp_fast_mode = 1;
 
-rep = ['results/barycenters-1d/' name '/'];
+rep = ['results/interpolation-1d/' name '/'];
 if not(exist(rep))
     mkdir(rep); 
 end    
@@ -55,6 +55,8 @@ saveas(gcf,[rep 'linear-interp.png'], 'png');
 %%
 % Parameters
 
+% Ground cost
+c = ground_cost(N,1);
 % regularization
 epsilon = (.15)^2;  % large
 epsilon = (.08)^2;  % medium
@@ -65,16 +67,7 @@ rho = 1;  %medium
 % prox param
 lambda = rho/epsilon;
 
-%%
-% Ground cost
 
-x = linspace(0,1,N(1));
-y = linspace(0,1,N(2));
-[Y,X] = meshgrid(y,x);
-c0 = abs(X-Y).^2;
-resh = @(x)reshape( x, [2 2 N(1) N(2)]);
-flat = @(x)reshape(x, [2 2 N(1)*N(2)]);
-c = resh( tensor_diag(c0(:),c0(:)) );
 
 %%
 % Run Sinkhorn.

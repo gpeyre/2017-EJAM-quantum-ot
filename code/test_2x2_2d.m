@@ -15,7 +15,7 @@ name = '2d-iso-bump';
 name = '2d-mixt-bump';
 name = '2d-bump-donut';
 
-rep = ['results/barycenters-2d/' name '/'];
+rep = ['results/interpolation-2d/' name '/'];
 if not(exist(rep))
     mkdir(rep);
 end
@@ -33,20 +33,10 @@ n1 = 256; % upscaling for display
 rendering_tensors_2d(mu,n1, [rep 'input']);
 
 %%
-% Ground cost
-
-x = linspace(0,1,n);
-[y,x] = meshgrid(x,x);
-[X1,X2] = meshgrid(x(:),x(:));
-[Y1,Y2] = meshgrid(y(:),y(:));
-c0 = (X1-X2).^2 + (Y1-Y2).^2;
-resh = @(x)reshape( x, [2 2 N N]);
-flat = @(x)reshape(x, [2 2 N N]);
-c = resh( tensor_diag(c0(:),c0(:)) );
-
-%%
 % Parameters
 
+% Ground cost
+c = ground_cost(n,2);
 % regularization
 epsilon = (.15)^2;  % large
 epsilon = (.04)^2;  % small
@@ -56,9 +46,7 @@ rho = 10;  %large
 rho = 1;  %medium
 % prox param
 lambda = rho/epsilon;
-
 options.tau = 1/(lambda+1); 
-options.tau_nu = 1/options.tau; % not use anymore.
 
 %%
 % Just compute the coupling using Sinkhorn. 

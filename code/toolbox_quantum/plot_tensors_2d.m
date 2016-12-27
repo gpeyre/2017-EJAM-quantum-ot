@@ -4,12 +4,16 @@ function plot_tensors_2d(Nu, options)
 %
 %   Nu should have size (2,2,n,n)
 %
+%   plot_tensors_2d(Nu, options);
+%
+%   options.nb_ellipses controls number of ellipses along each dimension.
+%
 %   Copyright (c) 2016 Gabriel Peyre
 
 options.null = 0;
 q = getoptions(options, 'nb_ellipses', 10); % #ellipses
 col = getoptions(options, 'color', [1 0 0]);
-ecol = getoptions(options, 'color_edge', [1 0 0]);
+ecol = getoptions(options, 'color_edge', col);
 fill_ellipses = getoptions(options, 'fill_ellipses', 1);
 scaling = getoptions(options, 'scaling', .8);
 f = getoptions(options, 'image', []);

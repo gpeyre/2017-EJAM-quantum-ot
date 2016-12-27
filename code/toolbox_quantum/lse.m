@@ -8,6 +8,7 @@ function u = lse(K)
 %
 %   You can set the global variable lse_stab. 
 %   Use lse_stab==1 to use stabilized version using the shifting trick.
+%
 %   This should not be needed here, because the Sinkhorn iterates are
 %   written in a stabilized way.
 %

@@ -8,7 +8,7 @@ addpath('data/images/');
 
 name = 'plate-elong';
 
-rep = ['results/barycenters-3d/' name '/'];
+rep = ['results/interpolation-3d/' name '/'];
 if not(exist(rep))
     mkdir(rep); 
 end    
