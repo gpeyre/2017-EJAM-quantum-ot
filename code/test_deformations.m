@@ -6,7 +6,7 @@ addpath('toolbox/');
 addpath('toolbox_quantum/');
 addpath('toolbox_geometry/');
 addpath('toolbox_quantum/tensor_logexp/');
-addpath('data/optical-flows/');
+% addpath('data/optical-flows/');
 
 global logexp_fast_mode;
 logexp_fast_mode = 1; % slow
@@ -18,7 +18,7 @@ rep = ['results/deformations/' name '/'];
 [~,~] = mkdir(rep);
 
 % domain width
-n = 16*2;
+n = 16;
 
 %%
 % Helpers.
@@ -108,8 +108,9 @@ for k=1:2
     [U{k},mu{k},detU{k}] = polar_svd(J{k});
     [e1,e2,l1,l2] = tensor_eigendecomp(mu{k}); 
     % for fun, remap the eigenvalues
-    alpha = .5;
-    % mu{k} = tensor_eigenrecomp(e1,e2,abs(l1-1).^alpha,abs(l2-1).^alpha);
+    alpha = 1;
+    vmin = .05;
+    mu{k} = tensor_eigenrecomp(e1,e2,vmin + abs(l1-1).^alpha,vmin + abs(l2-1).^alpha);
 end
 
 
@@ -128,8 +129,8 @@ for k=1:2
     clf; display_grid(T{k});
     saveas(gcf, [rep 'input-' num2str(k) '-grid.png'], 'png');
     % display tensors
-    q = squeeze( trM(mu{k},1) );
     q = rescale(sqrt(sum(V{k}.^2,3))); % magnitude of displacement
+    q = squeeze( trM(mu{k},1) );
     clf;
     opt.image = q;
     opt.nb_ellipses = min(n,32);
@@ -182,6 +183,6 @@ for k=1:m
     % display as grid
     clf; display_grid(Ti{k}); drawnow;
     saveas(gcf, [rep 'interp-' num2str(k) '-grid.png'], 'png');
-    clf; display_grid(T_init); drawnow;
-    saveas(gcf, [rep 'interp-' num2str(k) '-grid.png'], 'png');
+    % clf; display_grid(T_init); drawnow;
+    % saveas(gcf, [rep 'interp-' num2str(k) '-grid.png'], 'png');
 end
