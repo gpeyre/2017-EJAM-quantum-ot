@@ -20,7 +20,7 @@ if not(exist(rep))
     mkdir(rep);
 end
 
-n = 15; % width of images
+n = 32; % width of images
 N = n*n; % #pixels
 op = load_helpers(n);
 
@@ -44,57 +44,43 @@ epsilon = (.08)^2;  % medium
 % fidelity
 rho = 10;  %large
 rho = 1;  %medium
-% prox param
-lambda = rho/epsilon;
-options.tau = 1/(lambda+1); 
 
 %%
-% Just compute the coupling using Sinkhorn. 
+% Compute the coupling using Sinkhorn. 
 
 options.niter = 500; % ok for .05^2
 options.disp_rate = NaN;
-options.tau = 1/(lambda+1);
+options.tau = 1.8*epsilon/(rho+epsilon);  % prox step, use extrapolation to seed up
 [gamma,u,v,err] = quantum_sinkhorn(mu{1},mu{2},c,epsilon,rho, options);
 
-% Compute interpolation using an heuristic formula.
-nu = compute_quantum_interp(gamma, mu, m, 2);
+%%
+% Compute interpolation using an heuristic McCann-like formula.
+
+m = 9;
+opt.sparse_mult = 100;
+opt.disp_tensors = 1;
+nu = compute_quantum_interp(gamma, mu, m, 2, opt);
 rendering_tensors_2d(nu,n1, [rep 'interpol']);
 
-
 %%
-% Single test.
-
-options.niter = 5;
-options.disp_rate = NaN;
-options.over_iterations = 10; % seems important to avoid oscilations
-w = [1/2 1/2];
-% usual code, works fine
+% Compute an animation movie.
 
 
-% [nu,gamma,err] = quantum_barycenters(mu,c,rho,epsilon,w,options);
-
-options.over_iterations = 1; % not needed anymore
-options.niter = 50;
-[nu,gamma,err] = quantum_barycenters(mu,c,rho,epsilon,w,options); 
-rendering_tensors_2d(nu,n1, [], options);
-
-f = @(x)log10(x);
-clf;
-subplot(3,1,1); plot(f(err(:,1))); axis tight;
-subplot(3,1,2); plot(f(err(:,2))); axis tight;
-subplot(3,1,3); plot(f(err(:,3))); axis tight;
-
-%%
-% full interpolation
-
-options.niter = 200; % sinkhorn #iterates
-
-m = 8; % numberof barycenters
-nu = {};
-for k=1:m
-    t = (k-1)/(m-1);
-    w = [1-t t];
-    fprintf('Barycenter %d/%d:', k, m);
-    [nu{k},gamma,err] = quantum_barycenters(mu,c,rho,epsilon,w,options);
+m = 60;
+nu = compute_quantum_interp(gamma, mu, m, 2, opt);
+opt.disp_tensors = 0;
+F = rendering_tensors_2d(nu,n1, '', opt);
+%
+k = 0; clf;
+while true
+    k = k+1;
+    k1 = 1+mod(k-1,2*m-1);
+    if k1>m
+        k1=2*m-k1;
+    end
+    imageplot(F(:,:,k1)); drawnow;
 end
-rendering_tensors_2d(nu,n1, [rep 'barycenters']);
+
+opt.quality = 50;
+write_video(F, [rep 'interpol'], 'mp4', opt);
+

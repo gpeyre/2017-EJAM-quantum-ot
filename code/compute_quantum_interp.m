@@ -13,6 +13,8 @@ function nu = compute_quantum_interp(gamma, mu, m, d, options)
 %   d should be either 1 (1-D case), 2 (2-D) or a generic cost matix (slow
 %   mode).
 %
+%   options.sparse_mult controls the number of traveling diracs used. 
+%
 %   Copyright (c) 2016 Gabriel Peyre
 
 options.null = 0; 
@@ -70,6 +72,7 @@ end
 
 
 for k=1:m
+    progressbar(k,m);
     t = (k-1)/(m-1);
     nu{k} = zeros(size(mu{1},1),size(mu{1},2),N(1),1);
     for i=1:length(I)
