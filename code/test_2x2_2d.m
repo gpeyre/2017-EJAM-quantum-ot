@@ -16,9 +16,7 @@ name = '2d-mixt-bump';
 name = '2d-bump-donut';
 
 rep = ['results/interpolation-2d/' name '/'];
-if not(exist(rep))
-    mkdir(rep);
-end
+[~,~] = mkdir(rep);
 
 n = 32; % width of images
 N = n*n; % #pixels
@@ -65,14 +63,13 @@ rendering_tensors_2d(nu,n1, [rep 'interpol']);
 %%
 % Compute an animation movie.
 
-
 m = 60;
 nu = compute_quantum_interp(gamma, mu, m, 2, opt);
 opt.disp_tensors = 0;
 F = rendering_tensors_2d(nu,n1, '', opt);
-%
+% display
 k = 0; clf;
-while true
+for k=1:m*5
     k = k+1;
     k1 = 1+mod(k-1,2*m-1);
     if k1>m
@@ -80,7 +77,7 @@ while true
     end
     imageplot(F(:,:,k1)); drawnow;
 end
-
+% saveas video
 opt.quality = 50;
 write_video(F, [rep 'interpol'], 'mp4', opt);
 

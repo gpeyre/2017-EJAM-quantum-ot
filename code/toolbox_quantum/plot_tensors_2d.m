@@ -7,8 +7,10 @@ function plot_tensors_2d(Nu, options)
 %   plot_tensors_2d(Nu, options);
 %
 %   options.nb_ellipses controls number of ellipses along each dimension.
+%   options.image displays a background image.
 %
 %   Copyright (c) 2016 Gabriel Peyre
+
 
 options.null = 0;
 q = getoptions(options, 'nb_ellipses', 10); % #ellipses
@@ -17,6 +19,12 @@ ecol = getoptions(options, 'color_edge', col);
 fill_ellipses = getoptions(options, 'fill_ellipses', 1);
 scaling = getoptions(options, 'scaling', .8);
 f = getoptions(options, 'image', []);
+
+if not(isempty(f))
+   % need to exchange X/Y to correct for matlab alignement 
+   Nu = permute(Nu,[1 2 4 3]);
+   Nu = Nu(2:-1:1, 2:-1:1,:,:);
+end
 
 p = size(Nu,3);
 I = round(linspace(1,p,q));
@@ -29,7 +37,7 @@ s = scaling*1/q; % scaling
 hold on;
 if not(isempty(f))
     t = linspace(0,1,size(f,1));
-    imagesc(t,t,f'); 
+    imagesc(t,t,f); 
     if size(f,3)==1
         colormap gray(256);
     else

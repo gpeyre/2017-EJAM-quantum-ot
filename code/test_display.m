@@ -1,5 +1,5 @@
 %%
-% Test for display.
+% Test for display of tensor-valued measures (does nothing but displaying ellpises).
 
 rep = 'results/display/';
 [~,~] = mkdir(rep);
