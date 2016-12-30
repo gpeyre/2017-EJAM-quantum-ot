@@ -18,7 +18,7 @@ rep = ['results/meshing/' name '/'];
 % Load input measures.
 
 n = 32; % Size for Sinkhorn computation
-n1 = 256; % Size of the underlying grid for FM computation.
+n1 = 256*2; % Size of the underlying grid for FM computation.
 
 
 op = load_derivative_2d();
@@ -51,7 +51,7 @@ switch name
             for a=1:2
                 for b=1:2
                     g = squeeze(Mu0{k}(a,b,:,:));
-                    g = perform_blurring(g, sigma, options);
+                    g = perform_blurring(g, sigma);
                     Mu1{k}(a,b,:,:) = g;
                     g = image_resize(g,[n n 1]);
                     Mu{k}(a,b,:,:) = reshape(g, [1 1 n n]);
@@ -99,7 +99,7 @@ nu = compute_quantum_interp(gamma, mu, m, 2, opt);
 %%
 % Display anisotropic mesh according to the interpolated metrics.
 
-P = 200; % #sampling points, high density
+P = 500; % #sampling points, high density
 P1 = 25; % low density
 for k=1:m
     % up-sample
