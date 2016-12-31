@@ -20,9 +20,7 @@ rep = ['results/meshing/' name '/'];
 n = 32; % Size for Sinkhorn computation
 n1 = 256*2; % Size of the underlying grid for FM computation.
 
-
 op = load_derivative_2d();
-
 % rotate tensor by pi/2 for display
 rotate = @(mu)cat(2, ...
     cat(1, mu(2,2,:,:), -mu(1,2,:,:)), ...
@@ -32,22 +30,23 @@ rotate = @(mu)cat(2, ...
 switch name
     case 'images'
         name_img = {'cartoon' 'bugsbunny'};
+        Mu = {};  Mu1 = {};
         for k=1:2
             f0{k} = load_image(name_img{k}, n1);
             f0{k} = rescale(sum(f0{k},3));
             % use hessian
             sigma = 8;
             Mu0{k} = op.Hess( perform_blurring(f0{k},sigma) );
-            % remapping function for the eigenvalue, typically should be |.|
+            % remapping function for the eigenvalues
             [e1,e2,l1,l2] = tensor_eigendecomp(Mu0{k});
+            alpha = 1.5; beta = alpha;  % controls how much anisotropy
+            vmin = 1e-4; % controls edge vs. smooth distribution
             v = max(abs(l1(:)));
-            alpha = 1.5; beta = alpha; vmin = .01;
             phi = @(x)vmin + abs(x/v).^alpha;
             psi = @(x)vmin + abs(x/v).^beta;
             Mu0{k} = tensor_eigenrecomp(e1,e2,phi(l1),psi(l2));
             % blur & sub-sample
             sigma = 25;
-            Mu = {};  Mu1 = {};
             for a=1:2
                 for b=1:2
                     g = squeeze(Mu0{k}(a,b,:,:));
@@ -106,9 +105,13 @@ for k=1:m
     op = load_helpers(n);
     T = op.C2T(reshape(nu{k}, [2 2 n n]));
     T = image_resize(T,[n1 n1 3]);
-    Mu = op.T2C(T);
+    Nu = op.T2C(T);
+    % ensure positive eigenvalues    
+    [e1,e2,l1,l2] = tensor_eigendecomp(Nu);
+    vmin = 1e-4; 
+    Nu = tensor_eigenrecomp(e1,e2,max(vmin,l1),max(vmin,l2));    
     % do the sampling
-    [X,D,Vor,v] = farthesh_point(Mu,P);    
+    [X,D,Vor,v] = farthesh_point(Nu,P);    
     % display    
     opt.nb_contours = 0;
     clf; disp_farthest_sampling(D,X,v, 'voronoi', opt);
@@ -129,9 +132,11 @@ for k=1:m
         saveas(gcf, [rep 'input-mesh-' num2str(k) '-img.png'], 'png');
     end
     % just a few samples
+    if 0
     [X,D,Vor,v] = farthesh_point(Mu,P1);
     opt.nb_contours = 12;
     clf; disp_farthest_sampling(D,X,v, 'voronoi', opt);  
     saveas(gcf, [rep 'input-contours-' num2str(k) '.png'], 'png');  
+    end
 end
 
