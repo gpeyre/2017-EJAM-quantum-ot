@@ -19,6 +19,7 @@ rep = ['results/meshing/' name '/'];
 
 n = 32; % Size for Sinkhorn computation
 n1 = 256*2; % Size of the underlying grid for FM computation.
+P = 500; % #sampling points, high density
 
 op = load_derivative_2d();
 % rotate tensor by pi/2 for display
@@ -29,7 +30,7 @@ rotate = @(mu)cat(2, ...
 
 switch name
     case 'images'
-        name_img = {'cartoon' 'bugsbunny'};
+        name_img = {'chicken' 'cow'};
         Mu = {};  Mu1 = {};
         for k=1:2
             f0{k} = load_image(name_img{k}, n1);
@@ -98,7 +99,6 @@ nu = compute_quantum_interp(gamma, mu, m, 2, opt);
 %%
 % Display anisotropic mesh according to the interpolated metrics.
 
-P = 500; % #sampling points, high density
 P1 = 25; % low density
 for k=1:m
     % up-sample

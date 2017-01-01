@@ -1,8 +1,8 @@
-function x = perform_hist_eq(x,y,options)
+function x = hist_eq(x,y,options)
 
-% perform_hist_eq - perform histogram equalization
+% hist_eq - perform histogram equalization
 %
-%   x = perform_hist_eq(x,y,options);
+%   x = hist_eq(x,y,options);
 %
 %   Change the values of x so that its ordered values match
 %   the ordered values of y.

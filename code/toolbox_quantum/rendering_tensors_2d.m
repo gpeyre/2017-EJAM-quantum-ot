@@ -45,7 +45,7 @@ for k=1:m
     % do the diffusion
     T_t = op.C2T(C_t);
     Ti_t = image_resize(T_t,[n1 n1 3]);
-    fi_t = anisotropic_diffusion(Ti_t, f0, diffus_t, diffus_tau);
+    fi_t = anisotropic_diffusion(Ti_t, f0, diffus_t, diffus_tau, options);
     F(:,:,k) = fi_t;
     if not(isempty(naming)) % save to file
         imwrite(rescale(fi_t), [naming '-' num2str(k) '.png'], 'png');

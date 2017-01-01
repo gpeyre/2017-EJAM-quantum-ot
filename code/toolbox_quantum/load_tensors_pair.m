@@ -28,6 +28,21 @@ gaussian2dani = @(m,s)exp( -(X-m(1)).^2/(2*s(1)^2) - (Y-m(2)).^2/(2*s(2)^2) );
 t = {}; r = {}; s = {}; 
 mu = {};
 switch name
+    case '2d-aniso-fields'
+        s = getoptions(options, 'smoothness', 5);
+        a = getoptions(options, 'aniso', .025);
+        x = [0:n/2-1, -n/2:-1];
+        [Y,X] = meshgrid(x,x);
+        h = exp( (-X.^2-Y.^2)/(2*s^2) );  h = h/sum(h(:));
+        gsmooth = @(x)real( ifft2( fft2(x).*repmat(fft2(h), [1 1 size(x,3)]) ) );
+        randn('state', 123);
+        for k=1:2
+            % random periodic gaussian fields
+            e1 = gsmooth(randn(n,n,2));
+            e1 = e1 ./ repmat( sqrt(sum(e1.^2,3)), [1 1 2] );
+            e2 = cat(3, -e1(:,:,2), e1(:,:,1));
+            mu{k} = tensor_eigenrecomp(e1,e2,ones(n),ones(n)*a);
+        end
     case 'iso-orient'
         % first
         t{1} = x*pi;

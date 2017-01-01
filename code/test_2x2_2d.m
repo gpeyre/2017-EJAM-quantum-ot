@@ -4,6 +4,7 @@
 addpath('toolbox/');
 addpath('toolbox_quantum/');
 addpath('toolbox_quantum/tensor_logexp/');
+addpath('toolbox_anisotropic/');
 addpath('data/images/');
 
 global logexp_fast_mode;
@@ -14,6 +15,7 @@ name = '2d-smooth-rand';
 name = '2d-iso-bump';
 name = '2d-mixt-bump';
 name = '2d-bump-donut';
+name = '2d-aniso-fields';
 
 rep = ['results/interpolation-2d/' name '/'];
 [~,~] = mkdir(rep);
@@ -22,19 +24,37 @@ n = 32; % width of images
 N = n*n; % #pixels
 op = load_helpers(n);
 
-C = load_tensors_pair(name, n);
+opt.aniso = .06;
+C = load_tensors_pair(name, n, opt);
 mu = {}; 
 for k=1:2    
     mu{k} = reshape(C{k},[2 2 N]);
 end
 n1 = 256; % upscaling for display
-rendering_tensors_2d(mu,n1, [rep 'input']);
+opt.laplacian = 'superbases';
+opt.laplacian = 'fd';
+opt.diffus_tau = .08;
+opt.diffus_t = 50;
+F = rendering_tensors_2d(mu,n1, [rep 'input'], opt);
+
+switch name
+    case '2d-aniso-fields'
+        %% load a nice-looking rendering/coloring function
+        render = @(x)texture_lut(x, 'red-metal');
+    otherwise
+        render = @(x)x;
+end
 
 %%
 % Parameters
 
+cost_type = 2;
+if strcmp(name, '2d-aniso-fields')
+    cost_type = '2d-per';
+end
+
 % Ground cost
-c = ground_cost(n,2);
+c = ground_cost(n,cost_type);
 % regularization
 epsilon = (.15)^2;  % large
 epsilon = (.04)^2;  % small
