@@ -94,7 +94,7 @@ options.tau = 1.8*epsilon/(rho+epsilon);  % prox step, use extrapolation to seed
 m = 9;
 opt.sparse_mult = 100; % controls number of travelling Diracs
 opt.disp_tensors = 1;
-nu = compute_quantum_interp(gamma, mu, m, 2, opt);
+nu = quantum_interp(gamma, mu, m, 2, opt);
 
 %%
 % Display anisotropic mesh according to the interpolated metrics.

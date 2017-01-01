@@ -88,7 +88,7 @@ options.tol = 1e-13;
 % Compute McCann interpolation.
 m = 9; % number of barycenters
 opt.sparse_mult = 10; % sparsification of the coupling, to speed up
-nu = compute_quantum_interp(gamma, mu, m, 2, opt);
+nu = quantum_interp(gamma, mu, m, 2, opt);
 rendering_tensors_2d(nu{(m+1)/2},n_render, [rep 'isobary']);
 
 % sparse cost
@@ -103,7 +103,7 @@ cS = sparse(c0 .* (E>v));
 
 % same, but on a sparse grid
 [gammaS,u,v,err2] = quantum_sinkhorn(mu{1},mu{2},cS,epsilon,rho, options);
-nu = compute_quantum_interp(gammaS, mu, m, 2);
+nu = quantum_interp(gammaS, mu, m, 2);
 rendering_tensors_2d(nu{(m+1)/2},n_render, [rep 'isobary-sparse']);
 
 %%
@@ -124,7 +124,7 @@ for i_sub=1:nsub
     i = i(E>v); j = j(E>v); 
 end
 
-nu = compute_quantum_interp(gammaS, mu1, m, 2);
+nu = quantum_interp(gammaS, mu1, m, 2);
 rendering_tensors_2d(nu{(m+1)/2},n_render, [rep 'isobary-sparse']);
 
 for k=1:m

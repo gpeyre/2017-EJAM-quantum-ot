@@ -88,7 +88,7 @@ imageplot({G G1+G2 G1 G2},'',2,2);
 %%
 % Compute interpolation using an heuristic formula.
 
-nu = compute_quantum_interp(gamma, mu, m, 1);
+nu = quantum_interp(gamma, mu, m, 1);
 % display 1D evolution as ellipses
 clf;
 plot_tensors_1d(nu, options);

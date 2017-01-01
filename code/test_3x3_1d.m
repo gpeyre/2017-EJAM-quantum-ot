@@ -79,7 +79,7 @@ options.tau = 1/(lambda+1); % should scale like 2/(1+lambda)
 %%
 % Compute interpolation using an heuristic formula.
 
-nu = compute_quantum_interp(gamma, mu, m, 1);
+nu = quantum_interp(gamma, mu, m, 1);
 % display 1D evolution as ellipses
 clf;
 plot_tensors_volume(nu, opt);

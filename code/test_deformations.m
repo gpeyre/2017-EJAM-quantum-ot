@@ -159,7 +159,7 @@ options.disp_rate = NaN;
 % Compute interpolation using an heuristic formula.
 m = 9; % #barycenters
 opt.sparse_mult = 15; % amount of diracs transfered
-Ji = compute_quantum_interp(gamma, J1, m, 2, opt);
+Ji = quantum_interp(gamma, J1, m, 2, opt);
 
 %%
 % Reconstruct deformation field.

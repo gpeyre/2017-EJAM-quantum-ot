@@ -53,7 +53,7 @@ end
 tlist = linspace(0,1,15);
 options.niter = 100;
 options.barymode = barymode;
-[P,err] = quantum_interp(Q,R, tlist, options);
+[P,err] = quantum_interp_single(Q,R, tlist, options);
 
 opt.color = 'interp';
 clf;

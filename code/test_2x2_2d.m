@@ -50,7 +50,7 @@ end
 
 cost_type = 2;
 if strcmp(name, '2d-aniso-fields')
-    cost_type = '2d-per';
+    % cost_type = '2d-per';
 end
 
 % Ground cost
@@ -77,16 +77,20 @@ options.tau = 1.8*epsilon/(rho+epsilon);  % prox step, use extrapolation to seed
 m = 9;
 opt.sparse_mult = 100;
 opt.disp_tensors = 1;
-nu = compute_quantum_interp(gamma, mu, m, 2, opt);
+nu = quantum_interp(gamma, mu, m, 2, opt);
 rendering_tensors_2d(nu,n1, [rep 'interpol']);
 
 %%
 % Compute an animation movie.
 
 m = 60;
-nu = compute_quantum_interp(gamma, mu, m, 2, opt);
+nu = quantum_interp(gamma, mu, m, 2, opt);
 opt.disp_tensors = 0;
 F = rendering_tensors_2d(nu,n1, '', opt);
+Fr = {}; 
+for k=1:m
+    Fr{k} = render(F(:,:,k));
+end
 % display
 k = 0; clf;
 for k=1:m*5
@@ -95,9 +99,9 @@ for k=1:m*5
     if k1>m
         k1=2*m-k1;
     end
-    imageplot(F(:,:,k1)); drawnow;
+    imageplot(Fr{k1}); drawnow;
 end
 % saveas video
 opt.quality = 50;
-write_video(F, [rep 'interpol'], 'mp4', opt);
+write_video(Fr, [rep 'interpol'], 'mp4', opt);
 

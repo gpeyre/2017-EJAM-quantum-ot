@@ -138,7 +138,7 @@ toc
 
 % Compute interpolation using an heuristic formula.
 m = 7; % number of barycenters
-nu = compute_quantum_interp(gamma, mu, m, D.^2);
+nu = quantum_interp(gamma, mu, m, D.^2);
 % rendering
 opt.scale = .04;
 for k=1:m
