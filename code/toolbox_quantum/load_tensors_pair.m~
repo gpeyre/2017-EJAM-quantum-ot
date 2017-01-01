@@ -44,7 +44,7 @@ switch name
             % variations in size
             g = hist_eq(gsmooth(randn(n,n)), linspace(.1,1,n*n) ); % variation in size
             % variation in anisotropy
-            h = hist_eq(gsmooth(randn(n,n)), linspace(.1,.5,n*n) );
+            h = hist_eq(gsmooth(randn(n,n)), linspace(.1,1,n*n) );
             mu{k} = tensor_eigenrecomp(e1,e2,g.*h,g*a);
         end
     case 'iso-orient'

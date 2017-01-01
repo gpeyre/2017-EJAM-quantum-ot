@@ -39,7 +39,7 @@ F = rendering_tensors_2d(mu,n1, [rep 'input'], opt);
 
 switch name
     case '2d-aniso-fields'
-        %% load a nice-looking rendering/coloring function
+        % load a nice-looking rendering/coloring function
         render = @(x)texture_lut(x, 'red-metal');
     otherwise
         render = @(x)x;
@@ -78,22 +78,38 @@ m = 9;
 opt.sparse_mult = 100;
 opt.disp_tensors = 1;
 nu = quantum_interp(gamma, mu, m, 2, opt);
-rendering_tensors_2d(nu,n1, [rep 'interpol']);
+F = rendering_tensors_2d(nu,n1, [rep 'interpol']);
+
+for k=1:m
+    imwrite( render(F(:,:,k)), [rep 'interpol-render-' num2str(k) '.png'], 'png' );
+end
 
 %%
 % Compute an animation movie.
 
 m = 60;
 nu = quantum_interp(gamma, mu, m, 2, opt);
+
+if 0 % strcmp(name, '2d-aniso-fields')
+    % remap anisotropy
+    for k=1:m
+        [e1,e2,~,~] = tensor_eigendecomp(reshape(nu{k}, [2 2 n n]));
+        nu{k} = tensor_eigenrecomp(e1,e2,ones(n),ones(n)*opt.aniso);
+        nu{k} = reshape(nu{k}, [2 2 n*n]);
+    end
+end
+
 opt.disp_tensors = 0;
 F = rendering_tensors_2d(nu,n1, '', opt);
+
 Fr = {}; 
 for k=1:m
     Fr{k} = render(F(:,:,k));
 end
+
 % display
 k = 0; clf;
-for k=1:m*5
+for k=1:m
     k = k+1;
     k1 = 1+mod(k-1,2*m-1);
     if k1>m
@@ -101,6 +117,7 @@ for k=1:m*5
     end
     imageplot(Fr{k1}); drawnow;
 end
+
 % saveas video
 opt.quality = 50;
 write_video(Fr, [rep 'interpol'], 'mp4', opt);

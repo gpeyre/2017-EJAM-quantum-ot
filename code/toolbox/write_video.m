@@ -21,8 +21,14 @@ switch filetype
         % vidObj.VideoFormat = getoptions(options, 'format', 'Grayscale');
         % vidObj.CompressionRatio = getoptions(options, 'compression', 20);
         open(vidObj);
-        for i=1:size(A,3)
-            writeVideo(vidObj,A(:,:,i));
-        end
+        if iscell(A)
+            for i=1:length(A)
+                writeVideo(vidObj,A{i});
+            end
+        else
+            for i=1:size(A,3)
+                writeVideo(vidObj,A(:,:,i));
+            end
+        end     
         close(vidObj);
 end

@@ -1,8 +1,8 @@
-function [P,err] = quantum_interp(Q,R, t, options)
+function [P,err] = quantum_interp_single(Q,R, t, options)
 
-% quantum_interp - interpolation (without transport) between two tensors
+% quantum_interp_single - interpolation (without transport) between two tensors
 %
-%   [P,err] = quantum_interp(Q,R, t, options);
+%   [P,err] = quantum_interp_single(Q,R, t, options);
 %
 % ***** For options.barymode=='hard' *****
 %

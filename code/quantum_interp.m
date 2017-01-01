@@ -1,8 +1,8 @@
-function nu = compute_quantum_interp(gamma, mu, m, d, options)
+function nu = quantum_interp(gamma, mu, m, d, options)
 
-% compute_quantum_interp - heuristic McCann interpolation-like 
+% quantum_interp - heuristic McCann interpolation-like
 %
-%   nu = compute_quantum_interp(gamma, mu, m, d, options);
+%   nu = quantum_interp(gamma, mu, m, d, options);
 %
 %   m is number of steps in [0,1] for the interpolation.
 %
@@ -13,14 +13,14 @@ function nu = compute_quantum_interp(gamma, mu, m, d, options)
 %   d should be either 1 (1-D case), 2 (2-D) or a generic cost matix (slow
 %   mode).
 %
-%   options.sparse_mult controls the number of traveling diracs used. 
+%   options.sparse_mult controls the number of traveling diracs used.
 %
 %   Copyright (c) 2016 Gabriel Peyre
 
-options.null = 0; 
+options.null = 0;
 
-if size(d,1)>1 
-    c = d; 
+if size(d,1)>1
+    c = d;
     d = 'slow';
 elseif d~=1 && d~=2
     error('Only implemented in 1D and 2D (need to define the grid in higher dimensions)');
@@ -34,25 +34,25 @@ end
 if isstruct(gamma)
     % already in sparse format
     I = gamma.i; J = gamma.j;
-    gamma_ij = gamma.T;    
+    gamma_ij = gamma.T;
 else
     % convert in sparse format
-    sparse_mult = getoptions(options, 'sparse_mult', 3); 
+    sparse_mult = getoptions(options, 'sparse_mult', 3);
     T = squeeze( trM(gamma) );
-    v = sort(T(:), 'descend'); v = v(min(end,round(max(N)*sparse_mult))); % threshold   
+    v = sort(T(:), 'descend'); v = v(min(end,round(max(N)*sparse_mult))); % threshold
     [I,J] = ind2sub(N, find(T>v) );
     gamma_ij = gamma(:,:,find(T>v));
     mu0 = { sum(gamma,4) squeeze(sum(gamma,3)) };
 end
-    
+
 % matched marginals
 mu1 = { sparse_marginal(I,J,gamma_ij, N, 0), ...
         sparse_marginal(I,J,gamma_ij, N, 1) };
 % mu1 = mu0;
 
-% check 
+% check
 % plot([squeeze(trM(mu0{2})) squeeze(trM(mu1{2}))] );
-    
+
 % correction factor
 A = {};
 for k=1:2
@@ -97,7 +97,7 @@ for k=1:m
         end
         % accumulate measure
         nu{k}(:,:,pi) = nu{k}(:,:,pi) + G;
-    end    
+    end
 end
 
 end
