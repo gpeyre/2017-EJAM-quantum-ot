@@ -14,8 +14,8 @@ logexp_fast_mode = 4; % fast mex
 name = '2d-smooth-rand';
 name = '2d-iso-bump';
 name = '2d-mixt-bump';
-name = '2d-bump-donut';
 name = '2d-aniso-fields';
+name = '2d-bump-donut';
 
 rep = ['results/interpolation-2d/' name '/'];
 [~,~] = mkdir(rep);
@@ -26,6 +26,20 @@ op = load_helpers(n);
 
 opt.aniso = .06;
 C = load_tensors_pair(name, n, opt);
+
+
+opt.diffus_tau = .08;
+opt.diffus_t = 50;
+if strcmp(name, '2d-bump-donut')
+    for k=1:2
+        [e1,e2,l1,l2] = tensor_eigendecomp(C{k});
+        l1 = max(l1,.03);
+        l2 = max(l2,.03);
+        C{k} = tensor_eigenrecomp(e1,e2,l1,l2);        
+    end
+    opt.diffus_t = 20;
+end
+
 mu = {}; 
 for k=1:2    
     mu{k} = reshape(C{k},[2 2 N]);
@@ -33,24 +47,16 @@ end
 n1 = 256; % upscaling for display
 opt.laplacian = 'superbases';
 opt.laplacian = 'fd';
-opt.diffus_tau = .08;
-opt.diffus_t = 50;
-F = rendering_tensors_2d(mu,n1, [rep 'input'], opt);
-
-switch name
-    case '2d-aniso-fields'
-        % load a nice-looking rendering/coloring function
-        render = @(x)texture_lut(x, 'red-metal');
-    otherwise
-        render = @(x)x;
-end
+opt.disp_tensors = 1;
+opt.render = @(x)texture_lut(x, 'red-metal');
+[F,Fr] = rendering_tensors_2d(mu,n1, [rep 'input'], opt);
 
 %%
 % Parameters
 
 cost_type = 2;
 if strcmp(name, '2d-aniso-fields')
-    % cost_type = '2d-per';
+    % cost_type = '2d-per'; %TODO: FIX THIS
 end
 
 % Ground cost
@@ -78,12 +84,11 @@ m = 9;
 opt.sparse_mult = 100;
 opt.disp_tensors = 1;
 nu = quantum_interp(gamma, mu, m, 2, opt);
-F = rendering_tensors_2d(nu,n1, [rep 'interpol']);
+[F,Fr] = rendering_tensors_2d(nu,n1, [rep 'interpol'], opt);
 
 for k=1:m
-    imwrite( render(F(:,:,k)), [rep 'interpol-render-' num2str(k) '.png'], 'png' );
+    imwrite( Fr{k}, [rep 'interpol-render-' num2str(k) '.png'], 'png' );
 end
-
 %%
 % Compute an animation movie.
 
@@ -100,13 +105,7 @@ if 0 % strcmp(name, '2d-aniso-fields')
 end
 
 opt.disp_tensors = 0;
-F = rendering_tensors_2d(nu,n1, '', opt);
-
-Fr = {}; 
-for k=1:m
-    Fr{k} = render(F(:,:,k));
-end
-
+[F,Fr] = rendering_tensors_2d(nu,n1, '', opt);
 % display
 k = 0; clf;
 for k=1:m

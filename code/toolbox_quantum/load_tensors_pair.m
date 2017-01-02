@@ -126,13 +126,19 @@ switch name
         
         
     case '2d-bump-donut'
+        aniso = .8;
+        sigma = .13;
+        sigmar = .13;
+        radius = .9;
+        %
+        aniso = .97;
+        sigma = .15;
+        sigmar = .14;
         t = linspace(-1,1,n);
         [Y,X] = meshgrid(t,t); R = sqrt(X.^2+Y.^2); T = atan2(Y,X)*2;
         t = {T, zeros(n)}; % orient
-        r = {ones(n)*.8, zeros(n)};
-        sigma = .13;
-        sigmar = .13;
-        s = {exp(-(R-.7).^2/(2*sigmar^2)), gaussian2d([.5 .5], sigma)};    
+        r = {ones(n)*aniso, zeros(n)};
+        s = {exp(-(R-radius).^2/(2*sigmar^2)), gaussian2d([.5 .5], sigma)};    
         
         
     case '2d-corners-bar'

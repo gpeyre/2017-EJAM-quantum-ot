@@ -30,7 +30,7 @@ switch name
     case 'none'
         g = repmat(f, [1 1 3]);
     case 'red-metal'
-        c1 = [1 0 0]; c2 = [0 .5 .5];
+        c1 = [1 0 0]; c2 = [0 .3 .3];
         g = colorize( hat(f*1), c1,c2 );
     case 'wood'
         c1 = [169 100 76]/255; c2 = [45 33 30]/255;

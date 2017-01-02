@@ -1,4 +1,4 @@
-function [F,Fr] = rendering_tensors_2d(nu,n1, naming, options)
+function F = rendering_tensors_2d(nu,n1, naming, options)
 
 % display of a collection of 2D tensor fields using anistotropic diffusion + ellipsoids
 %
@@ -47,7 +47,6 @@ for k=1:m
     Ti_t = image_resize(T_t,[n1 n1 3]);
     fi_t = anisotropic_diffusion(Ti_t, f0, diffus_t, diffus_tau, options);
     F(:,:,k) = fi_t;
-    Fr{k} = render(fi_t);
     if not(isempty(naming)) % save to file
         imwrite(rescale(fi_t), [naming '-' num2str(k) '.png'], 'png');
     end
