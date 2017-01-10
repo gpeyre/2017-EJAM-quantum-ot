@@ -53,15 +53,51 @@ colormap gray(256)
 saveas(gcf, [rep 'input-full.png'], 'png');
 
 %% 
-% Anisotropic diffusion. 
+% Check for anisotropic diffusion. 
 
-optD.niter = 150;
-optD.tau = .1/1e4;
-[f, optD.Va,optD.Fa,optD.Ta,optD.Ua] = anisotropic_diffusion_mesh(V, F, T, [], optD);
+% subdivide mesh and tensor field
+options.sub_type = 'loop'; options.verb = 0;
+nsub = 2; 
+[Va,Fa] = perform_mesh_subdivision(V, F, nsub, options);
+Na = size(Va,2);
+Pa = size(Fa,2);
+% ortho-basis on faces
+Ua = mesh_eigenbasis(Va,Fa, opt);
+Ua1 = ( Ua(:,:,Fa(1,:)) + Ua(:,:,Fa(2,:)) + Ua(:,:,Fa(3,:)) )/3;
+% subdivide tensor field
+Ta = [];
+for i=1:2
+    for j=1:2
+        a = T(i,j,:);
+        [a1,Fa] = perform_mesh_subdivision(a(:)', F, nsub, options);
+        Ta(i,j,:) = reshape(a1, [1 1 Na]);
+    end
+end
+Ta1 = ( Ta(:,:,Fa(1,:)) + Ta(:,:,Fa(2,:)) + Ta(:,:,Fa(3,:)) )/3;
+% turn into a face 
+%
+Mesh = load_mesh_operators(Va,Fa);
+%
+f = randn(Na,1);
 
-opt.face_vertex_color = f;
-clf;  plot_mesh(Va,Fa, opt);
-colormap parula(256);
+
+tau = 1/2e+05
+contrast = getoptions(options, 'contrast', @(x)hist_eq(x,(1:Na)/Na));
+
+
+g = Mesh.Grad(f);
+% coefficient in Ua basis
+Cg = tensor_mult( tensor_transp(Va), reshape(g, [3 1 Pa]) );
+% apply tensor
+Ch = tensor_mult( Ta1, Cg(1:2,:,:) );
+Ch(3,:,:) = 0; % 0 in normal direction
+% reconstruct in each face
+h = tensor_mult( Va, reshape(Ch, [3 1 Pa]) );
+u = spdiags(1./Mesh.AreaV,0,Na,Na) * Mesh.Div(h);
+f = f - tau*u;
+
+
+
 
 %%
 % Geodesic distance.

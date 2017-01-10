@@ -11,7 +11,7 @@ function C = tensor_mult(A,B)
 [mA,nA,NA1,NA2] = size(A);
 [mB,nB,NB1,NB2] = size(B);
 
-if NA1~=NB1 || NA2~=NB2 || nA~=nB
+if NA1~=NB1 || NA2~=NB2 || nA~=mB
     error('Size problem');
 end
 C = zeros(mA,nB,NA1,NA2);

@@ -1,4 +1,4 @@
-function [W,nabla_x,gamma] = quantum_fidelity(mu,nu, x, y, rho, epsilon, options)
+function [W,nabla_x,gamma] = quantum_fidelity(mu, nu, x, y, rho, epsilon, options)
 
 % quantum_fidelity - compute value and gradient of Quantum OT
 %
@@ -15,7 +15,6 @@ options.null = 0;
 
 d = size(x,1); % embedding dimension
 N = [size(x,2) size(y,2)];
-
 
 % cost
 c = 1/2 * tensor_id( distmat(x,y).^2, d );
