@@ -1,8 +1,10 @@
 function p = periodic_comp(h)
 
-% compute the periodic component of an image
+% periodic_comp - compute the periodic component of an image
 %
 %   p = periodic_comp(h);
+%
+%   Uses the method developped by Lionel Moisan.
 %
 %   Copyright (c) 2016 Gabriel Peyre
 
