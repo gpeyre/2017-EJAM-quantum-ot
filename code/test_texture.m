@@ -1,7 +1,7 @@
-clear
+clear;
 
 % put here the path where the data is
-base_path = '/Users/gpeyre/Dropbox/work/wasserstein/wasserstein-tensor-valued/matlab/svbrdf/data/';
+addpath('/Users/gpeyre/Dropbox/work/wasserstein/wasserstein-tensor-valued/matlab/svbrdf/data/');
 
 addpath('svbrdf/');
 addpath('svbrdf/twoshot/');
@@ -14,7 +14,7 @@ rep = 'results/svbrdf/';
 % Load a first material.
 
 %load svbrdf/data/tile_stair.mat
-load([base_path 'leather_white.mat']);
+load 'leather_white.mat';
 whitemat = mat;
 
 % render
@@ -26,7 +26,7 @@ saveas(gcf,[rep 'leather_white.png']);
 %%
 % Load another material (replace with whatever path you are using)
 
-load([base_path 'metal_black.mat']);
+load 'metal_black.mat';
 
 [e1,e2,l1,l2] = tensor_eigendecomp(permute(mat.gloss, [3 4 1 2]));
 A = (l1-l2)./(l1+l2); % anisotropy
