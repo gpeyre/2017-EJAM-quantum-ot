@@ -9,6 +9,7 @@ addpath('data/textures/');
 name = 'grayfabric';
 name = 'fabric';
 name = 'stonewall';
+name = 'grunge';
 
 f = load_image(name);
 f = f/255;
@@ -20,7 +21,7 @@ options.estimator_type = 'window';
 options.estimator_type = 'periodic';
 options.samples =  200;
 
-[T,S,U,synth_func] = texton_estimation(f, n, options);
+[synth_func,T,Ts,S,U] = texton_estimation(f, n, options);
 
 % anisotropy ratio
 A = ( S(:,:,3)-S(:,:,2) ) ./ ( S(:,:,3)+S(:,:,2) );
