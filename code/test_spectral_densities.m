@@ -24,9 +24,9 @@ name = 'beigefabric';
 names = {'beigefabric' '5310387074_48aabd4a1b_o'};
 
 % target size for synthesis
-n = 128*2;
+n = 128;
 % number of transported diracs
-q = 100;
+q = 400;
 
 img = @(x)imagesc(fftshift(x));
 
@@ -63,13 +63,12 @@ end
 global logexp_fast_mode;
 logexp_fast_mode = 0;
 
-
 c0 = distmat(xy{1}',xy{2}');
 c = reshape(tensor_id(c0(:), 3), [3 3 q q]);
 epsilon = (.08)^2;  % regularization
 rho = 1;  % fidelity
 
-options.niter = 500; % ok for .05^2
+options.niter = 250; 
 options.disp_rate = NaN;
 options.tau = 1.8*epsilon/(rho+epsilon);  % prox step, use extrapolation to seed up
 [gamma,u,v,err] = quantum_sinkhorn(mu{1},mu{2},c,epsilon,rho, options);
@@ -97,6 +96,11 @@ for k=1:m
     Hs_k = resh(nu{k}) + r;
     Rs_k = fshift(Hs_k);
     f0_k = (1-t)*f0{1} + t*f0{2};
+    % display the log of energy
+    A = real(trM(Hs_k,1));
+    A(end/2+1,end/2+1) = Inf; A(end/2+1,end/2+1) = min(A(:));
+    imwrite(rescale(log10(A+1e-5)), [rep 'spectrum-' num2str(k) '.png'], 'png');
+    % synthesize the texture
     g = texture_synth(Rs_k,f0_k);
     imwrite(rescale(g), [rep 'synthesis-' num2str(k) '.png'], 'png');
 end
