@@ -1,0 +1,253 @@
+% !TEX root = ../TensorOT.tex
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Quantum Sinkhorn}
+\label{eq-q-sink}
+
+The convex program~\eqref{eq-Kantorovich} defining quantum OT is computationally challenging because it can be very large scale (problem size is $|I| \times |J|$) for imaging applications, and it involves matrix exponential and logarithm. In this section, leveraging recent advances in computational OT initiated by~\cite{cuturi-2013}, we propose to use a similar entropy regularized strategy (see also section~\ref{sec-intro}), but this time with the quantum-entropy~\eqref{eq-h-quantum}. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Entropic Regularization}
+
+We define an entropic regularized version of~\eqref{eq-Kantorovich}
+\eql{\label{eq-Kantorovich-regul}
+	W_\epsilon(\mu,\nu) \eqdef \min_{\ga} \dotp{\ga}{c} + \rho_1\KL(\ga \ones_J|\mu) + \rho_2\KL(\ga^\top \ones_I|\nu) - \epsilon H(\ga). 
+}
+Note that when $\epsilon=0$, one recovers the original problem~\eqref{eq-Kantorovich}. 
+%
+This is a strongly convex program, with a unique solution. The crux of this approach, as already known in the scalar case (see~\cite{2016-chizat-sinkhorn}), is that its convex dual has a particularly simple structure, which is amenable to a simple alternating maximization strategy. 
+
+\begin{prop}
+	The dual problem associated to~\eqref{eq-Kantorovich-regul} reads
+	\begin{multline}\label{eq-dual-pb}
+		W_\epsilon(\mu,\nu)
+		= 
+		\umax{u,v} - 
+				\tr\Big[
+						\rho_1 \sum_i (e^{u_i+\log(\mu_i)} - \mu_i) \\
+					+   \rho_2 \sum_j (e^{v_j+\log(\nu_j)} - \nu_j)
+					+    \epsilon \sum_{i,j}  e^{ \Kern(u,v)_{i,j} }
+			 \Big], 
+	\end{multline}	
+	where we define
+	\eql{\label{eq-defn-K}
+		\Kern(u,v)_{i,j} \eqdef -\frac{c_{i,j} + \rho_1 u_i + \rho_2 v_j}{\epsilon}.
+	} 
+	% where we use the notation $u \ones^\top + \ones v^\top \eqdef (u_i+v_j)_{i,j}$. 
+	Furthermore, the following primal-dual relationships hold at optimality:
+	\eql{\label{eq-primal-dual-scaling}
+		\foralls (i,j), \quad \ga_{i,j} = \exp\pa{ \Kern(u,v)_{i,j} }.
+	}
+\end{prop}
+\begin{proof} \if 0
+Applying the Fenchel--Rockafellar duality theorem \justin{cite me!} to~\eqref{eq-Kantorovich-regul} leads to the dual program
+\eq{
+	\umax{u,v} - \epsilon H^*( \Kern(u,v) |\xi) 
+	-\rho_1 \KL^*(u|\mu) - \rho_2 \KL^*(v|\nu) - \epsilon \tr(\xi), 
+}
+where here $\KL^*(\cdot|\mu)$ corresponds to the Legendre transform with respect to the first argument of the KL divergence.
+%
+The following Lengendre--Fenchel \justin{cite me!} formula leads to the desired result:
+%\eq{
+%	(-H)^*(u) = \tr( \exp(u) ), 
+%}
+\begin{align*} % eq-legendre-kl
+	H^*(K) &= \textstyle\sum_{i,j} \tr( e^{K_{i,j}} ) \\
+	\KL^*(u|\mu) &= \textstyle\sum_i \tr( \exp(u_i+\log(\mu_i)) - \mu_i).
+\end{align*}
+%
+\lenaic{replace w/ the following proof (after double check):}
+\fi
+Applying the Fenchel--Rockafellar duality theorem~\cite{rockafellar-convex} to~\eqref{eq-Kantorovich-regul} leads to the dual program
+\eq{
+	\umax{u,v} - \epsilon \KL^*( \Kern_0(u,v)|\xi) 
+	-\rho_1 \KL^*(u|\mu) - \rho_2 \KL^*(v|\nu) - \epsilon \tr(\xi), 
+}
+where here $\KL^*(\cdot|\mu)$ corresponds to the Legendre transform with respect to the first argument of the KL divergence, $ \Kern_0(u,v)_{i,j} \eqdef -\frac{\rho_1 u_i + \rho_2 v_j}{\epsilon}.$ and $\xi_{i,j} \eqdef \exp(-c_{i,j}/\epsilon)$ for all $i,j$.
+%
+The following Lengendre formula leads to the desired result:
+%\eq{
+%	(-H)^*(u) = \tr( \exp(u) ), 
+%}
+\eq{% eq-legendre-kl
+	\KL^*(u|\mu) = \textstyle\sum_i \tr( \exp(u_i+\log(\mu_i)) - \mu_i).
+}
+\end{proof}
+
+
+
+%%% FIG %%%
+\newcommand{\meshFig}[1]{\includegraphics[width=.105\linewidth]{mesh/interpol-#1}}
+\newcommand{\ImgFig}[1]{\includegraphics[width=.105\linewidth]{2d/interpol-ellispses-#1}}
+\begin{figure*}\centering
+\begin{tabular}{@{\hspace{1mm}}c@{\hspace{1mm}}c@{\hspace{1mm}}c@{\hspace{1mm}}c@{\hspace{1mm}}c@{\hspace{1mm}}c@{\hspace{1mm}}c@{\hspace{1mm}}c@{\hspace{1mm}}c@{}}
+\meshFig{1}&
+\meshFig{1}&
+\meshFig{2}&
+\meshFig{3}&
+\meshFig{4}&
+\meshFig{5}&
+\meshFig{6}&
+\meshFig{7}&
+\meshFig{7}\\
+\ImgFig{1}&
+\ImgFig{2}&
+\ImgFig{3}&
+\ImgFig{4}&
+\ImgFig{5}&
+\ImgFig{6}&
+\ImgFig{7}&
+\ImgFig{8}&
+\ImgFig{9}\\
+$t=0$ & $t=1/8$ & $t=1/4$ & $t=3/8$ & $t=1/2$ & $t=5/8$ & $t=3/4$ & $t=7/8$ & $t=1$ 
+\end{tabular}
+\caption{
+Examples of interpolations obtained using formula~\eqref{eq-interpolating}. \gabriel{redo the ellipses}
+%
+\textbf{Top:} Interpolation on a 3-D surface (a triangulated mesh).
+% 
+The red ellipsoids depicts the tensors $\mu_t$ defined over the tangent planes and the coloring of the surface displays $\tr(\mu_t)$ (blue corresponding to $0$, yellow to large values).
+\textbf{Bottom:} Interpolation on a 2-D planar domain, the background image is a texture synthesized from the underlying tensor field using an anisotropic diffusion applied to a Gaussian white noise initial condition.
+} \label{fig:mesh}
+\end{figure*}
+%%% FIG %%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Quantum Sinkhorn Algorithm}
+
+It is possible to use Dykstra's algorithm~\cite{Dykstra83} (see~\cite{bauschke-lewis} for its extension to Bregman divergences) to solve~\eqref{eq-dual-pb}. This corresponds to alternatively maximizing~\eqref{eq-dual-pb} with respect to $u$ and $v$. 
+%
+The following proposition states that the maximization with respect to either $u$ or $v$ leads to two fixed-point equations. 
+%
+These fixed points are conveniently written using the log-sum-exp operator, 
+\eql{\label{eq-dfn-lse}
+	\LSE_j( K_{i,j} ) \eqdef \log \sum_j \exp(K_{i,j}), 
+}
+where the sum on $j$ is replaced by a sum on $i$ for $\LSE_i$. 
+
+\begin{prop}\label{prop-fixed-points}
+	For $v$ fixed (resp.\ $u$ fixed), the minimizer $u$ (resp.\ $v$) of~\eqref{eq-dual-pb} satisfies
+	\begin{align}\label{eq-fixed-point-u}
+		\foralls i, \quad u_i = \LSE_j(\Kern(u,v)_{i,j})-\log(\mu_i), \\
+		\foralls j, \quad v_j = \LSE_i(\Kern(u,v)_{i,j})-\log(\nu_j), \label{eq-fixed-point-v}
+	\end{align}
+	where $\Kern(u,v)$ is defined in~\eqref{eq-defn-K}.
+\end{prop}
+\begin{proof}
+	Writing the first order condition of~\eqref{eq-dual-pb} with respect to each $u_i$ leads to
+	\eq{
+		\rho_1 e^{u_i + \log(\mu_i)} - \rho_1 \sum_{j} e^{\Kern(u,v)_{i,j}} = 0
+	} 
+	which gives the desired expression. A similar expression holds for the first order conditions with respect to $v_j$.
+\end{proof}
+
+
+%\begin{rem}[Stabilization]
+%	As for the usual Sinkhorn algorithm, the straightforward implementation of the formula~\eqref{eq-dfn-lse} to compute $\LSE$ is unstable when some entries of $K_{i,j}$ are large (which is the case for small valued of $\epsilon$). A stable implementation is obtained by using the shift-invariance of this operator, namely 
+%	\eq{
+%		\LSE_j( K_{i,j} ) = \kappa_i \Id_{d \times d} + \LSE_j( K_{i,j} - \kappa_i \Id_{d \times d} )
+%	}
+%	where one can typically use set $\kappa_i \eqdef \max_j \tr(K_{i,j})/d$. 
+%\end{rem}
+
+A simple fixed point algorithm is then obtained by replacing in Dykstra's the explicit alternate minimization with respect to $u$ and $v$ by just one step of fixed point iterations~\eqref{eq-fixed-point-u} and~\eqref{eq-fixed-point-v}. To make the resulting fixed point contractant and ensure linear convergence, one introduces relaxation parameters $(\tau_1,\tau_2)$. 
+
+The quantum Sinkhorn algorithm is detailed in Algorithm~\ref{alg:sinkhorn}. It alternates between the updates of $u$ and $v$, using relaxed fixed point iterations associated to~\eqref{eq-fixed-point-u} and~\eqref{eq-fixed-point-v}. We use the following $\tau$-relaxed assignment notation 
+\eql{\label{eq-dfn-relaxed-assign}
+	a \RelaxAssign{\tau} b 
+	\quad\text{means that}\quad
+	a \leftarrow (1-\tau) a + \tau b.
+}
+The algorithm outputs the scaled kernel $\ga_{i,j} = \exp(K_{i,j})$.
+
+
+
+%thus initializes $\foralls (i,j), (u_i,v_j) \leftarrow (0,0)$, then performs iteratively the following two steps.
+%\begin{rs}
+%	\item \textbf{$u$ update:}  update $K_{i,j} \leftarrow \Kern(u,v)_{i,j}$, apply
+%		\eql{\label{eq-sink-1}
+%			\foralls i \in I, \quad u_i \RelaxAssign{\tau_1} \LSE_j(K_{i,j})-\log(\mu_i).
+%		}		
+%
+%	\item \textbf{$v$ update:} update $K_{i,j} \leftarrow \Kern(u,v)_{i,j}$, apply
+%		\eql{\label{eq-sink-2}
+%			\foralls j \in J, \quad v_j \RelaxAssign{\tau_2} \LSE_i(K_{i,j})-\log(\nu_j).
+%		}		
+%\end{rs}
+
+\begin{rem}[Choice of $\tau_k$]\label{rem-choice-tau}
+ In the scalar case, i.e. $d=1$ (and also for isotropic input tensors), when using $\tau_k = \tfrac{\epsilon}{\rho_k+\epsilon}$ for $k=1,2$, one retrieves exactly Sinkhorn iterations for unbalanced transport as described in~\cite{2016-chizat-sinkhorn}, and each update of $u$ (resp.\ $v$) exactly solves the fixed point~\eqref{eq-fixed-point-u} (resp.\ \eqref{eq-fixed-point-v}). 
+%
+Moreover, it is simple to check that these iterates are contractant whenever
+\eq{
+	\tau_k \in ]0,\tfrac{2 \epsilon}{\epsilon+\rho_k}[
+	\quad\text{for } k=1,2.
+}
+%This property is simple to check for $d=1$, and is verified numerically for higher dimensions $d$. \lenaic{I reorganized here a bit} \justin{For all $d$ this holds?  How do you check numerically for \emph{all} $d$?  Should we use Mathematica?}
+%	\todo{Maybe not, apparently using different $\tau$ values can lead to huge speed up. So a comparison plot would be welcome. }
+	% 
+	and this property has been observed experimentally for higher dimensions $d=2,3$. Using higher values for $\tau_k$ actually often improves the (linear) convergence rate; we leave this interesting observation open for future theoretical investigation. 
+	% We thus recommend in practice using this value for $\tau$.
+	% When $d>1$, even under this choice of relaxation parameter, each update does not exactly solves the fixed point equation though. 
+\end{rem}
+
+
+\begin{rem}[Stability]In contrast to the usual implementation of Sinkhorn's algorithm, which is numerically unstable for small $\epsilon$ because it requires to compute $e^{u/\epsilon}$ and $e^{v/\epsilon}$, the proposed iterations using the LSE operator are stable. The algorithm can thus be run for arbitrary small $\epsilon$, although the linear speed of convergence is of course impacted. 
+% This stabilizing effect is similar to the kernel absorption technics introduced in~\cite{}.  
+\end{rem}
+
+
+\begin{algorithm}[t]
+\fbox{\hspace{-.1in}\parbox{\columnwidth}{%
+\begin{algorithmic}
+\Function{Quantum-Sinkhorn}{$\mu,\nu,c,\epsilon,\rho_1,\rho_2$}
+	% \LineComment{Computes minimizer $\ga$ of~\eqref{eq-Kantorovich-regul}}
+	\algspace
+	\State $\foralls k=1,2, \quad \tau_k \in ]0,\tfrac{2 \epsilon}{\epsilon+\rho_k}[$, 
+	\Let{$\foralls (i,j) \in I \times J, \quad (u_i,v_j)$}{$(0_{d \times d}, 0_{d \times d})$}
+	\For{$s=1,2,3,\ldots$}
+		\Let{$K$}{$\Kern(u,v)$}
+		\State $\foralls i \in I, \quad u_i \RelaxAssign{\tau_1} \LSE_j(K_{i,j})-\log(\mu_i)$
+		\Let{$K$}{$\Kern(u,v)$}
+		\State $\foralls j \in J, \quad v_j \RelaxAssign{\tau_2} \LSE_i(K_{i,j})-\log(\nu_j)$
+	\EndFor
+%	\algspace
+	\State\Return{$(\ga_{i,j} = \exp(K_{i,j}))_{i,j}$}
+\EndFunction
+  \end{algorithmic}
+}}
+\caption{Quantum-Sinkhorn iterations to compute the optimal coupling $\ga$ of the regularized transportation problem~\eqref{eq-Kantorovich-regul}. The operator $\Kern$ is defined in~\eqref{eq-defn-K}.\label{alg:sinkhorn}}
+\end{algorithm}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Numerical Illustrations}
+\label{sec-numerics-interp}
+
+Figures~\ref{fig:1d-interp} and~\ref{fig:mesh} illustrates on synthetic examples of input tensor fields $(\muA,\muB)$ our interpolation method. We recall that it is obtained in two steps:
+\begin{enumerate}
+	\item One first computes the optimal $\ga$ solving~\eqref{eq-Kantorovich-regul} using Sinkhorn iterations (Algorithm~\ref{alg:sinkhorn}).
+	\item Then, for any $t \in [0,1]$, one computes $\mu_t$ using this optimal $\ga$ with formula~\eqref{eq-interpolating}.
+\end{enumerate}
+   
+Figure~\ref{fig:1d-interp} shows examples of interpolations on a 1-D domain $X=Y=[0,1]$ with tensors of dimension $d=2$ and $d=3$, and a ground cost $c_{i,j}=|x_i-y_j|^2\Id_{d \times d}$. It compares the OT interpolation, which achieves a ``mass displacement'' to the usual linear interpolation $(1-t)\mu+t\nu$, which only performs a pointwise interpolation of the tensors. 
+
+Figure~\ref{fig:mesh} shows larger scale examples. The top row corresponds to $X=Y$ being a triangulated mesh of a surface, and the cost is proportional to the squared geodesic distance $c_{i,j}=d_X(x_i,y_j)^2 \Id_{2\times 2}$. The bottom row corresponds to $X=Y=[0,1]^2$ and $d=2$, with cost $c_{i,j}=\norm{x_i-y_j}^2\Id_{2 \times 2}$, which is a typical setup for image processing (the background shows the output of an anisotropic diffusion driven by the tensor field).
+
+
+
+%%% FIG %%%
+\begin{figure}\centering
+\begin{tabular}{@{}c@{}|@{}c@{}}
+\includegraphics[width=.49\linewidth]{1d/cross-orient/linear-interp}&
+\includegraphics[width=.49\linewidth]{1d/cross-orient/interp-ellipses}\\\hline
+\includegraphics[width=.49\linewidth]{3d/plate-elong/linear-interp}&
+\includegraphics[width=.49\linewidth]{3d/plate-elong/interp-ellipses}\\\hline
+Linear interpolation & Quantum OT
+\end{tabular}
+\caption{Comparison of linear and quantum-OT interpolation (using formula~\eqref{eq-interpolating}). 
+Each row shows a field of tensors (top $d=2$, bottom $d=3$) along a linear segment from $t=0$ to $t=1$ ($t$ axis is vertical).
+} \label{fig:1d-interp}
+\end{figure}
+%%% FIG %%%

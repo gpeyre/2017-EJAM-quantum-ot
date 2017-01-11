@@ -1,0 +1,194 @@
+% !TEX root = ../TensorOT.tex
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Kantorovich Problem for Tensor-Valued Transport}
+
+We consider two measures that are sums of Dirac masses
+\eql{\label{eq-input-measures}
+	\mu = \sum_{i \in I} \mu_i \de_{x_i}
+	\qandq
+	\nu = \sum_{j \in J} \nu_j \de_{y_j}
+}
+where $(x_i)_i \subset X$ and $(y_j)_j \subset Y$, and $(\mu_i)_i \in \Ss_+^d$ and $(\nu_j)_j \in \Ss_+^d$ are collections of PSD matrices. 
+%
+Our goal is to propose a new definition of OT between $\mu$ and $\nu$. 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Tensor Transportation}
+
+Following the initial static formulation of OT by Kantorovich~\cite{Kantorovich42}, we define a coupling $\ga = \sum_{i,j}\ga_{i,j} \de_{(x_i,y_j)}$ as a measure over the product $X \times Y$ that encodes the transport of mass between $\mu$ and $\nu$. In the matrix case, $\ga_{i,j} \in \Ss_+^d$ is now a PSD matrix, describing how much of mass is moved between $\mu_i$ and $\nu_j$. 
+% 
+Exact (balanced) transport would mean that the marginals $(\ga \ones_J,\ga^\top \ones_I)$ must be equal to the input measures $(\mu,\nu)$. But as remarked by~\cite{ning2015matrix}, in contrast to the scalar case, in the matrix case (dimension $d>1$), in general this contraint is too strong, and there might exists no coupling satisfying these marginal constraints.
+%
+We advocate in this work that the natural workaround for the matrix setting is in fact the unbalanced case, and following~\cite{LieroMielkeSavareLong}, we propose to use a ``relaxed'' formulation, where the discrepancy between the marginals $(\ga \ones_J,\ga^\top \ones_I)$ and the input measures $(\mu,\nu)$ is quantified according to some divergence between measures. 
+
+In the scalar case, the most natural divergence is the Kulback-Leibler divergence (which in particular gives rise to a natural Riemannian structure on positive measures, as defined in~\cite{LieroMielkeSavareCourt,kondratyev2015,2016-chizat-focm}).  We thus propose to make use of its quantum counterpart~\eqref{eq-kl-quantum} %. 
+%
+%We hence consider
+via
+  the following convex program
+\eql{\label{eq-Kantorovich}
+	W(\mu,\nu) = \min_{\ga}\ \dotp{\ga}{c} + \rho_1 \KL(\ga \ones_J|\mu) + \rho_2 \KL(\ga^\top \ones_I|\nu) 
+}
+subject to the constraint $\foralls (i,j), \ga_{i,j} \in \Ss_+^d$.
+Here $\rho_1,\rho_2 >0$ are constants balancing the ``transport'' effect versus the local modification of the matrices. 
+
+The matrix $c_{i,j} \in \RR^{d \times d}$ measures the cost of displacing an amount of (matrix) mass $\ga_{i,j}$ between $x_i$ and $y_j$  as $\tr(\ga_{i,j}c_{i,j})$. % \justin{Should one of these be transposed?}\gabriel{Since $\ga_{i,j}$ is symmetric, this is not needed. But we can add it if you feel it is confusing.}.\justin{Got it!}
+%
+A typical cost, assuming $X=Y$ is a metric space endowed with a distance $d_X$, is
+\eq{
+	c_{i,j} = d_X(x_i,y_j)^\al \Id_{d \times d}, 
+}
+for some $\al>0$.  In this case, one should interpret the trace as the global mass of a tensor, and the total transportation cost is simply 
+\eq{
+	\dotp{\ga}{c} = \sum_{i,j} d_X(x_i,y_j)^\al \tr(\ga_{i,j}).
+}
+
+
+\begin{rem}[Classical OT]
+	%Note that i
+	In the scalar case $d=1$, \eqref{eq-Kantorovich} recovers exactly the log-entropic definition~\cite{LieroMielkeSavareLong} of unbalanced optimal transport, which is studied numerically in~\cite{2016-chizat-sinkhorn}. %Note also that f
+	For isotropic tensors, i.e., all $\mu_i$ and $\nu_j$ are scalar multiples of the identity $\Id_{d \times d}$, the computation also collapses to the scalar case (the $\ga_{i,j}$ are also isotropic). More generally, if all the $(\mu_i,\nu_j)_{i,j}$ commute, they diagonalize in the same orthogonal basis, and~\eqref{eq-Kantorovich} reduces to performing $d$ independent unbalanced OT along each eigendirection. 
+\end{rem}
+
+\begin{rem}[Cost between single Dirac masses]
+	When $\mu=P \de_{x}$ and $\nu=Q \de_{x}$ are two Dirac masses are the same location $x$ and associated to tensors $(P,Q) \in (\Ss_+^d)^2$,
+	one obtains the following ``metric'' between tensors (assuming $\rho_1=\rho_2=\rho$ for simplicity)
+	\eql{\label{eq-cost-single-dirac}
+		W(P \de_{x},Q \de_{x}) = D(P,Q) \eqdef \tr\pa{
+			P+Q-2 \mathfrak{M}(P,Q)
+		}^{\frac{1}{2}}
+	}	
+	where $\mathfrak{M}(P,Q) \eqdef \exp(\log(P)/2+\log(Q)/2)$.
+	%
+	Unfortunately, in general $D$ does not satisfy the triangle inequality.
+	Note that when $(P,Q)$ commute, one has $D(P,Q) = \norm{\sqrt{P}-\sqrt{Q}}$ which indeed satisfies the triangle inequality. 
+%	\justin{I couldn't parse the previous sentence}\gabriel{I have simplified and only put the formula when the spikes are at the same location. Is it clearer ?}\justin{Yes, thanks!}
+	
+%	
+%	 where $(x,y) \in X \times Y$, $(P,Q) \in (\Ss_+^d)^2$, denoting $\bar c(x,y) \Id_{d \times d}$ the cost (assumed to be multiple of identity for simplicity), one finds that (when $\rho_1=\rho_2=\rho$)
+%	\eq{
+%		W(P \de_{x},Q \de_y) = \rho \tr(
+%			P+Q-2 e^{-\frac{\bar c(x,y)}{2\rho}} \mathfrak{M}(P,Q)
+%		)
+%	} 
+	%
+	% Note that if one uses instead $\mathfrak{M}(P,Q)=( \sqrt{P}Q\sqrt{P} )^{\frac{1}{2}}$, one recovers for $D$ the Bure metric (which is actually the Wasserstein distance on the set of Gaussian parameterized by covariances matrices), which is the smallest ``monotone'' metric.
+	% 
+	% The case $\mathfrak{M}(P,Q)=\sqrt{P}\sqrt{Q}$ is the so-called Wigner-Yanase metric. 
+\end{rem}
+
+\begin{rem}[Quantum transport on curved geometries]
+	If $(\mu,\nu)$ are defined on a non-Euclidean space $Y=X$, like a smooth manifold, then formulation~\eqref{eq-Kantorovich} should be handled with care, since it assumes all the tensors $(\mu_i,\nu_j)_{i,j}$ are defined %expressed in coordinates 
+	in some common basis. 
+	%
+	For smooth manifolds, the simplest workaround is to assume that these tensors are defined with respect to carefully selected orthogonal bases of the tangent planes, so that the field of bases is itself smooth. Unless the manifold is parallelizable, in particular if it has a trivial topology, it is not possible to obtain a globally smooth orthonormal basis; in general, any such field necessarily has a few singular points. In the following, we compute smoothly-varying orthogonal bases of the tangent planes following the method of~\cite{crane2010trivial}. 
+	%
+	In this setting, the cost is usually chosen to be $c_{i,j} = d_X(x_i,x_j)^\al \Id_{d \times d}$ where $d_X$ is the geodesic distance on $X$. 
+\end{rem}
+
+\if 0
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Tensor Transportation on Surfaces}
+
+
+\todo{If we use Keenan's code, no need for such a long paragraph, only a remark is ok to explain that tangent plane needs to be properly parameterized, with the caveat of having a few singular points.}
+
+The formulation so far assumed that measures $\mu$ and $\nu$ are defined on an Euclidean spaces $(X,Y)$. The usual choice of metric, assuming $X=Y$ is some $d$-dimensional smooth manifolds, is to use $c_{i,j} = d(x_i,x_j)_X^\al \Id_{d \times d}$ where $d_X$ is the geodesic distance between $(x_i,x_j) \in X^2$. 
+%
+In our setting of tensor-valued measures, an extra difficulty, with respect to the usual scalar OT case, is that each tensors $\mu_i \in \Ss_d$ is now defined with respect to some particular choice of basis $B_i$ of the tangent space $\Tt_i$ of $X$ at $x_i \in X$. 
+% 
+This implies that one needs to settle a change of basis when transport such a tensor over a different tangent plane $\Tt_j$ at $x_j$. We name $T_{i,j}$ this change of basis, which corresponds to the notion of parallel transport from differential geometry.
+
+Assuming that each $\ga_{i,j}$ is represented with respect to the basis $B_i$ of $\Tt_i$, the marginalization operator $\ga \ones_J = (\sum_j \ga_{i,j})_j$ stays the same (because all the summed tensors are represented with respect to a common basis $B_i$), but one needs to re-define the marginalization operator $\ga^\top \ones_J$ as
+\eql{\label{eq-marginalization-surf}
+	\ga^\top \ones_I \eqdef
+	\sum_i T_{i,j} \ga_{i,j} T_{i,j}^\top.
+}
+
+
+\begin{rem}[Invariance property]\label{rem-invariance}
+	It is important that the overall transport does not depend on a particular choice of basis $B_i$ in each tangent plane. This means that the computation of the parallel transport $T_{i,j}$ should be such that, replacing $B_i$ by $B_i R_i$ where $R_i \in \Oo_d$ (an orthogonal matrix), then the overall transportation problem is unchanged after the replacement of $(\mu_i,\nu_j,\ga_{i,j})$ by $(R_i \mu_i R_i^\top, R_j \nu_j R_j^\top, R_i\ga_{i,j}R_i^\top)$.
+\end{rem}
+
+\begin{rem}[Extrinsic parallel transport]
+	Assuming that $X$ is a $d$-dimensional manifold embedded in some Euclidean space $\RR^{d'}$ with $d' \geq d$, so that tangent plane bases are represented as matrices $B_i \in \RR^{d' \times d}$. In this case, a simple choice of parallel transport operator is $T_{i,j} \eqdef B_j^\top B_i \in \RR^{d \times d}$. Although this choice is quite crude, we found it to be sufficient for the targeted sets of applications. Note also that this choice satisfies the invariance property of Remark~\ref{rem-invariance}. It is of course possible to use more advance constructions of discrete connexions, for instance on triangulated surfaces, see~\cite{crane2010trivial,liu2016discrete}.
+\end{rem}
+
+\fi
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Quantum Transport Interpolation}
+
+\newcommand{\muA}{\mu}
+\newcommand{\muB}{\nu}
+
+
+Given two input measures $(\muA,\muB)$, we denote $\ga$ a solution of~\eqref{eq-Kantorovich} (in practice, its regularized version, see~\eqref{eq-Kantorovich-regul} below). The coupling $\ga$ defines a (fuzzy) correspondance between the tensor fields. A typical use of this correspondance is to compute a continuous interpolation between these fields. Section~\ref{sec-numerics-interp} shows some numerical illustration of this interpolation. Note also that Section~\ref{sec-q-bary} proposes a generalization of this idea to compute an interpolation (barycenters) between more than two input fields.  
+
+
+Mimicking the definition of the optimal transport interpolation (the so-called McCann displacement interpolation see for instance~\cite{santambrogio2015optimal}), we propose to use $\gamma$ to define a path $t \in [0,1] \mapsto \mu_t$ interpolating between $(\muA,\muB)$. 
+%
+For simplicity, we assume the cost has the form $c_{i,j}=d_X(x_i,y_j)^\al \Id_{d \times d}$ for some ground metric $d_X$ on $X=Y$. We also suppose we can compute efficiently the interpolation between two points $(x_i,y_j) \in X^2$ as
+\eq{
+	x_{i,j}^t \eqdef \uargmin{x \in X} (1-t)d_X^2(x_i,x) + t d_X^2(y_j,x). 
+}
+For instance, over Euclidean spaces, $g_t$ is simply the linear interpolation, and over more general manifold, it is a geodesic segment.
+We also denote
+\eq{
+	\bar\muA_i \eqdef \muA_i \Big( \sum_{j} \ga_{i,j} \Big)^{-1} 
+	\qandq
+	\bar\muB_j \eqdef \muB_j \Big( \sum_{i} \ga_{i,j} \Big)^{-1}
+}
+the adjustment factors which account for the imperfect match of the marginal associated to a solution of~\eqref{eq-Kantorovich-regul}, and the adjusted coupling is
+\eq{
+	\ga_{i,j}^t \eqdef [(1-t) \bar\muA_i + t \bar\muB_{j}] \ga_{i,j}.
+}
+
+Finally, the interpolating measure is then defined as
+\eql{\label{eq-interpolating}
+	\foralls t \in [0,1], \quad
+	\mu_t \eqdef \sum_{i,j} \ga_{i,j}^t \de_{x_{i,j}^t}.
+}
+One easily verifies that this measure indeed interpolates the two input measures, i.e. 
+$(\mu_{t=0},\mu_{t=1})=(\muA,\muB)$. 
+%
+This formula~\eqref{eq-interpolating} generates the interpolation by creating a Dirac's tensor $ \ga_{i,j}^t \de_{x_{i,j}^t}$ for each coupling entry $\ga_{i,j}$, and this tensor travels between $\mu_i \de_{x_i}$ (at $t=0$) and $\nu_j \de_{y_j}$ (at $t=1$).
+
+\begin{rem}[Computational cost] We observed numerically that, similarely to the scalar case, the optimal coupling $\ga$ is sparse, meaning that only of the order of $O(|I|)$ non-zero terms are involved in the interpolating measure~\eqref{eq-interpolating}. Note that the entropic regularization algorithm detailed in Section~\ref{eq-q-sink} destroys this exact sparsity, but we found numerically that that thresholding to zero the small entries of $\ga$ generates accurate approximations. 
+\end{rem}
+
+% \fx{Maybe, one can mention other interpolation than just linear on the space of matrices. This would be something that I would comment on at least.}
+
+%Define the log-geometric mean between two PSD matrices $(P_0,P_1)$
+%\begin{align*}
+%	P_t &= \uargmin{Q} (1-t)\KL(P_0|Q) + t \KL(P_1|Q) \\
+%	&= \exp( (1-t)\log(P_0)+t\log(P_1) ).
+%\end{align*}
+%\todo{ref to the INRIA's paper}
+
+
+
+\if 0
+Lastly, once the optimal $\ga$ has been computed, the interpolation formula~\eqref{eq-interpolating} needs to be updated as
+\eq{
+	\foralls t \in [0,1], \quad
+	\mu_t = \sum_{i,j} [(1-t) A_{0,i} + t A_{1,j}] [T_{i,j}^t \ga_{i,j} T_{i,j}^{t,\top}] \de_{g_t(x_i,y_j)}
+}
+where $g_t$ parameterizes geodesics, i.e. denoting $d_X$ the geodesic distance, formally
+\eq{
+	g_t(x_0,x_1) \eqdef \uargmin{x \in X} (1-t)d_X^2(x_0,x) + t d_X^2(x_1,x). 
+}
+%and $t \in [0,1] \mapsto�T_{i,j}^t$ is an interpolation between $T_{i,j}^{t=0} = \Id$ (for $t=0$) and $T_{i,j}^{t=1}=T_{i,j}$. 
+Denoting $T_{i,j}=T(x_i,x_j)$, one defines $T_{i,j}^{t} = T(x_i,g_t(x_i,y_j))$ which interpolates between $T_{i,j}^{t=0} = \Id$ and $T_{i,j}^{t=1}=T_{i,j}$. 
+\fi
+
+\if 0
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Extension to Non-symmetric Tensors}
+
+\todo{Explain here the great idea of Justin, where the $\gamma$ is computed on the symmetric part (obtained by left or right polar decomposition) and then you interpolation on $SO(d)$ the orthogonal part. Beware that one needs to impose sign of the determinant to be fixed (e.g. positive) otherwise $SO((d)$ interpolation would fail. }
+
+\fi
