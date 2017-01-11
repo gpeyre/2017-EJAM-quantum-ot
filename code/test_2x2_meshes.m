@@ -179,7 +179,7 @@ for k=1:m
     saveas(gcf, [rep 'anisodiffus-' num2str(k) '.png'], 'png');
     % plot using elevations
     W = squeeze( optD.Ua(:,3,:) );
-    kappa = .05; % strenght of elevation
+    kappa = .03; % strenght of elevation
     clf;  plot_mesh(optD.Va + kappa*repmat(f{k}'-1/2, [3 1]) .* W ,optD.Fa);
 	colormap gray(256); drawnow;  
     saveas(gcf, [rep 'anisodiffus-' num2str(k) '.png'], 'png');
