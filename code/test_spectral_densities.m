@@ -7,9 +7,17 @@ addpath('toolbox_quantum/');
 addpath('data/textures/');
 
 name = 'grayfabric';
-name = 'fabric';
 name = 'stonewall';
 name = 'grunge';
+
+name = 'beigefabric';
+name = 'fabric';
+name = 'grayfabric';
+name = 'rera';
+name = 'wood';
+name = '5310387074_48aabd4a1b_o'; % ok
+name = '8471333239_c68649960a_o'; % moyen
+name = '9395669296_7d90eab03a_o'; % bof
 
 f = load_image(name);
 f = f/255;
@@ -44,7 +52,10 @@ imageplot( squeeze(a(1,:,:,:) ) );
 title('Orientation');
 colormap jet(256); 
 
-clf; image(synth_func(0)); 
-axis image; axis off;
+clf;
+img(log(S(:,:,3)+1e-10)); axis image; axis off; colorbar;
+
+% clf; image(synth_func(0)); 
+% axis image; axis off;
 
 

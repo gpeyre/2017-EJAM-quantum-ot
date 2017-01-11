@@ -26,7 +26,10 @@ switch logexp_fast_mode
         y = tensor_operation(x, @logm, 0);
     case {1,2}
         y = tensor_operation(x, @log, 1);
-    case 3        % pbm?
+    case 3     % works only for 2x2!
+        if size(x,1)~=2
+            error('Works only for 2x2 matrices');
+        end
         % explicit 2x2
         a = x(1,1,:,:); b = x(2,2,:,:); c = x(1,2,:,:);
         % eigenvalue

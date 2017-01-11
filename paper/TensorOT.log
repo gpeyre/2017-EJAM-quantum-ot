@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.9.19)  11 JAN 2017 18:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.9.19)  11 JAN 2017 18:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1812,7 +1812,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 130.
 Here is how much of TeX's memory you used:
  12199 strings out of 493014
  195854 string characters out of 6133351
- 324223 words of memory out of 5000000
+ 324374 words of memory out of 5000000
  14972 multiletter control sequences out of 15000+600000
  55946 words of font info for 286 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1841,7 +1841,7 @@ onts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/ty
 pe1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/ti
 mes/utmbi8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmr8
 a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on TensorOT.pdf (9 pages, 10048275 bytes).
+Output written on TensorOT.pdf (9 pages, 10046260 bytes).
 PDF statistics:
  752 PDF objects out of 1000 (max. 8388607)
  467 compressed objects within 5 object streams

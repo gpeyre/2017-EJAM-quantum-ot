@@ -29,15 +29,19 @@ t = (K11+K22)/2;
 a = K11 - t;
 b = K12;
 
-ab2 = sqrt(a.^2+b.^2);
+ab2 = sqrt(a.^2+abs(b).^2);
 l1 = ab2  + t;
 l2 = -ab2 + t;
 
-theta = atan2( ab2-a, b );
-
-e1(:,:,1) = cos(theta);
-e1(:,:,2) = sin(theta);
-e2(:,:,1) = -sin(theta);
-e2(:,:,2) = cos(theta);
+if isreal(b)
+    theta = atan2( ab2-a, b );
+    e1(:,:,1) = cos(theta);
+    e1(:,:,2) = sin(theta);
+    e2(:,:,1) = -sin(theta);
+    e2(:,:,2) = cos(theta);
+else
+    % need alternate formulas
+    %%
+end
 
 end

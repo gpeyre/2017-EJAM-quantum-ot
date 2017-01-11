@@ -36,16 +36,19 @@ switch logexp_fast_mode
         % diagonalization
         x = tensor_operation(x, @exp, 1);
     case 2
+        if size(x,1)~=2
+            error('Works only for 2x2 matrices');
+        end
         % explicit 2x2
         a = x(1,1,:,:); b = x(1,2,:,:); d = x(2,2,:,:);
         S = exp((a+d)/2);
-        D = 1/2 * sqrt( (a-d).^2 + 4*b.^2 );
+        D = 1/2 * sqrt( (a-d).^2 + 4*abs(b).^2 );
         CD = cosh(D); SD = sinh(D)./D;
         L = (a-d) .* SD / 2;
         x(1,1,:,:) = S .* ( CD + L );
         x(2,2,:,:) = S .* ( CD - L );
         x(1,2,:,:) = S .* b .* SD;     
-        x(2,1,:,:) = x(1,2,:,:);
+        x(2,1,:,:) = conj(x(1,2,:,:));
     case 4
         x = tensorExp2x2(x);
     otherwise
