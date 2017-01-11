@@ -42,6 +42,11 @@ if isreal(b)
 else
     % need alternate formulas
     %%
+    T = (ab2-a) ./ b;    
+    e1(:,:,1) = 1./sqrt(1+T.^2);
+    e1(:,:,2) = T./sqrt(1+T.^2);
+    e2(:,:,1) = -conj( e1(:,:,2) );
+    e2(:,:,2) = conj( e1(:,:,1) );        
 end
 
 end

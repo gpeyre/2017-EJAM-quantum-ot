@@ -1,8 +1,8 @@
-function [synth_func,T,Ts,S,U] = texton_estimation(f, n, options)
+function [Ts,f0,T,S,U] = texton_estimation(f, n, options)
 
 % texton_estimation - estimate covariance and texton
 %
-%   [synth_func,T,Ts,S,U] = texton_estimation(f, n, options); 
+%   [Ts,f0,T,S,U]  = texton_estimation(f, n, options); 
 %
 %   Ts(:,:,i,j) is the sqtm of T(:,:,i,j), i.e. the texton.
 %
@@ -18,7 +18,6 @@ estimator_type = getoptions(options, 'estimator_type', 'periodic');
 q = getoptions(options, 'samples', 200);
 
 n0 = size(f,1);
-
 
 % window for estimation
 w = sin( pi*(0:n-1)'/n ).^2; w = w*w';
@@ -64,27 +63,5 @@ warning on;
 
 f0 = mean(mean(f,1),2);
 
-synth_func = @(s)texture_synth(Ts,f0,s);
-
-
-
-end
-
-function g = texture_synth(Ts,f0,s)
-
-n = size(Ts,3);
-
-% synthesize by convolving with a noise
-if s>0
-    randn('seed', s);
-end
-W = randn(n)/n;
-W = W-mean(W(:))+1/n^2;
-W = fft2(W);
-%
-g = tensor_mult(Ts, reshape(repmat(W, [3 1]), [3 1 n n]));
-g = permute(squeeze(g), [2 3 1]);
-g = real( ifft2(g) );
-g = g + repmat( f0, [n n 1] );
 
 end

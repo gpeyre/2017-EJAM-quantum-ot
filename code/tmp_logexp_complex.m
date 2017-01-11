@@ -2,7 +2,7 @@
 % test for expM/logM of complex matrices
 
 global logexp_fast_mode;
-logexp_fast_mode = 2;
+logexp_fast_mode = 0;
 
 d = 2;
 A = randn(d)+1i*randn(d);

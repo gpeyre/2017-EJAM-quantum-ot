@@ -3,7 +3,7 @@
 % Need to implement a windowing estimator. 
 
 rep = 'results/texturesynthesis/';
-[~,~] = mkdir(rep);
+
 
 addpath('toolbox/');
 addpath('toolbox_quantum/');
@@ -48,12 +48,11 @@ for k=1:2
     imageplot( texture_synth(Ts{k},f0{k}) );    
     clf;
     img(log(S{k}(:,:,3)+1e-10)); axis image; axis off; colorbar;    
-    % only retain most energetic positions in fftshift domain.
-    Hs{k} = fshift( Ts{k} );
+    % only retain most energetic positions
     x = (0:n-1)'/n; [Y,X] = meshgrid(x,x);
-    E = trM( Hs{k}, 1); [~,I] = sort(E(:), 'descend'); I = I(1:q);
+    E = trM( fshift(Ts{k}), 1); [~,I] = sort(E(:), 'descend'); I = I(1:q);
     xy{k} = [X(I) Y(I)];
-    mu{k} = Hs{k}(:,:,I);
+    mu{k} = Ts{k}(:,:,I);
 end
 
 %%
@@ -87,18 +86,17 @@ imageplot( { trM(resh(T{1}), 1), ...
              trM(resh(nu{1}), 1) });
 % residual
 for k=1:2
-    R{k} = Hs{k}-resh(nu{k});
+    R{k} = Ts{k}-resh(nu{k});
 end
 % synthesize
 for k=1:m
     t=(k-1)/(m-1);
     % interpolate linearly the residual
     r = (1-t)*R{1} + t*R{2};
-    Hs_k = resh(nu{k}) + r;
-    Rs_k = fshift(Hs_k);
+    Ts_k = resh(nu{k}) + r;
     f0_k = (1-t)*f0{1} + t*f0{2};
-    g = texture_synth(Rs_k,f0_k);
-    imwrite(rescale(g), [rep 'synthesis-' num2str(k) '.png'], 'png');
+    g = texture_synth(Ts_k,f0_k);
+    imwrite();
 end
          
 return;
