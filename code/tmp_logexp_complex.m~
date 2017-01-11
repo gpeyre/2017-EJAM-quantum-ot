@@ -8,11 +8,10 @@ d = 2;
 A = randn(d)+1i*randn(d);
 X = A*A';
 
-myerr = @(x,y)norm(x(:)-y(:))/norm(x(:));
+norm( logm(X) logM(X)
 
-myerr( logm(X) , logM(X) )
-
-myerr( expm(logm(X)), expM(logm(X)) ) 
+expm(logm(X))
+expM(logm(X))
 
 
 return;

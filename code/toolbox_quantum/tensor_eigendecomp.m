@@ -40,11 +40,14 @@ if isreal(b)
     e2(:,:,1) = -sin(theta);
     e2(:,:,2) = cos(theta);
 else
-    % need alternate formulas
-    %%
     T = (ab2-a) ./ b;    
     e1(:,:,1) = 1./sqrt(1+T.^2);
     e1(:,:,2) = T./sqrt(1+T.^2);
+    % problem, need normalizing
+    a = sqrt( abs(e1(:,:,1)).^2 + abs(e1(:,:,2)).^2 );
+    e1(:,:,1) = e1(:,:,1) ./ a;
+    e1(:,:,2) = e1(:,:,2) ./ a;
+    %
     e2(:,:,1) = -conj( e1(:,:,2) );
     e2(:,:,2) = conj( e1(:,:,1) );        
 end
