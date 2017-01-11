@@ -25,25 +25,24 @@ if nargin<4
     r1 = size(M,3);
 end
 
-if ndims(M)<2 || ndims(M)>3
-    error('Works only for grayscale or color images');
-end
 
-if ndims(M)==3 && size(M,3)<4
+if ndims(M)>=3
     % RVB image
-    M1 = zeros(p1,q1, size(M,3));
-    for m=1:size(M,3)
-        M1(:,:,m) = image_resize(M(:,:,m), p1, q1);
+    M1 = zeros(p1,q1, size(M,3), size(M,4));
+    for i=1:size(M,3)
+        for j=1:size(M,4)
+            M1(:,:,i,j) = image_resize(M(:,:,i,j), p1, q1);
+        end
     end
     return;
-elseif ndims(M)==3
-    p = size(M,1);
-    q = size(M,2);
-    r = size(M,3);
-    [Y,X,Z] = meshgrid( (0:q-1)/(q-1), (0:p-1)/(p-1), (0:r-1)/(r-1)  );
-    [YI,XI,ZI] = meshgrid( (0:q1-1)/(q1-1), (0:p1-1)/(p1-1), (0:r1-1)/(r1-1) );
-    M1 = interp3( Y,X,Z, M, YI,XI,ZI ,'cubic');
-    return;
+% elseif ndims(M)==3
+%     p = size(M,1);
+%     q = size(M,2);
+%     r = size(M,3);
+%     [Y,X,Z] = meshgrid( (0:q-1)/(q-1), (0:p-1)/(p-1), (0:r-1)/(r-1)  );
+%     [YI,XI,ZI] = meshgrid( (0:q1-1)/(q1-1), (0:p1-1)/(p1-1), (0:r1-1)/(r1-1) );
+%     M1 = interp3( Y,X,Z, M, YI,XI,ZI ,'cubic');
+%     return;
 end
 
 p = size(M,1);

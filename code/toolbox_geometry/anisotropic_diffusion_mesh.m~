@@ -1,12 +1,7 @@
 function [f, Va,Fa,Ta,Ua] = anisotropic_diffusion_mesh(V, F, T, f, options)
 
-% anisotropic_diffusion_mesh - perform an anisotropic tensor diffusion on a mesh
-%
-%   [f, Va,Fa,Ta,Ua] = anisotropic_diffusion_mesh(V, F, T, f, options);
-%
-%   T should be of size (2,2,N).
-%
-%   Copyright (c) 2017 Gabriel Peyre
+% anisotropic_diffusion_mesh - perform an anisotropic tensor diffusion on a
+ mesh
 
 options.null = 0;
 Fa = getoptions(options, 'Fa', []);
@@ -15,18 +10,11 @@ Ta = getoptions(options, 'Ta', []);
 Ua = getoptions(options, 'Ua', []);
 nsub = getoptions(options, 'nsub', 2); 
 
-% subdivide mesh 
-if isempty(Va)
+% subdivide mesh and tensor field
+if isempty('Va')
     options.sub_type = 'loop'; options.verb = 0;
     [Va,Fa] = perform_mesh_subdivision(V, F, nsub, options);
-    opt.singularity = [1,2];
-    Ua = mesh_eigenbasis(Va,Fa, opt);
-end
-Na = size(Va,2);
-Pa = size(Fa,2);
-
-% subdivide tensor field
-if isempty(Ta)
+    % subdivide tensor field
     Ta = [];
     for i=1:2
         for j=1:2
@@ -35,8 +23,12 @@ if isempty(Ta)
             Ta(i,j,:) = reshape(a1, [1 1 Na]);
         end
     end
+    opt.singularity = [1,2];
+    Ua = mesh_eigenbasis(Va,Fa, opt);
 end
 
+Na = size(Va,2);
+Pa = size(Fa,2);
 % ortho-bases on faces
 Ua1 = ( Ua(:,:,Fa(1,:)) + Ua(:,:,Fa(2,:)) + Ua(:,:,Fa(3,:)) )/3;
 Ta1 = ( Ta(:,:,Fa(1,:)) + Ta(:,:,Fa(2,:)) + Ta(:,:,Fa(3,:)) )/3;

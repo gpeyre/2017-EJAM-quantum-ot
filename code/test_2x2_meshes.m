@@ -52,32 +52,10 @@ plot_tensor_mesh(V,F, U, T, opt);
 colormap gray(256)
 saveas(gcf, [rep 'input-full.png'], 'png');
 
-%% 
-% Anisotropic diffusion. 
-
-optD.niter = 150;
-optD.tau = .1/1e4;
-[f, optD.Va,optD.Fa,optD.Ta,optD.Ua] = anisotropic_diffusion_mesh(V, F, T, [], optD);
-
-opt.face_vertex_color = f;
-clf;  plot_mesh(Va,Fa, opt);
-colormap parula(256);
-
 %%
-% Geodesic distance.
+% Approximate geodesic distance.
 
-if 0
-    % approximate geodesic distance on the mesh using Varadhan's formula
-    Mesh = load_mesh_operators(V,F);
-    t_Varadhan = 1e-2;  % time step for Varadhan formula
-    t_Varadhan = 1e-3;  % time step for Varadhan formula
-    Z = inv( full( diag(Mesh.AreaV) + t_Varadhan * Mesh.Delta ));
-    Z = -t_Varadhan*log(Z);
-    D = sqrt(max(Z,0)); 
-else
-    % approximate using graph distance
-    D = graph_distance_mesh(V,F);
-end
+D = graph_distance_mesh(V,F);
 D = D/max(D(:));
 
 % display geodesic distance
@@ -86,33 +64,34 @@ opt.face_vertex_color = rescale( D(k,:)' );
 clf;  plot_mesh(V,F, opt);
 colormap parula(256);
 
-% generate tensors, W is the normal, and V1/V2 supposed to be tangent
-% C1/C2 are min/max curvature estimates
-if 0
-options.curvature_smoothing = 3;
-[V2,V1,C2,C1,Cm,Gc,W] = compute_curvature(V,F,options);
-[C1,C2] = deal(C1/max(abs(C1)), C2/max(abs(C1)));
-end
-
 %% 
 % Generate two tensor fields
 
-% find cool seed point
+% find cool seed points for the "bumps"
 switch name
     case 'moomoo'
-        c = [19 686];
+        h = {[19] [686]};
+        h = {[9 374 424 524 787 804] [258]}; 
     otherwise
-        [~,c(1)] = min( V(2,:) );
-        [~,c(1)] = max( D(c(1),:) );
-        [~,c(2)] = max( D(c(1),:) );
+        [~,h(1)] = min( V(2,:) );
+        [~,h(1)] = max( D(h(1),:) );
+        [~,h(2)] = max( D(h(1),:) );
 end
-sigma = .1;
-aniso = .1;
+
+sigma = [.12 .06]; % width of each "bump"
+aniso = [.03 1]; % anisotropy of each "bump"
+ampl = [1 .15];
 mu = {};
-for i=1:2
-    a = exp( -D(:,c(i)).^2/(2*sigma^2) );
-    mu{i} = tensor_diag(a(:),a(:)*aniso);
+vmin = .02;
+vmin = .06;
+for k=1:2
+    a = zeros(N,1);
+    for i=1:length(h{k})
+        a = a + exp( -D(:,h{k}(i)).^2/(2*sigma(k)^2) );
+    end
+    mu{k} = tensor_diag(vmin+a(:),vmin+a(:)*aniso(k));
 end
+
 
 opt.scale = .04;
 opt.nsub = 2;
@@ -124,58 +103,84 @@ for i=1:2
 end
 
 %%
-% Ground cost and parallel transport.
-
-c = reshape( tensor_diag(D(:).^2,D(:).^2), [2 2 N N]);
-
-%%
-% MaCann-like interpolation.
+% Sinkhorn.
 
 global logexp_fast_mode;
 logexp_fast_mode = 1; % slow
 logexp_fast_mode = 4; % fast mex
 
-% regularization
-epsilon = (.12)^2;  % large
-epsilon = (.08)^2;  % medium
-% marginal fidelity
-rho = 1; 
-
+% ground cost
+c = reshape( tensor_diag(D(:).^2,D(:).^2), [2 2 N N]);
+epsilon = (.08)^2;  % regularization
+rho = 1;  % marginal fidelity
 options.niter = 500; % ok for .05^2
 options.disp_rate = NaN;
-tic;
 [gamma,u,v,err] = quantum_sinkhorn(mu{1},mu{2},c,epsilon,rho, options);
-toc
 
-% Compute interpolation using an heuristic formula.
-m = 7; % number of barycenters
+%%
+%  MaCann-like interpolation.
+
+m = 9; % number of barycenters
 nu = quantum_interp(gamma, mu, m, D.^2);
-% rendering
+% correct for problems
+for k=1:m
+    [e1,e2,l1,l2] = tensor_eigendecomp(nu{k});
+    l1 = max(l1,vmin); l2 = max(l2,vmin);
+    nu{k} = tensor_eigenrecomp(e1,e2,l1,l2);    
+end
+    
+
+%%
+% Fix distribution of traces to some input.
+
+if 0
+% reference histogram for eigenvalues
+sigma = .1;
+H = linspace(vmin,1,N).^2;
+H = vmin + exp(-linspace(-1,1,N).^2/(2*sigma^2));
+for k=1:m
+    [e1,e2,l1,l2] = tensor_eigendecomp(nu{k});
+    l1 = max(l1,vmin); l2 = max(l2,vmin);
+    %
+    Tr = l1+l2; 
+    Tr1 = hist_eq(Tr, H);
+    l1 = l1 .* Tr1 ./ Tr; l2 = l2 .* Tr1 ./ Tr;
+    %
+    nu{k} = tensor_eigenrecomp(e1,e2,l1,l2);    
+end
+end
+
+
+%%
+% Rendering.
+
 opt.scale = .04;
 for k=1:m
+    t = (k-1)/(m-1);
     clf;
+    opt.color_ellipses = [t 0 1-t];
     plot_tensor_mesh(V,F, U, nu{k}, opt);
-    colormap parula(256);
+    colormap parula(256); drawnow;
     saveas(gcf, [rep 'interpol-' num2str(k) '.png'], 'png');
 end
 
-%%
-% Barycenters.
+%% 
+% Anisotropic diffusion rendering. 
 
-% 
-options.disp_rate = NaN;
-options.niter = 500/2; % sinkhorn #iterates
-nu = {};
+clear optD;
+optD.niter = 150; % diffusion #iter
+optD.tau = .05/1e4;
 for k=1:m
-    t = (k-1)/(m-1);
-    w = [1-t t];
-    fprintf('Barycenter %d/%d:', k, m);
-    [nu{k},gamma,err] = quantum_barycenters(mu,c,rho,epsilon,w,options);
-end
-% rendering
-for k=1:m
-    clf;
-    plot_tensor_mesh(V,F, U, nu{k}, opt);
-    colormap parula(256);
-    saveas(gcf, [rep 'barycenter-' num2str(k) '.png'], 'png');
+    [f{k}, optD.Va,optD.Fa,T,optD.Ua] = anisotropic_diffusion_mesh(V, F,nu{k}, [], optD);
+    % plot using colors
+    opt.face_vertex_color = f{k};
+    clf;  plot_mesh(optD.Va,optD.Fa, opt);
+	colormap jet(256); drawnow;  
+    saveas(gcf, [rep 'anisodiffus-' num2str(k) '.png'], 'png');
+    % plot using elevations
+    W = squeeze( optD.Ua(:,3,:) );
+    kappa = .05; % strenght of elevation
+    clf;  plot_mesh(optD.Va + kappa*repmat(f{k}'-1/2, [3 1]) .* W ,optD.Fa);
+	colormap gray(256); drawnow;  
+    saveas(gcf, [rep 'anisodiffus-' num2str(k) '.png'], 'png');
 end

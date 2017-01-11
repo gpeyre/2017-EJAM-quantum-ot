@@ -75,9 +75,7 @@ rho = 1;  %medium
 options.niter = 500; % ok for .05^2
 options.disp_rate = NaN;
 options.tau = 1.8*epsilon/(rho+epsilon);  % prox step, use extrapolation to seed up
-tic; 
 [gamma,u,v,err] = quantum_sinkhorn(mu{1},mu{2},c,epsilon,rho, options);
-toc
 
 %%
 % Compute interpolation using an heuristic McCann-like formula.
