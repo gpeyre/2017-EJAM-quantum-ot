@@ -1,0 +1,29 @@
+%%
+% Tests of gaussian texture synthesis.
+
+
+addpath('toolbox/');
+addpath('toolbox_quantum/');
+addpath('data/textures/');
+
+a = dir('data/textures/*.png');
+
+
+rep = ['results/texturesynth-samples/'];
+[~,~] = mkdir(rep);
+
+
+n = 256;
+options.samples = 1;
+for k=1:length(a)
+    name = a(k).name(1:end-4);    
+    f = load_image(name) / 255;   
+    imwrite(f(1:n,1:n,:),[rep name '-original.png'], 'png' );
+    [Ts,f0] = texton_estimation(f, n, options); 
+    g = texture_synth(Ts,f0);
+    imwrite(f(1:n,1:n,:),[rep name '-synthesized.png'], 'png' );
+    % spectrum
+    Hs{k} = fshift( Ts{k} );
+    A = real(trM(Hs{k},1)); A(end/2+1,end/2+1) = Inf; A(end/2+1,end/2+1) = min(A(:));
+
+end

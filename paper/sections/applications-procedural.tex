@@ -1,0 +1,47 @@
+% !TEX root = ../TensorOT.tex
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Anisotropic Space-varying Procedural Noise}
+
+Texture synthesis using procedural noise functions is widely used in rendering pipelines and video games because of both its low storage cost and the fact that it is typically parameterized by a few meaningful parameters~\cite{LagaeSurvey}. 
+%
+Following~\cite{LagaImproving} we consider here a spatially-varying Gabor noise function (i.e. a non-stationary Gaussian noise), whose covariance function is parameterized using a PSD-valued field $\mu$. 
+%
+Quantum optimal transport allows to interpolate and navigate between these noise functions by transporting the corresponding tensor fields. 
+%
+The initial Gabor noise method makes use of sparse Gabor splattering~\cite{LagaeSurvey} (which enable synthesis at arbitrary resolution and zooming). We rather consider here a more straightfoward, where the texture $f_{t_0}$ is obtained by stopping at time $t=t_0$ an ansiotropic diffusion guided by the tensor field $\mu$  of a high frequency noise $\Nn$ (numerically a white noise on a grid)
+\eq{
+	\frac{\partial_t f_t}{\partial t} = \text{div}( \mu \nabla f_t ), \qwhereq
+	f_{t=0} \sim \Nn, 
+}
+where $(\mu \nabla f_t)(x) \eqdef \mu(x) (\nabla f_t(x))$ is the vector field obtained by applying the tensor $\mu(x) \in \Ss_2^+$ to the gradient vector $\nabla f_t(x) \in \RR^2$. 
+%
+Locally around $x$, the texture is stretched in the direction of the main eigenvector of $\mu(x)$,  highly anisotropic tensor giving rise to elongated ``stripes'' as opposed to isotropic tensor generating ``spots''. 
+
+Numerically, $f$ is discretized on a 2-D grid, and $\mu$ is represented on this grid as a sum of Dirac masses~\eqref{eq-input-measures}. On Euclidian domain, $\nabla$ and div are computed using usual finite difference, while on triangulated mesh, they are implemented using standard piecewise linear finite element primitives. 
+%
+Figure~\ref{fig:texture} shows two illustration of this method. Top row generates an animated color texture by indexing a non-linear black-red color map using $f_t$. Bottom row generates an animated bump-mapped surface using $f_t$ to offset the mesh surface in the normal direction. 
+
+
+%%% FIG %%%
+\newcommand{\BumpFig}[1]{\includegraphics[width=.17\linewidth,trim=140 10 125 0,clip]{mesh-bump/anisodiffus-#1}}
+\newcommand{\TextureImg}[2]{\includegraphics[width=.19\linewidth]{textures/#1/interpol-#2}}
+\begin{figure}\centering
+\begin{tabular}{@{}c@{\hspace{.5mm}}c@{\hspace{.5mm}}c@{\hspace{.5mm}}c@{\hspace{.5mm}}c@{\hspace{.5mm}}c@{}}
+\TextureImg{2d-bump-donut}{render-1}&
+\TextureImg{2d-bump-donut}{render-3}&
+\TextureImg{2d-bump-donut}{render-5}&
+\TextureImg{2d-bump-donut}{render-7}&
+\TextureImg{2d-bump-donut}{render-9}&
+\includegraphics[height=.19\linewidth]{textures/2d-bump-donut/colorbar.png} \\
+\BumpFig{1}&
+\BumpFig{3}&
+\BumpFig{5}&
+\BumpFig{7}&
+\BumpFig{9}&\\
+$t=0$ & $t=1/4$ & $t=1/2$ & $t=3/4$ & $t=1$
+\end{tabular}
+\caption{Example of interpolation between two input procedural anisotropic noise function. The PSD tensor field parameterizing the texture are displayed on Figure~\ref{fig:intro}. The colormap used to render the anisotropic texture is displayed on the last column.  
+} \label{fig:texture}
+\end{figure}
+%%% FIG %%%

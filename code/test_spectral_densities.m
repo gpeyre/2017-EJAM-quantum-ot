@@ -14,15 +14,27 @@ names = {'wood' 'fabric'};
 names = {'rera' 'grunge'};
 names = {'rera' 'fabric'};
 
+names = {'bark' 'beigefabric'};
+names = {'dune' 'fabric-blue'};
+
+
 rep = ['results/texturesynth/' names{1} '-' names{2} '/'];
 [~,~] = mkdir(rep);
 
 % target size for synthesis
 n = 128*2;
 % number of transported diracs
-q = 400*3;
+q = 400*4;
+
+% size for loading
+n0 = n;
 
 img = @(x)imagesc(fftshift(x));
+
+
+remap = @(x)log10(A+1e-5);
+maxdiv = @(x)1-x/max(x(:));
+remap = @(x)maxdiv(x.^.5);
 
 options.estimator_type = 'periodic';
 % number of samples to populate the covariance, increase to avoid rank
@@ -37,7 +49,7 @@ fshift1 = @(x)[x(end/2+1:end,end/2+1:end,:,:), x(end/2+1:end,1:end/2,:,:); ...
 fshift = @(x)perm( fshift1( perm(x) ) );
 
 for k=1:2
-    f{k} = load_image(names{k}) / 255;
+    f{k} = load_image(names{k},n0) / 255;
     % full 3D texton
     [TsF{k},f0F{k}] = texton_estimation(f{k}, n, options);
     % dimension reduction to 2 colors    
@@ -56,8 +68,8 @@ for k=1:2
     clf; imageplot( texture_synth(Ts{k},f0{k}, U{k}, m0{k}) );  
     % display spectrum
     A = real(trM(Hs{k},1)); A(end/2+1,end/2+1) = Inf; A(end/2+1,end/2+1) = min(A(:));
-    clf; imagesc(log(A+1e-10)); axis image; axis off; colorbar;    
-    imwrite(rescale(log10(A+1e-5)), [rep 'spectrum-input-' num2str(k) '.png'], 'png');
+    clf; imagesc( remap(A) ); axis image; axis off; colorbar;    
+    imwrite(remap(A), [rep 'spectrum-input-' num2str(k) '.png'], 'png');
     % only retain most energetic positions in fftshift domain.    
     x = (0:n-1)'/n; [Y,X] = meshgrid(x,x);
     E = trM( Hs{k}, 1); [~,I] = sort(E(:), 'descend'); I = I(1:q);
@@ -89,7 +101,7 @@ fprintf('Sinkhorn: ');
 % Compute interpolation using an heuristic McCann-like formula.
 
 m = 9;
-opt.sparse_mult = 20;
+opt.sparse_mult = 40;
 fprintf('Interpolation: ');
 nu = quantum_interp_free(gamma, mu, xy, n, m, opt);
 
@@ -97,9 +109,6 @@ nu = quantum_interp_free(gamma, mu, xy, n, m, opt);
 R = { Hs{1}-resh(nu{1}), Hs{end}-resh(nu{end}) };
 % synthesize
 lint = @(t,a,b)(1-t)*a + t*b;
-remap = @(x)log10(A+1e-5);
-remap = @(x)x.^.5;
-maxdiv = @(x)x/max(x(:));
 for k=1:m
     t=(k-1)/(m-1);
     % interpolate linearly the residual
@@ -111,7 +120,7 @@ for k=1:m
     U_k = orthogonalize_mat( lint(t, U{1}, U{2} ) );
     % display the log of energy
     A = real(trM(Hs_k,1)); A(end/2+1,end/2+1) = Inf; A(end/2+1,end/2+1) = min(A(:));
-    imwrite(maxdiv(remap(A)), [rep 'spectrum-' num2str(k) '.png'], 'png');
+    imwrite(remap(A), [rep 'spectrum-' num2str(k) '.png'], 'png');
     % synthesize the texture
     f_k = texture_synth(Ts_k,f0_k,U_k,m_k, 123);
     imwrite(clamp(f_k), [rep 'synthesis-' num2str(k) '.png'], 'png');

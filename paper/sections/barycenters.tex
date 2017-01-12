@@ -74,6 +74,47 @@ where here we defined $\Kern$ as
 
 
 
+%%
+\newcommand{\BaryImg}[2]{{\includegraphics[width=.095\linewidth,trim=18 160 18 160,clip]{2d-bary/barycenter-#1-#2}}}
+\newcommand{\BaryImgLine}[1]{%%%
+\BaryImg{#1}{1}&\BaryImg{#1}{2}&\BaryImg{#1}{3}&\BaryImg{#1}{4}&\BaryImg{#1}{5} %%%
+}
+%%
+\newcommand{\BarySurf}[2]{{\includegraphics[width=.095\linewidth,trim=25 10 25 10,clip]{mesh-bary/barycenter-#1-#2}}}
+\newcommand{\BarySurfLine}[1]{%%%
+\BarySurf{#1}{1}&\BarySurf{#1}{2}&\BarySurf{#1}{3}&\BarySurf{#1}{4}&\BarySurf{#1}{5} %%%
+}
+%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \fbox
+%%
+\begin{figure*}\centering
+%%%%%
+\begin{tabular}{@{}c@{}c@{}c@{}c@{}c@{}}
+\BaryImgLine{1}\\
+\BaryImgLine{2}\\
+\BaryImgLine{3}\\
+\BaryImgLine{4}\\
+\BaryImgLine{5}
+\end{tabular}
+%%%%%
+\hspace{5mm}
+%%%%%
+\begin{tabular}{@{}c@{}c@{}c@{}c@{}c@{}}
+\BarySurfLine{1}\\
+\BarySurfLine{2}\\
+\BarySurfLine{3}\\
+\BarySurfLine{4}\\
+\BarySurfLine{5}
+\end{tabular}
+%%%%%
+\caption{$5 \times 5$ barycenters of four input measures (displayed in the four corners). The weighs $w \in \RR^4$ corresponds to bilinear interpolation weights~\eqref{eq-bilinear} inside the square.
+} \label{fig:barycenters}
+\end{figure*}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 %%%%
 \subsection{Quantum Barycenter Sinkhorn}
 
@@ -174,59 +215,12 @@ Note that in the scalar case $d=1$ and for isotropic input tensors (multiples of
 \subsection{Numerical Illustrations}
 
 Figure~\ref{fig:2d-bary} and~\ref{fig:mesh-bary} shows examples of barycenters $\nu$ solving~\eqref{eq-defn-barycenters} between four input measures $(\mu^\ell)_{\ell=1}^4$. The horizontal/vertical axes of the figures are indexed by $(t_1,t_2) \in [0,1]^2$ (on a $5 \times 5$ grids) and parameterize the weights $(w_\ell)_{\ell=1}^4$ appearing in~\eqref{eq-defn-barycenters} as
-\eq{
+\eql{\label{eq-bilinear}
 	(w_1,w_2,w_3,w_4) \eqdef ( (1-t_1)(1-t_2), (1-t_1)t_2, t_1(1-t_2), t_1,t_2 ). 
 }
 Figure~\ref{fig:2d-bary} corresponds to measures on $X=Y=[0,1]^2$ with $d=2$ and ground cost $c_{i,j}=\norm{x_i-x_j}^2\Id_{2 \times 2}$.
 Figure~\ref{fig:2d-bary} corresponds to measures on $X=Y$ being a surface mesh with $d=2$ (the tensors are defined on the tangent planes) and a ground cost is $c_{i,j}=d_X(x_i,x_j)^2\Id_{2 \times 2}$ where $d_X$ is the geodesic distance on the mesh.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \fbox
-\newcommand{\myBary}[2]{{\includegraphics[width=.195\linewidth,trim=18 160 18 160,clip]{2d-bary/barycenter-#1-#2}}}
-\newcommand{\myBaryLine}[1]{%%%
-\myBary{#1}{1}&\myBary{#1}{2}&\myBary{#1}{3}&\myBary{#1}{4}&\myBary{#1}{5} %%%
-}
-%%
-\begin{figure}\centering
-\begin{tabular}{@{}c@{}c@{}c@{}c@{}c@{}}
-\myBaryLine{1}\\
-\myBaryLine{2}\\
-\myBaryLine{3}\\
-\myBaryLine{4}\\
-\myBaryLine{5}
-\end{tabular}
-\caption{$5 \times 5$ barycenters of four input measures (displayed in the four corners). The weighs $w \in \RR^4$ corresponds to bilinear interpolation weights inside the square.
-} \label{fig:2d-bary}
-\end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\renewcommand{\myBary}[2]{{\includegraphics[width=.195\linewidth,trim=25 25 25 25,clip]{mesh-bary/barycenter-#1-#2}}}
-%%
-\begin{figure}\centering
-\begin{tabular}{@{}c@{}c@{}c@{}c@{}c@{}}
-\myBaryLine{1}\\
-\myBaryLine{2}\\
-\myBaryLine{3}\\
-\myBaryLine{4}\\
-\myBaryLine{5}
-\end{tabular}
-\caption{Same as Figure~\ref{fig:2d-bary}, but with barycenters computed on a 3-D surface. 
-} \label{fig:mesh-bary}
-\end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\renewcommand{\myBary}[2]{{\includegraphics[width=.32\linewidth,trim=25 25 25 25,clip]{mesh-bary/barycenter-#1-#2}}}
-%\renewcommand{\myBaryLine}[1]{\myBary{#1}{1}&\myBary{#1}{3}&\myBary{#1}{5}}
-%\begin{figure}\centering
-%\begin{tabular}{@{}c@{}c@{}c@{}}
-%\myBaryLine{1}\\
-%\myBaryLine{3}\\
-%\myBaryLine{5}
-%\end{tabular}
-%\caption{Same as Figure~\ref{fig:2d-bary}, but with barycenters computed on a 3-D surface. 
-%} \label{fig:2d-bary}
-%\end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+

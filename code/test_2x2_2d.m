@@ -50,6 +50,13 @@ opt.disp_tensors = 1;
 opt.render = @(x)texture_lut(x, 'red-metal');
 [F,Fr] = rendering_tensors_2d(mu,n1, [rep 'input'], opt);
 
+if 0
+    % just to display the colorbar
+    A = repmat( linspace(0,1,256)', [1 25] ); 
+    A = opt.render(A);
+    imwrite(A, [rep 'colorbar.png'], 'png');
+end
+
 %%
 % Parameters
 

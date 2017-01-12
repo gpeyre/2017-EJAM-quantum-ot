@@ -1,53 +1,56 @@
-This is BibTeX, Version 0.99d (TeX Live 2015)
+This is BibTeX, Version 0.99d (TeX Live 2016)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: TensorOT.aux
 The style file: acmsiggraph.bst
 Database file #1: refs.bib
+Warning--can't use both volume and number fields in alliez2003anisotropic
+Warning--empty organization in peyre-iccv-09
 Warning--can't use both volume and number fields in crane2010trivial
 Warning--empty publisher in cuturi-2013
 Warning--can't use both author and editor fields in Deriche2006
 Warning--empty publisher in frogner-2015
 Warning--empty booktitle in HotzFHHJJ04
 Warning--empty organization in HotzFHHJJ04
-You've used 37 entries,
+Warning--can't use both volume and number fields in LagaeSurvey
+You've used 43 entries,
             2748 wiz_defined-function locations,
-            838 strings with 10544 characters,
-and the built_in function-call counts, 15148 in all, are:
-= -- 1575
-> -- 665
+            877 strings with 11631 characters,
+and the built_in function-call counts, 17937 in all, are:
+= -- 1856
+> -- 804
 < -- 2
-+ -- 228
-- -- 236
-* -- 1298
-:= -- 2523
-add.period$ -- 150
-call.type$ -- 37
-change.case$ -- 252
-chr.to.int$ -- 36
-cite$ -- 43
-duplicate$ -- 484
-empty$ -- 1126
-format.name$ -- 263
-if$ -- 3049
++ -- 277
+- -- 285
+* -- 1552
+:= -- 2980
+add.period$ -- 174
+call.type$ -- 43
+change.case$ -- 300
+chr.to.int$ -- 42
+cite$ -- 52
+duplicate$ -- 569
+empty$ -- 1330
+format.name$ -- 317
+if$ -- 3608
 int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 37
-newline$ -- 225
-num.names$ -- 111
-pop$ -- 197
+missing$ -- 43
+newline$ -- 261
+num.names$ -- 129
+pop$ -- 237
 preamble$ -- 1
-purify$ -- 217
+purify$ -- 259
 quote$ -- 0
-skip$ -- 329
+skip$ -- 385
 stack$ -- 0
-substring$ -- 953
-swap$ -- 111
+substring$ -- 1133
+swap$ -- 131
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 284
-warning$ -- 6
-while$ -- 144
-width$ -- 41
-write$ -- 521
-(There were 6 warnings)
+type$ -- 332
+warning$ -- 9
+while$ -- 167
+width$ -- 47
+write$ -- 608
+(There were 9 warnings)
