@@ -6,12 +6,8 @@ addpath('/Users/gpeyre/Dropbox/work/wasserstein/wasserstein-tensor-valued/franco
 rep = 'results/dti/';
 [~,~] = mkdir(rep);
 
-subj = {'three' 'four'};
-btype = [2000 2000];
-
 subj = {'one' 'two'};
 btype = [1000 2000];
-
 
 resh = @(x)reshape(x, [2 2 size(x,3)*size(x,4)]);
 iresh = @(x)reshape(x, [2 2 sqrt(size(x,3)) sqrt(size(x,3))]);
@@ -23,15 +19,9 @@ for k=1:2
     N0 = [size(slice,1), size(slice,2)];
     Mu{k} = permute( reshape( slice, [N0 3 3] ), [3 4 1 2]);
     % cropping
-    
-    n1 = 25; sub = 1;
-    sx = 25 + (0:sub:n1-1);
-    sy = 65 + (0:sub:n1-1);
-    
     n1 = 50; sub = 2;
     sx = 20 + (0:sub:n1-1);
     sy = 40 + (0:sub:n1-1);
-    
     n = n1/sub;
     mu{k} = resh( Mu{k}(1:2,1:2,sx,sy) );
     % display
@@ -74,7 +64,7 @@ nu = quantum_interp(gamma, mu, m, 2, opt);
 for k=1:m
     t = (k-1)/(m-1);
     opt.color = [t 0 1-t];
-    opt.image = trM(iresh(nu{k}),1);
+    opt.image = 
     clf; plot_tensors_2d(iresh(nu{k}), opt); drawnow;
     saveas(gcf, [rep 'interpol-ellipses-' num2str(k) '.png']);
 end
