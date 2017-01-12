@@ -52,37 +52,35 @@ Justin Solomon \\ MIT \and
 
 \begin{document}
 
-\newcommand{\meshFigIntr}[1]{\includegraphics[width=.105\linewidth,trim=140 10 120 0,clip]{mesh-intro/#1}}
+\newcommand{\meshFigIntr}[1]{\includegraphics[width=.100\linewidth,trim=140 10 120 0,clip]{mesh-intro/interpol-#1}}
+\newcommand{\imgFigIntr}[1]{\includegraphics[width=.105\linewidth,trim=80 20 80 20,clip]{2d-intro/interpol-ellipses-#1}}
 
 \teaser{
-%\begin{figure*}\centering
+\centering
 \begin{tabular}{@{\hspace{1mm}}c@{\hspace{1mm}}c@{\hspace{1mm}}c@{\hspace{1mm}}c@{\hspace{1mm}}c@{\hspace{1mm}}c@{\hspace{1mm}}c@{\hspace{1mm}}c@{\hspace{1mm}}c@{}}
-\meshFigIntr{interpol-1}&
-\meshFigIntr{interpol-2}&
-\meshFigIntr{interpol-3}&
-\meshFigIntr{interpol-4}&
-\meshFigIntr{interpol-5}&
-\meshFigIntr{interpol-6}&
-\meshFigIntr{interpol-7}&
-\meshFigIntr{interpol-8}&
-\meshFigIntr{interpol-9}\\
-\meshFigIntr{anisodiffus-1}&
-\meshFigIntr{anisodiffus-2}&
-\meshFigIntr{anisodiffus-3}&
-\meshFigIntr{anisodiffus-4}&
-\meshFigIntr{anisodiffus-5}&
-\meshFigIntr{anisodiffus-6}&
-\meshFigIntr{anisodiffus-7}&
-\meshFigIntr{anisodiffus-8}&
-\meshFigIntr{anisodiffus-9}\\
+\imgFigIntr{1}&
+\imgFigIntr{2}&
+\imgFigIntr{3}&
+\imgFigIntr{4}&
+\imgFigIntr{5}&
+\imgFigIntr{6}&
+\imgFigIntr{7}&
+\imgFigIntr{8}&
+\imgFigIntr{9}\\
+\meshFigIntr{1}&
+\meshFigIntr{2}&
+\meshFigIntr{3}&
+\meshFigIntr{4}&
+\meshFigIntr{5}&
+\meshFigIntr{6}&
+\meshFigIntr{7}&
+\meshFigIntr{8}&
+\meshFigIntr{9}\\
 $t=0$ & $t=1/8$ & $t=1/4$ & $t=3/8$ & $t=1/2$ & $t=5/8$ & $t=3/4$ & $t=7/8$ & $t=1$ 
 \end{tabular}
 \caption{%%%
-\textbf{Top row:} given two input fields of PSD matrices (displayed at time $t \in \{0,1\}$ using ellipses) on some domain (here a surface mesh), our Quantum Optimal Transport (Q-OT) method defines a continuous interpolating paths for $t \in [0,1]$. On contrary to usual linear interpolation schemes, Q-OT transport the ``mass'' of the tensors (size of the ellipses) as well are their anisotropy and orientation. This interpolation, and its extension to barycenter of several input fields, is computed using a fast extension of the well-known Sinkhorn algorithm.
-%%
-\textbf{Bottom row:} an example application is the generation of a spatially varying anisotropic texture that can be used as a bump map to offset the surface in the normal direction.
-} \label{fig:mesh-intro}
-%\end{figure*}
+given two input fields of PSD matrices (displayed at time $t \in \{0,1\}$ using ellipses) on some domain (here a 2-D planar square and a surface mesh), our Quantum Optimal Transport (Q-OT) method defines a continuous interpolating paths for $t \in [0,1]$. On contrary to usual linear interpolation schemes, Q-OT transport the ``mass'' of the tensors (size of the ellipses) as well are their anisotropy and orientation. This interpolation, and its extension to barycenter of several input fields, is computed using a fast extension of the well-known Sinkhorn algorithm.
+} \label{fig:intro}
 }
 
 

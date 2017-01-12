@@ -27,7 +27,6 @@ op = load_helpers(n);
 opt.aniso = .06;
 C = load_tensors_pair(name, n, opt);
 
-
 opt.diffus_tau = .08;
 opt.diffus_t = 50;
 if strcmp(name, '2d-bump-donut')
@@ -75,6 +74,7 @@ rho = 1;  %medium
 options.niter = 500; % ok for .05^2
 options.disp_rate = NaN;
 options.tau = 1.8*epsilon/(rho+epsilon);  % prox step, use extrapolation to seed up
+fprintf('Sinkhorn: ');
 [gamma,u,v,err] = quantum_sinkhorn(mu{1},mu{2},c,epsilon,rho, options);
 
 %%
@@ -83,12 +83,30 @@ options.tau = 1.8*epsilon/(rho+epsilon);  % prox step, use extrapolation to seed
 m = 9;
 opt.sparse_mult = 100;
 opt.disp_tensors = 1;
+fprintf('Interpolating: ');
 nu = quantum_interp(gamma, mu, m, 2, opt);
-[F,Fr] = rendering_tensors_2d(nu,n1, [rep 'interpol'], opt);
 
+%%
+% Display with a background texture.
+
+[F,Fr] = rendering_tensors_2d(nu,n1, [rep 'interpol'], opt);
 for k=1:m
     imwrite( Fr{k}, [rep 'interpol-render-' num2str(k) '.png'], 'png' );
 end
+
+%%
+% Display with no backgound texture.
+
+opt.nb_ellipses = n/2;
+opt.scaling = .7;
+for k=1:m
+    t = (k-1)/(m-1);
+    opt.color = [t 0 1-t];
+    clf; plot_tensors_2d(reshape(nu{k}, [2 2 n n]), opt); drawnow;
+    saveas(gcf, [rep 'interpol-ellipses-' num2str(k) '.png']);
+end
+
+
 %%
 % Compute an animation movie.
 

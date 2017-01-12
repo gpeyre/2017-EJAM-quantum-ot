@@ -76,42 +76,6 @@ The following Lengendre formula leads to the desired result:
 
 
 
-%%% FIG %%%
-\newcommand{\meshFig}[1]{\includegraphics[width=.105\linewidth]{mesh/interpol-#1}}
-\newcommand{\ImgFig}[1]{\includegraphics[width=.105\linewidth]{2d/interpol-ellispses-#1}}
-\begin{figure*}\centering
-\begin{tabular}{@{\hspace{1mm}}c@{\hspace{1mm}}c@{\hspace{1mm}}c@{\hspace{1mm}}c@{\hspace{1mm}}c@{\hspace{1mm}}c@{\hspace{1mm}}c@{\hspace{1mm}}c@{\hspace{1mm}}c@{}}
-\meshFig{1}&
-\meshFig{1}&
-\meshFig{2}&
-\meshFig{3}&
-\meshFig{4}&
-\meshFig{5}&
-\meshFig{6}&
-\meshFig{7}&
-\meshFig{7}\\
-\ImgFig{1}&
-\ImgFig{2}&
-\ImgFig{3}&
-\ImgFig{4}&
-\ImgFig{5}&
-\ImgFig{6}&
-\ImgFig{7}&
-\ImgFig{8}&
-\ImgFig{9}\\
-$t=0$ & $t=1/8$ & $t=1/4$ & $t=3/8$ & $t=1/2$ & $t=5/8$ & $t=3/4$ & $t=7/8$ & $t=1$ 
-\end{tabular}
-\caption{
-Examples of interpolations obtained using formula~\eqref{eq-interpolating}. \gabriel{redo the ellipses}
-%
-\textbf{Top:} Interpolation on a 3-D surface (a triangulated mesh).
-% 
-The red ellipsoids depicts the tensors $\mu_t$ defined over the tangent planes and the coloring of the surface displays $\tr(\mu_t)$ (blue corresponding to $0$, yellow to large values).
-\textbf{Bottom:} Interpolation on a 2-D planar domain, the background image is a texture synthesized from the underlying tensor field using an anisotropic diffusion applied to a Gaussian white noise initial condition.
-} \label{fig:mesh}
-\end{figure*}
-%%% FIG %%%
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Quantum Sinkhorn Algorithm}
@@ -225,7 +189,9 @@ Moreover, it is simple to check that these iterates are contractant whenever
 \subsection{Numerical Illustrations}
 \label{sec-numerics-interp}
 
-Figures~\ref{fig:1d-interp} and~\ref{fig:mesh} illustrates on synthetic examples of input tensor fields $(\muA,\muB)$ our interpolation method. We recall that it is obtained in two steps:
+Figures~\ref{fig:intro} and~\ref{fig:1d-interp} illustrates on synthetic examples of input tensor fields $(\muA,\muB)$ our interpolation method. 
+%
+We recall that it is obtained in two steps:
 \begin{enumerate}
 	\item One first computes the optimal $\ga$ solving~\eqref{eq-Kantorovich-regul} using Sinkhorn iterations (Algorithm~\ref{alg:sinkhorn}).
 	\item Then, for any $t \in [0,1]$, one computes $\mu_t$ using this optimal $\ga$ with formula~\eqref{eq-interpolating}.

@@ -24,11 +24,13 @@ Locally around $x$, the texture is stretched in the direction of the main eigenv
 Numerically, $f$ is discretized on a 2-D grid, and $\mu$ is represented on this grid as a sum of Dirac masses~\eqref{eq-input-measures}. 
 
 
-
+%%
+\textbf{Bottom row:} an example application is the generation of a spatially varying anisotropic texture that can be used as a bump map to offset the surface in the normal direction.
 
 
 
 %%% FIG %%%
+\newcommand{\BumpFig}[1]{\includegraphics[width=.17\linewidth,trim=140 10 125 0,clip]{mesh-bump/anisodiffus-#1}}
 \newcommand{\TextureImg}[2]{\includegraphics[width=.19\linewidth]{textures/#1/interpol-#2}}
 \begin{figure}\centering
 \begin{tabular}{@{}c@{\hspace{.5mm}}c@{\hspace{.5mm}}c@{\hspace{.5mm}}c@{\hspace{.5mm}}c@{}}
@@ -37,19 +39,14 @@ Numerically, $f$ is discretized on a 2-D grid, and $\mu$ is represented on this 
 \TextureImg{2d-bump-donut}{render-5}&
 \TextureImg{2d-bump-donut}{render-7}&
 \TextureImg{2d-bump-donut}{render-9}\\
-\TextureImg{2d-aniso-fields}{ellispses-1}&
-\TextureImg{2d-aniso-fields}{ellispses-3}&
-\TextureImg{2d-aniso-fields}{ellispses-5}&
-\TextureImg{2d-aniso-fields}{ellispses-7}&
-\TextureImg{2d-aniso-fields}{ellispses-9}\\
-\TextureImg{2d-aniso-fields}{render-1}&
-\TextureImg{2d-aniso-fields}{render-3}&
-\TextureImg{2d-aniso-fields}{render-5}&
-\TextureImg{2d-aniso-fields}{render-7}&
-\TextureImg{2d-aniso-fields}{render-9}\\
+\BumpFig{1}&
+\BumpFig{3}&
+\BumpFig{5}&
+\BumpFig{7}&
+\BumpFig{9}\\
 $t=0$ & $t=1/4$ & $t=1/2$ & $t=3/4$ & $t=1$
 \end{tabular}
-\caption{Blabla. See \ref{fig:mesh} for the first row. REDO the ellipses.
+\caption{Blabla. See \ref{fig:intro} for the ellipses.
 } \label{fig:texture}
 \end{figure}
 %%% FIG %%%

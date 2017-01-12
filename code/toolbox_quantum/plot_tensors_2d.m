@@ -11,7 +11,6 @@ function plot_tensors_2d(Nu, options)
 %
 %   Copyright (c) 2016 Gabriel Peyre
 
-
 options.null = 0;
 q = getoptions(options, 'nb_ellipses', 10); % #ellipses
 col = getoptions(options, 'color', [1 0 0]);

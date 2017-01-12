@@ -27,15 +27,6 @@
 \citation{LieroMielkeSavareCourt,kondratyev2015,2016-chizat-focm}
 \citation{LieroMielkeSavareLong,2015-chizat-unbalanced}
 \citation{frogner-2015}
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces \textbf  {Top row:} given two input fields of PSD matrices (displayed at time $t \in \{0,1\}$ using ellipses) on some domain (here a surface mesh), our Quantum Optimal Transport (Q-OT) method defines a continuous interpolating paths for $t \in [0,1]$. On contrary to usual linear interpolation schemes, Q-OT transport the ``mass'' of the tensors (size of the ellipses) as well are their anisotropy and orientation. This interpolation, and its extension to barycenter of several input fields, is computed using a fast extension of the well-known Sinkhorn algorithm. \textbf  {Bottom row:} an example application is the generation of a spatially varying anisotropic texture that can be used as a bump map to offset the surface in the normal direction. \relax }}{1}{figure.1}}
-\newlabel{fig:mesh-intro}{{1}{1}{\textbf {Top row:} given two input fields of PSD matrices (displayed at time $t \in \{0,1\}$ using ellipses) on some domain (here a surface mesh), our Quantum Optimal Transport (Q-OT) method defines a continuous interpolating paths for $t \in [0,1]$. On contrary to usual linear interpolation schemes, Q-OT transport the ``mass'' of the tensors (size of the ellipses) as well are their anisotropy and orientation. This interpolation, and its extension to barycenter of several input fields, is computed using a fast extension of the well-known Sinkhorn algorithm. \textbf {Bottom row:} an example application is the generation of a spatially varying anisotropic texture that can be used as a bump map to offset the surface in the normal direction. \relax }{figure.1}{}}
-\@LN@col{1}
-\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section.1}}
-\newlabel{sec-intro}{{1}{1}{Introduction}{section.1}{}}
-\@LN@col{2}
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.1}Previous Work}{1}{subsection.1.1}}
-\@writefile{toc}{\contentsline {paragraph}{Scalar-valued optimal transport.}{1}{section*.2}}
-\@writefile{toc}{\contentsline {paragraph}{Unbalanced transport.}{1}{section*.3}}
 \citation{cuturi-2013}
 \citation{Sinkhorn64}
 \citation{solomon-2015}
@@ -44,6 +35,16 @@
 \citation{bregman-1967}
 \citation{Dykstra83,bauschke-lewis}
 \citation{Dhillon2008,Kulis2009,Chandrasekaran2016}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces given two input fields of PSD matrices (displayed at time $t \in \{0,1\}$ using ellipses) on some domain (here a 2-D planar square and a surface mesh), our Quantum Optimal Transport (Q-OT) method defines a continuous interpolating paths for $t \in [0,1]$. On contrary to usual linear interpolation schemes, Q-OT transport the ``mass'' of the tensors (size of the ellipses) as well are their anisotropy and orientation. This interpolation, and its extension to barycenter of several input fields, is computed using a fast extension of the well-known Sinkhorn algorithm. \relax }}{1}{figure.1}}
+\newlabel{fig:intro}{{1}{1}{given two input fields of PSD matrices (displayed at time $t \in \{0,1\}$ using ellipses) on some domain (here a 2-D planar square and a surface mesh), our Quantum Optimal Transport (Q-OT) method defines a continuous interpolating paths for $t \in [0,1]$. On contrary to usual linear interpolation schemes, Q-OT transport the ``mass'' of the tensors (size of the ellipses) as well are their anisotropy and orientation. This interpolation, and its extension to barycenter of several input fields, is computed using a fast extension of the well-known Sinkhorn algorithm. \relax }{figure.1}{}}
+\@LN@col{1}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section.1}}
+\newlabel{sec-intro}{{1}{1}{Introduction}{section.1}{}}
+\@LN@col{2}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.1}Previous Work}{1}{subsection.1.1}}
+\@writefile{toc}{\contentsline {paragraph}{Scalar-valued optimal transport.}{1}{section*.2}}
+\@writefile{toc}{\contentsline {paragraph}{Unbalanced transport.}{1}{section*.3}}
+\@writefile{toc}{\contentsline {paragraph}{Entropic regularization.}{1}{section*.4}}
 \citation{Dryden2009,Deriche2006}
 \citation{weickert1998anisotropic}
 \citation{VaxmanCDPBHB16}
@@ -52,15 +53,14 @@
 \citation{JiangSpectral,Carlen2014,Chen2016}
 \citation{ning2015matrix}
 \@LN@col{1}
-\@writefile{toc}{\contentsline {paragraph}{Entropic regularization.}{2}{section*.4}}
 \@writefile{toc}{\contentsline {paragraph}{Tensor field processing.}{2}{section*.5}}
 \@writefile{toc}{\contentsline {paragraph}{OT on tensor fields.}{2}{section*.6}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {1.2}Contributions.}{2}{subsection.1.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.3}Notation}{2}{subsection.1.3}}
 \@LN@col{2}
 \@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Displays of various types of tensor-valued measures $\mu $. The principal directions of an ellipse at some $x_i \in X$ are the eigenvectors of $\mu _i \in \mathcal  {S}_+^d$, while the principal width are given by its eigenvalues. \relax }}{2}{figure.caption.7}}
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
 \newlabel{fig:display}{{2}{2}{Displays of various types of tensor-valued measures $\mu $. The principal directions of an ellipse at some $x_i \in X$ are the eigenvectors of $\mu _i \in \Ss _+^d$, while the principal width are given by its eigenvalues. \relax }{figure.caption.7}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.3}Notation}{2}{subsection.1.3}}
 \newlabel{eq-h-quantum}{{1}{2}{Notation}{equation.1.1}{}}
 \newlabel{eq-kl-quantum}{{2}{2}{Notation}{equation.1.2}{}}
 \citation{Kantorovich42}
@@ -104,56 +104,55 @@
 \newlabel{rem-choice-tau}{{5}{4}{Choice of $\tau _k$}{rem.5}{}}
 \citation{agueh-2011}
 \citation{benamou-2015,solomon-2015}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces  Examples of interpolations obtained using formula\nobreakspace  {}\textup  {\hbox {\mathsurround \z@ \normalfont  (\ignorespaces \ref  {eq-interpolating}\unskip \@@italiccorr )}}. {\bfseries  \relax \fontsize  {7}{8}\selectfont  \color  {blue} GP: redo the ellipses} \textbf  {Top:} Interpolation on a 3-D surface (a triangulated mesh). The red ellipsoids depicts the tensors $\mu _t$ defined over the tangent planes and the coloring of the surface displays $\tr  (\mu _t)$ (blue corresponding to $0$, yellow to large values). \textbf  {Bottom:} Interpolation on a 2-D planar domain, the background image is a texture synthesized from the underlying tensor field using an anisotropic diffusion applied to a Gaussian white noise initial condition. \relax }}{5}{figure.caption.8}}
-\newlabel{fig:mesh}{{3}{5}{Examples of interpolations obtained using formula~\eqref {eq-interpolating}. \gabriel {redo the ellipses} \textbf {Top:} Interpolation on a 3-D surface (a triangulated mesh). The red ellipsoids depicts the tensors $\mu _t$ defined over the tangent planes and the coloring of the surface displays $\tr (\mu _t)$ (blue corresponding to $0$, yellow to large values). \textbf {Bottom:} Interpolation on a 2-D planar domain, the background image is a texture synthesized from the underlying tensor field using an anisotropic diffusion applied to a Gaussian white noise initial condition. \relax }{figure.caption.8}{}}
 \@LN@col{1}
 \@writefile{loa}{\contentsline {algorithm}{\numberline {1}{\ignorespaces Quantum-Sinkhorn iterations to compute the optimal coupling $\gamma $ of the regularized transportation problem\nobreakspace  {}\textup  {\hbox {\mathsurround \z@ \normalfont  (\ignorespaces \ref  {eq-Kantorovich-regul}\unskip \@@italiccorr )}}. The operator $\mathcal  {K}$ is defined in\nobreakspace  {}\textup  {\hbox {\mathsurround \z@ \normalfont  (\ignorespaces \ref  {eq-defn-K}\unskip \@@italiccorr )}}.\relax }}{5}{algorithm.1}}
 \newlabel{alg:sinkhorn}{{1}{5}{Quantum-Sinkhorn iterations to compute the optimal coupling $\ga $ of the regularized transportation problem~\eqref {eq-Kantorovich-regul}. The operator $\Kern $ is defined in~\eqref {eq-defn-K}.\relax }{algorithm.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Comparison of linear and quantum-OT interpolation (using formula\nobreakspace  {}\textup  {\hbox {\mathsurround \z@ \normalfont  (\ignorespaces \ref  {eq-interpolating}\unskip \@@italiccorr )}}). Each row shows a field of tensors (top $d=2$, bottom $d=3$) along a linear segment from $t=0$ to $t=1$ ($t$ axis is vertical). \relax }}{5}{figure.caption.8}}
+\newlabel{fig:1d-interp}{{3}{5}{Comparison of linear and quantum-OT interpolation (using formula~\eqref {eq-interpolating}). Each row shows a field of tensors (top $d=2$, bottom $d=3$) along a linear segment from $t=0$ to $t=1$ ($t$ axis is vertical). \relax }{figure.caption.8}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Numerical Illustrations}{5}{subsection.3.3}}
 \newlabel{sec-numerics-interp}{{3.3}{5}{Numerical Illustrations}{subsection.3.3}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {4}Quantum Barycenters}{5}{section.4}}
 \newlabel{sec-q-bary}{{4}{5}{Quantum Barycenters}{section.4}{}}
 \@LN@col{2}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Comparison of linear and quantum-OT interpolation (using formula\nobreakspace  {}\textup  {\hbox {\mathsurround \z@ \normalfont  (\ignorespaces \ref  {eq-interpolating}\unskip \@@italiccorr )}}). Each row shows a field of tensors (top $d=2$, bottom $d=3$) along a linear segment from $t=0$ to $t=1$ ($t$ axis is vertical). \relax }}{5}{figure.caption.9}}
-\newlabel{fig:1d-interp}{{4}{5}{Comparison of linear and quantum-OT interpolation (using formula~\eqref {eq-interpolating}). Each row shows a field of tensors (top $d=2$, bottom $d=3$) along a linear segment from $t=0$ to $t=1$ ($t$ axis is vertical). \relax }{figure.caption.9}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Two examples of pointwise (without transportation) interpolations\nobreakspace  {}\textup  {\hbox {\mathsurround \z@ \normalfont  (\ignorespaces \ref  {eq-barycentric-matrix}\unskip \@@italiccorr )}}. Here $P_1$ and $P_2$ are represented using the blue/red ellipses on the left/right, and weights are $(w_1,w_2)=(1-t,t)$ for $t \in [0,1]$ from left to right.\relax }}{5}{figure.caption.9}}
+\newlabel{fig:interp}{{4}{5}{Two examples of pointwise (without transportation) interpolations~\eqref {eq-barycentric-matrix}. Here $P_1$ and $P_2$ are represented using the blue/red ellipses on the left/right, and weights are $(w_1,w_2)=(1-t,t)$ for $t \in [0,1]$ from left to right.\relax }{figure.caption.9}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Barycenters Optimization Problem}{5}{subsection.4.1}}
 \newlabel{eq-defn-barycenters}{{15}{5}{Barycenters Optimization Problem}{equation.4.15}{}}
 \newlabel{eq-barycentric-matrix}{{16}{5}{Barycenters between single Dirac masses}{equation.4.16}{}}
+\newlabel{eq-dual-bary}{{17}{5}{}{equation.4.17}{}}
+\newlabel{eq-def-k-bary}{{18}{5}{}{equation.4.18}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Quantum Barycenter Sinkhorn}{5}{subsection.4.2}}
+\newlabel{eq-fixed-point-u-bary}{{19}{5}{}{equation.4.19}{}}
+\newlabel{eq-fixed-point-v-bary}{{20}{5}{}{equation.4.20}{}}
+\newlabel{eq-fixed-point-nu-bary}{{21}{5}{}{equation.4.21}{}}
 \citation{2016-chizat-sinkhorn}
 \citation{2016-chizat-sinkhorn}
 \citation{LagaeSurvey}
 \citation{LagaImproving}
 \citation{LagaeSurvey}
 \@LN@col{1}
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Two examples of pointwise (without transportation) interpolations\nobreakspace  {}\textup  {\hbox {\mathsurround \z@ \normalfont  (\ignorespaces \ref  {eq-barycentric-matrix}\unskip \@@italiccorr )}}. Here $P_1$ and $P_2$ are represented using the blue/red ellipses on the left/right, and weights are $(w_1,w_2)=(1-t,t)$ for $t \in [0,1]$ from left to right.\relax }}{6}{figure.caption.10}}
-\newlabel{fig:interp}{{5}{6}{Two examples of pointwise (without transportation) interpolations~\eqref {eq-barycentric-matrix}. Here $P_1$ and $P_2$ are represented using the blue/red ellipses on the left/right, and weights are $(w_1,w_2)=(1-t,t)$ for $t \in [0,1]$ from left to right.\relax }{figure.caption.10}{}}
 \@writefile{loa}{\contentsline {algorithm}{\numberline {2}{\ignorespaces Quantum-Barycenter iterations to compute the optimal barycenter measure $\nu $ solving\nobreakspace  {}\textup  {\hbox {\mathsurround \z@ \normalfont  (\ignorespaces \ref  {eq-defn-barycenters}\unskip \@@italiccorr )}}. The operator $\mathcal  {K}$ is defined in\nobreakspace  {}\textup  {\hbox {\mathsurround \z@ \normalfont  (\ignorespaces \ref  {eq-def-k-bary}\unskip \@@italiccorr )}}. \relax }}{6}{algorithm.2}}
 \newlabel{alg:barycenter}{{2}{6}{Quantum-Barycenter iterations to compute the optimal barycenter measure $\nu $ solving~\eqref {eq-defn-barycenters}. The operator $\Kern $ is defined in~\eqref {eq-def-k-bary}. \relax }{algorithm.2}{}}
-\newlabel{eq-dual-bary}{{17}{6}{}{equation.4.17}{}}
-\newlabel{eq-def-k-bary}{{18}{6}{}{equation.4.18}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Quantum Barycenter Sinkhorn}{6}{subsection.4.2}}
-\newlabel{eq-fixed-point-u-bary}{{19}{6}{}{equation.4.19}{}}
-\newlabel{eq-fixed-point-v-bary}{{20}{6}{}{equation.4.20}{}}
-\newlabel{eq-fixed-point-nu-bary}{{21}{6}{}{equation.4.21}{}}
-\@LN@col{2}
-\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces $5 \times 5$ barycenters of four input measures (displayed in the four corners). The weighs $w \in \mathbb  {R}^4$ corresponds to bilinear interpolation weights inside the square. \relax }}{6}{figure.caption.11}}
-\newlabel{fig:2d-bary}{{6}{6}{$5 \times 5$ barycenters of four input measures (displayed in the four corners). The weighs $w \in \RR ^4$ corresponds to bilinear interpolation weights inside the square. \relax }{figure.caption.11}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Numerical Illustrations}{6}{subsection.4.3}}
 \@writefile{toc}{\contentsline {section}{\numberline {5}Applications}{6}{section.5}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Anisotropic Texture Synthesis}{6}{subsection.5.1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces $5 \times 5$ barycenters of four input measures (displayed in the four corners). The weighs $w \in \mathbb  {R}^4$ corresponds to bilinear interpolation weights inside the square. \relax }}{6}{figure.caption.10}}
+\newlabel{fig:2d-bary}{{5}{6}{$5 \times 5$ barycenters of four input measures (displayed in the four corners). The weighs $w \in \RR ^4$ corresponds to bilinear interpolation weights inside the square. \relax }{figure.caption.10}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Same as Figure\nobreakspace  {}\ref  {fig:2d-bary}, but with barycenters computed on a 3-D surface. \relax }}{6}{figure.caption.11}}
+\newlabel{fig:mesh-bary}{{6}{6}{Same as Figure~\ref {fig:2d-bary}, but with barycenters computed on a 3-D surface. \relax }{figure.caption.11}{}}
 \citation{Aittala2015}
 \@LN@col{1}
-\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Same as Figure\nobreakspace  {}\ref  {fig:2d-bary}, but with barycenters computed on a 3-D surface. \relax }}{7}{figure.caption.12}}
-\newlabel{fig:mesh-bary}{{7}{7}{Same as Figure~\ref {fig:2d-bary}, but with barycenters computed on a 3-D surface. \relax }{figure.caption.12}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Blabla. See \ref  {fig:mesh} for the first row. REDO the ellipses. \relax }}{7}{figure.caption.13}}
-\newlabel{fig:texture}{{8}{7}{Blabla. See \ref {fig:mesh} for the first row. REDO the ellipses. \relax }{figure.caption.13}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Blabla. See \ref  {fig:intro} for the ellipses. \relax }}{7}{figure.caption.12}}
+\newlabel{fig:texture}{{7}{7}{Blabla. See \ref {fig:intro} for the ellipses. \relax }{figure.caption.12}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Blabla. \relax }}{7}{figure.caption.13}}
+\newlabel{fig:meshing}{{8}{7}{Blabla. \relax }{figure.caption.13}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Anisotropic Material Modification}{7}{subsection.5.2}}
-\@LN@col{2}
-\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Blabla. \relax }}{7}{figure.caption.14}}
-\newlabel{fig:meshing}{{9}{7}{Blabla. \relax }{figure.caption.14}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Anisotropic Meshing}{7}{subsection.5.3}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.4}Diffusion Tensor Imaging}{7}{subsection.5.4}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.5}Deformation Interpolation by Stress Transportation}{7}{subsection.5.5}}
+\@LN@col{2}
+\newlabel{eq-interpolating}{{22}{7}{Deformation Interpolation by Stress Transportation}{equation.5.22}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.6}Shape Registration}{7}{subsection.5.6}}
 \citation{}
 \citation{daemon,lddmm}
 \bibstyle{acmsiggraph}
@@ -174,17 +173,15 @@
 \bibcite{crane2010trivial}{\citename {Crane et\nobreakspace  {}al\unhbox \voidb@x \hbox {.} }2010}
 \bibcite{cuturi-2013}{\citename {Cuturi }2013}
 \bibcite{Deriche2006}{\citename {Deriche et\nobreakspace  {}al\unhbox \voidb@x \hbox {.} }2006}
-\@LN@col{1}
-\newlabel{eq-interpolating}{{22}{8}{Deformation Interpolation by Stress Transportation}{equation.5.22}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.6}Shape Registration}{8}{subsection.5.6}}
-\@writefile{toc}{\contentsline {section}{\numberline {6}Conclusion}{8}{section.6}}
-\@LN@col{2}
 \bibcite{Dhillon2008}{\citename {Dhillon and Tropp }2008}
 \bibcite{Dryden2009}{\citename {Dryden et\nobreakspace  {}al\unhbox \voidb@x \hbox {.} }2009}
 \bibcite{Dykstra83}{\citename {Dykstra }1983}
 \bibcite{frogner-2015}{\citename {Frogner et\nobreakspace  {}al\unhbox \voidb@x \hbox {.} }2015}
 \bibcite{HotzFHHJJ04}{\citename {Hotz et\nobreakspace  {}al\unhbox \voidb@x \hbox {.} }2004}
 \bibcite{JiangSpectral}{\citename {Jiang et\nobreakspace  {}al\unhbox \voidb@x \hbox {.} }2012}
+\@LN@col{1}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Conclusion}{8}{section.6}}
+\@LN@col{2}
 \bibcite{Kantorovich42}{\citename {Kantorovich }1942}
 \bibcite{kondratyev2015}{\citename {Kondratyev et\nobreakspace  {}al\unhbox \voidb@x \hbox {.} }2015}
 \bibcite{Kulis2009}{\citename {Kulis et\nobreakspace  {}al\unhbox \voidb@x \hbox {.} }2009}
