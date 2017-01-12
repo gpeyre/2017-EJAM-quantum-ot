@@ -12,45 +12,45 @@ Warning--empty publisher in frogner-2015
 Warning--empty booktitle in HotzFHHJJ04
 Warning--empty organization in HotzFHHJJ04
 Warning--can't use both volume and number fields in LagaeSurvey
-You've used 43 entries,
+You've used 44 entries,
             2748 wiz_defined-function locations,
-            877 strings with 11631 characters,
-and the built_in function-call counts, 17937 in all, are:
-= -- 1856
-> -- 804
+            883 strings with 11794 characters,
+and the built_in function-call counts, 18354 in all, are:
+= -- 1901
+> -- 822
 < -- 2
-+ -- 277
-- -- 285
-* -- 1552
-:= -- 2980
-add.period$ -- 174
-call.type$ -- 43
-change.case$ -- 300
-chr.to.int$ -- 42
-cite$ -- 52
-duplicate$ -- 569
-empty$ -- 1330
-format.name$ -- 317
-if$ -- 3608
++ -- 283
+- -- 291
+* -- 1590
+:= -- 3048
+add.period$ -- 178
+call.type$ -- 44
+change.case$ -- 307
+chr.to.int$ -- 43
+cite$ -- 53
+duplicate$ -- 581
+empty$ -- 1360
+format.name$ -- 324
+if$ -- 3692
 int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 43
-newline$ -- 261
-num.names$ -- 129
-pop$ -- 237
+missing$ -- 44
+newline$ -- 267
+num.names$ -- 132
+pop$ -- 241
 preamble$ -- 1
-purify$ -- 259
+purify$ -- 265
 quote$ -- 0
-skip$ -- 385
+skip$ -- 394
 stack$ -- 0
-substring$ -- 1133
-swap$ -- 131
+substring$ -- 1163
+swap$ -- 134
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 332
+type$ -- 340
 warning$ -- 9
-while$ -- 167
-width$ -- 47
-write$ -- 608
+while$ -- 171
+width$ -- 48
+write$ -- 622
 (There were 9 warnings)

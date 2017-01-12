@@ -150,6 +150,12 @@
 \newblock In {\em Advances in Neural Information Processing Systems}, vol.~28.
   2044--2052.
 
+\bibitem[\protect\citename{Galerne et~al\mbox{.} }2011]{galerne2011random}
+{\sc Galerne, B., Gousseau, Y., and Morel, J.-M.}
+\newblock 2011.
+\newblock Random phase textures: Theory and synthesis.
+\newblock {\em IEEE Transactions on image processing 20}, 1, 257--267.
+
 \bibitem[\protect\citename{Hotz et~al\mbox{.} }2004]{HotzFHHJJ04}
 {\sc Hotz, I., Feng, L., Hagen, H., Hamann, B., Joy, K.~I., and Jeremic, B.}
 \newblock 2004.

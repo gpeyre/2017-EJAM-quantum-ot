@@ -9,13 +9,14 @@ addpath('data/textures/');
 
 
 names = {'beigefabric' 'fabric1'};
-names = {'fabric-mix' 'stonewall'};
 names = {'wood' 'fabric'};
 names = {'rera' 'grunge'};
 names = {'rera' 'fabric'};
 
 names = {'bark' 'beigefabric'};
 names = {'dune' 'fabric-blue'};
+
+names = {'fabric-mix' 'stonewall'};
 
 
 rep = ['results/texturesynth/' names{1} '-' names{2} '/'];
@@ -49,7 +50,7 @@ fshift1 = @(x)[x(end/2+1:end,end/2+1:end,:,:), x(end/2+1:end,1:end/2,:,:); ...
 fshift = @(x)perm( fshift1( perm(x) ) );
 
 for k=1:2
-    f{k} = load_image(names{k},n0) / 255;
+    f{k} = load_image(names{k}) / 255;
     % full 3D texton
     [TsF{k},f0F{k}] = texton_estimation(f{k}, n, options);
     % dimension reduction to 2 colors    
