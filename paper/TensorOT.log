@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.9.19)  12 JAN 2017 23:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.9.19)  13 JAN 2017 00:52
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1578,134 +1578,142 @@ nput line 41.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <9> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 47.
 )
-(./sections/applications-dti.tex) (./sections/applications-texsynth.tex
-<./images/texsynth/spectrum-1.png, id=578, 256.96pt x 256.96pt>
+(./sections/applications-dti.tex
+
+LaTeX Warning: Citation 'le2001diffusion' on page 7 undefined on input line 7.
+
+
+LaTeX Warning: Citation 'CaiafaPestilli' on page 7 undefined on input line 11.
+
+) (./sections/applications-texsynth.tex
+Underfull \vbox (badness 7186) has occurred while \output is active []
+
+
+<./images/texsynth/spectrum-1.png, id=579, 256.96pt x 256.96pt>
 File: ./images/texsynth/spectrum-1.png Graphic file (type png)
 
 <use ./images/texsynth/spectrum-1.png>
-Package pdftex.def Info: ./images/texsynth/spectrum-1.png used on input line 31
+Package pdftex.def Info: ./images/texsynth/spectrum-1.png used on input line 30
 .
 (pdftex.def)             Requested size: 46.98602pt x 46.98401pt.
 
-<./images/texsynth/spectrum-3.png, id=579, 256.96pt x 256.96pt>
+<./images/texsynth/spectrum-3.png, id=580, 256.96pt x 256.96pt>
 File: ./images/texsynth/spectrum-3.png Graphic file (type png)
 
 <use ./images/texsynth/spectrum-3.png>
-Package pdftex.def Info: ./images/texsynth/spectrum-3.png used on input line 32
+Package pdftex.def Info: ./images/texsynth/spectrum-3.png used on input line 31
 .
 (pdftex.def)             Requested size: 46.98602pt x 46.98401pt.
 
-<./images/texsynth/spectrum-5.png, id=580, 256.96pt x 256.96pt>
+<./images/texsynth/spectrum-5.png, id=581, 256.96pt x 256.96pt>
 File: ./images/texsynth/spectrum-5.png Graphic file (type png)
 
 <use ./images/texsynth/spectrum-5.png>
-Package pdftex.def Info: ./images/texsynth/spectrum-5.png used on input line 33
+Package pdftex.def Info: ./images/texsynth/spectrum-5.png used on input line 32
 .
 (pdftex.def)             Requested size: 46.98602pt x 46.98401pt.
 
-<./images/texsynth/spectrum-7.png, id=581, 256.96pt x 256.96pt>
+<./images/texsynth/spectrum-7.png, id=582, 256.96pt x 256.96pt>
 File: ./images/texsynth/spectrum-7.png Graphic file (type png)
 
 <use ./images/texsynth/spectrum-7.png>
-Package pdftex.def Info: ./images/texsynth/spectrum-7.png used on input line 34
+Package pdftex.def Info: ./images/texsynth/spectrum-7.png used on input line 33
 .
 (pdftex.def)             Requested size: 46.98602pt x 46.98401pt.
 
-<./images/texsynth/spectrum-9.png, id=582, 256.96pt x 256.96pt>
+<./images/texsynth/spectrum-9.png, id=583, 256.96pt x 256.96pt>
 File: ./images/texsynth/spectrum-9.png Graphic file (type png)
 
 <use ./images/texsynth/spectrum-9.png>
-Package pdftex.def Info: ./images/texsynth/spectrum-9.png used on input line 35
+Package pdftex.def Info: ./images/texsynth/spectrum-9.png used on input line 34
 .
 (pdftex.def)             Requested size: 46.98602pt x 46.98401pt.
 
-<./images/texsynth/synthesis-1.png, id=583, 256.96pt x 256.96pt>
+<./images/texsynth/synthesis-1.png, id=584, 256.96pt x 256.96pt>
 File: ./images/texsynth/synthesis-1.png Graphic file (type png)
 
 <use ./images/texsynth/synthesis-1.png>
 Package pdftex.def Info: ./images/texsynth/synthesis-1.png used on input line 3
-6.
+5.
 (pdftex.def)             Requested size: 46.98602pt x 46.98401pt.
 
-<./images/texsynth/synthesis-3.png, id=584, 256.96pt x 256.96pt>
+<./images/texsynth/synthesis-3.png, id=585, 256.96pt x 256.96pt>
 File: ./images/texsynth/synthesis-3.png Graphic file (type png)
 
 <use ./images/texsynth/synthesis-3.png>
 Package pdftex.def Info: ./images/texsynth/synthesis-3.png used on input line 3
-7.
+6.
 (pdftex.def)             Requested size: 46.98602pt x 46.98401pt.
 
-<./images/texsynth/synthesis-5.png, id=585, 256.96pt x 256.96pt>
+<./images/texsynth/synthesis-5.png, id=586, 256.96pt x 256.96pt>
 File: ./images/texsynth/synthesis-5.png Graphic file (type png)
 
 <use ./images/texsynth/synthesis-5.png>
 Package pdftex.def Info: ./images/texsynth/synthesis-5.png used on input line 3
-8.
+7.
 (pdftex.def)             Requested size: 46.98602pt x 46.98401pt.
 
-<./images/texsynth/synthesis-7.png, id=586, 256.96pt x 256.96pt>
+<./images/texsynth/synthesis-7.png, id=587, 256.96pt x 256.96pt>
 File: ./images/texsynth/synthesis-7.png Graphic file (type png)
 
 <use ./images/texsynth/synthesis-7.png>
 Package pdftex.def Info: ./images/texsynth/synthesis-7.png used on input line 3
-9.
+8.
 (pdftex.def)             Requested size: 46.98602pt x 46.98401pt.
 
-<./images/texsynth/synthesis-9.png, id=587, 256.96pt x 256.96pt>
+<./images/texsynth/synthesis-9.png, id=588, 256.96pt x 256.96pt>
 File: ./images/texsynth/synthesis-9.png Graphic file (type png)
 
 <use ./images/texsynth/synthesis-9.png>
-Package pdftex.def Info: ./images/texsynth/synthesis-9.png used on input line 4
-0.
+Package pdftex.def Info: ./images/texsynth/synthesis-9.png used on input line 3
+9.
 (pdftex.def)             Requested size: 46.98602pt x 46.98401pt.
 
-<./images/texsynth/original-1.png, id=588, 256.96pt x 256.96pt>
+<./images/texsynth/original-1.png, id=589, 256.96pt x 256.96pt>
 File: ./images/texsynth/original-1.png Graphic file (type png)
 
 <use ./images/texsynth/original-1.png>
-Package pdftex.def Info: ./images/texsynth/original-1.png used on input line 44
+Package pdftex.def Info: ./images/texsynth/original-1.png used on input line 43
 .
 (pdftex.def)             Requested size: 46.98602pt x 46.98401pt.
 
-<./images/texsynth/original-2.png, id=589, 256.96pt x 256.96pt>
+<./images/texsynth/original-2.png, id=590, 256.96pt x 256.96pt>
 File: ./images/texsynth/original-2.png Graphic file (type png)
 
 <use ./images/texsynth/original-2.png>
-Package pdftex.def Info: ./images/texsynth/original-2.png used on input line 45
+Package pdftex.def Info: ./images/texsynth/original-2.png used on input line 44
 .
 (pdftex.def)             Requested size: 46.98602pt x 46.98401pt.
 
-Overfull \hbox (5.36617pt too wide) in paragraph at lines 30--51
+Overfull \hbox (5.36617pt too wide) in paragraph at lines 29--50
  [][] 
  []
 
-)) (./sections/conclusion.tex
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [7 <./images/mesh-bump/anisodiffus-1.png (PNG copy)> <./images/mesh-bump/aniso
-diffus-3.png (PNG copy)> <./images/mesh-bump/anisodiffus-5.png (PNG copy)> <./i
-mages/mesh-bump/anisodiffus-7.png (PNG copy)> <./images/mesh-bump/anisodiffus-9
-.png (PNG copy)> <./images/textures/2d-bump-donut/interpol-render-1.png (PNG co
-py)> <./images/textures/2d-bump-donut/interpol-render-3.png (PNG copy)> <./imag
-es/textures/2d-bump-donut/interpol-render-5.png (PNG copy)> <./images/textures/
-2d-bump-donut/interpol-render-7.png (PNG copy)> <./images/textures/2d-bump-donu
-t/interpol-render-9.png (PNG copy)> <./images/textures/2d-bump-donut/colorbar.p
-ng (PNG copy)> <./images/meshing/2d-bump-donut/input-mesh-1.png> <./images/mesh
-ing/2d-bump-donut/input-mesh-3.png> <./images/meshing/2d-bump-donut/input-mesh-
-5.png> <./images/meshing/2d-bump-donut/input-mesh-7.png> <./images/meshing/2d-b
-ump-donut/input-mesh-9.png> <./images/meshing/images/input-mesh-1.png> <./image
-s/meshing/images/input-mesh-3.png> <./images/meshing/images/input-mesh-5.png> <
-./images/meshing/images/input-mesh-7.png> <./images/meshing/images/input-mesh-9
-.png> <./images/meshing/images/input-images-1.png> <./images/meshing/images/inp
-ut-mesh-1-img.png> <./images/meshing/images/input-images-2.png> <./images/meshi
-ng/images/input-mesh-9-img.png> <./images/texsynth/spectrum-1.png (PNG copy)> <
-./images/texsynth/spectrum-3.png (PNG copy)> <./images/texsynth/spectrum-5.png 
-(PNG copy)> <./images/texsynth/spectrum-7.png (PNG copy)> <./images/texsynth/sp
-ectrum-9.png (PNG copy)> <./images/texsynth/synthesis-1.png (PNG copy)> <./imag
-es/texsynth/synthesis-3.png (PNG copy)> <./images/texsynth/synthesis-5.png (PNG
- copy)> <./images/texsynth/synthesis-7.png (PNG copy)> <./images/texsynth/synth
-esis-9.png (PNG copy)> <./images/texsynth/original-1.png (PNG copy)> <./images/
-texsynth/original-2.png (PNG copy)>]) (./TensorOT.bbl [8])
+)) (./sections/conclusion.tex) (./TensorOT.bbl [7 <./images/mesh-bump/anisodiff
+us-1.png (PNG copy)> <./images/mesh-bump/anisodiffus-3.png (PNG copy)> <./image
+s/mesh-bump/anisodiffus-5.png (PNG copy)> <./images/mesh-bump/anisodiffus-7.png
+ (PNG copy)> <./images/mesh-bump/anisodiffus-9.png (PNG copy)> <./images/textur
+es/2d-bump-donut/interpol-render-1.png (PNG copy)> <./images/textures/2d-bump-d
+onut/interpol-render-3.png (PNG copy)> <./images/textures/2d-bump-donut/interpo
+l-render-5.png (PNG copy)> <./images/textures/2d-bump-donut/interpol-render-7.p
+ng (PNG copy)> <./images/textures/2d-bump-donut/interpol-render-9.png (PNG copy
+)> <./images/textures/2d-bump-donut/colorbar.png (PNG copy)> <./images/meshing/
+2d-bump-donut/input-mesh-1.png> <./images/meshing/2d-bump-donut/input-mesh-3.pn
+g> <./images/meshing/2d-bump-donut/input-mesh-5.png> <./images/meshing/2d-bump-
+donut/input-mesh-7.png> <./images/meshing/2d-bump-donut/input-mesh-9.png> <./im
+ages/meshing/images/input-mesh-1.png> <./images/meshing/images/input-mesh-3.png
+> <./images/meshing/images/input-mesh-5.png> <./images/meshing/images/input-mes
+h-7.png> <./images/meshing/images/input-mesh-9.png> <./images/meshing/images/in
+put-images-1.png> <./images/meshing/images/input-mesh-1-img.png> <./images/mesh
+ing/images/input-images-2.png> <./images/meshing/images/input-mesh-9-img.png>]
+[8 <./images/texsynth/spectrum-1.png (PNG copy)> <./images/texsynth/spectrum-3.
+png (PNG copy)> <./images/texsynth/spectrum-5.png (PNG copy)> <./images/texsynt
+h/spectrum-7.png (PNG copy)> <./images/texsynth/spectrum-9.png (PNG copy)> <./i
+mages/texsynth/synthesis-1.png (PNG copy)> <./images/texsynth/synthesis-3.png (
+PNG copy)> <./images/texsynth/synthesis-5.png (PNG copy)> <./images/texsynth/sy
+nthesis-7.png (PNG copy)> <./images/texsynth/synthesis-9.png (PNG copy)> <./ima
+ges/texsynth/original-1.png (PNG copy)> <./images/texsynth/original-2.png (PNG 
+copy)>])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 128.
  [9
 
@@ -1721,10 +1729,10 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 128.
  ) 
 Here is how much of TeX's memory you used:
- 12213 strings out of 493014
- 194632 string characters out of 6133351
- 329002 words of memory out of 5000000
- 14938 multiletter control sequences out of 15000+600000
+ 12215 strings out of 493014
+ 194665 string characters out of 6133351
+ 329580 words of memory out of 5000000
+ 14940 multiletter control sequences out of 15000+600000
  53829 words of font info for 297 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  44i,14n,78p,719b,442s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1752,10 +1760,10 @@ mf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2016/texmf-dist
 e1/urw/times/utmbi8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/ti
 mes/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmri8
 a.pfb>
-Output written on TensorOT.pdf (9 pages, 7178960 bytes).
+Output written on TensorOT.pdf (9 pages, 7179743 bytes).
 PDF statistics:
- 743 PDF objects out of 1000 (max. 8388607)
- 483 compressed objects within 5 object streams
+ 744 PDF objects out of 1000 (max. 8388607)
+ 484 compressed objects within 5 object streams
  132 named destinations out of 1000 (max. 500000)
  36854 words of extra memory for PDF output out of 42996 (max. 10000000)
 
