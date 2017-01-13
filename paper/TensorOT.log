@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.9.19)  13 JAN 2017 00:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.9.19)  13 JAN 2017 01:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1580,7 +1580,8 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <9> not available
 )
 (./sections/applications-dti.tex
 
-LaTeX Warning: Citation 'le2001diffusion' on page 7 undefined on input line 7.
+LaTeX Warning: Citation 'wandell2016clarifying' on page 7 undefined on input li
+ne 7.
 
 
 LaTeX Warning: Citation 'CaiafaPestilli' on page 7 undefined on input line 11.
@@ -1689,23 +1690,23 @@ Overfull \hbox (5.36617pt too wide) in paragraph at lines 29--50
  [][] 
  []
 
-)) (./sections/conclusion.tex) (./TensorOT.bbl [7 <./images/mesh-bump/anisodiff
-us-1.png (PNG copy)> <./images/mesh-bump/anisodiffus-3.png (PNG copy)> <./image
-s/mesh-bump/anisodiffus-5.png (PNG copy)> <./images/mesh-bump/anisodiffus-7.png
- (PNG copy)> <./images/mesh-bump/anisodiffus-9.png (PNG copy)> <./images/textur
-es/2d-bump-donut/interpol-render-1.png (PNG copy)> <./images/textures/2d-bump-d
-onut/interpol-render-3.png (PNG copy)> <./images/textures/2d-bump-donut/interpo
-l-render-5.png (PNG copy)> <./images/textures/2d-bump-donut/interpol-render-7.p
-ng (PNG copy)> <./images/textures/2d-bump-donut/interpol-render-9.png (PNG copy
-)> <./images/textures/2d-bump-donut/colorbar.png (PNG copy)> <./images/meshing/
-2d-bump-donut/input-mesh-1.png> <./images/meshing/2d-bump-donut/input-mesh-3.pn
-g> <./images/meshing/2d-bump-donut/input-mesh-5.png> <./images/meshing/2d-bump-
-donut/input-mesh-7.png> <./images/meshing/2d-bump-donut/input-mesh-9.png> <./im
-ages/meshing/images/input-mesh-1.png> <./images/meshing/images/input-mesh-3.png
-> <./images/meshing/images/input-mesh-5.png> <./images/meshing/images/input-mes
-h-7.png> <./images/meshing/images/input-mesh-9.png> <./images/meshing/images/in
-put-images-1.png> <./images/meshing/images/input-mesh-1-img.png> <./images/mesh
-ing/images/input-images-2.png> <./images/meshing/images/input-mesh-9-img.png>]
+)) (./sections/conclusion.tex) [7 <./images/mesh-bump/anisodiffus-1.png (PNG co
+py)> <./images/mesh-bump/anisodiffus-3.png (PNG copy)> <./images/mesh-bump/anis
+odiffus-5.png (PNG copy)> <./images/mesh-bump/anisodiffus-7.png (PNG copy)> <./
+images/mesh-bump/anisodiffus-9.png (PNG copy)> <./images/textures/2d-bump-donut
+/interpol-render-1.png (PNG copy)> <./images/textures/2d-bump-donut/interpol-re
+nder-3.png (PNG copy)> <./images/textures/2d-bump-donut/interpol-render-5.png (
+PNG copy)> <./images/textures/2d-bump-donut/interpol-render-7.png (PNG copy)> <
+./images/textures/2d-bump-donut/interpol-render-9.png (PNG copy)> <./images/tex
+tures/2d-bump-donut/colorbar.png (PNG copy)> <./images/meshing/2d-bump-donut/in
+put-mesh-1.png> <./images/meshing/2d-bump-donut/input-mesh-3.png> <./images/mes
+hing/2d-bump-donut/input-mesh-5.png> <./images/meshing/2d-bump-donut/input-mesh
+-7.png> <./images/meshing/2d-bump-donut/input-mesh-9.png> <./images/meshing/ima
+ges/input-mesh-1.png> <./images/meshing/images/input-mesh-3.png> <./images/mesh
+ing/images/input-mesh-5.png> <./images/meshing/images/input-mesh-7.png> <./imag
+es/meshing/images/input-mesh-9.png> <./images/meshing/images/input-images-1.png
+> <./images/meshing/images/input-mesh-1-img.png> <./images/meshing/images/input
+-images-2.png> <./images/meshing/images/input-mesh-9-img.png>] (./TensorOT.bbl
 [8 <./images/texsynth/spectrum-1.png (PNG copy)> <./images/texsynth/spectrum-3.
 png (PNG copy)> <./images/texsynth/spectrum-5.png (PNG copy)> <./images/texsynt
 h/spectrum-7.png (PNG copy)> <./images/texsynth/spectrum-9.png (PNG copy)> <./i
@@ -1715,9 +1716,7 @@ nthesis-7.png (PNG copy)> <./images/texsynth/synthesis-9.png (PNG copy)> <./ima
 ges/texsynth/original-1.png (PNG copy)> <./images/texsynth/original-2.png (PNG 
 copy)>])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 128.
- [9
-
-]
+ [9]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 128.
  (./TensorOT.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 128.
@@ -1726,12 +1725,15 @@ Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 128.
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 128.
  ) 
 Here is how much of TeX's memory you used:
- 12215 strings out of 493014
- 194665 string characters out of 6133351
- 329580 words of memory out of 5000000
+ 12217 strings out of 493014
+ 194716 string characters out of 6133351
+ 329653 words of memory out of 5000000
  14940 multiletter control sequences out of 15000+600000
  53829 words of font info for 297 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1760,10 +1762,10 @@ mf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2016/texmf-dist
 e1/urw/times/utmbi8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/ti
 mes/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmri8
 a.pfb>
-Output written on TensorOT.pdf (9 pages, 7179743 bytes).
+Output written on TensorOT.pdf (9 pages, 7182651 bytes).
 PDF statistics:
- 744 PDF objects out of 1000 (max. 8388607)
- 484 compressed objects within 5 object streams
- 132 named destinations out of 1000 (max. 500000)
+ 747 PDF objects out of 1000 (max. 8388607)
+ 487 compressed objects within 5 object streams
+ 134 named destinations out of 1000 (max. 500000)
  36854 words of extra memory for PDF output out of 42996 (max. 10000000)
 

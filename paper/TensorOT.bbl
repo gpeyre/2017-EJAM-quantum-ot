@@ -59,6 +59,13 @@
   functions.
 \newblock {\em Comm. Pure Appl. Math. 44}, 4, 375--417.
 
+\bibitem[\protect\citename{Caiafa and Pestilli }2015]{CaiafaPestilli}
+{\sc Caiafa, C.~F., and Pestilli, F.}
+\newblock 2015.
+\newblock Sparse multiway decomposition for analysis and modeling of diffusion
+  imaging and tractography.
+\newblock {\em arXiv:1505.07170\/}.
+
 \bibitem[\protect\citename{Carlen and Maas }2014]{Carlen2014}
 {\sc Carlen, E.~A., and Maas, J.}
 \newblock 2014.
@@ -283,6 +290,12 @@
 \newblock 2016.
 \newblock Directional field synthesis, design, and processing.
 \newblock {\em Comput. Graph. Forum 35}, 2, 545--572.
+
+\bibitem[\protect\citename{Wandell }2016]{wandell2016clarifying}
+{\sc Wandell, B.~A.}
+\newblock 2016.
+\newblock Clarifying human white matter.
+\newblock {\em Annual review of neuroscience}, 0.
 
 \bibitem[\protect\citename{Weickert }1998]{weickert1998anisotropic}
 {\sc Weickert, J.}
