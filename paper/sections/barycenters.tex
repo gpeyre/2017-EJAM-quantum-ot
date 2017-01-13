@@ -6,12 +6,12 @@
 \section{Quantum Barycenters}
 \label{sec-q-bary}
 
-Following~\cite{agueh-2011} (see also~\cite{benamou-2015,solomon-2015} for numerical methods using entropic regularization), we now propose a generalization of the OT problem~\eqref{eq-Kantorovich}, where, instead of coupling only two input measures, one tries to couple an arbitrary set of inputs, and compute their Frechet means. 
+Following Agueh and Carlier~\shortcite{agueh-2011} (see also~\cite{benamou-2015,solomon-2015} for numerical methods using entropic regularization), we now propose a generalization of the OT problem~\eqref{eq-Kantorovich}, where, instead of coupling only two input measures, one tries to couple an arbitrary set of inputs, and compute their Fr\'echet means. 
 
 \newcommand{\weight}{w}
 
 %%%%
-\subsection{Barycenters Optimization Problem}
+\subsection{Barycenter Optimization Problem}
 
 Given some input measures $(\mu^\ell)_\ell$, the quantum barycenter problem reads
 \eql{\label{eq-defn-barycenters}
@@ -35,7 +35,7 @@ in the definition~\eqref{eq-Kantorovich} of $W_\epsilon$. Note that the choice $
 	\eql{\label{eq-barycentric-matrix}
 		P = e^{-\frac{\Ee(x^\star)}{\rho}} \exp\Big(\sum_{\ell} \weight_\ell \log(P_\ell)\Big).
 	}
-	Figure~\eqref{fig:interp} illustrate the effect of a pointwise interpolation (i.e. at the same location $x_\ell$ for all $\ell$) between tensors.
+	Figure~\ref{fig:interp} illustrates the effect of a pointwise interpolation (i.e. at the same location $x_\ell$ for all $\ell$) between tensors.
 \end{rem}
 
 
@@ -53,7 +53,7 @@ in the definition~\eqref{eq-Kantorovich} of $W_\epsilon$. Note that the choice $
 \input{sections/barycenters-fig}
 
 
-Problem~\eqref{eq-defn-barycenters} is convex, and similarly to~\eqref{eq-dual-pb}, it can be re-written in dual form.
+Problem~\eqref{eq-defn-barycenters} is convex, and similarly to~\eqref{eq-dual-pb}, it can be rewritten in dual form.
 
 \begin{prop}
 The optimal $\nu$ solving~\eqref{eq-defn-barycenters} is solution of
@@ -67,7 +67,7 @@ The optimal $\nu$ solving~\eqref{eq-defn-barycenters} is solution of
 					+    \epsilon \sum_{i,j}  e^{ \Kern(u^\ell,v^\ell)_{i,j} }
 			 \Big], 
 \end{multline}	
-where here we defined $\Kern$ as
+where here we define $\Kern$ as
 \eql{\label{eq-def-k-bary}
 	\Kern(u,v)_{i,j} \eqdef -\frac{c_{i,j} + \rho u_i +  v_j}{\epsilon}.
 }
@@ -98,14 +98,14 @@ The proof of~\eqref{eq-fixed-point-u-bary} and~\eqref{eq-fixed-point-v-bary} is 
 Minimization of~\eqref{eq-dual-bary} on $\nu$ leads to~\eqref{eq-fixed-point-nu-bary}. 
 \end{proof}
 
-The extension of the quantum Sinkhorn algorithm to solve the barycenter problem~\eqref{alg:barycenter} is detailed in Algorithm~\ref{alg:barycenter}. It alternate between the update of $u$, $\nu$ and $v$, using relaxed version of the fixed point equations~\eqref{eq-fixed-point-u-bary}, \eqref{eq-fixed-point-v-bary} and~\eqref{eq-fixed-point-nu-bary}. The notation $\RelaxAssign{\tau}$ refers to a relaxed assignment as defined in~\eqref{eq-dfn-relaxed-assign}. 
+The extension of the quantum Sinkhorn algorithm to solve the barycenter problem~\eqref{alg:barycenter} is detailed in Algorithm~\ref{alg:barycenter}. It alternates between the updates of $u$, $\nu$ and $v$, using the relaxed version of the fixed point equations~\eqref{eq-fixed-point-u-bary}, \eqref{eq-fixed-point-v-bary} and~\eqref{eq-fixed-point-nu-bary}. The notation $\RelaxAssign{\tau}$ refers to a relaxed assignment as defined in~\eqref{eq-dfn-relaxed-assign}. 
 
 \begin{rem}[Choice of $\tau$]
-Remarks~\ref{rem-choice-tau} also applies for this Sinkhorn-like scheme, and setting $(\tau_1,\tau_2)=(\tfrac{\epsilon}{\rho+\epsilon},1)$ leads, in the scalar case $d=1$, to the algorithm detailed in~\cite{2016-chizat-sinkhorn}. We found experimentally that this choice leads to contracting (and hence linearly converging) iterations, and that higher values of $\tau$ usually accelerates the convergence rate. 
+Remark~\ref{rem-choice-tau} also applies for this Sinkhorn-like scheme, and setting $(\tau_1,\tau_2)=(\tfrac{\epsilon}{\rho+\epsilon},1)$ leads, in the scalar case $d=1$, to the algorithm in~\cite{2016-chizat-sinkhorn}. We found experimentally that this choice leads to contracting (and hence linearly converging) iterations, and that higher values of $\tau$ usually accelerate the convergence rate. 
 \end{rem}
 
 \begin{rem}[Scalar and isotropic cases]
-Note that in the scalar case $d=1$ and for isotropic input tensors (multiples of the identity), one retrieves the provably convergent unbalanced barycenter algorithm detailed in~\cite{2016-chizat-sinkhorn}.
+Note that in the scalar case $d=1$ and for isotropic input tensors (multiples of the identity), one retrieves the provably convergent unbalanced barycenter algorithm in~\cite{2016-chizat-sinkhorn}.
 \end{rem}
 
 

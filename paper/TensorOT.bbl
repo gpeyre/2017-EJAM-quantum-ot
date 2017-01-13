@@ -10,14 +10,14 @@
 {\sc Al-Mohy, A.~H., and Higham, N.~J.}
 \newblock 2009.
 \newblock A new scaling and squaring algorithm for the matrix exponential.
-\newblock {\em SIAM J. Sci. Comput. 31}, 3, 970?--989.
+\newblock {\em SIAM J. Sci. Comput. 31}, 3, 970--989.
 
 \bibitem[\protect\citename{Al-Mohy and Higham }2012]{HighamLog}
 {\sc Al-Mohy, A.~H., and Higham, N.~J.}
 \newblock 2012.
 \newblock Improved inverse scaling and squaring algorithms for the matrix
   logarithm.
-\newblock {\em SIAM J. Sci. Comput. 34}, 4, C153?--C169.
+\newblock {\em SIAM J. Sci. Comput. 34}, 4, C153--C169.
 
 \bibitem[\protect\citename{Alliez et~al\mbox{.} }2003]{alliez2003anisotropic}
 {\sc Alliez, P., Cohen-Steiner, D., Devillers, O., L{\'e}vy, B., and Desbrun,
@@ -25,6 +25,12 @@
 \newblock 2003.
 \newblock Anisotropic polygonal remeshing.
 \newblock In {\em ACM Transactions on Graphics (TOG)}, vol.~22, ACM, 485--493.
+
+\bibitem[\protect\citename{Anonymous }2016]{peyre2016quantum}
+{\sc Anonymous}.
+\newblock 2016.
+\newblock Quantum optimal transport for tensor field processing.
+\newblock {\em arXiv:1612.08731\/}.
 
 \bibitem[\protect\citename{Bauschke and Lewis }2000]{bauschke-lewis}
 {\sc Bauschke, H.~H., and Lewis, A.~S.}
@@ -95,7 +101,7 @@
 \bibitem[\protect\citename{Chizat et~al\mbox{.} }2015]{2015-chizat-unbalanced}
 {\sc Chizat, L., Peyr{\'e}, G., Schmitzer, B., and Vialard, F.-X.}
 \newblock 2015.
-\newblock Unbalanced optimal transport: Geometry and kantorovich formulation.
+\newblock Unbalanced optimal transport: Geometry and {K}antorovich formulation.
 \newblock Preprint 1508.05216, Arxiv.
 
 \bibitem[\protect\citename{Chizat et~al\mbox{.} }2016a]{2016-chizat-sinkhorn}
@@ -107,7 +113,8 @@
 \bibitem[\protect\citename{Chizat et~al\mbox{.} }2016b]{2016-chizat-focm}
 {\sc Chizat, L., Schmitzer, B., Peyr{\'e}, G., and Vialard, F.-X.}
 \newblock 2016.
-\newblock An interpolating distance between optimal transport and {Fisher-Rao}.
+\newblock An interpolating distance between optimal transport and
+  {Fisher--Rao}.
 \newblock {\em to appear in Foundations of Computational Mathematics\/}.
 
 \bibitem[\protect\citename{Crane et~al\mbox{.} }2010]{crane2010trivial}
@@ -139,7 +146,7 @@
 \bibitem[\protect\citename{Dhillon and Tropp }2008]{Dhillon2008}
 {\sc Dhillon, I.~S., and Tropp, J.~A.}
 \newblock 2008.
-\newblock Matrix nearness problems with bregman divergences.
+\newblock Matrix nearness problems with {B}regman divergences.
 \newblock {\em SIAM Journal on Matrix Analysis and Applications 29}, 4,
   1120--1146.
 
@@ -185,7 +192,7 @@
 \bibitem[\protect\citename{Kantorovich }1942]{Kantorovich42}
 {\sc Kantorovich, L.}
 \newblock 1942.
-\newblock On the transfer of masses (in russian).
+\newblock On the transfer of masses (in {R}ussian).
 \newblock {\em Doklady Akademii Nauk 37}, 2, 227--229.
 
 \bibitem[\protect\citename{Kondratyev et~al\mbox{.} }2015]{kondratyev2015}
@@ -198,7 +205,7 @@
 \bibitem[\protect\citename{Kulis et~al\mbox{.} }2009]{Kulis2009}
 {\sc Kulis, B., Sustik, M.~A., and Dhillon, I.~S.}
 \newblock 2009.
-\newblock Low-rank kernel learning with bregman matrix divergences.
+\newblock Low-rank kernel learning with {B}regman matrix divergences.
 \newblock {\em J. Mach. Learn. Res. 10\/} (June), 341--376.
 
 \bibitem[\protect\citename{Lagae et~al\mbox{.} }2010]{LagaeSurvey}
@@ -212,14 +219,14 @@
 \bibitem[\protect\citename{Lagae et~al\mbox{.} }2011]{LagaImproving}
 {\sc Lagae, A., Lefebvre, S., and Dutr{\'e}, P.}
 \newblock 2011.
-\newblock Improving gabor noise.
+\newblock Improving {G}abor noise.
 \newblock {\em IEEE Transactions on Visualization and Computer Graphics 17}, 8,
   1096--1107.
 
 \bibitem[\protect\citename{{Liero} et~al\mbox{.} }2015]{LieroMielkeSavareLong}
 {\sc {Liero}, M., {Mielke}, A., and {Savar{\'e}}, G.}
 \newblock 2015.
-\newblock Optimal entropy-transport problems and a new {Hellinger-Kantorovich}
+\newblock Optimal entropy-transport problems and a new {Hellinger--Kantorovich}
   distance between positive measures.
 \newblock {\em ArXiv e-prints\/}.
 
@@ -246,7 +253,7 @@
 \bibitem[\protect\citename{Ning et~al\mbox{.} }2015]{ning2015matrix}
 {\sc Ning, L., Georgiou, T.~T., and Tannenbaum, A.}
 \newblock 2015.
-\newblock On matrix-valued monge--kantorovich optimal mass transport.
+\newblock On matrix-valued {M}onge--{K}antorovich optimal mass transport.
 \newblock {\em IEEE transactions on automatic control 60}, 2, 373--382.
 
 \bibitem[\protect\citename{Pestilli et~al\mbox{.}
@@ -260,7 +267,7 @@
 {\sc Rockafellar, R.~T.}
 \newblock 1970.
 \newblock {\em Convex analysis}.
-\newblock Princeton university press.
+\newblock Princeton University Press.
 
 \bibitem[\protect\citename{Rubner et~al\mbox{.} }2000]{rubner-2000}
 {\sc Rubner, Y., Tomasi, C., and Guibas, L.~J.}
@@ -278,7 +285,7 @@
 \bibitem[\protect\citename{Shewchuk }2002]{shewchuk2002good}
 {\sc Shewchuk, J.}
 \newblock 2002.
-\newblock What is a good linear finite element? interpolation, conditioning,
+\newblock What is a good linear finite element? {I}nterpolation, conditioning,
   anisotropy, and quality measures (preprint).
 \newblock {\em University of California at Berkeley 73\/}.
 
@@ -314,7 +321,7 @@
 {\sc Wandell, B.~A.}
 \newblock 2016.
 \newblock Clarifying human white matter.
-\newblock {\em Annual review of neuroscience}, 0.
+\newblock {\em Annual Review of Neuroscience\/}.
 
 \bibitem[\protect\citename{Weickert }1998]{weickert1998anisotropic}
 {\sc Weickert, J.}

@@ -1,4 +1,7 @@
-\documentclass[tog]{acmsiggraph}
+%\newcommand{\AnonymMode}[2]{#2}  % uncomment for final compilation
+\newcommand{\AnonymMode}[2]{#1} % uncomment for anonymous compilation
+
+\AnonymMode{\documentclass[review]{acmsiggraph}}{\documentclass[tog]{acmsiggraph}}
 
 \usepackage{mystyle}
 
@@ -23,14 +26,17 @@
 
 \title{Quantum Optimal Transport for Tensor Field Processing}
 
+\AnonymMode{
+\author{}\pdfauthor{}
+}
+{
 \author{Gabriel Peyr\'e\thanks{\url{gabriel.peyre@ens.fr}} \\ CNRS \\ \'Ecole Normale Sup\'erieure \and
 Lena\"{i}c Chizat \\ Univ. Paris-Dauphine \\ INRIA Mokaplan \and 
 Fran\c{c}ois-Xavier Vialard \\ Univ. Paris-Dauphine \\ INRIA Mokaplan \and 
 Justin Solomon \\ MIT \and 
 }
-
 \pdfauthor{Gabriel Peyr\'e, Lena\"{i}c Chizat, Fran\c{c}ois-Xavier Vialard, Justin Solomon}
-
+}
 
 
 %\author{}
@@ -79,7 +85,7 @@ Justin Solomon \\ MIT \and
 $t=0$ & $t=1/8$ & $t=1/4$ & $t=3/8$ & $t=1/2$ & $t=5/8$ & $t=3/4$ & $t=7/8$ & $t=1$ 
 \end{tabular}
 \caption{%%%
-given two input fields of PSD matrices (displayed at time $t \in \{0,1\}$ using ellipses) on some domain (here a 2-D planar square and a surface mesh), our Quantum Optimal Transport (Q-OT) method defines a continuous interpolating paths for $t \in [0,1]$. On contrary to usual linear interpolation schemes, Q-OT transport the ``mass'' of the tensors (size of the ellipses) as well are their anisotropy and orientation. This interpolation, and its extension to barycenter of several input fields, is computed using a fast extension of the well-known Sinkhorn algorithm.
+Given two input fields of positive semidefinite matrices (displayed at times $t \in \{0,1\}$ using ellipses) on some domain (here, a 2-D planar square and a surface mesh), our Quantum Optimal Transport (Q-OT) method defines a continuous interpolating path for $t \in [0,1]$. Unlike linear interpolation schemes, Q-OT transports the ``mass'' of the tensors (size of the ellipses) as well as their anisotropy and orientation. This interpolation, and its extension to finding the barycenter of several input fields, is computed using a fast extension of the well-known Sinkhorn algorithm.
 } \label{fig:intro}
 }
 

@@ -7,7 +7,7 @@
 
 Optimal transport (OT) is an active field of research at the intersection of probability theory, PDEs, convex optimization and numerical analysis. 
 %
-OT offers a canonical way to lift a ground distance on some metric space to a metric between arbitrary probability measures defined over this base space. This OT distance offers many interesting  features, and in particular leads to a geometrically faithful way to manipulate and interpolate probability distributions.
+OT offers a canonical way to lift a ground distance on some metric space to a metric between arbitrary probability measures defined over this base space. OT distances offer many interesting  features, and in particular lead to a geometrically faithful way to manipulate and interpolate probability distributions.
 
 
 
@@ -19,14 +19,14 @@ OT offers a canonical way to lift a ground distance on some metric space to a me
 \paragraph{Scalar-valued optimal transport.}
 
 Dating back to the eighteenth century, classical instances of the optimal transport problem seek a minimal-cost matching between two distributions defined over a geometric domain, e.g.\ matching supply to demand while incurring minimal cost. 
-Initially formulated by Monge in terms of an unknown map transporting mass~\cite{Monge1781}, its reformulation by Kantorovich~\cite{Kantorovich42} as a linear program (static formulation) enables the use of convex analysis to study its structure and develop numerical solvers. 
+Initially formulated by Monge in terms of an unknown map transporting mass~\shortcite{Monge1781}, its reformulation by Kantorovich~\shortcite{Kantorovich42} as a linear program (static formulation) enables the use of convex analysis to study its structure and develop numerical solvers. 
 % 
-The equivalence between these two formulations was introduced by Brenier~\cite{Brenier91} and opened the door to a dynamical (geodesic) reformulation~\cite{benamou2000computational}. We refer to~\cite{santambrogio2015optimal} for a review of the theoretical foundations of OT. 
+The equivalence between these two formulations was introduced by Brenier~\shortcite{Brenier91} and opened the door to a dynamical (geodesic) reformulation~\cite{benamou2000computational}. We refer to~\cite{santambrogio2015optimal} for a review of the theoretical foundations of OT. 
 %
 
-The basic OT problem has been extended in various ways, a typical illustration of which being the computation of a barycenter (Frechet's mean) of input measures, a convex program studied by Agueh and Carlier~\cite{agueh-2011}.
+The basic OT problem has been extended in various ways, a typical illustration of which being the computation of a barycenter (Fr\'echet mean) of input measures, a convex program studied by Agueh and Carlier~\shortcite{agueh-2011}.
 %
-OT has found numerous applications, for instance in computer vision (under the naming ``earth mover distance'')~\cite{rubner-2000} or computer graphics~\cite{bonneel-2011}. % sampling~\cite{deGoes-2012}, matching~\cite{solomon2016entropic}.
+OT has found numerous applications, for instance in computer vision (under the name ``earth mover distance'')~\cite{rubner-2000} or computer graphics~\cite{bonneel-2011}. % sampling~\cite{deGoes-2012}, matching~\cite{solomon2016entropic}.
 
 
 %%%
@@ -41,7 +41,7 @@ Our work extends this static unbalanced formulation to tensor-valued measures.
 %%%
 \paragraph{Entropic regularization.}
 
-The current state-of-the-art to approximate OT for arbitrary ground costs uses entropic regularization of the transport plan. This leads to strictly convex programs that can be solved using a simple class of highly parallelizable ``diagonal scaling'' algorithms. The landmark paper of Cuturi~\cite{cuturi-2013} inspired detailed study of these solvers, leading to various generalizations of Sinkhorn's algorithm~\cite{Sinkhorn64}. This includes for instance the use fast convolutional structures~\cite{solomon-2015}, extensions to barycenters~\cite{benamou-2015} and to unbalanced OT~\cite{frogner-2015,2016-chizat-sinkhorn}.
+The current state-of-the-art OT approximation for arbitrary ground costs uses entropic regularization of the transport plan. This leads to strictly convex programs that can be solved using a simple class of highly parallelizable ``diagonal scaling'' algorithms. The landmark paper of Cuturi~\shortcite{cuturi-2013} inspired detailed study of these solvers, leading to various generalizations of Sinkhorn's algorithm~\shortcite{Sinkhorn64}. This includes for instance the use fast convolutional structures~\cite{solomon-2015}, extensions to barycenters~\cite{benamou-2015} and to unbalanced OT~\cite{frogner-2015,2016-chizat-sinkhorn}.
 %
 These entropic regularization techniques correspond to the use of projection and proximal maps for the Kullback--Leibler Bregman divergence and are equivalent to iterative projections~\cite{bregman-1967} and Dykstra's algorithm~\cite{Dykstra83,bauschke-lewis}. 
 %
@@ -56,7 +56,7 @@ Tensor-valued data are ubiquitous in various areas of imaging science, computer 
 %%%
 \paragraph{OT on tensor fields.}
 
-The simplest way to define OT-like distances between arbitrary vector-valued measures is to use dual norms~\cite{Ning2014metrics}, which correspond to generalizations of $W_1$ OT for which transport cost equals ground distance. The corresponding metrics, however, have degenerate behavior in interpolation and barycenter problems (much like the $L^1$ norm on functions) and only uses the linear structure of matrices rather than their multiplicative structure.
+The simplest way to define OT-like distances between arbitrary vector-valued measures is to use dual norms~\cite{Ning2014metrics}, which correspond to generalizations of $W_1$ OT for which transport cost equals ground distance. The corresponding metrics, however, have degenerate behavior in interpolation and barycenter problems (much like the $L^1$ norm on functions) and only use the linear structure of matrices rather than their multiplicative structure.
 %
 More satisfying notions of OT have recently been proposed in a dynamical (geodesic) way~\cite{JiangSpectral,Carlen2014,Chen2016}. 
 %
@@ -72,7 +72,7 @@ A static formulation of a tensor-valued OT is proposed in~\cite{ning2015matrix},
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Contributions.} 
+\subsection{Contributions} 
 
 We present a new static formulation of OT between tensor fields, which is the direct generalization of unbalanced OT from the scalar to the matrix case.
 %
@@ -80,7 +80,10 @@ Our second contribution is a fast entropic scaling algorithm generalizing the ce
 %
 Our third contribution is the extension of this approach to compute barycenters between several tensor fields. 
 %
-The Matlab code to reproduce the results of this article is available online.\footnote{\url{https://github.com/gpeyre/2016-wasserstein-tensor-valued}} %\justin{Of course we'll have to remove these links for SIGGRAPH submission}\gabriel{Indeed. I just thought it was a good idea for the arxiv paper, so that people can start playing with it and see that it really works (as opposed to alternative solution by Georgiou et al., which I think would not scale and are complex to implement). Is it ok ?}
+The Matlab code to reproduce the results of this article is available online.\footnote{
+\AnonymMode{\emph{Removed for paper submission.}}{\url{https://github.com/gpeyre/2016-wasserstein-tensor-valued}}
+}
+%\justin{Of course we'll have to remove these links for SIGGRAPH submission}\gabriel{Indeed. I just thought it was a good idea for the arxiv paper, so that people can start playing with it and see that it really works (as opposed to alternative solution by Georgiou et al., which I think would not scale and are complex to implement). Is it ok ?}
 
 % 
 % Applications to several problem in imaging and graphics ...
@@ -118,13 +121,14 @@ $X=[0,1]$, $d=3$
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-A tensor-valued measure $\mu$ defined on some space $X$ is a special case of vector-valued measure, where the ``mass'' $\mu(A) \in \Ss_+^d$ associated to a measurable set $A \subset X$ is a PSD matrix. In this article, in order to derive computational schemes, we focus on discrete measures. This means that such a measure $\mu$ is a sum of Dirac masses
+A tensor-valued measure $\mu$ defined on some space $X$ is a %special case of 
+vector-valued measure, where the ``mass'' $\mu(A) \in \Ss_+^d$ associated to a measurable set $A \subset X$ is a PSD matrix. In this article, in order to derive computational schemes, we focus on discrete measures. Such a measure $\mu$ is a sum of Dirac masses
 $\mu = \sum_{i \in I} \mu_i \de_{x_i}$
-where $(x_i)_i \subset X$, and $(\mu_i)_i \in \Ss_+^d$ is a collection of PSD matrices. In this particular case, $\mu(A)=\sum_{x_i \in A} \mu_i$. 
+where $(x_i)_i \subset X$, and $(\mu_i)_i \in \Ss_+^d$ is a collection of PSD matrices. In this case, $\mu(A)=\sum_{x_i \in A} \mu_i$. 
 %
 Figure~\ref{fig:display} shows graphically some examples of tensor-valued measures; we use this type of visualization through the article. 
 %
-In the following, since the sampling points $(x_i)_i$ are assumed to be fixed and clear from the context, to ease readability, we do not make the distinction between the measure $\mu$ and the vector of matrix $(\mu_i)_i$. This is an abuse of notation, but it is always clear from context wether we are referring to a measure or a vector. 
+In the following, since the sampling points $(x_i)_i$ are assumed to be fixed and clear from the context, to ease readability, we do not make the distinction between the measure $\mu$ and the vector of matrices $(\mu_i)_i$. This is an abuse of notation, but it is always clear from context whether we are referring to a measure or a vector. 
 
 The quantum entropy (also called von Neumann entropy) of a tensor-valued measure is 
 \eql{\label{eq-h-quantum}
@@ -154,7 +158,7 @@ The inner product between collections of matrices $\mu=(\mu_i)_i, \xi=(\xi_i)_i$
 }
 Given a collection of matrices $\ga=(\ga_{i,j})_{i \in I,j \in J}$ the marginalization operators read
 \eq{
-	\ga \ones_J \eqdef (\sum_j \ga_{i,j})_i 
+	\ga \ones_J \eqdef \left(\sum_j \ga_{i,j}\right)_i 
 	\qandq
-	\ga^\top \ones_I \eqdef (\sum_i \ga_{i,j})_j .
+	\ga^\top \ones_I \eqdef \left(\sum_i \ga_{i,j}\right)_j .
 }

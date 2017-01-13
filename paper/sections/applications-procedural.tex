@@ -1,14 +1,14 @@
 % !TEX root = ../TensorOT.tex
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Anisotropic Space-varying Procedural Noise}
+\subsection{Anisotropic Space-Varying Procedural Noise}
 
 
 \input{sections/applications-procedural-fig}
 
 Texture synthesis using procedural noise functions is widely used in rendering pipelines and video games because of both its low storage cost and the fact that it is typically parameterized by a few meaningful parameters~\cite{LagaeSurvey}. 
 %
-Following~\cite{LagaImproving} we consider here a spatially-varying Gabor noise function (i.e. a non-stationary Gaussian noise), whose covariance function is parameterized using a PSD-valued field $\mu$. 
+Following Lagae et al.~\shortcite{LagaImproving} we consider here a spatially-varying Gabor noise function (i.e.\ non-stationary Gaussian noise), whose covariance function is parameterized using a PSD-valued field $\mu$. 
 %
 Quantum optimal transport allows to interpolate and navigate between these noise functions by transporting the corresponding tensor fields. 
 %
@@ -19,10 +19,10 @@ The initial Gabor noise method makes use of sparse Gabor splattering~\cite{Lagae
 }
 where $(\mu \nabla f_t)(x) \eqdef \mu(x) (\nabla f_t(x))$ is the vector field obtained by applying the tensor $\mu(x) \in \Ss_2^+$ to the gradient vector $\nabla f_t(x) \in \RR^2$. 
 %
-Locally around $x$, the texture is stretched in the direction of the main eigenvector of $\mu(x)$,  highly anisotropic tensor giving rise to elongated ``stripes'' as opposed to isotropic tensor generating ``spots''. 
+Locally around $x$, the texture is stretched in the direction of the main eigenvector of $\mu(x)$,  highly anisotropic tensor giving rise to elongated ``stripes'' as opposed to isotropic tensor generating ``spots.''
 
-Numerically, $f$ is discretized on a 2-D grid, and $\mu$ is represented on this grid as a sum of Dirac masses~\eqref{eq-input-measures}. On Euclidian domains $X$, $\nabla$ and div are computed using usual finite difference, while on triangulated mesh, they are implemented using standard piecewise linear finite element primitives. 
+Numerically, $f$ is discretized on a 2-D grid, and $\mu$ is represented on this grid as a sum of Dirac masses~\eqref{eq-input-measures}. On Euclidian domains $X$, $\nabla$ and div are computed using finite differences, while on triangulated mesh, they are implemented using standard piecewise-linear finite element primitives. 
 %
-Figure~\ref{fig:texture} shows two illustrations of this method. Top row generates an animated color texture by indexing a non-linear black-red colormap (displayed on the right) using $f_t$. Bottom row generates an animated bump-mapped surface using $f_t$ to offset the mesh surface in the normal direction. 
+Figure~\ref{fig:texture} shows two illustrations of this method. The top row generates an animated color texture by indexing a non-linear black-red colormap (displayed on the right) using $f_t$. Bottom row generates an animated bump-mapped surface using $f_t$ to offset the mesh surface in the normal direction. 
 
 

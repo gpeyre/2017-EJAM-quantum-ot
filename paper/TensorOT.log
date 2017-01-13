@@ -1,19 +1,21 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.9.19)  13 JAN 2017 11:55
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.9.11)  13 JAN 2017 12:47
 entering extended mode
- restricted \write18 enabled.
- file:line:error style messages enabled.
- %&-line parsing enabled.
-**TensorOT.tex
-(./TensorOT.tex
-LaTeX2e <2016/03/31>
-Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
-(./acmsiggraph.cls
+**C:/Users/Justin/Documents/mit/research/2016-wasserstein-tensor-valued/paper/T
+ensorOT.tex
+
+(C:/Users/Justin/Documents/mit/research/2016-wasserstein-tensor-valued/paper/Te
+nsorOT.tex
+LaTeX2e <2014/05/01>
+Babel <3.9k> and hyphenation patterns for 68 languages loaded.
+
+(C:\Users\Justin\Documents\mit\research\2016-wasserstein-tensor-valued\paper\ac
+msiggraph.cls
 Document Class: acmsiggraph 2015/11/04 v0.92 ACM SIGGRAPH class
 \ACMpointsize=\skip41
-(/usr/local/texlive/2016/texmf-dist/tex/latex/base/article.cls
-Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
-(/usr/local/texlive/2016/texmf-dist/tex/latex/base/size10.clo
-File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls"
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\size10.clo"
+File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
 \c@section=\count80
@@ -27,41 +29,41 @@ File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip43
 \bibindent=\dimen102
 )
-(/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsmath.sty
-Package: amsmath 2016/03/10 v2.15b AMS math features
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
+Package: amsmath 2013/01/14 v2.14 AMS math features
 \@mathmargin=\skip44
 
 For additional information on amsmath, use the `?' option.
-(/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amstext.sty
-Package: amstext 2000/06/29 v2.01 AMS text
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
+Package: amstext 2000/06/29 v2.01
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsgen.sty
-File: amsgen.sty 1999/11/30 v2.0 generic functions
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
+File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks14
 \ex@=\dimen103
 ))
-(/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsbsy.sty
-Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
+Package: amsbsy 1999/11/29 v1.2d
 \pmbraise@=\dimen104
 )
-(/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsopn.sty
-Package: amsopn 2016/03/08 v2.02 operator names
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
+Package: amsopn 1999/12/14 v2.01 operator names
 )
 \inf@bad=\count87
-LaTeX Info: Redefining \frac on input line 199.
+LaTeX Info: Redefining \frac on input line 210.
 \uproot@=\count88
 \leftroot@=\count89
-LaTeX Info: Redefining \overline on input line 297.
+LaTeX Info: Redefining \overline on input line 306.
 \classnum@=\count90
 \DOTSCASE@=\count91
-LaTeX Info: Redefining \ldots on input line 394.
-LaTeX Info: Redefining \dots on input line 397.
-LaTeX Info: Redefining \cdots on input line 518.
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
 \Mathstrutbox@=\box26
 \strutbox@=\box27
 \big@size=\dimen105
-LaTeX Font Info:    Redeclaring font encoding OML on input line 634.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 635.
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 \macc@depth=\count92
 \c@MaxMatrixCols=\count93
 \dotsspace@=\muskip10
@@ -82,10 +84,10 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 635.
 \multlinegap=\skip45
 \multlinetaggap=\skip46
 \mathdisplay@stack=\toks18
-LaTeX Info: Redefining \[ on input line 2739.
-LaTeX Info: Redefining \] on input line 2740.
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
 )
-(/usr/local/texlive/2016/texmf-dist/tex/latex/lineno/lineno.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\lineno\lineno.sty"
 Package: lineno 2005/11/02 line numbers on paragraphs v4.41
 \linenopenalty=\count99
 \output=\toks19
@@ -103,50 +105,50 @@ Package: lineno 2005/11/02 line numbers on paragraphs v4.41
 \bframebox=\box28
 LaTeX Info: Redefining \\ on input line 3056.
 )
-(/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/helvet.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\helvet.sty"
 Package: helvet 2005/04/12 PSNFSS-v9.2a (WaS) 
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/keyval.sty
-Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+Package: keyval 2014/05/08 v1.15 key=value parser (DPC)
 \KV@toks@=\toks20
 ))
-(/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/times.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\times.sty"
 Package: times 2005/04/12 PSNFSS-v9.2a (SPQR) 
 )
-(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/graphicx.sty
-Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+Package: graphicx 2014/04/25 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2016/05/09 v1.0r Standard LaTeX Graphics (DPC,SPQR)
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/trig.sty
-Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
-File: graphics.cfg 2016/01/02 v1.10 sample graphics configuration
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
 )
-Package graphics Info: Driver file: pdftex.def on input line 96.
+Package graphics Info: Driver file: pdftex.def on input line 91.
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/pdftex-def/pdftex.def
+("C:\Program Files\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
-(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/infwarerr.sty
-Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 )
-(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
-Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count106
 ))
 \Gin@req@height=\dimen117
 \Gin@req@width=\dimen118
 )
-(/usr/local/texlive/2016/texmf-dist/tex/latex/caption/caption.sty
-Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
+("C:\Program Files\MiKTeX 2.9\tex\latex\caption\caption.sty"
+Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/caption/caption3.sty
-Package: caption3 2016/02/04 v1.7-139 caption3 kernel (AR)
-Package caption3 Info: TeX engine: e-TeX on input line 67.
+("C:\Program Files\MiKTeX 2.9\tex\latex\caption\caption3.sty"
+Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 57.
 \captionmargin=\dimen119
 \captionmargin@=\dimen120
 \captionwidth=\dimen121
@@ -157,7 +159,7 @@ Package caption3 Info: TeX engine: e-TeX on input line 67.
 )
 \c@ContinuedFloat=\count107
 )
-(/usr/local/texlive/2016/texmf-dist/tex/latex/parskip/parskip.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\ltxmisc\parskip.sty"
 Package: parskip 2001/04/09 non-zero parskip adjustments
 )
 \bibhang=\skip47
@@ -165,136 +167,138 @@ Package: parskip 2001/04/09 non-zero parskip adjustments
 \teaserspace=\skip49
 \@ACMabs=\toks21
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/comment/comment.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\comment\comment.sty"
 \CommentStream=\write3
 
 Excluding comment 'comment') Excluding comment 'CCSXML'
-(/usr/local/texlive/2016/texmf-dist/tex/latex/url/url.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\url\url.sty"
 \Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
-) (./acmcopyright.sty
+)
+(C:\Users\Justin\Documents\mit\research\2016-wasserstein-tensor-valued\paper\ac
+mcopyright.sty
 Package: acmcopyright 2014/06/29 v1.2 Copyright statements for ACM classes
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\xkeyval\xkeyval.sty"
+Package: xkeyval 2014/05/25 v2.7 package option processing (HA)
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/xkeyval/xkeyval.sty
-Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
-
-(/usr/local/texlive/2016/texmf-dist/tex/generic/xkeyval/xkeyval.tex
-(/usr/local/texlive/2016/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+("C:\Program Files\MiKTeX 2.9\tex\generic\xkeyval\xkeyval.tex"
+("C:\Program Files\MiKTeX 2.9\tex\generic\xkeyval\xkvutils.tex"
 \XKV@toks=\toks22
 \XKV@tempa@toks=\toks23
 )
 \XKV@depth=\count108
-File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+File: xkeyval.tex 2014/05/25 v2.7 key=value parser (HA)
 )))
-(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/ifpdf.sty
-Package: ifpdf 2016/05/14 v3.1 Provides the ifpdf switch
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
 )
-(/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/hyperref.sty
-Package: hyperref 2016/05/05 v6.83n Hypertext links for LaTeX
+("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\hyperref.sty"
+Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
 
-(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
-Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\hobsub-hyperref.sty"
+Package: hobsub-hyperref 2012/04/25 v1.12 Bundle oberdiek, subset hyperref (HO)
 
 
-(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
-Package: hobsub-generic 2016/05/16 v1.14 Bundle oberdiek, subset generic (HO)
-Package: hobsub 2016/05/16 v1.14 Construct package bundles (HO)
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\hobsub-generic.sty"
+Package: hobsub-generic 2012/04/25 v1.12 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2012/04/25 v1.12 Construct package bundles (HO)
 Package hobsub Info: Skipping package `infwarerr' (already loaded).
 Package hobsub Info: Skipping package `ltxcmds' (already loaded).
-Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
-Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
+Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
 Package ifvtex Info: VTeX not detected.
-Package: intcalc 2016/05/16 v1.2 Expandable calculations with integers (HO)
+Package: intcalc 2007/09/27 v1.1 Expandable calculations with integers (HO)
 Package hobsub Info: Skipping package `ifpdf' (already loaded).
-Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
 Package etexcmds Info: Could not find \expanded.
 (etexcmds)             That can mean that you are not using pdfTeX 1.50 or
 (etexcmds)             that some package has redefined \expanded.
 (etexcmds)             In the latter case, load this package earlier.
-Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
-Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
-Package: pdftexcmds 2016/05/10 v0.21 Utility functions of pdfTeX for LuaTeX (HO
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
-Package: pdfescape 2016/05/16 v1.14 Implements pdfTeX's escape features (HO)
-Package: bigintcalc 2016/05/16 v1.4 Expandable calculations on big integers (HO
+Package: pdfescape 2011/11/25 v1.13 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2012/04/08 v1.3 Expandable calculations on big integers (HO
 )
-Package: bitset 2016/05/16 v1.2 Handle bit-vector datatype (HO)
-Package: uniquecounter 2016/05/16 v1.3 Provide unlimited unique counter (HO)
+Package: bitset 2011/01/30 v1.1 Handle bit-vector datatype (HO)
+Package: uniquecounter 2011/01/30 v1.2 Provide unlimited unique counter (HO)
 )
 Package hobsub Info: Skipping package `hobsub' (already loaded).
-Package: letltxmacro 2016/05/16 v1.5 Let assignment for LaTeX macros (HO)
-Package: hopatch 2016/05/16 v1.3 Wrapper for package hooks (HO)
-Package: xcolor-patch 2016/05/16 xcolor patch
-Package: atveryend 2016/05/16 v1.9 Hooks at the very end of document (HO)
+Package: letltxmacro 2010/09/02 v1.4 Let assignment for LaTeX macros (HO)
+Package: hopatch 2011/06/24 v1.1 Wrapper for package hooks (HO)
+Package: xcolor-patch 2011/01/30 xcolor patch
+Package: atveryend 2011/06/30 v1.8 Hooks at the very end of document (HO)
 Package atveryend Info: \enddocument detected (standard20110627).
-Package: atbegshi 2016/05/16 v1.17 At begin shipout hook (HO)
-Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
-Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
+Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
+Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
+Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
 )
-(/usr/local/texlive/2016/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+("C:\Program Files\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-(/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/auxhook.sty
-Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\auxhook.sty"
+Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
 )
-(/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/kvoptions.sty
-Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 )
 \@linkdim=\dimen126
 \Hy@linkcounter=\count109
 \Hy@pagecounter=\count110
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/pd1enc.def
-File: pd1enc.def 2016/05/05 v6.83n Hyperref: PDFDocEncoding definition (HO)
+("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def"
+File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
 )
 \Hy@SavedSpaceFactor=\count111
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\hyperref.cfg"
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
-Package hyperref Info: Option `breaklinks' set `true' on input line 4322.
-Package hyperref Info: Option `hyperfootnotes' set `false' on input line 4322.
-Package hyperref Info: Option `bookmarks' set `false' on input line 4322.
-Package hyperref Info: Hyper figures OFF on input line 4446.
-Package hyperref Info: Link nesting OFF on input line 4451.
-Package hyperref Info: Hyper index ON on input line 4454.
-Package hyperref Info: Plain pages OFF on input line 4461.
-Package hyperref Info: Backreferencing OFF on input line 4466.
+Package hyperref Info: Option `breaklinks' set `true' on input line 4319.
+Package hyperref Info: Option `hyperfootnotes' set `false' on input line 4319.
+Package hyperref Info: Option `bookmarks' set `false' on input line 4319.
+Package hyperref Info: Hyper figures OFF on input line 4443.
+Package hyperref Info: Link nesting OFF on input line 4448.
+Package hyperref Info: Hyper index ON on input line 4451.
+Package hyperref Info: Plain pages OFF on input line 4458.
+Package hyperref Info: Backreferencing OFF on input line 4463.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
-Package hyperref Info: Bookmarks OFF on input line 4697.
+Package hyperref Info: Bookmarks OFF on input line 4694.
 \c@Hy@tempcnt=\count112
-LaTeX Info: Redefining \url on input line 5044.
+LaTeX Info: Redefining \url on input line 5041.
 \XeTeXLinkMargin=\dimen127
 \Fld@menulength=\count113
 \Field@Width=\dimen128
 \Fld@charsize=\dimen129
-Package hyperref Info: Hyper figures OFF on input line 6298.
-Package hyperref Info: Link nesting OFF on input line 6303.
-Package hyperref Info: Hyper index ON on input line 6306.
-Package hyperref Info: backreferencing OFF on input line 6313.
-Package hyperref Info: Link coloring OFF on input line 6318.
-Package hyperref Info: Link coloring with OCG OFF on input line 6323.
-Package hyperref Info: PDF/A mode OFF on input line 6328.
-LaTeX Info: Redefining \ref on input line 6368.
-LaTeX Info: Redefining \pageref on input line 6372.
+Package hyperref Info: Hyper figures OFF on input line 6295.
+Package hyperref Info: Link nesting OFF on input line 6300.
+Package hyperref Info: Hyper index ON on input line 6303.
+Package hyperref Info: backreferencing OFF on input line 6310.
+Package hyperref Info: Link coloring OFF on input line 6315.
+Package hyperref Info: Link coloring with OCG OFF on input line 6320.
+Package hyperref Info: PDF/A mode OFF on input line 6325.
+LaTeX Info: Redefining \ref on input line 6365.
+LaTeX Info: Redefining \pageref on input line 6369.
 \Hy@abspage=\count114
 \c@Item=\count115
 )
 
 Package hyperref Message: Driver: hpdftex.
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/hpdftex.def
-File: hpdftex.def 2016/05/05 v6.83n Hyperref driver for pdfTeX
+("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\hpdftex.def"
+File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
 \Fld@listcount=\count116
 \c@bookmark@seq@number=\count117
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
-Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\rerunfilecheck.sty"
+Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 )
@@ -303,19 +307,19 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 Package hyperref Info: Option `colorlinks' set `true' on input line 548.
 Package hyperref Info: Option `breaklinks' set `true' on input line 548.
 )
-(./mystyle.sty
-(/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+(C:\Users\Justin\Documents\mit\research\2016-wasserstein-tensor-valued\paper\my
+style.sty ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 )
-(/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/amssymb.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 )
-(/usr/local/texlive/2016/texmf-dist/tex/latex/amscls/amsthm.sty
-Package: amsthm 2015/03/04 v2.20.2
+("C:\Program Files\MiKTeX 2.9\tex\latex\amscls\amsthm.sty"
+Package: amsthm 2009/07/02 v2.20.1
 \thm@style=\toks24
 \thm@bodyfont=\toks25
 \thm@headfont=\toks26
@@ -326,16 +330,16 @@ Package: amsthm 2015/03/04 v2.20.2
 \thm@headsep=\skip53
 \dth@everypar=\toks29
 )
-(/usr/local/texlive/2016/texmf-dist/tex/latex/tools/array.sty
-Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\array.sty"
+Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
 \col@sep=\dimen130
 \extrarowheight=\dimen131
 \NC@list=\toks30
 \extratabsurround=\skip54
 \backup@length=\skip55
 )
-(/usr/local/texlive/2016/texmf-dist/tex/latex/tools/tabularx.sty
-Package: tabularx 2016/02/03 v2.11 `tabularx' package (DPC)
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\tabularx.sty"
+Package: tabularx 2014/05/13 v2.10 `tabularx' package (DPC)
 \TX@col@width=\dimen132
 \TX@old@table=\dimen133
 \TX@old@col=\dimen134
@@ -344,28 +348,28 @@ Package: tabularx 2016/02/03 v2.11 `tabularx' package (DPC)
 \TX@cols=\count118
 \TX@ftn=\toks31
 )
-(/usr/local/texlive/2016/texmf-dist/tex/latex/tools/indentfirst.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\indentfirst.sty"
 Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
 )
-(/usr/local/texlive/2016/texmf-dist/tex/latex/tools/xspace.sty
-Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\xspace.sty"
+Package: xspace 2009/10/20 v1.13 Space after command names (DPC,MH)
 )
-(/usr/local/texlive/2016/texmf-dist/tex/latex/xcolor/xcolor.sty
-Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+("C:\Program Files\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty"
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics-cfg/color.cfg
-File: color.cfg 2016/01/02 v1.6 sample color configuration
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
-Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
-Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
-Package xcolor Info: Model `RGB' extended on input line 1364.
-Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
-Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
-Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
-Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
-Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
-Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
 )
 \c@thm=\count119
 \c@prop=\count120
@@ -375,7 +379,7 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 \c@rem=\count124
 \c@exmp=\count125
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/float/float.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\float\float.sty"
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count126
 \float@exts=\toks32
@@ -389,23 +393,23 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \restsubheight=\skip57
 \restsubmoreheight=\skip58
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/multirow/multirow.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\multirow\multirow.sty"
 \bigstrutjot=\dimen137
 )
-(/usr/local/texlive/2016/texmf-dist/tex/latex/doublestroke/dsfont.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\dstroke\dsfont.sty"
 Package: dsfont 1995/08/01 v0.1 Double stroke roman fonts
 )
-(/usr/local/texlive/2016/texmf-dist/tex/latex/algorithms/algorithm.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\algorithms\algorithm.sty"
 Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
 nment
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/base/ifthen.sty
-Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ifthen.sty"
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 )
 \@float@every@algorithm=\toks35
 \c@algorithm=\count128
 )
-(/usr/local/texlive/2016/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\algorithmicx\algorithmicx.sty"
 Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
 
 Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
@@ -419,81 +423,82 @@ Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
 \c@ALG@storecount=\count134
 \c@ALG@tmpcounter=\count135
 \ALG@tmplength=\skip61
-) (/usr/local/texlive/2016/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\algorithmicx\algpseudocode.sty"
 Package: algpseudocode 
 
 Document Style - pseudocode environments for use with the `algorithmicx' style
-)) (./MyMnSymbol.sty
+))
+(C:\Users\Justin\Documents\mit\research\2016-wasserstein-tensor-valued\paper\My
+MnSymbol.sty
 Package: MyMnSymbol 2007/01/21 v1.4 Underbraces from MnSymbol
 \symlargesymbolsX=\mathgroup6
 LaTeX Font Info:    Redeclaring math symbol \bracelu on input line 19.
 LaTeX Font Info:    Redeclaring math symbol \braceru on input line 20.
 LaTeX Info: Redefining \underbrace on input line 76.
-)
-(/usr/local/texlive/2016/texmf-dist/tex/latex/microtype/microtype.sty
-Package: microtype 2016/05/14 v2.6a Micro-typographical refinements (RS)
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\microtype\microtype.sty"
+Package: microtype 2013/05/23 v2.5a Micro-typographical refinements (RS)
 \MT@toks=\toks36
 \MT@count=\count136
-LaTeX Info: Redefining \textls on input line 774.
+LaTeX Info: Redefining \textls on input line 766.
 \MT@outer@kern=\dimen138
-LaTeX Info: Redefining \textmicrotypecontext on input line 1310.
+LaTeX Info: Redefining \textmicrotypecontext on input line 1285.
 \MT@listname@count=\count137
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/microtype/microtype-pdftex.def
-File: microtype-pdftex.def 2016/05/14 v2.6a Definitions specific to pdftex (RS)
+("C:\Program Files\MiKTeX 2.9\tex\latex\microtype\microtype-pdftex.def"
+File: microtype-pdftex.def 2013/05/23 v2.5a Definitions specific to pdftex (RS)
 
-LaTeX Info: Redefining \lsstyle on input line 916.
-LaTeX Info: Redefining \lslig on input line 916.
+LaTeX Info: Redefining \lsstyle on input line 915.
+LaTeX Info: Redefining \lslig on input line 915.
 \MT@outer@space=\skip62
 )
 Package microtype Info: Loading configuration file microtype.cfg.
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/microtype/microtype.cfg
-File: microtype.cfg 2016/05/14 v2.6a microtype main configuration file (RS)
+("C:\Program Files\MiKTeX 2.9\tex\latex\microtype\microtype.cfg"
+File: microtype.cfg 2013/05/23 v2.5a microtype main configuration file (RS)
 ))
-(./pbox.sty
+(C:\Users\Justin\Documents\mit\research\2016-wasserstein-tensor-valued\paper\pb
+ox.sty
 Package: pbox 2011/12/07 v1.2 Dynamic parboxes
- (/usr/local/texlive/2016/texmf-dist/tex/latex/tools/calc.sty
-Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\tools\calc.sty"
+Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Acount=\count138
 \calc@Bcount=\count139
 \calc@Adimen=\dimen139
 \calc@Bdimen=\dimen140
 \calc@Askip=\skip63
 \calc@Bskip=\skip64
-LaTeX Info: Redefining \setlength on input line 80.
-LaTeX Info: Redefining \addtolength on input line 81.
+LaTeX Info: Redefining \setlength on input line 75.
+LaTeX Info: Redefining \addtolength on input line 76.
 \calc@Ccount=\count140
 \calc@Cskip=\skip65
 )
 \pb@xlen=\skip66
 )
-(./TensorOT.aux
+(C:\Users\Justin\Documents\mit\research\2016-wasserstein-tensor-valued\paper\Te
+nsorOT.aux
 
 LaTeX Warning: Label `fig:texsynth' multiply defined.
 
 )
-\openout1 = `TensorOT.aux'.
-
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 53.
- (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 59.
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\ot1ptm.fd"
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
-(/usr/local/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count141
 \scratchdimen=\dimen141
@@ -506,40 +511,25 @@ File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 \MPnumerator=\count145
 \makeMPintoPDFobject=\count146
 \everyMPtoPDFconversion=\toks38
-) (/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
-Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
-
-(/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/grfext.sty
-Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
 )
-Package grfext Info: Graphics extension search list:
-(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
-G,.JBIG2,.JB2,.eps]
-(grfext)             \AppendGraphicsExtensions on input line 456.
-
-(/usr/local/texlive/2016/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
-e
-))
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \AtBeginShipoutBox=\box32
-Package hyperref Info: Link coloring ON on input line 53.
-
-(/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/nameref.sty
+Package hyperref Info: Link coloring ON on input line 59.
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
-(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
-Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
+Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count147
 )
-LaTeX Info: Redefining \ref on input line 53.
-LaTeX Info: Redefining \pageref on input line 53.
-LaTeX Info: Redefining \nameref on input line 53.
-LaTeX Info: Redefining \microtypecontext on input line 53.
+LaTeX Info: Redefining \ref on input line 59.
+LaTeX Info: Redefining \pageref on input line 59.
+LaTeX Info: Redefining \nameref on input line 59.
+LaTeX Info: Redefining \microtypecontext on input line 59.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -550,220 +540,221 @@ Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/microtype/mt-ptm.cfg
+("C:\Program Files\MiKTeX 2.9\tex\latex\microtype\mt-ptm.cfg"
 File: mt-ptm.cfg 2006/04/20 v1.7 microtype config. file: Times (RS)
 )
-LaTeX Font Info:    Try loading font information for OT1+phv on input line 87.
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 93.
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/ot1phv.fd
+("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\ot1phv.fd"
 File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 )
 LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
-(Font)              scaled to size 13.24796pt on input line 87.
+(Font)              scaled to size 13.24796pt on input line 93.
 Package microtype Info: Loading generic settings for font family
 (microtype)             `phv' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 87.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 93.
 LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
-(Font)              scaled to size 13.24796pt on input line 87.
+(Font)              scaled to size 13.24796pt on input line 93.
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/microtype/mt-cmr.cfg
+("C:\Program Files\MiKTeX 2.9\tex\latex\microtype\mt-cmr.cfg"
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
 (RS)
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 87.
+LaTeX Font Info:    Try loading font information for U+msa on input line 93.
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsa.fd
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-(/usr/local/texlive/2016/texmf-dist/tex/latex/microtype/mt-msa.cfg
+("C:\Program Files\MiKTeX 2.9\tex\latex\microtype\mt-msa.cfg"
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 87.
+LaTeX Font Info:    Try loading font information for U+msb on input line 93.
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-(/usr/local/texlive/2016/texmf-dist/tex/latex/microtype/mt-msb.cfg
+("C:\Program Files\MiKTeX 2.9\tex\latex\microtype\mt-msb.cfg"
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 87.
-
-(/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/omsptm.fd
-File: omsptm.fd 
-)
-LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <7> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 87.
-
-<./images/2d-intro/interpol-ellipses-1.png, id=4, 362.3136pt x 248.127pt>
+<./images/2d-intro/interpol-ellipses-1.png, id=3, 362.3136pt x 248.127pt>
 File: ./images/2d-intro/interpol-ellipses-1.png Graphic file (type png)
 
 <use ./images/2d-intro/interpol-ellipses-1.png>
 Package pdftex.def Info: ./images/2d-intro/interpol-ellipses-1.png used on inpu
-t line 87.
+t line 93.
 (pdftex.def)             Requested size: 53.11629pt x 54.76453pt.
 
-<./images/2d-intro/interpol-ellipses-2.png, id=6, 362.3136pt x 248.127pt>
+<./images/2d-intro/interpol-ellipses-2.png, id=5, 362.3136pt x 248.127pt>
 File: ./images/2d-intro/interpol-ellipses-2.png Graphic file (type png)
 
 <use ./images/2d-intro/interpol-ellipses-2.png>
 Package pdftex.def Info: ./images/2d-intro/interpol-ellipses-2.png used on inpu
-t line 87.
+t line 93.
 (pdftex.def)             Requested size: 53.11629pt x 54.76453pt.
 
-<./images/2d-intro/interpol-ellipses-3.png, id=8, 362.3136pt x 248.127pt>
+<./images/2d-intro/interpol-ellipses-3.png, id=7, 362.3136pt x 248.127pt>
 File: ./images/2d-intro/interpol-ellipses-3.png Graphic file (type png)
 
 <use ./images/2d-intro/interpol-ellipses-3.png>
 Package pdftex.def Info: ./images/2d-intro/interpol-ellipses-3.png used on inpu
-t line 87.
+t line 93.
 (pdftex.def)             Requested size: 53.11629pt x 54.76453pt.
 
-<./images/2d-intro/interpol-ellipses-4.png, id=10, 362.3136pt x 248.127pt>
+<./images/2d-intro/interpol-ellipses-4.png, id=9, 362.3136pt x 248.127pt>
 File: ./images/2d-intro/interpol-ellipses-4.png Graphic file (type png)
 
 <use ./images/2d-intro/interpol-ellipses-4.png>
 Package pdftex.def Info: ./images/2d-intro/interpol-ellipses-4.png used on inpu
-t line 87.
+t line 93.
 (pdftex.def)             Requested size: 53.11629pt x 54.76453pt.
 
-<./images/2d-intro/interpol-ellipses-5.png, id=12, 362.3136pt x 248.127pt>
+<./images/2d-intro/interpol-ellipses-5.png, id=11, 362.3136pt x 248.127pt>
 File: ./images/2d-intro/interpol-ellipses-5.png Graphic file (type png)
 
 <use ./images/2d-intro/interpol-ellipses-5.png>
 Package pdftex.def Info: ./images/2d-intro/interpol-ellipses-5.png used on inpu
-t line 87.
+t line 93.
 (pdftex.def)             Requested size: 53.11629pt x 54.76453pt.
 
-<./images/2d-intro/interpol-ellipses-6.png, id=14, 362.3136pt x 248.127pt>
+<./images/2d-intro/interpol-ellipses-6.png, id=13, 362.3136pt x 248.127pt>
 File: ./images/2d-intro/interpol-ellipses-6.png Graphic file (type png)
 
 <use ./images/2d-intro/interpol-ellipses-6.png>
 Package pdftex.def Info: ./images/2d-intro/interpol-ellipses-6.png used on inpu
-t line 87.
+t line 93.
 (pdftex.def)             Requested size: 53.11629pt x 54.76453pt.
 
-<./images/2d-intro/interpol-ellipses-7.png, id=16, 362.3136pt x 248.127pt>
+<./images/2d-intro/interpol-ellipses-7.png, id=15, 362.3136pt x 248.127pt>
 File: ./images/2d-intro/interpol-ellipses-7.png Graphic file (type png)
 
 <use ./images/2d-intro/interpol-ellipses-7.png>
 Package pdftex.def Info: ./images/2d-intro/interpol-ellipses-7.png used on inpu
-t line 87.
+t line 93.
 (pdftex.def)             Requested size: 53.11629pt x 54.76453pt.
 
-<./images/2d-intro/interpol-ellipses-8.png, id=18, 362.3136pt x 248.127pt>
+<./images/2d-intro/interpol-ellipses-8.png, id=17, 362.3136pt x 248.127pt>
 File: ./images/2d-intro/interpol-ellipses-8.png Graphic file (type png)
 
 <use ./images/2d-intro/interpol-ellipses-8.png>
 Package pdftex.def Info: ./images/2d-intro/interpol-ellipses-8.png used on inpu
-t line 87.
+t line 93.
 (pdftex.def)             Requested size: 53.11629pt x 54.76453pt.
 
-<./images/2d-intro/interpol-ellipses-9.png, id=20, 362.3136pt x 248.127pt>
+<./images/2d-intro/interpol-ellipses-9.png, id=19, 362.3136pt x 248.127pt>
 File: ./images/2d-intro/interpol-ellipses-9.png Graphic file (type png)
 
 <use ./images/2d-intro/interpol-ellipses-9.png>
 Package pdftex.def Info: ./images/2d-intro/interpol-ellipses-9.png used on inpu
-t line 87.
+t line 93.
 (pdftex.def)             Requested size: 53.11629pt x 54.76453pt.
 
-<./images/mesh-intro/interpol-1.png, id=22, 441.8106pt x 245.718pt>
+<./images/mesh-intro/interpol-1.png, id=21, 441.8106pt x 245.718pt>
 File: ./images/mesh-intro/interpol-1.png Graphic file (type png)
 
 <use ./images/mesh-intro/interpol-1.png>
 Package pdftex.def Info: ./images/mesh-intro/interpol-1.png used on input line 
-87.
+93.
 (pdftex.def)             Requested size: 50.59209pt x 65.93613pt.
 
-<./images/mesh-intro/interpol-2.png, id=24, 441.8106pt x 245.718pt>
+<./images/mesh-intro/interpol-2.png, id=23, 441.8106pt x 245.718pt>
 File: ./images/mesh-intro/interpol-2.png Graphic file (type png)
 
 <use ./images/mesh-intro/interpol-2.png>
 Package pdftex.def Info: ./images/mesh-intro/interpol-2.png used on input line 
-87.
+93.
 (pdftex.def)             Requested size: 50.59209pt x 65.93613pt.
 
-<./images/mesh-intro/interpol-3.png, id=26, 441.8106pt x 245.718pt>
+<./images/mesh-intro/interpol-3.png, id=25, 441.8106pt x 245.718pt>
 File: ./images/mesh-intro/interpol-3.png Graphic file (type png)
 
 <use ./images/mesh-intro/interpol-3.png>
 Package pdftex.def Info: ./images/mesh-intro/interpol-3.png used on input line 
-87.
+93.
 (pdftex.def)             Requested size: 50.59209pt x 65.93613pt.
 
-<./images/mesh-intro/interpol-4.png, id=28, 441.8106pt x 245.718pt>
+<./images/mesh-intro/interpol-4.png, id=27, 441.8106pt x 245.718pt>
 File: ./images/mesh-intro/interpol-4.png Graphic file (type png)
 
 <use ./images/mesh-intro/interpol-4.png>
 Package pdftex.def Info: ./images/mesh-intro/interpol-4.png used on input line 
-87.
+93.
 (pdftex.def)             Requested size: 50.59209pt x 65.93613pt.
 
-<./images/mesh-intro/interpol-5.png, id=30, 441.8106pt x 245.718pt>
+<./images/mesh-intro/interpol-5.png, id=29, 441.8106pt x 245.718pt>
 File: ./images/mesh-intro/interpol-5.png Graphic file (type png)
 
 <use ./images/mesh-intro/interpol-5.png>
 Package pdftex.def Info: ./images/mesh-intro/interpol-5.png used on input line 
-87.
+93.
 (pdftex.def)             Requested size: 50.59209pt x 65.93613pt.
 
-<./images/mesh-intro/interpol-6.png, id=32, 441.8106pt x 245.718pt>
+<./images/mesh-intro/interpol-6.png, id=31, 441.8106pt x 245.718pt>
 File: ./images/mesh-intro/interpol-6.png Graphic file (type png)
 
 <use ./images/mesh-intro/interpol-6.png>
 Package pdftex.def Info: ./images/mesh-intro/interpol-6.png used on input line 
-87.
+93.
 (pdftex.def)             Requested size: 50.59209pt x 65.93613pt.
 
-<./images/mesh-intro/interpol-7.png, id=34, 441.8106pt x 245.718pt>
+<./images/mesh-intro/interpol-7.png, id=33, 441.8106pt x 245.718pt>
 File: ./images/mesh-intro/interpol-7.png Graphic file (type png)
 
 <use ./images/mesh-intro/interpol-7.png>
 Package pdftex.def Info: ./images/mesh-intro/interpol-7.png used on input line 
-87.
+93.
 (pdftex.def)             Requested size: 50.59209pt x 65.93613pt.
 
-<./images/mesh-intro/interpol-8.png, id=36, 441.8106pt x 245.718pt>
+<./images/mesh-intro/interpol-8.png, id=35, 441.8106pt x 245.718pt>
 File: ./images/mesh-intro/interpol-8.png Graphic file (type png)
 
 <use ./images/mesh-intro/interpol-8.png>
 Package pdftex.def Info: ./images/mesh-intro/interpol-8.png used on input line 
-87.
+93.
 (pdftex.def)             Requested size: 50.59209pt x 65.93613pt.
 
-<./images/mesh-intro/interpol-9.png, id=38, 441.8106pt x 245.718pt>
+<./images/mesh-intro/interpol-9.png, id=37, 441.8106pt x 245.718pt>
 File: ./images/mesh-intro/interpol-9.png Graphic file (type png)
 
 <use ./images/mesh-intro/interpol-9.png>
 Package pdftex.def Info: ./images/mesh-intro/interpol-9.png used on input line 
-87.
+93.
 (pdftex.def)             Requested size: 50.59209pt x 65.93613pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 87.
+(caption)                particular \caption on input line 93.
 See the caption package documentation for explanation.
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 87.
-LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <6> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 87.
-(./sections/abstract.tex
-LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
-(Font)              scaled to size 11.03998pt on input line 3.
-LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <12> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 3.
-LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
-(Font)              scaled to size 11.03998pt on input line 3.
-) Excluding 'CCSXML' comment.
-LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <9> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 109.
-LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <8> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 111.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 93.
 
-(./sections/introduction.tex
+(C:\Users\Justin\Documents\mit\research\2016-wasserstein-tensor-valued\paper\se
+ctions/abstract.tex
+LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
+(Font)              scaled to size 11.03998pt on input line 13.
+LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <12> not available
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 13.
+LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
+(Font)              scaled to size 11.03998pt on input line 13.
+LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
+(Font)              scaled to size 4.59999pt on input line 13.
+) Excluding 'CCSXML' comment.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 115.
+
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\omsptm.fd"
+File: omsptm.fd 
+)
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <9> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 115.
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <8> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 117.
+
+(C:\Users\Justin\Documents\mit\research\2016-wasserstein-tensor-valued\paper\se
+ctions/introduction.tex
 LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
 (Font)              scaled to size 9.19998pt on input line 16.
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10> not available
@@ -776,110 +767,125 @@ LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <9> not available
 (Font)              Font shape `OT1/phv/b/n' tried instead on input line 21.
 LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
 (Font)              scaled to size 8.27998pt on input line 21.
-
-Underfull \vbox (badness 1342) has occurred while \output is active []
-
- [1{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+ [1{C:/Users/Justin/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 
- <./images/2d-intro/interpol-ellipses-1.png (PNG copy)> <./images/2d-intro/inte
-rpol-ellipses-2.png (PNG copy)> <./images/2d-intro/interpol-ellipses-3.png (PNG
- copy)> <./images/2d-intro/interpol-ellipses-4.png (PNG copy)> <./images/2d-int
-ro/interpol-ellipses-5.png (PNG copy)> <./images/2d-intro/interpol-ellipses-6.p
-ng (PNG copy)> <./images/2d-intro/interpol-ellipses-7.png (PNG copy)> <./images
-/2d-intro/interpol-ellipses-8.png (PNG copy)> <./images/2d-intro/interpol-ellip
-ses-9.png (PNG copy)> <./images/mesh-intro/interpol-1.png (PNG copy)> <./images
-/mesh-intro/interpol-2.png (PNG copy)> <./images/mesh-intro/interpol-3.png (PNG
- copy)> <./images/mesh-intro/interpol-4.png (PNG copy)> <./images/mesh-intro/in
-terpol-5.png (PNG copy)> <./images/mesh-intro/interpol-6.png (PNG copy)> <./ima
-ges/mesh-intro/interpol-7.png (PNG copy)> <./images/mesh-intro/interpol-8.png (
-PNG copy)> <./images/mesh-intro/interpol-9.png (PNG copy)>]
-<./images/display/1d-2x2.png, id=134, 317.5062pt x 37.0986pt>
+ <C:/Users/Justin/Documents/mit/research/2016-wasserstein-tensor-valued/paper/i
+mages/2d-intro/interpol-ellipses-1.png (PNG copy)> <C:/Users/Justin/Documents/m
+it/research/2016-wasserstein-tensor-valued/paper/images/2d-intro/interpol-ellip
+ses-2.png (PNG copy)> <C:/Users/Justin/Documents/mit/research/2016-wasserstein-
+tensor-valued/paper/images/2d-intro/interpol-ellipses-3.png (PNG copy)> <C:/Use
+rs/Justin/Documents/mit/research/2016-wasserstein-tensor-valued/paper/images/2d
+-intro/interpol-ellipses-4.png (PNG copy)> <C:/Users/Justin/Documents/mit/resea
+rch/2016-wasserstein-tensor-valued/paper/images/2d-intro/interpol-ellipses-5.pn
+g (PNG copy)> <C:/Users/Justin/Documents/mit/research/2016-wasserstein-tensor-v
+alued/paper/images/2d-intro/interpol-ellipses-6.png (PNG copy)> <C:/Users/Justi
+n/Documents/mit/research/2016-wasserstein-tensor-valued/paper/images/2d-intro/i
+nterpol-ellipses-7.png (PNG copy)> <C:/Users/Justin/Documents/mit/research/2016
+-wasserstein-tensor-valued/paper/images/2d-intro/interpol-ellipses-8.png (PNG c
+opy)> <C:/Users/Justin/Documents/mit/research/2016-wasserstein-tensor-valued/pa
+per/images/2d-intro/interpol-ellipses-9.png (PNG copy)> <C:/Users/Justin/Docume
+nts/mit/research/2016-wasserstein-tensor-valued/paper/images/mesh-intro/interpo
+l-1.png (PNG copy)> <C:/Users/Justin/Documents/mit/research/2016-wasserstein-te
+nsor-valued/paper/images/mesh-intro/interpol-2.png (PNG copy)> <C:/Users/Justin
+/Documents/mit/research/2016-wasserstein-tensor-valued/paper/images/mesh-intro/
+interpol-3.png (PNG copy)> <C:/Users/Justin/Documents/mit/research/2016-wassers
+tein-tensor-valued/paper/images/mesh-intro/interpol-4.png (PNG copy)> <C:/Users
+/Justin/Documents/mit/research/2016-wasserstein-tensor-valued/paper/images/mesh
+-intro/interpol-5.png (PNG copy)> <C:/Users/Justin/Documents/mit/research/2016-
+wasserstein-tensor-valued/paper/images/mesh-intro/interpol-6.png (PNG copy)> <C
+:/Users/Justin/Documents/mit/research/2016-wasserstein-tensor-valued/paper/imag
+es/mesh-intro/interpol-7.png (PNG copy)> <C:/Users/Justin/Documents/mit/researc
+h/2016-wasserstein-tensor-valued/paper/images/mesh-intro/interpol-8.png (PNG co
+py)> <C:/Users/Justin/Documents/mit/research/2016-wasserstein-tensor-valued/pap
+er/images/mesh-intro/interpol-9.png (PNG copy)>]
+<./images/display/1d-2x2.png, id=132, 317.5062pt x 37.0986pt>
 File: ./images/display/1d-2x2.png Graphic file (type png)
 
 <use ./images/display/1d-2x2.png>
-Package pdftex.def Info: ./images/display/1d-2x2.png used on input line 102.
+Package pdftex.def Info: ./images/display/1d-2x2.png used on input line 105.
 (pdftex.def)             Requested size: 115.65256pt x 13.51341pt.
 
-<./images/display/1d-3x3.png, id=136, 300.6432pt x 29.3898pt>
+<./images/display/1d-3x3.png, id=134, 300.6432pt x 29.3898pt>
 File: ./images/display/1d-3x3.png Graphic file (type png)
 
 <use ./images/display/1d-3x3.png>
-Package pdftex.def Info: ./images/display/1d-3x3.png used on input line 104.
+Package pdftex.def Info: ./images/display/1d-3x3.png used on input line 107.
 (pdftex.def)             Requested size: 115.65256pt x 11.30545pt.
 
-<./images/display/structure-tensors.png, id=137, 230.3004pt x 232.7094pt>
+<./images/display/structure-tensors.png, id=135, 230.3004pt x 232.7094pt>
 File: ./images/display/structure-tensors.png Graphic file (type png)
 
 <use ./images/display/structure-tensors.png>
 Package pdftex.def Info: ./images/display/structure-tensors.png used on input l
-ine 110.
+ine 113.
 (pdftex.def)             Requested size: 64.93575pt x 65.61269pt.
 
-<./images/display/mesh.png, id=138, 205.2468pt x 278.9622pt>
+<./images/display/mesh.png, id=136, 205.2468pt x 278.9622pt>
 File: ./images/display/mesh.png Graphic file (type png)
 
 <use ./images/display/mesh.png>
-Package pdftex.def Info: ./images/display/mesh.png used on input line 111.
+Package pdftex.def Info: ./images/display/mesh.png used on input line 114.
 (pdftex.def)             Requested size: 49.5868pt x 67.39497pt.
-LaTeX Font Info:    Try loading font information for U+dsrom on input line 160.
+LaTeX Font Info:    Try loading font information for U+dsrom on input line 164.
 
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/doublestroke/Udsrom.fd
+("C:\Program Files\MiKTeX 2.9\tex\latex\dstroke\udsrom.fd"
 File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
 ))
-(./sections/quantum-ot.tex
+(C:\Users\Justin\Documents\mit\research\2016-wasserstein-tensor-valued\paper\se
+ctions/quantum-ot.tex
 Underfull \hbox (badness 3068) in paragraph at lines 4--4
 []\OT1/phv/b/n/12 Kantorovich Prob-lem for Tensor-Valued
  []
 
-[2 <./images/display/1d-2x2.png> <./images/display/1d-3x3.png> <./images/displa
-y/structure-tensors.png> <./images/display/mesh.png>]
+[2 <C:/Users/Justin/Documents/mit/research/2016-wasserstein-tensor-valued/paper
+/images/display/1d-2x2.png> <C:/Users/Justin/Documents/mit/research/2016-wasser
+stein-tensor-valued/paper/images/display/1d-3x3.png> <C:/Users/Justin/Documents
+/mit/research/2016-wasserstein-tensor-valued/paper/images/display/structure-ten
+sors.png> <C:/Users/Justin/Documents/mit/research/2016-wasserstein-tensor-value
+d/paper/images/display/mesh.png>]
 LaTeX Font Info:    Try loading font information for U+euf on input line 62.
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/ueuf.fd
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\ueuf.fd"
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 )
-(/usr/local/texlive/2016/texmf-dist/tex/latex/microtype/mt-euf.cfg
+("C:\Program Files\MiKTeX 2.9\tex\latex\microtype\mt-euf.cfg"
 File: mt-euf.cfg 2006/07/03 v1.1 microtype config. file: AMS Euler Fraktur (RS)
 
-) [3])
-(./sections/sinkhorn.tex
+))
+(C:\Users\Justin\Documents\mit\research\2016-wasserstein-tensor-valued\paper\se
+ctions/sinkhorn.tex [3]
 Overfull \hbox (8.55455pt too wide) detected at line 15
-\OML/cmm/m/it/9 W[]\OT1/cmr/m/n/9 (\OML/cmm/m/it/9 ^^V; ^^W\OT1/cmr/m/n/9 ) [] 
-[]\OMS/cmsy/m/n/9 h\OML/cmm/m/it/9 ^^M;  c\OMS/cmsy/m/n/9 i \OT1/cmr/m/n/9 + \O
-ML/cmm/m/it/9 ^^Z[] []\OT1/cmr/m/n/9 (\OML/cmm/m/it/9 ^^M\U/dsrom/m/n/9 1[]\OMS
-/cmsy/m/n/9 j\OML/cmm/m/it/9 ^^V\OT1/cmr/m/n/9 ) + \OML/cmm/m/it/9 ^^Z[] []\OT1
-/cmr/m/n/9 (\OML/cmm/m/it/9 ^^M[]\U/dsrom/m/n/9 1[]\OMS/cmsy/m/n/9 j\OML/cmm/m/
-it/9 ^^W\OT1/cmr/m/n/9 ) \OMS/cmsy/m/n/9 ^^@ \OML/cmm/m/it/9 "H\OT1/cmr/m/n/9 (
-\OML/cmm/m/it/9 ^^M\OT1/cmr/m/n/9 )\OML/cmm/m/it/9 :
+\OML/cmm/m/it/9 W[]\OT1/cmr/m/n/9 (\OML/cmm/m/it/9 ; \OT1/cmr/m/n/9 ) [] []\O
+MS/cmsy/m/n/9 h\OML/cmm/m/it/9 ;  c\OMS/cmsy/m/n/9 i \OT1/cmr/m/n/9 + \OML/cmm
+/m/it/9 [] []\OT1/cmr/m/n/9 (\OML/cmm/m/it/9 \U/dsrom/m/n/9 1[]\OMS/cmsy/m/n/
+9 j\OML/cmm/m/it/9 \OT1/cmr/m/n/9 ) + \OML/cmm/m/it/9 [] []\OT1/cmr/m/n/9 (\O
+ML/cmm/m/it/9 []\U/dsrom/m/n/9 1[]\OMS/cmsy/m/n/9 j\OML/cmm/m/it/9 \OT1/cmr/m
+/n/9 ) \OMS/cmsy/m/n/9   \OML/cmm/m/it/9 "H\OT1/cmr/m/n/9 (\OML/cmm/m/it/9 \OT
+1/cmr/m/n/9 )\OML/cmm/m/it/9 :
  []
 
 
 Overfull \hbox (0.81387pt too wide) detected at line 65
-[]  \OMS/cmsy/m/n/9 ^^@ \OML/cmm/m/it/9 " [][]\OT1/cmr/m/n/9 (\OMS/cmsy/m/n/9 K
-[]\OT1/cmr/m/n/9 (\OML/cmm/m/it/9 u; v\OT1/cmr/m/n/9 )\OMS/cmsy/m/n/9 j\OML/cmm
-/m/it/9 ^^X\OT1/cmr/m/n/9 ) \OMS/cmsy/m/n/9 ^^@ \OML/cmm/m/it/9 ^^Z[] [][]\OT1/
-cmr/m/n/9 (\OML/cmm/m/it/9 u\OMS/cmsy/m/n/9 j\OML/cmm/m/it/9 ^^V\OT1/cmr/m/n/9 
-) \OMS/cmsy/m/n/9 ^^@ \OML/cmm/m/it/9 ^^Z[] [][]\OT1/cmr/m/n/9 (\OML/cmm/m/it/9
- v\OMS/cmsy/m/n/9 j\OML/cmm/m/it/9 ^^W\OT1/cmr/m/n/9 ) \OMS/cmsy/m/n/9 ^^@ \OML
-/cmm/m/it/9 " []\OT1/cmr/m/n/9 (\OML/cmm/m/it/9 ^^X\OT1/cmr/m/n/9 )\OML/cmm/m/i
-t/9 ;
+[]  \OMS/cmsy/m/n/9   \OML/cmm/m/it/9 " [][]\OT1/cmr/m/n/9 (\OMS/cmsy/m/n/9 K[]
+\OT1/cmr/m/n/9 (\OML/cmm/m/it/9 u; v\OT1/cmr/m/n/9 )\OMS/cmsy/m/n/9 j\OML/cmm/m
+/it/9 \OT1/cmr/m/n/9 ) \OMS/cmsy/m/n/9   \OML/cmm/m/it/9 [] [][]\OT1/cmr/m/n/
+9 (\OML/cmm/m/it/9 u\OMS/cmsy/m/n/9 j\OML/cmm/m/it/9 \OT1/cmr/m/n/9 ) \OMS/cms
+y/m/n/9   \OML/cmm/m/it/9 [] [][]\OT1/cmr/m/n/9 (\OML/cmm/m/it/9 v\OMS/cmsy/m/
+n/9 j\OML/cmm/m/it/9 \OT1/cmr/m/n/9 ) \OMS/cmsy/m/n/9   \OML/cmm/m/it/9 " []\O
+T1/cmr/m/n/9 (\OML/cmm/m/it/9 \OT1/cmr/m/n/9 )\OML/cmm/m/it/9 ;
  []
 
 
-Underfull \hbox (badness 4108) in paragraph at lines 83--90
-[]\OT1/ptm/m/n/9 (+20) It is pos-si-ble to use Dyk-stra's al-go-rithm [[][]Dyk-
-stra 1983[][]]
- []
-
-(./sections/sinkhorn-alg.tex
+(C:\Users\Justin\Documents\mit\research\2016-wasserstein-tensor-valued\paper\se
+ctions/sinkhorn-alg.tex
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
 put line 18.
 ) [4]
-Missing character: There is no   in font ptmr7t!
- (./sections/sinkhorn-fig.tex
-<./images/1d/cross-orient/linear-interp.png, id=300, 272.6988pt x 127.677pt>
+(C:\Users\Justin\Documents\mit\research\2016-wasserstein-tensor-valued\paper\se
+ctions/sinkhorn-fig.tex
+<./images/1d/cross-orient/linear-interp.png, id=302, 272.6988pt x 127.677pt>
 File: ./images/1d/cross-orient/linear-interp.png Graphic file (type png)
 
 <use ./images/1d/cross-orient/linear-interp.png>
@@ -887,7 +893,7 @@ Package pdftex.def Info: ./images/1d/cross-orient/linear-interp.png used on inp
 ut line 4.
 (pdftex.def)             Requested size: 118.06436pt x 55.27798pt.
 
-<./images/1d/cross-orient/interp-ellipses.png, id=301, 272.217pt x 127.677pt>
+<./images/1d/cross-orient/interp-ellipses.png, id=303, 272.217pt x 127.677pt>
 File: ./images/1d/cross-orient/interp-ellipses.png Graphic file (type png)
 
 <use ./images/1d/cross-orient/interp-ellipses.png>
@@ -895,7 +901,7 @@ Package pdftex.def Info: ./images/1d/cross-orient/interp-ellipses.png used on i
 nput line 5.
 (pdftex.def)             Requested size: 118.06436pt x 55.37538pt.
 
-<./images/3d/plate-elong/linear-interp.png, id=302, 210.0648pt x 103.587pt>
+<./images/3d/plate-elong/linear-interp.png, id=304, 210.0648pt x 103.587pt>
 File: ./images/3d/plate-elong/linear-interp.png Graphic file (type png)
 
 <use ./images/3d/plate-elong/linear-interp.png>
@@ -903,22 +909,27 @@ Package pdftex.def Info: ./images/3d/plate-elong/linear-interp.png used on inpu
 t line 6.
 (pdftex.def)             Requested size: 118.06436pt x 58.22012pt.
 
-<./images/3d/plate-elong/interp-ellipses.png, id=303, 213.4374pt x 102.1416pt>
+<./images/3d/plate-elong/interp-ellipses.png, id=305, 213.4374pt x 102.1416pt>
 File: ./images/3d/plate-elong/interp-ellipses.png Graphic file (type png)
 
 <use ./images/3d/plate-elong/interp-ellipses.png>
 Package pdftex.def Info: ./images/3d/plate-elong/interp-ellipses.png used on in
 put line 7.
 (pdftex.def)             Requested size: 118.06436pt x 56.50066pt.
-)) (./sections/barycenters.tex
-<./images/pointwise-interp/interp-ortho-hard.png, id=312, 277.035pt x 45.771pt>
+))
+(C:\Users\Justin\Documents\mit\research\2016-wasserstein-tensor-valued\paper\se
+ctions/barycenters.tex
+Underfull \vbox (badness 4279) has occurred while \output is active []
+
+
+<./images/pointwise-interp/interp-ortho-hard.png, id=314, 277.035pt x 45.771pt>
 File: ./images/pointwise-interp/interp-ortho-hard.png Graphic file (type png)
 <use ./images/pointwise-interp/interp-ortho-hard.png>
 Package pdftex.def Info: ./images/pointwise-interp/interp-ortho-hard.png used o
 n input line 44.
 (pdftex.def)             Requested size: 110.8363pt x 18.31226pt.
 
-<./images/pointwise-interp/interp-rot_small-hard.png, id=313, 277.9986pt x 45.7
+<./images/pointwise-interp/interp-rot_small-hard.png, id=315, 277.9986pt x 45.7
 71pt>
 File: ./images/pointwise-interp/interp-rot_small-hard.png Graphic file (type pn
 g)
@@ -927,8 +938,9 @@ Package pdftex.def Info: ./images/pointwise-interp/interp-rot_small-hard.png us
 ed on input line 45.
 (pdftex.def)             Requested size: 110.8363pt x 18.2487pt.
 
-(./sections/barycenters-fig.tex
-<./images/2d-bary/barycenter-1-1.png, id=316, 191.7564pt x 465.9006pt>
+(C:\Users\Justin\Documents\mit\research\2016-wasserstein-tensor-valued\paper\se
+ctions/barycenters-fig.tex
+<./images/2d-bary/barycenter-1-1.png, id=318, 191.7564pt x 465.9006pt>
 File: ./images/2d-bary/barycenter-1-1.png Graphic file (type png)
 
 <use ./images/2d-bary/barycenter-1-1.png>
@@ -936,7 +948,7 @@ Package pdftex.def Info: ./images/2d-bary/barycenter-1-1.png used on input line
  19.
 (pdftex.def)             Requested size: 48.06017pt x 44.68646pt.
 
-<./images/2d-bary/barycenter-1-2.png, id=318, 191.7564pt x 465.9006pt>
+<./images/2d-bary/barycenter-1-2.png, id=320, 191.7564pt x 465.9006pt>
 File: ./images/2d-bary/barycenter-1-2.png Graphic file (type png)
 
 <use ./images/2d-bary/barycenter-1-2.png>
@@ -944,7 +956,7 @@ Package pdftex.def Info: ./images/2d-bary/barycenter-1-2.png used on input line
  19.
 (pdftex.def)             Requested size: 48.06017pt x 44.68646pt.
 
-<./images/2d-bary/barycenter-1-3.png, id=320, 191.7564pt x 465.9006pt>
+<./images/2d-bary/barycenter-1-3.png, id=322, 191.7564pt x 465.9006pt>
 File: ./images/2d-bary/barycenter-1-3.png Graphic file (type png)
 
 <use ./images/2d-bary/barycenter-1-3.png>
@@ -952,7 +964,7 @@ Package pdftex.def Info: ./images/2d-bary/barycenter-1-3.png used on input line
  19.
 (pdftex.def)             Requested size: 48.06017pt x 44.68646pt.
 
-<./images/2d-bary/barycenter-1-4.png, id=322, 191.7564pt x 465.9006pt>
+<./images/2d-bary/barycenter-1-4.png, id=324, 191.7564pt x 465.9006pt>
 File: ./images/2d-bary/barycenter-1-4.png Graphic file (type png)
 
 <use ./images/2d-bary/barycenter-1-4.png>
@@ -960,7 +972,7 @@ Package pdftex.def Info: ./images/2d-bary/barycenter-1-4.png used on input line
  19.
 (pdftex.def)             Requested size: 48.06017pt x 44.68646pt.
 
-<./images/2d-bary/barycenter-1-5.png, id=324, 191.7564pt x 465.9006pt>
+<./images/2d-bary/barycenter-1-5.png, id=326, 191.7564pt x 465.9006pt>
 File: ./images/2d-bary/barycenter-1-5.png Graphic file (type png)
 
 <use ./images/2d-bary/barycenter-1-5.png>
@@ -968,7 +980,7 @@ Package pdftex.def Info: ./images/2d-bary/barycenter-1-5.png used on input line
  19.
 (pdftex.def)             Requested size: 48.06017pt x 44.68646pt.
 
-<./images/2d-bary/barycenter-2-1.png, id=326, 191.7564pt x 465.9006pt>
+<./images/2d-bary/barycenter-2-1.png, id=328, 191.7564pt x 465.9006pt>
 File: ./images/2d-bary/barycenter-2-1.png Graphic file (type png)
 
 <use ./images/2d-bary/barycenter-2-1.png>
@@ -976,7 +988,7 @@ Package pdftex.def Info: ./images/2d-bary/barycenter-2-1.png used on input line
  20.
 (pdftex.def)             Requested size: 48.06017pt x 44.68646pt.
 
-<./images/2d-bary/barycenter-2-2.png, id=328, 191.7564pt x 465.9006pt>
+<./images/2d-bary/barycenter-2-2.png, id=330, 191.7564pt x 465.9006pt>
 File: ./images/2d-bary/barycenter-2-2.png Graphic file (type png)
 
 <use ./images/2d-bary/barycenter-2-2.png>
@@ -984,7 +996,7 @@ Package pdftex.def Info: ./images/2d-bary/barycenter-2-2.png used on input line
  20.
 (pdftex.def)             Requested size: 48.06017pt x 44.68646pt.
 
-<./images/2d-bary/barycenter-2-3.png, id=330, 191.7564pt x 465.9006pt>
+<./images/2d-bary/barycenter-2-3.png, id=332, 191.7564pt x 465.9006pt>
 File: ./images/2d-bary/barycenter-2-3.png Graphic file (type png)
 
 <use ./images/2d-bary/barycenter-2-3.png>
@@ -992,7 +1004,7 @@ Package pdftex.def Info: ./images/2d-bary/barycenter-2-3.png used on input line
  20.
 (pdftex.def)             Requested size: 48.06017pt x 44.68646pt.
 
-<./images/2d-bary/barycenter-2-4.png, id=332, 191.7564pt x 465.9006pt>
+<./images/2d-bary/barycenter-2-4.png, id=334, 191.7564pt x 465.9006pt>
 File: ./images/2d-bary/barycenter-2-4.png Graphic file (type png)
 
 <use ./images/2d-bary/barycenter-2-4.png>
@@ -1000,7 +1012,7 @@ Package pdftex.def Info: ./images/2d-bary/barycenter-2-4.png used on input line
  20.
 (pdftex.def)             Requested size: 48.06017pt x 44.68646pt.
 
-<./images/2d-bary/barycenter-2-5.png, id=334, 191.7564pt x 465.9006pt>
+<./images/2d-bary/barycenter-2-5.png, id=336, 191.7564pt x 465.9006pt>
 File: ./images/2d-bary/barycenter-2-5.png Graphic file (type png)
 
 <use ./images/2d-bary/barycenter-2-5.png>
@@ -1008,7 +1020,7 @@ Package pdftex.def Info: ./images/2d-bary/barycenter-2-5.png used on input line
  20.
 (pdftex.def)             Requested size: 48.06017pt x 44.68646pt.
 
-<./images/2d-bary/barycenter-3-1.png, id=336, 191.7564pt x 465.9006pt>
+<./images/2d-bary/barycenter-3-1.png, id=338, 191.7564pt x 465.9006pt>
 File: ./images/2d-bary/barycenter-3-1.png Graphic file (type png)
 
 <use ./images/2d-bary/barycenter-3-1.png>
@@ -1016,7 +1028,7 @@ Package pdftex.def Info: ./images/2d-bary/barycenter-3-1.png used on input line
  21.
 (pdftex.def)             Requested size: 48.06017pt x 44.68646pt.
 
-<./images/2d-bary/barycenter-3-2.png, id=338, 191.7564pt x 465.9006pt>
+<./images/2d-bary/barycenter-3-2.png, id=340, 191.7564pt x 465.9006pt>
 File: ./images/2d-bary/barycenter-3-2.png Graphic file (type png)
 
 <use ./images/2d-bary/barycenter-3-2.png>
@@ -1024,7 +1036,7 @@ Package pdftex.def Info: ./images/2d-bary/barycenter-3-2.png used on input line
  21.
 (pdftex.def)             Requested size: 48.06017pt x 44.68646pt.
 
-<./images/2d-bary/barycenter-3-3.png, id=340, 191.7564pt x 465.9006pt>
+<./images/2d-bary/barycenter-3-3.png, id=342, 191.7564pt x 465.9006pt>
 File: ./images/2d-bary/barycenter-3-3.png Graphic file (type png)
 
 <use ./images/2d-bary/barycenter-3-3.png>
@@ -1032,7 +1044,7 @@ Package pdftex.def Info: ./images/2d-bary/barycenter-3-3.png used on input line
  21.
 (pdftex.def)             Requested size: 48.06017pt x 44.68646pt.
 
-<./images/2d-bary/barycenter-3-4.png, id=342, 191.7564pt x 465.9006pt>
+<./images/2d-bary/barycenter-3-4.png, id=344, 191.7564pt x 465.9006pt>
 File: ./images/2d-bary/barycenter-3-4.png Graphic file (type png)
 
 <use ./images/2d-bary/barycenter-3-4.png>
@@ -1040,7 +1052,7 @@ Package pdftex.def Info: ./images/2d-bary/barycenter-3-4.png used on input line
  21.
 (pdftex.def)             Requested size: 48.06017pt x 44.68646pt.
 
-<./images/2d-bary/barycenter-3-5.png, id=344, 191.7564pt x 465.9006pt>
+<./images/2d-bary/barycenter-3-5.png, id=346, 191.7564pt x 465.9006pt>
 File: ./images/2d-bary/barycenter-3-5.png Graphic file (type png)
 
 <use ./images/2d-bary/barycenter-3-5.png>
@@ -1048,7 +1060,7 @@ Package pdftex.def Info: ./images/2d-bary/barycenter-3-5.png used on input line
  21.
 (pdftex.def)             Requested size: 48.06017pt x 44.68646pt.
 
-<./images/2d-bary/barycenter-4-1.png, id=346, 191.7564pt x 465.9006pt>
+<./images/2d-bary/barycenter-4-1.png, id=348, 191.7564pt x 465.9006pt>
 File: ./images/2d-bary/barycenter-4-1.png Graphic file (type png)
 
 <use ./images/2d-bary/barycenter-4-1.png>
@@ -1056,7 +1068,7 @@ Package pdftex.def Info: ./images/2d-bary/barycenter-4-1.png used on input line
  22.
 (pdftex.def)             Requested size: 48.06017pt x 44.68646pt.
 
-<./images/2d-bary/barycenter-4-2.png, id=348, 191.7564pt x 465.9006pt>
+<./images/2d-bary/barycenter-4-2.png, id=350, 191.7564pt x 465.9006pt>
 File: ./images/2d-bary/barycenter-4-2.png Graphic file (type png)
 
 <use ./images/2d-bary/barycenter-4-2.png>
@@ -1064,7 +1076,7 @@ Package pdftex.def Info: ./images/2d-bary/barycenter-4-2.png used on input line
  22.
 (pdftex.def)             Requested size: 48.06017pt x 44.68646pt.
 
-<./images/2d-bary/barycenter-4-3.png, id=350, 191.7564pt x 465.9006pt>
+<./images/2d-bary/barycenter-4-3.png, id=352, 191.7564pt x 465.9006pt>
 File: ./images/2d-bary/barycenter-4-3.png Graphic file (type png)
 
 <use ./images/2d-bary/barycenter-4-3.png>
@@ -1072,7 +1084,7 @@ Package pdftex.def Info: ./images/2d-bary/barycenter-4-3.png used on input line
  22.
 (pdftex.def)             Requested size: 48.06017pt x 44.68646pt.
 
-<./images/2d-bary/barycenter-4-4.png, id=352, 191.7564pt x 465.9006pt>
+<./images/2d-bary/barycenter-4-4.png, id=354, 191.7564pt x 465.9006pt>
 File: ./images/2d-bary/barycenter-4-4.png Graphic file (type png)
 
 <use ./images/2d-bary/barycenter-4-4.png>
@@ -1080,7 +1092,7 @@ Package pdftex.def Info: ./images/2d-bary/barycenter-4-4.png used on input line
  22.
 (pdftex.def)             Requested size: 48.06017pt x 44.68646pt.
 
-<./images/2d-bary/barycenter-4-5.png, id=354, 191.7564pt x 465.9006pt>
+<./images/2d-bary/barycenter-4-5.png, id=356, 191.7564pt x 465.9006pt>
 File: ./images/2d-bary/barycenter-4-5.png Graphic file (type png)
 
 <use ./images/2d-bary/barycenter-4-5.png>
@@ -1088,7 +1100,7 @@ Package pdftex.def Info: ./images/2d-bary/barycenter-4-5.png used on input line
  22.
 (pdftex.def)             Requested size: 48.06017pt x 44.68646pt.
 
-<./images/2d-bary/barycenter-5-1.png, id=356, 191.7564pt x 465.9006pt>
+<./images/2d-bary/barycenter-5-1.png, id=358, 191.7564pt x 465.9006pt>
 File: ./images/2d-bary/barycenter-5-1.png Graphic file (type png)
 
 <use ./images/2d-bary/barycenter-5-1.png>
@@ -1096,7 +1108,7 @@ Package pdftex.def Info: ./images/2d-bary/barycenter-5-1.png used on input line
  23.
 (pdftex.def)             Requested size: 48.06017pt x 44.68646pt.
 
-<./images/2d-bary/barycenter-5-2.png, id=358, 191.7564pt x 465.9006pt>
+<./images/2d-bary/barycenter-5-2.png, id=360, 191.7564pt x 465.9006pt>
 File: ./images/2d-bary/barycenter-5-2.png Graphic file (type png)
 
 <use ./images/2d-bary/barycenter-5-2.png>
@@ -1104,7 +1116,7 @@ Package pdftex.def Info: ./images/2d-bary/barycenter-5-2.png used on input line
  23.
 (pdftex.def)             Requested size: 48.06017pt x 44.68646pt.
 
-<./images/2d-bary/barycenter-5-3.png, id=360, 191.7564pt x 465.9006pt>
+<./images/2d-bary/barycenter-5-3.png, id=362, 191.7564pt x 465.9006pt>
 File: ./images/2d-bary/barycenter-5-3.png Graphic file (type png)
 
 <use ./images/2d-bary/barycenter-5-3.png>
@@ -1112,7 +1124,7 @@ Package pdftex.def Info: ./images/2d-bary/barycenter-5-3.png used on input line
  23.
 (pdftex.def)             Requested size: 48.06017pt x 44.68646pt.
 
-<./images/2d-bary/barycenter-5-4.png, id=362, 191.7564pt x 465.9006pt>
+<./images/2d-bary/barycenter-5-4.png, id=364, 191.7564pt x 465.9006pt>
 File: ./images/2d-bary/barycenter-5-4.png Graphic file (type png)
 
 <use ./images/2d-bary/barycenter-5-4.png>
@@ -1120,7 +1132,7 @@ Package pdftex.def Info: ./images/2d-bary/barycenter-5-4.png used on input line
  23.
 (pdftex.def)             Requested size: 48.06017pt x 44.68646pt.
 
-<./images/2d-bary/barycenter-5-5.png, id=364, 191.7564pt x 465.9006pt>
+<./images/2d-bary/barycenter-5-5.png, id=366, 191.7564pt x 465.9006pt>
 File: ./images/2d-bary/barycenter-5-5.png Graphic file (type png)
 
 <use ./images/2d-bary/barycenter-5-5.png>
@@ -1128,7 +1140,7 @@ Package pdftex.def Info: ./images/2d-bary/barycenter-5-5.png used on input line
  23.
 (pdftex.def)             Requested size: 48.06017pt x 44.68646pt.
 
-<./images/mesh-bary/barycenter-1-1.png, id=366, 304.0158pt x 253.9086pt>
+<./images/mesh-bary/barycenter-1-1.png, id=368, 304.0158pt x 253.9086pt>
 File: ./images/mesh-bary/barycenter-1-1.png Graphic file (type png)
 
 <use ./images/mesh-bary/barycenter-1-1.png>
@@ -1136,7 +1148,7 @@ Package pdftex.def Info: ./images/mesh-bary/barycenter-1-1.png used on input li
 ne 29.
 (pdftex.def)             Requested size: 48.06017pt x 44.27184pt.
 
-<./images/mesh-bary/barycenter-1-2.png, id=368, 304.0158pt x 253.9086pt>
+<./images/mesh-bary/barycenter-1-2.png, id=370, 304.0158pt x 253.9086pt>
 File: ./images/mesh-bary/barycenter-1-2.png Graphic file (type png)
 
 <use ./images/mesh-bary/barycenter-1-2.png>
@@ -1144,7 +1156,7 @@ Package pdftex.def Info: ./images/mesh-bary/barycenter-1-2.png used on input li
 ne 29.
 (pdftex.def)             Requested size: 48.06017pt x 44.27184pt.
 
-<./images/mesh-bary/barycenter-1-3.png, id=370, 304.0158pt x 253.9086pt>
+<./images/mesh-bary/barycenter-1-3.png, id=372, 304.0158pt x 253.9086pt>
 File: ./images/mesh-bary/barycenter-1-3.png Graphic file (type png)
 
 <use ./images/mesh-bary/barycenter-1-3.png>
@@ -1152,7 +1164,7 @@ Package pdftex.def Info: ./images/mesh-bary/barycenter-1-3.png used on input li
 ne 29.
 (pdftex.def)             Requested size: 48.06017pt x 44.27184pt.
 
-<./images/mesh-bary/barycenter-1-4.png, id=372, 304.0158pt x 253.9086pt>
+<./images/mesh-bary/barycenter-1-4.png, id=374, 304.0158pt x 253.9086pt>
 File: ./images/mesh-bary/barycenter-1-4.png Graphic file (type png)
 
 <use ./images/mesh-bary/barycenter-1-4.png>
@@ -1160,7 +1172,7 @@ Package pdftex.def Info: ./images/mesh-bary/barycenter-1-4.png used on input li
 ne 29.
 (pdftex.def)             Requested size: 48.06017pt x 44.27184pt.
 
-<./images/mesh-bary/barycenter-1-5.png, id=374, 304.0158pt x 253.9086pt>
+<./images/mesh-bary/barycenter-1-5.png, id=376, 304.0158pt x 253.9086pt>
 File: ./images/mesh-bary/barycenter-1-5.png Graphic file (type png)
 
 <use ./images/mesh-bary/barycenter-1-5.png>
@@ -1168,7 +1180,7 @@ Package pdftex.def Info: ./images/mesh-bary/barycenter-1-5.png used on input li
 ne 29.
 (pdftex.def)             Requested size: 48.06017pt x 44.27184pt.
 
-<./images/mesh-bary/barycenter-2-1.png, id=376, 304.0158pt x 253.9086pt>
+<./images/mesh-bary/barycenter-2-1.png, id=378, 304.0158pt x 253.9086pt>
 File: ./images/mesh-bary/barycenter-2-1.png Graphic file (type png)
 
 <use ./images/mesh-bary/barycenter-2-1.png>
@@ -1176,7 +1188,7 @@ Package pdftex.def Info: ./images/mesh-bary/barycenter-2-1.png used on input li
 ne 30.
 (pdftex.def)             Requested size: 48.06017pt x 44.27184pt.
 
-<./images/mesh-bary/barycenter-2-2.png, id=378, 304.0158pt x 253.9086pt>
+<./images/mesh-bary/barycenter-2-2.png, id=380, 304.0158pt x 253.9086pt>
 File: ./images/mesh-bary/barycenter-2-2.png Graphic file (type png)
 
 <use ./images/mesh-bary/barycenter-2-2.png>
@@ -1184,7 +1196,7 @@ Package pdftex.def Info: ./images/mesh-bary/barycenter-2-2.png used on input li
 ne 30.
 (pdftex.def)             Requested size: 48.06017pt x 44.27184pt.
 
-<./images/mesh-bary/barycenter-2-3.png, id=380, 304.0158pt x 253.9086pt>
+<./images/mesh-bary/barycenter-2-3.png, id=382, 304.0158pt x 253.9086pt>
 File: ./images/mesh-bary/barycenter-2-3.png Graphic file (type png)
 
 <use ./images/mesh-bary/barycenter-2-3.png>
@@ -1192,7 +1204,7 @@ Package pdftex.def Info: ./images/mesh-bary/barycenter-2-3.png used on input li
 ne 30.
 (pdftex.def)             Requested size: 48.06017pt x 44.27184pt.
 
-<./images/mesh-bary/barycenter-2-4.png, id=382, 304.0158pt x 253.9086pt>
+<./images/mesh-bary/barycenter-2-4.png, id=384, 304.0158pt x 253.9086pt>
 File: ./images/mesh-bary/barycenter-2-4.png Graphic file (type png)
 
 <use ./images/mesh-bary/barycenter-2-4.png>
@@ -1200,7 +1212,7 @@ Package pdftex.def Info: ./images/mesh-bary/barycenter-2-4.png used on input li
 ne 30.
 (pdftex.def)             Requested size: 48.06017pt x 44.27184pt.
 
-<./images/mesh-bary/barycenter-2-5.png, id=384, 304.0158pt x 253.9086pt>
+<./images/mesh-bary/barycenter-2-5.png, id=386, 304.0158pt x 253.9086pt>
 File: ./images/mesh-bary/barycenter-2-5.png Graphic file (type png)
 
 <use ./images/mesh-bary/barycenter-2-5.png>
@@ -1208,7 +1220,7 @@ Package pdftex.def Info: ./images/mesh-bary/barycenter-2-5.png used on input li
 ne 30.
 (pdftex.def)             Requested size: 48.06017pt x 44.27184pt.
 
-<./images/mesh-bary/barycenter-3-1.png, id=386, 304.0158pt x 253.9086pt>
+<./images/mesh-bary/barycenter-3-1.png, id=388, 304.0158pt x 253.9086pt>
 File: ./images/mesh-bary/barycenter-3-1.png Graphic file (type png)
 
 <use ./images/mesh-bary/barycenter-3-1.png>
@@ -1216,7 +1228,7 @@ Package pdftex.def Info: ./images/mesh-bary/barycenter-3-1.png used on input li
 ne 31.
 (pdftex.def)             Requested size: 48.06017pt x 44.27184pt.
 
-<./images/mesh-bary/barycenter-3-2.png, id=388, 304.0158pt x 253.9086pt>
+<./images/mesh-bary/barycenter-3-2.png, id=390, 304.0158pt x 253.9086pt>
 File: ./images/mesh-bary/barycenter-3-2.png Graphic file (type png)
 
 <use ./images/mesh-bary/barycenter-3-2.png>
@@ -1224,7 +1236,7 @@ Package pdftex.def Info: ./images/mesh-bary/barycenter-3-2.png used on input li
 ne 31.
 (pdftex.def)             Requested size: 48.06017pt x 44.27184pt.
 
-<./images/mesh-bary/barycenter-3-3.png, id=390, 304.0158pt x 253.9086pt>
+<./images/mesh-bary/barycenter-3-3.png, id=392, 304.0158pt x 253.9086pt>
 File: ./images/mesh-bary/barycenter-3-3.png Graphic file (type png)
 
 <use ./images/mesh-bary/barycenter-3-3.png>
@@ -1232,7 +1244,7 @@ Package pdftex.def Info: ./images/mesh-bary/barycenter-3-3.png used on input li
 ne 31.
 (pdftex.def)             Requested size: 48.06017pt x 44.27184pt.
 
-<./images/mesh-bary/barycenter-3-4.png, id=392, 304.0158pt x 253.9086pt>
+<./images/mesh-bary/barycenter-3-4.png, id=394, 304.0158pt x 253.9086pt>
 File: ./images/mesh-bary/barycenter-3-4.png Graphic file (type png)
 
 <use ./images/mesh-bary/barycenter-3-4.png>
@@ -1240,7 +1252,7 @@ Package pdftex.def Info: ./images/mesh-bary/barycenter-3-4.png used on input li
 ne 31.
 (pdftex.def)             Requested size: 48.06017pt x 44.27184pt.
 
-<./images/mesh-bary/barycenter-3-5.png, id=394, 304.0158pt x 253.9086pt>
+<./images/mesh-bary/barycenter-3-5.png, id=396, 304.0158pt x 253.9086pt>
 File: ./images/mesh-bary/barycenter-3-5.png Graphic file (type png)
 
 <use ./images/mesh-bary/barycenter-3-5.png>
@@ -1248,7 +1260,7 @@ Package pdftex.def Info: ./images/mesh-bary/barycenter-3-5.png used on input li
 ne 31.
 (pdftex.def)             Requested size: 48.06017pt x 44.27184pt.
 
-<./images/mesh-bary/barycenter-4-1.png, id=396, 304.0158pt x 253.9086pt>
+<./images/mesh-bary/barycenter-4-1.png, id=398, 304.0158pt x 253.9086pt>
 File: ./images/mesh-bary/barycenter-4-1.png Graphic file (type png)
 
 <use ./images/mesh-bary/barycenter-4-1.png>
@@ -1256,7 +1268,7 @@ Package pdftex.def Info: ./images/mesh-bary/barycenter-4-1.png used on input li
 ne 32.
 (pdftex.def)             Requested size: 48.06017pt x 44.27184pt.
 
-<./images/mesh-bary/barycenter-4-2.png, id=398, 304.0158pt x 253.9086pt>
+<./images/mesh-bary/barycenter-4-2.png, id=400, 304.0158pt x 253.9086pt>
 File: ./images/mesh-bary/barycenter-4-2.png Graphic file (type png)
 
 <use ./images/mesh-bary/barycenter-4-2.png>
@@ -1264,7 +1276,7 @@ Package pdftex.def Info: ./images/mesh-bary/barycenter-4-2.png used on input li
 ne 32.
 (pdftex.def)             Requested size: 48.06017pt x 44.27184pt.
 
-<./images/mesh-bary/barycenter-4-3.png, id=400, 304.0158pt x 253.9086pt>
+<./images/mesh-bary/barycenter-4-3.png, id=402, 304.0158pt x 253.9086pt>
 File: ./images/mesh-bary/barycenter-4-3.png Graphic file (type png)
 
 <use ./images/mesh-bary/barycenter-4-3.png>
@@ -1272,7 +1284,7 @@ Package pdftex.def Info: ./images/mesh-bary/barycenter-4-3.png used on input li
 ne 32.
 (pdftex.def)             Requested size: 48.06017pt x 44.27184pt.
 
-<./images/mesh-bary/barycenter-4-4.png, id=402, 304.0158pt x 253.9086pt>
+<./images/mesh-bary/barycenter-4-4.png, id=404, 304.0158pt x 253.9086pt>
 File: ./images/mesh-bary/barycenter-4-4.png Graphic file (type png)
 
 <use ./images/mesh-bary/barycenter-4-4.png>
@@ -1280,7 +1292,7 @@ Package pdftex.def Info: ./images/mesh-bary/barycenter-4-4.png used on input li
 ne 32.
 (pdftex.def)             Requested size: 48.06017pt x 44.27184pt.
 
-<./images/mesh-bary/barycenter-4-5.png, id=404, 304.0158pt x 253.9086pt>
+<./images/mesh-bary/barycenter-4-5.png, id=406, 304.0158pt x 253.9086pt>
 File: ./images/mesh-bary/barycenter-4-5.png Graphic file (type png)
 
 <use ./images/mesh-bary/barycenter-4-5.png>
@@ -1288,7 +1300,7 @@ Package pdftex.def Info: ./images/mesh-bary/barycenter-4-5.png used on input li
 ne 32.
 (pdftex.def)             Requested size: 48.06017pt x 44.27184pt.
 
-<./images/mesh-bary/barycenter-5-1.png, id=406, 304.0158pt x 253.9086pt>
+<./images/mesh-bary/barycenter-5-1.png, id=408, 304.0158pt x 253.9086pt>
 File: ./images/mesh-bary/barycenter-5-1.png Graphic file (type png)
 
 <use ./images/mesh-bary/barycenter-5-1.png>
@@ -1296,7 +1308,7 @@ Package pdftex.def Info: ./images/mesh-bary/barycenter-5-1.png used on input li
 ne 33.
 (pdftex.def)             Requested size: 48.06017pt x 44.27184pt.
 
-<./images/mesh-bary/barycenter-5-2.png, id=408, 304.0158pt x 253.9086pt>
+<./images/mesh-bary/barycenter-5-2.png, id=410, 304.0158pt x 253.9086pt>
 File: ./images/mesh-bary/barycenter-5-2.png Graphic file (type png)
 
 <use ./images/mesh-bary/barycenter-5-2.png>
@@ -1304,7 +1316,7 @@ Package pdftex.def Info: ./images/mesh-bary/barycenter-5-2.png used on input li
 ne 33.
 (pdftex.def)             Requested size: 48.06017pt x 44.27184pt.
 
-<./images/mesh-bary/barycenter-5-3.png, id=410, 304.0158pt x 253.9086pt>
+<./images/mesh-bary/barycenter-5-3.png, id=412, 304.0158pt x 253.9086pt>
 File: ./images/mesh-bary/barycenter-5-3.png Graphic file (type png)
 
 <use ./images/mesh-bary/barycenter-5-3.png>
@@ -1312,7 +1324,7 @@ Package pdftex.def Info: ./images/mesh-bary/barycenter-5-3.png used on input li
 ne 33.
 (pdftex.def)             Requested size: 48.06017pt x 44.27184pt.
 
-<./images/mesh-bary/barycenter-5-4.png, id=412, 304.0158pt x 253.9086pt>
+<./images/mesh-bary/barycenter-5-4.png, id=414, 304.0158pt x 253.9086pt>
 File: ./images/mesh-bary/barycenter-5-4.png Graphic file (type png)
 
 <use ./images/mesh-bary/barycenter-5-4.png>
@@ -1320,21 +1332,32 @@ Package pdftex.def Info: ./images/mesh-bary/barycenter-5-4.png used on input li
 ne 33.
 (pdftex.def)             Requested size: 48.06017pt x 44.27184pt.
 
-<./images/mesh-bary/barycenter-5-5.png, id=414, 304.0158pt x 253.9086pt>
+<./images/mesh-bary/barycenter-5-5.png, id=416, 304.0158pt x 253.9086pt>
 File: ./images/mesh-bary/barycenter-5-5.png Graphic file (type png)
 
 <use ./images/mesh-bary/barycenter-5-5.png>
 Package pdftex.def Info: ./images/mesh-bary/barycenter-5-5.png used on input li
 ne 33.
 (pdftex.def)             Requested size: 48.06017pt x 44.27184pt.
-) [5 <./images/1d/cross-orient/linear-interp.png> <./images/1d/cross-orient/int
-erp-ellipses.png> <./images/3d/plate-elong/linear-interp.png> <./images/3d/plat
-e-elong/interp-ellipses.png> <./images/pointwise-interp/interp-ortho-hard.png> 
-<./images/pointwise-interp/interp-rot_small-hard.png>] (./sections/barycenter-a
-lg.tex))
-(./sections/applications.tex (./sections/applications-procedural.tex
-(./sections/applications-procedural-fig.tex
-<./images/textures/2d-bump-donut/interpol-render-1.png, id=474, 256.96pt x 256.
+)
+(C:\Users\Justin\Documents\mit\research\2016-wasserstein-tensor-valued\paper\se
+ctions/barycenter-alg.tex) [5 <C:/Users/Justin/Documents/mit/research/2016-wass
+erstein-tensor-valued/paper/images/1d/cross-orient/linear-interp.png> <C:/Users
+/Justin/Documents/mit/research/2016-wasserstein-tensor-valued/paper/images/1d/c
+ross-orient/interp-ellipses.png> <C:/Users/Justin/Documents/mit/research/2016-w
+asserstein-tensor-valued/paper/images/3d/plate-elong/linear-interp.png> <C:/Use
+rs/Justin/Documents/mit/research/2016-wasserstein-tensor-valued/paper/images/3d
+/plate-elong/interp-ellipses.png> <C:/Users/Justin/Documents/mit/research/2016-
+wasserstein-tensor-valued/paper/images/pointwise-interp/interp-ortho-hard.png> 
+<C:/Users/Justin/Documents/mit/research/2016-wasserstein-tensor-valued/paper/im
+ages/pointwise-interp/interp-rot_small-hard.png>])
+(C:\Users\Justin\Documents\mit\research\2016-wasserstein-tensor-valued\paper\se
+ctions/applications.tex
+(C:\Users\Justin\Documents\mit\research\2016-wasserstein-tensor-valued\paper\se
+ctions/applications-procedural.tex
+(C:\Users\Justin\Documents\mit\research\2016-wasserstein-tensor-valued\paper\se
+ctions/applications-procedural-fig.tex
+<./images/textures/2d-bump-donut/interpol-render-1.png, id=479, 256.96pt x 256.
 96pt>
 File: ./images/textures/2d-bump-donut/interpol-render-1.png Graphic file (type 
 png)
@@ -1343,7 +1366,7 @@ Package pdftex.def Info: ./images/textures/2d-bump-donut/interpol-render-1.png
 used on input line 7.
 (pdftex.def)             Requested size: 45.78014pt x 45.78029pt.
 
-<./images/textures/2d-bump-donut/interpol-render-3.png, id=475, 256.96pt x 256.
+<./images/textures/2d-bump-donut/interpol-render-3.png, id=480, 256.96pt x 256.
 96pt>
 File: ./images/textures/2d-bump-donut/interpol-render-3.png Graphic file (type 
 png)
@@ -1352,7 +1375,7 @@ Package pdftex.def Info: ./images/textures/2d-bump-donut/interpol-render-3.png
 used on input line 8.
 (pdftex.def)             Requested size: 45.78014pt x 45.78029pt.
 
-<./images/textures/2d-bump-donut/interpol-render-5.png, id=476, 256.96pt x 256.
+<./images/textures/2d-bump-donut/interpol-render-5.png, id=481, 256.96pt x 256.
 96pt>
 File: ./images/textures/2d-bump-donut/interpol-render-5.png Graphic file (type 
 png)
@@ -1361,7 +1384,7 @@ Package pdftex.def Info: ./images/textures/2d-bump-donut/interpol-render-5.png
 used on input line 9.
 (pdftex.def)             Requested size: 45.78014pt x 45.78029pt.
 
-<./images/textures/2d-bump-donut/interpol-render-7.png, id=477, 256.96pt x 256.
+<./images/textures/2d-bump-donut/interpol-render-7.png, id=482, 256.96pt x 256.
 96pt>
 File: ./images/textures/2d-bump-donut/interpol-render-7.png Graphic file (type 
 png)
@@ -1370,7 +1393,7 @@ Package pdftex.def Info: ./images/textures/2d-bump-donut/interpol-render-7.png
 used on input line 10.
 (pdftex.def)             Requested size: 45.78014pt x 45.78029pt.
 
-<./images/textures/2d-bump-donut/interpol-render-9.png, id=478, 256.96pt x 256.
+<./images/textures/2d-bump-donut/interpol-render-9.png, id=483, 256.96pt x 256.
 96pt>
 File: ./images/textures/2d-bump-donut/interpol-render-9.png Graphic file (type 
 png)
@@ -1379,7 +1402,7 @@ Package pdftex.def Info: ./images/textures/2d-bump-donut/interpol-render-9.png
 used on input line 11.
 (pdftex.def)             Requested size: 45.78014pt x 45.78029pt.
 
-<./images/textures/2d-bump-donut/colorbar.png, id=479, 25.09375pt x 256.96pt>
+<./images/textures/2d-bump-donut/colorbar.png, id=484, 25.09375pt x 256.96pt>
 File: ./images/textures/2d-bump-donut/colorbar.png Graphic file (type png)
 
 <use ./images/textures/2d-bump-donut/colorbar.png>
@@ -1387,7 +1410,7 @@ Package pdftex.def Info: ./images/textures/2d-bump-donut/colorbar.png used on i
 nput line 12.
 (pdftex.def)             Requested size: 4.47072pt x 45.78014pt.
 
-<./images/mesh-bump/anisodiffus-1.png, id=480, 441.8106pt x 245.718pt>
+<./images/mesh-bump/anisodiffus-1.png, id=485, 441.8106pt x 245.718pt>
 File: ./images/mesh-bump/anisodiffus-1.png Graphic file (type png)
 
 <use ./images/mesh-bump/anisodiffus-1.png>
@@ -1395,7 +1418,7 @@ Package pdftex.def Info: ./images/mesh-bump/anisodiffus-1.png used on input lin
 e 13.
 (pdftex.def)             Requested size: 40.9602pt x 54.90662pt.
 
-<./images/mesh-bump/anisodiffus-3.png, id=482, 441.8106pt x 245.718pt>
+<./images/mesh-bump/anisodiffus-3.png, id=487, 441.8106pt x 245.718pt>
 File: ./images/mesh-bump/anisodiffus-3.png Graphic file (type png)
 
 <use ./images/mesh-bump/anisodiffus-3.png>
@@ -1403,7 +1426,7 @@ Package pdftex.def Info: ./images/mesh-bump/anisodiffus-3.png used on input lin
 e 14.
 (pdftex.def)             Requested size: 40.9602pt x 54.90662pt.
 
-<./images/mesh-bump/anisodiffus-5.png, id=484, 441.8106pt x 245.718pt>
+<./images/mesh-bump/anisodiffus-5.png, id=489, 441.8106pt x 245.718pt>
 File: ./images/mesh-bump/anisodiffus-5.png Graphic file (type png)
 
 <use ./images/mesh-bump/anisodiffus-5.png>
@@ -1411,7 +1434,7 @@ Package pdftex.def Info: ./images/mesh-bump/anisodiffus-5.png used on input lin
 e 15.
 (pdftex.def)             Requested size: 40.9602pt x 54.90662pt.
 
-<./images/mesh-bump/anisodiffus-7.png, id=486, 441.8106pt x 245.718pt>
+<./images/mesh-bump/anisodiffus-7.png, id=491, 441.8106pt x 245.718pt>
 File: ./images/mesh-bump/anisodiffus-7.png Graphic file (type png)
 
 <use ./images/mesh-bump/anisodiffus-7.png>
@@ -1419,47 +1442,95 @@ Package pdftex.def Info: ./images/mesh-bump/anisodiffus-7.png used on input lin
 e 16.
 (pdftex.def)             Requested size: 40.9602pt x 54.90662pt.
 
-<./images/mesh-bump/anisodiffus-9.png, id=488, 441.8106pt x 245.718pt>
+<./images/mesh-bump/anisodiffus-9.png, id=493, 441.8106pt x 245.718pt>
 File: ./images/mesh-bump/anisodiffus-9.png Graphic file (type png)
 
 <use ./images/mesh-bump/anisodiffus-9.png>
 Package pdftex.def Info: ./images/mesh-bump/anisodiffus-9.png used on input lin
 e 17.
 (pdftex.def)             Requested size: 40.9602pt x 54.90662pt.
-) [6 <./images/2d-bary/barycenter-1-1.png (PNG copy)> <./images/2d-bary/barycen
-ter-1-2.png (PNG copy)> <./images/2d-bary/barycenter-1-3.png (PNG copy)> <./ima
-ges/2d-bary/barycenter-1-4.png (PNG copy)> <./images/2d-bary/barycenter-1-5.png
- (PNG copy)> <./images/2d-bary/barycenter-2-1.png (PNG copy)> <./images/2d-bary
-/barycenter-2-2.png (PNG copy)> <./images/2d-bary/barycenter-2-3.png (PNG copy)
-> <./images/2d-bary/barycenter-2-4.png (PNG copy)> <./images/2d-bary/barycenter
--2-5.png (PNG copy)> <./images/2d-bary/barycenter-3-1.png (PNG copy)> <./images
-/2d-bary/barycenter-3-2.png (PNG copy)> <./images/2d-bary/barycenter-3-3.png (P
-NG copy)> <./images/2d-bary/barycenter-3-4.png (PNG copy)> <./images/2d-bary/ba
-rycenter-3-5.png (PNG copy)> <./images/2d-bary/barycenter-4-1.png (PNG copy)> <
-./images/2d-bary/barycenter-4-2.png (PNG copy)> <./images/2d-bary/barycenter-4-
-3.png (PNG copy)> <./images/2d-bary/barycenter-4-4.png (PNG copy)> <./images/2d
--bary/barycenter-4-5.png (PNG copy)> <./images/2d-bary/barycenter-5-1.png (PNG 
-copy)> <./images/2d-bary/barycenter-5-2.png (PNG copy)> <./images/2d-bary/baryc
-enter-5-3.png (PNG copy)> <./images/2d-bary/barycenter-5-4.png (PNG copy)> <./i
-mages/2d-bary/barycenter-5-5.png (PNG copy)> <./images/mesh-bary/barycenter-1-1
-.png (PNG copy)> <./images/mesh-bary/barycenter-1-2.png (PNG copy)> <./images/m
-esh-bary/barycenter-1-3.png (PNG copy)> <./images/mesh-bary/barycenter-1-4.png 
-(PNG copy)> <./images/mesh-bary/barycenter-1-5.png (PNG copy)> <./images/mesh-b
-ary/barycenter-2-1.png (PNG copy)> <./images/mesh-bary/barycenter-2-2.png (PNG 
-copy)> <./images/mesh-bary/barycenter-2-3.png (PNG copy)> <./images/mesh-bary/b
-arycenter-2-4.png (PNG copy)> <./images/mesh-bary/barycenter-2-5.png (PNG copy)
-> <./images/mesh-bary/barycenter-3-1.png (PNG copy)> <./images/mesh-bary/baryce
-nter-3-2.png (PNG copy)> <./images/mesh-bary/barycenter-3-3.png (PNG copy)> <./
-images/mesh-bary/barycenter-3-4.png (PNG copy)> <./images/mesh-bary/barycenter-
-3-5.png (PNG copy)> <./images/mesh-bary/barycenter-4-1.png (PNG copy)> <./image
-s/mesh-bary/barycenter-4-2.png (PNG copy)> <./images/mesh-bary/barycenter-4-3.p
-ng (PNG copy)> <./images/mesh-bary/barycenter-4-4.png (PNG copy)> <./images/mes
-h-bary/barycenter-4-5.png (PNG copy)> <./images/mesh-bary/barycenter-5-1.png (P
-NG copy)> <./images/mesh-bary/barycenter-5-2.png (PNG copy)> <./images/mesh-bar
-y/barycenter-5-3.png (PNG copy)> <./images/mesh-bary/barycenter-5-4.png (PNG co
-py)> <./images/mesh-bary/barycenter-5-5.png (PNG copy)>]) (./sections/applicati
-ons-meshing.tex
-<./images/meshing/2d-bump-donut/input-mesh-1.png, id=573, 180.1932pt x 180.1932
+) [6 <C:/Users/Justin/Documents/mit/research/2016-wasserstein-tensor-valued/pap
+er/images/2d-bary/barycenter-1-1.png (PNG copy)> <C:/Users/Justin/Documents/mit
+/research/2016-wasserstein-tensor-valued/paper/images/2d-bary/barycenter-1-2.pn
+g (PNG copy)> <C:/Users/Justin/Documents/mit/research/2016-wasserstein-tensor-v
+alued/paper/images/2d-bary/barycenter-1-3.png (PNG copy)> <C:/Users/Justin/Docu
+ments/mit/research/2016-wasserstein-tensor-valued/paper/images/2d-bary/barycent
+er-1-4.png (PNG copy)> <C:/Users/Justin/Documents/mit/research/2016-wasserstein
+-tensor-valued/paper/images/2d-bary/barycenter-1-5.png (PNG copy)> <C:/Users/Ju
+stin/Documents/mit/research/2016-wasserstein-tensor-valued/paper/images/2d-bary
+/barycenter-2-1.png (PNG copy)> <C:/Users/Justin/Documents/mit/research/2016-wa
+sserstein-tensor-valued/paper/images/2d-bary/barycenter-2-2.png (PNG copy)> <C:
+/Users/Justin/Documents/mit/research/2016-wasserstein-tensor-valued/paper/image
+s/2d-bary/barycenter-2-3.png (PNG copy)> <C:/Users/Justin/Documents/mit/researc
+h/2016-wasserstein-tensor-valued/paper/images/2d-bary/barycenter-2-4.png (PNG c
+opy)> <C:/Users/Justin/Documents/mit/research/2016-wasserstein-tensor-valued/pa
+per/images/2d-bary/barycenter-2-5.png (PNG copy)> <C:/Users/Justin/Documents/mi
+t/research/2016-wasserstein-tensor-valued/paper/images/2d-bary/barycenter-3-1.p
+ng (PNG copy)> <C:/Users/Justin/Documents/mit/research/2016-wasserstein-tensor-
+valued/paper/images/2d-bary/barycenter-3-2.png (PNG copy)> <C:/Users/Justin/Doc
+uments/mit/research/2016-wasserstein-tensor-valued/paper/images/2d-bary/barycen
+ter-3-3.png (PNG copy)> <C:/Users/Justin/Documents/mit/research/2016-wasserstei
+n-tensor-valued/paper/images/2d-bary/barycenter-3-4.png (PNG copy)> <C:/Users/J
+ustin/Documents/mit/research/2016-wasserstein-tensor-valued/paper/images/2d-bar
+y/barycenter-3-5.png (PNG copy)> <C:/Users/Justin/Documents/mit/research/2016-w
+asserstein-tensor-valued/paper/images/2d-bary/barycenter-4-1.png (PNG copy)> <C
+:/Users/Justin/Documents/mit/research/2016-wasserstein-tensor-valued/paper/imag
+es/2d-bary/barycenter-4-2.png (PNG copy)> <C:/Users/Justin/Documents/mit/resear
+ch/2016-wasserstein-tensor-valued/paper/images/2d-bary/barycenter-4-3.png (PNG 
+copy)> <C:/Users/Justin/Documents/mit/research/2016-wasserstein-tensor-valued/p
+aper/images/2d-bary/barycenter-4-4.png (PNG copy)> <C:/Users/Justin/Documents/m
+it/research/2016-wasserstein-tensor-valued/paper/images/2d-bary/barycenter-4-5.
+png (PNG copy)> <C:/Users/Justin/Documents/mit/research/2016-wasserstein-tensor
+-valued/paper/images/2d-bary/barycenter-5-1.png (PNG copy)> <C:/Users/Justin/Do
+cuments/mit/research/2016-wasserstein-tensor-valued/paper/images/2d-bary/baryce
+nter-5-2.png (PNG copy)> <C:/Users/Justin/Documents/mit/research/2016-wasserste
+in-tensor-valued/paper/images/2d-bary/barycenter-5-3.png (PNG copy)> <C:/Users/
+Justin/Documents/mit/research/2016-wasserstein-tensor-valued/paper/images/2d-ba
+ry/barycenter-5-4.png (PNG copy)> <C:/Users/Justin/Documents/mit/research/2016-
+wasserstein-tensor-valued/paper/images/2d-bary/barycenter-5-5.png (PNG copy)> <
+C:/Users/Justin/Documents/mit/research/2016-wasserstein-tensor-valued/paper/ima
+ges/mesh-bary/barycenter-1-1.png (PNG copy)> <C:/Users/Justin/Documents/mit/res
+earch/2016-wasserstein-tensor-valued/paper/images/mesh-bary/barycenter-1-2.png 
+(PNG copy)> <C:/Users/Justin/Documents/mit/research/2016-wasserstein-tensor-val
+ued/paper/images/mesh-bary/barycenter-1-3.png (PNG copy)> <C:/Users/Justin/Docu
+ments/mit/research/2016-wasserstein-tensor-valued/paper/images/mesh-bary/baryce
+nter-1-4.png (PNG copy)> <C:/Users/Justin/Documents/mit/research/2016-wasserste
+in-tensor-valued/paper/images/mesh-bary/barycenter-1-5.png (PNG copy)> <C:/User
+s/Justin/Documents/mit/research/2016-wasserstein-tensor-valued/paper/images/mes
+h-bary/barycenter-2-1.png (PNG copy)> <C:/Users/Justin/Documents/mit/research/2
+016-wasserstein-tensor-valued/paper/images/mesh-bary/barycenter-2-2.png (PNG co
+py)> <C:/Users/Justin/Documents/mit/research/2016-wasserstein-tensor-valued/pap
+er/images/mesh-bary/barycenter-2-3.png (PNG copy)> <C:/Users/Justin/Documents/m
+it/research/2016-wasserstein-tensor-valued/paper/images/mesh-bary/barycenter-2-
+4.png (PNG copy)> <C:/Users/Justin/Documents/mit/research/2016-wasserstein-tens
+or-valued/paper/images/mesh-bary/barycenter-2-5.png (PNG copy)> <C:/Users/Justi
+n/Documents/mit/research/2016-wasserstein-tensor-valued/paper/images/mesh-bary/
+barycenter-3-1.png (PNG copy)> <C:/Users/Justin/Documents/mit/research/2016-was
+serstein-tensor-valued/paper/images/mesh-bary/barycenter-3-2.png (PNG copy)> <C
+:/Users/Justin/Documents/mit/research/2016-wasserstein-tensor-valued/paper/imag
+es/mesh-bary/barycenter-3-3.png (PNG copy)> <C:/Users/Justin/Documents/mit/rese
+arch/2016-wasserstein-tensor-valued/paper/images/mesh-bary/barycenter-3-4.png (
+PNG copy)> <C:/Users/Justin/Documents/mit/research/2016-wasserstein-tensor-valu
+ed/paper/images/mesh-bary/barycenter-3-5.png (PNG copy)> <C:/Users/Justin/Docum
+ents/mit/research/2016-wasserstein-tensor-valued/paper/images/mesh-bary/barycen
+ter-4-1.png (PNG copy)> <C:/Users/Justin/Documents/mit/research/2016-wasserstei
+n-tensor-valued/paper/images/mesh-bary/barycenter-4-2.png (PNG copy)> <C:/Users
+/Justin/Documents/mit/research/2016-wasserstein-tensor-valued/paper/images/mesh
+-bary/barycenter-4-3.png (PNG copy)> <C:/Users/Justin/Documents/mit/research/20
+16-wasserstein-tensor-valued/paper/images/mesh-bary/barycenter-4-4.png (PNG cop
+y)> <C:/Users/Justin/Documents/mit/research/2016-wasserstein-tensor-valued/pape
+r/images/mesh-bary/barycenter-4-5.png (PNG copy)> <C:/Users/Justin/Documents/mi
+t/research/2016-wasserstein-tensor-valued/paper/images/mesh-bary/barycenter-5-1
+.png (PNG copy)> <C:/Users/Justin/Documents/mit/research/2016-wasserstein-tenso
+r-valued/paper/images/mesh-bary/barycenter-5-2.png (PNG copy)> <C:/Users/Justin
+/Documents/mit/research/2016-wasserstein-tensor-valued/paper/images/mesh-bary/b
+arycenter-5-3.png (PNG copy)> <C:/Users/Justin/Documents/mit/research/2016-wass
+erstein-tensor-valued/paper/images/mesh-bary/barycenter-5-4.png (PNG copy)> <C:
+/Users/Justin/Documents/mit/research/2016-wasserstein-tensor-valued/paper/image
+s/mesh-bary/barycenter-5-5.png (PNG copy)>])
+(C:\Users\Justin\Documents\mit\research\2016-wasserstein-tensor-valued\paper\se
+ctions/applications-meshing.tex
+<./images/meshing/2d-bump-donut/input-mesh-1.png, id=574, 180.1932pt x 180.1932
 pt>
 File: ./images/meshing/2d-bump-donut/input-mesh-1.png Graphic file (type png)
  <use ./images/meshing/2d-bump-donut/input-mesh-1.png>
@@ -1467,7 +1538,7 @@ Package pdftex.def Info: ./images/meshing/2d-bump-donut/input-mesh-1.png used o
 n input line 23.
 (pdftex.def)             Requested size: 46.98602pt x 46.98384pt.
 
-<./images/meshing/2d-bump-donut/input-mesh-3.png, id=574, 178.7478pt x 178.7478
+<./images/meshing/2d-bump-donut/input-mesh-3.png, id=575, 178.7478pt x 178.7478
 pt>
 File: ./images/meshing/2d-bump-donut/input-mesh-3.png Graphic file (type png)
  <use ./images/meshing/2d-bump-donut/input-mesh-3.png>
@@ -1475,7 +1546,7 @@ Package pdftex.def Info: ./images/meshing/2d-bump-donut/input-mesh-3.png used o
 n input line 24.
 (pdftex.def)             Requested size: 46.98602pt x 46.98608pt.
 
-<./images/meshing/2d-bump-donut/input-mesh-5.png, id=575, 179.7114pt x 179.7114
+<./images/meshing/2d-bump-donut/input-mesh-5.png, id=576, 179.7114pt x 179.7114
 pt>
 File: ./images/meshing/2d-bump-donut/input-mesh-5.png Graphic file (type png)
  <use ./images/meshing/2d-bump-donut/input-mesh-5.png>
@@ -1483,7 +1554,7 @@ Package pdftex.def Info: ./images/meshing/2d-bump-donut/input-mesh-5.png used o
 n input line 25.
 (pdftex.def)             Requested size: 46.98602pt x 46.98436pt.
 
-<./images/meshing/2d-bump-donut/input-mesh-7.png, id=576, 179.7114pt x 179.7114
+<./images/meshing/2d-bump-donut/input-mesh-7.png, id=577, 179.7114pt x 179.7114
 pt>
 File: ./images/meshing/2d-bump-donut/input-mesh-7.png Graphic file (type png)
  <use ./images/meshing/2d-bump-donut/input-mesh-7.png>
@@ -1491,7 +1562,7 @@ Package pdftex.def Info: ./images/meshing/2d-bump-donut/input-mesh-7.png used o
 n input line 26.
 (pdftex.def)             Requested size: 46.98602pt x 46.98436pt.
 
-<./images/meshing/2d-bump-donut/input-mesh-9.png, id=577, 178.7478pt x 178.7478
+<./images/meshing/2d-bump-donut/input-mesh-9.png, id=578, 178.7478pt x 178.7478
 pt>
 File: ./images/meshing/2d-bump-donut/input-mesh-9.png Graphic file (type png)
  <use ./images/meshing/2d-bump-donut/input-mesh-9.png>
@@ -1499,7 +1570,7 @@ Package pdftex.def Info: ./images/meshing/2d-bump-donut/input-mesh-9.png used o
 n input line 27.
 (pdftex.def)             Requested size: 46.98602pt x 46.98608pt.
 
-<./images/meshing/images/input-mesh-1.png, id=578, 274.626pt x 274.626pt>
+<./images/meshing/images/input-mesh-1.png, id=579, 274.626pt x 274.626pt>
 File: ./images/meshing/images/input-mesh-1.png Graphic file (type png)
 
 <use ./images/meshing/images/input-mesh-1.png>
@@ -1507,7 +1578,7 @@ Package pdftex.def Info: ./images/meshing/images/input-mesh-1.png used on input
  line 28.
 (pdftex.def)             Requested size: 46.98602pt x 46.98332pt.
 
-<./images/meshing/images/input-mesh-3.png, id=579, 274.626pt x 274.626pt>
+<./images/meshing/images/input-mesh-3.png, id=580, 274.626pt x 274.626pt>
 File: ./images/meshing/images/input-mesh-3.png Graphic file (type png)
 
 <use ./images/meshing/images/input-mesh-3.png>
@@ -1515,7 +1586,7 @@ Package pdftex.def Info: ./images/meshing/images/input-mesh-3.png used on input
  line 29.
 (pdftex.def)             Requested size: 46.98602pt x 46.98332pt.
 
-<./images/meshing/images/input-mesh-5.png, id=580, 275.5896pt x 275.5896pt>
+<./images/meshing/images/input-mesh-5.png, id=581, 275.5896pt x 275.5896pt>
 File: ./images/meshing/images/input-mesh-5.png Graphic file (type png)
 
 <use ./images/meshing/images/input-mesh-5.png>
@@ -1523,7 +1594,7 @@ Package pdftex.def Info: ./images/meshing/images/input-mesh-5.png used on input
  line 30.
 (pdftex.def)             Requested size: 46.98602pt x 46.98416pt.
 
-<./images/meshing/images/input-mesh-7.png, id=581, 275.5896pt x 275.5896pt>
+<./images/meshing/images/input-mesh-7.png, id=582, 275.5896pt x 275.5896pt>
 File: ./images/meshing/images/input-mesh-7.png Graphic file (type png)
 
 <use ./images/meshing/images/input-mesh-7.png>
@@ -1531,7 +1602,7 @@ Package pdftex.def Info: ./images/meshing/images/input-mesh-7.png used on input
  line 31.
 (pdftex.def)             Requested size: 46.98602pt x 46.98416pt.
 
-<./images/meshing/images/input-mesh-9.png, id=582, 275.1078pt x 275.1078pt>
+<./images/meshing/images/input-mesh-9.png, id=583, 275.1078pt x 275.1078pt>
 File: ./images/meshing/images/input-mesh-9.png Graphic file (type png)
 
 <use ./images/meshing/images/input-mesh-9.png>
@@ -1539,7 +1610,7 @@ Package pdftex.def Info: ./images/meshing/images/input-mesh-9.png used on input
  line 32.
 (pdftex.def)             Requested size: 46.98602pt x 46.98598pt.
 
-<./images/meshing/images/input-images-1.png, id=583, 266.9172pt x 266.9172pt>
+<./images/meshing/images/input-images-1.png, id=584, 266.9172pt x 266.9172pt>
 File: ./images/meshing/images/input-images-1.png Graphic file (type png)
 
 <use ./images/meshing/images/input-images-1.png>
@@ -1547,14 +1618,14 @@ Package pdftex.def Info: ./images/meshing/images/input-images-1.png used on inp
 ut line 36.
 (pdftex.def)             Requested size: 46.98602pt x 46.98409pt.
 
-<./images/meshing/images/input-mesh-1-img.png, id=584, 273.1806pt x 273.1806pt>
+<./images/meshing/images/input-mesh-1-img.png, id=585, 273.1806pt x 273.1806pt>
 File: ./images/meshing/images/input-mesh-1-img.png Graphic file (type png)
 <use ./images/meshing/images/input-mesh-1-img.png>
 Package pdftex.def Info: ./images/meshing/images/input-mesh-1-img.png used on i
 nput line 37.
 (pdftex.def)             Requested size: 46.98602pt x 46.98196pt.
 
-<./images/meshing/images/input-images-2.png, id=585, 268.8444pt x 268.8444pt>
+<./images/meshing/images/input-images-2.png, id=586, 268.8444pt x 268.8444pt>
 File: ./images/meshing/images/input-images-2.png Graphic file (type png)
 
 <use ./images/meshing/images/input-images-2.png>
@@ -1562,7 +1633,7 @@ Package pdftex.def Info: ./images/meshing/images/input-images-2.png used on inp
 ut line 38.
 (pdftex.def)             Requested size: 46.98602pt x 46.98283pt.
 
-<./images/meshing/images/input-mesh-9-img.png, id=586, 273.6624pt x 273.6624pt>
+<./images/meshing/images/input-mesh-9-img.png, id=587, 273.6624pt x 273.6624pt>
 File: ./images/meshing/images/input-mesh-9-img.png Graphic file (type png)
 <use ./images/meshing/images/input-mesh-9-img.png>
 Package pdftex.def Info: ./images/meshing/images/input-mesh-9-img.png used on i
@@ -1571,8 +1642,12 @@ nput line 39.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <9> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 45.
 )
-(./sections/applications-dti.tex
-<./images/dti/interpol-rho1-1.png, id=594, 362.3136pt x 248.127pt>
+(C:\Users\Justin\Documents\mit\research\2016-wasserstein-tensor-valued\paper\se
+ctions/applications-dti.tex
+Underfull \vbox (badness 3590) has occurred while \output is active []
+
+
+<./images/dti/interpol-rho1-1.png, id=595, 362.3136pt x 248.127pt>
 File: ./images/dti/interpol-rho1-1.png Graphic file (type png)
 
 <use ./images/dti/interpol-rho1-1.png>
@@ -1580,7 +1655,7 @@ Package pdftex.def Info: ./images/dti/interpol-rho1-1.png used on input line 19
 .
 (pdftex.def)             Requested size: 46.98602pt x 50.98175pt.
 
-<./images/dti/interpol-rho1-3.png, id=596, 362.3136pt x 248.127pt>
+<./images/dti/interpol-rho1-3.png, id=597, 362.3136pt x 248.127pt>
 File: ./images/dti/interpol-rho1-3.png Graphic file (type png)
 
 <use ./images/dti/interpol-rho1-3.png>
@@ -1588,7 +1663,7 @@ Package pdftex.def Info: ./images/dti/interpol-rho1-3.png used on input line 20
 .
 (pdftex.def)             Requested size: 46.98602pt x 50.98175pt.
 
-<./images/dti/interpol-rho1-5.png, id=598, 362.3136pt x 248.127pt>
+<./images/dti/interpol-rho1-5.png, id=599, 362.3136pt x 248.127pt>
 File: ./images/dti/interpol-rho1-5.png Graphic file (type png)
 
 <use ./images/dti/interpol-rho1-5.png>
@@ -1596,7 +1671,7 @@ Package pdftex.def Info: ./images/dti/interpol-rho1-5.png used on input line 21
 .
 (pdftex.def)             Requested size: 46.98602pt x 50.98175pt.
 
-<./images/dti/interpol-rho1-7.png, id=600, 362.3136pt x 248.127pt>
+<./images/dti/interpol-rho1-7.png, id=601, 362.3136pt x 248.127pt>
 File: ./images/dti/interpol-rho1-7.png Graphic file (type png)
 
 <use ./images/dti/interpol-rho1-7.png>
@@ -1604,7 +1679,7 @@ Package pdftex.def Info: ./images/dti/interpol-rho1-7.png used on input line 22
 .
 (pdftex.def)             Requested size: 46.98602pt x 50.98175pt.
 
-<./images/dti/interpol-rho1-9.png, id=602, 362.3136pt x 248.127pt>
+<./images/dti/interpol-rho1-9.png, id=603, 362.3136pt x 248.127pt>
 File: ./images/dti/interpol-rho1-9.png Graphic file (type png)
 
 <use ./images/dti/interpol-rho1-9.png>
@@ -1612,7 +1687,7 @@ Package pdftex.def Info: ./images/dti/interpol-rho1-9.png used on input line 23
 .
 (pdftex.def)             Requested size: 46.98602pt x 50.98175pt.
 
-<./images/dti/interpol-rho005-1.png, id=604, 362.3136pt x 248.127pt>
+<./images/dti/interpol-rho005-1.png, id=605, 362.3136pt x 248.127pt>
 File: ./images/dti/interpol-rho005-1.png Graphic file (type png)
 
 <use ./images/dti/interpol-rho005-1.png>
@@ -1620,7 +1695,7 @@ Package pdftex.def Info: ./images/dti/interpol-rho005-1.png used on input line
 24.
 (pdftex.def)             Requested size: 46.98602pt x 50.98175pt.
 
-<./images/dti/interpol-rho005-3.png, id=606, 362.3136pt x 248.127pt>
+<./images/dti/interpol-rho005-3.png, id=607, 362.3136pt x 248.127pt>
 File: ./images/dti/interpol-rho005-3.png Graphic file (type png)
 
 <use ./images/dti/interpol-rho005-3.png>
@@ -1628,7 +1703,7 @@ Package pdftex.def Info: ./images/dti/interpol-rho005-3.png used on input line
 25.
 (pdftex.def)             Requested size: 46.98602pt x 50.98175pt.
 
-<./images/dti/interpol-rho005-5.png, id=608, 362.3136pt x 248.127pt>
+<./images/dti/interpol-rho005-5.png, id=609, 362.3136pt x 248.127pt>
 File: ./images/dti/interpol-rho005-5.png Graphic file (type png)
 
 <use ./images/dti/interpol-rho005-5.png>
@@ -1636,7 +1711,7 @@ Package pdftex.def Info: ./images/dti/interpol-rho005-5.png used on input line
 26.
 (pdftex.def)             Requested size: 46.98602pt x 50.98175pt.
 
-<./images/dti/interpol-rho005-7.png, id=610, 362.3136pt x 248.127pt>
+<./images/dti/interpol-rho005-7.png, id=611, 362.3136pt x 248.127pt>
 File: ./images/dti/interpol-rho005-7.png Graphic file (type png)
 
 <use ./images/dti/interpol-rho005-7.png>
@@ -1644,7 +1719,7 @@ Package pdftex.def Info: ./images/dti/interpol-rho005-7.png used on input line
 27.
 (pdftex.def)             Requested size: 46.98602pt x 50.98175pt.
 
-<./images/dti/interpol-rho005-9.png, id=612, 362.3136pt x 248.127pt>
+<./images/dti/interpol-rho005-9.png, id=613, 362.3136pt x 248.127pt>
 File: ./images/dti/interpol-rho005-9.png Graphic file (type png)
 
 <use ./images/dti/interpol-rho005-9.png>
@@ -1652,7 +1727,7 @@ Package pdftex.def Info: ./images/dti/interpol-rho005-9.png used on input line
 28.
 (pdftex.def)             Requested size: 46.98602pt x 50.98175pt.
 
-<./images/dti/original-trace-1-roi.png, id=614, 169.63374pt x 129.48375pt>
+<./images/dti/original-trace-1-roi.png, id=615, 169.63374pt x 129.48375pt>
 File: ./images/dti/original-trace-1-roi.png Graphic file (type png)
 
 <use ./images/dti/original-trace-1-roi.png>
@@ -1660,7 +1735,7 @@ Package pdftex.def Info: ./images/dti/original-trace-1-roi.png used on input li
 ne 32.
 (pdftex.def)             Requested size: 72.28423pt x 55.17506pt.
 
-<./images/dti/original-trace-2-roi.png, id=615, 169.63374pt x 129.48375pt>
+<./images/dti/original-trace-2-roi.png, id=616, 169.63374pt x 129.48375pt>
 File: ./images/dti/original-trace-2-roi.png Graphic file (type png)
 
 <use ./images/dti/original-trace-2-roi.png>
@@ -1672,25 +1747,54 @@ Overfull \hbox (5.36617pt too wide) in paragraph at lines 18--39
  [][] 
  []
 
-) (./sections/applications-texsynth.tex [7 <./images/mesh-bump/anisodiffus-1.pn
-g (PNG copy)> <./images/mesh-bump/anisodiffus-3.png (PNG copy)> <./images/mesh-
-bump/anisodiffus-5.png (PNG copy)> <./images/mesh-bump/anisodiffus-7.png (PNG c
-opy)> <./images/mesh-bump/anisodiffus-9.png (PNG copy)> <./images/textures/2d-b
-ump-donut/interpol-render-1.png (PNG copy)> <./images/textures/2d-bump-donut/in
-terpol-render-3.png (PNG copy)> <./images/textures/2d-bump-donut/interpol-rende
-r-5.png (PNG copy)> <./images/textures/2d-bump-donut/interpol-render-7.png (PNG
- copy)> <./images/textures/2d-bump-donut/interpol-render-9.png (PNG copy)> <./i
-mages/textures/2d-bump-donut/colorbar.png (PNG copy)> <./images/meshing/2d-bump
--donut/input-mesh-1.png> <./images/meshing/2d-bump-donut/input-mesh-3.png> <./i
-mages/meshing/2d-bump-donut/input-mesh-5.png> <./images/meshing/2d-bump-donut/i
-nput-mesh-7.png> <./images/meshing/2d-bump-donut/input-mesh-9.png> <./images/me
-shing/images/input-mesh-1.png> <./images/meshing/images/input-mesh-3.png> <./im
-ages/meshing/images/input-mesh-5.png> <./images/meshing/images/input-mesh-7.png
-> <./images/meshing/images/input-mesh-9.png> <./images/meshing/images/input-ima
-ges-1.png> <./images/meshing/images/input-mesh-1-img.png> <./images/meshing/ima
-ges/input-images-2.png> <./images/meshing/images/input-mesh-9-img.png>]))
-(./sections/conclusion.tex) (./sections/applications-texsynth-fig.tex
-<./images/texsynth/spectrum-1.png, id=664, 256.96pt x 256.96pt>
+)
+(C:\Users\Justin\Documents\mit\research\2016-wasserstein-tensor-valued\paper\se
+ctions/applications-texsynth.tex [7 <C:/Users/Justin/Documents/mit/research/201
+6-wasserstein-tensor-valued/paper/images/mesh-bump/anisodiffus-1.png (PNG copy)
+> <C:/Users/Justin/Documents/mit/research/2016-wasserstein-tensor-valued/paper/
+images/mesh-bump/anisodiffus-3.png (PNG copy)> <C:/Users/Justin/Documents/mit/r
+esearch/2016-wasserstein-tensor-valued/paper/images/mesh-bump/anisodiffus-5.png
+ (PNG copy)> <C:/Users/Justin/Documents/mit/research/2016-wasserstein-tensor-va
+lued/paper/images/mesh-bump/anisodiffus-7.png (PNG copy)> <C:/Users/Justin/Docu
+ments/mit/research/2016-wasserstein-tensor-valued/paper/images/mesh-bump/anisod
+iffus-9.png (PNG copy)> <C:/Users/Justin/Documents/mit/research/2016-wasserstei
+n-tensor-valued/paper/images/textures/2d-bump-donut/interpol-render-1.png (PNG 
+copy)> <C:/Users/Justin/Documents/mit/research/2016-wasserstein-tensor-valued/p
+aper/images/textures/2d-bump-donut/interpol-render-3.png (PNG copy)> <C:/Users/
+Justin/Documents/mit/research/2016-wasserstein-tensor-valued/paper/images/textu
+res/2d-bump-donut/interpol-render-5.png (PNG copy)> <C:/Users/Justin/Documents/
+mit/research/2016-wasserstein-tensor-valued/paper/images/textures/2d-bump-donut
+/interpol-render-7.png (PNG copy)> <C:/Users/Justin/Documents/mit/research/2016
+-wasserstein-tensor-valued/paper/images/textures/2d-bump-donut/interpol-render-
+9.png (PNG copy)> <C:/Users/Justin/Documents/mit/research/2016-wasserstein-tens
+or-valued/paper/images/textures/2d-bump-donut/colorbar.png (PNG copy)> <C:/User
+s/Justin/Documents/mit/research/2016-wasserstein-tensor-valued/paper/images/mes
+hing/2d-bump-donut/input-mesh-1.png> <C:/Users/Justin/Documents/mit/research/20
+16-wasserstein-tensor-valued/paper/images/meshing/2d-bump-donut/input-mesh-3.pn
+g> <C:/Users/Justin/Documents/mit/research/2016-wasserstein-tensor-valued/paper
+/images/meshing/2d-bump-donut/input-mesh-5.png> <C:/Users/Justin/Documents/mit/
+research/2016-wasserstein-tensor-valued/paper/images/meshing/2d-bump-donut/inpu
+t-mesh-7.png> <C:/Users/Justin/Documents/mit/research/2016-wasserstein-tensor-v
+alued/paper/images/meshing/2d-bump-donut/input-mesh-9.png> <C:/Users/Justin/Doc
+uments/mit/research/2016-wasserstein-tensor-valued/paper/images/meshing/images/
+input-mesh-1.png> <C:/Users/Justin/Documents/mit/research/2016-wasserstein-tens
+or-valued/paper/images/meshing/images/input-mesh-3.png> <C:/Users/Justin/Docume
+nts/mit/research/2016-wasserstein-tensor-valued/paper/images/meshing/images/inp
+ut-mesh-5.png> <C:/Users/Justin/Documents/mit/research/2016-wasserstein-tensor-
+valued/paper/images/meshing/images/input-mesh-7.png> <C:/Users/Justin/Documents
+/mit/research/2016-wasserstein-tensor-valued/paper/images/meshing/images/input-
+mesh-9.png> <C:/Users/Justin/Documents/mit/research/2016-wasserstein-tensor-val
+ued/paper/images/meshing/images/input-images-1.png> <C:/Users/Justin/Documents/
+mit/research/2016-wasserstein-tensor-valued/paper/images/meshing/images/input-m
+esh-1-img.png> <C:/Users/Justin/Documents/mit/research/2016-wasserstein-tensor-
+valued/paper/images/meshing/images/input-images-2.png> <C:/Users/Justin/Documen
+ts/mit/research/2016-wasserstein-tensor-valued/paper/images/meshing/images/inpu
+t-mesh-9-img.png>]))
+(C:\Users\Justin\Documents\mit\research\2016-wasserstein-tensor-valued\paper\se
+ctions/conclusion.tex)
+(C:\Users\Justin\Documents\mit\research\2016-wasserstein-tensor-valued\paper\se
+ctions/applications-texsynth-fig.tex
+<./images/texsynth/spectrum-1.png, id=669, 256.96pt x 256.96pt>
 File: ./images/texsynth/spectrum-1.png Graphic file (type png)
 
 <use ./images/texsynth/spectrum-1.png>
@@ -1698,7 +1802,7 @@ Package pdftex.def Info: ./images/texsynth/spectrum-1.png used on input line 6.
 
 (pdftex.def)             Requested size: 46.98602pt x 46.98401pt.
 
-<./images/texsynth/spectrum-3.png, id=665, 256.96pt x 256.96pt>
+<./images/texsynth/spectrum-3.png, id=670, 256.96pt x 256.96pt>
 File: ./images/texsynth/spectrum-3.png Graphic file (type png)
 
 <use ./images/texsynth/spectrum-3.png>
@@ -1706,7 +1810,7 @@ Package pdftex.def Info: ./images/texsynth/spectrum-3.png used on input line 7.
 
 (pdftex.def)             Requested size: 46.98602pt x 46.98401pt.
 
-<./images/texsynth/spectrum-5.png, id=666, 256.96pt x 256.96pt>
+<./images/texsynth/spectrum-5.png, id=671, 256.96pt x 256.96pt>
 File: ./images/texsynth/spectrum-5.png Graphic file (type png)
 
 <use ./images/texsynth/spectrum-5.png>
@@ -1714,7 +1818,7 @@ Package pdftex.def Info: ./images/texsynth/spectrum-5.png used on input line 8.
 
 (pdftex.def)             Requested size: 46.98602pt x 46.98401pt.
 
-<./images/texsynth/spectrum-7.png, id=667, 256.96pt x 256.96pt>
+<./images/texsynth/spectrum-7.png, id=672, 256.96pt x 256.96pt>
 File: ./images/texsynth/spectrum-7.png Graphic file (type png)
 
 <use ./images/texsynth/spectrum-7.png>
@@ -1722,7 +1826,7 @@ Package pdftex.def Info: ./images/texsynth/spectrum-7.png used on input line 9.
 
 (pdftex.def)             Requested size: 46.98602pt x 46.98401pt.
 
-<./images/texsynth/spectrum-9.png, id=668, 256.96pt x 256.96pt>
+<./images/texsynth/spectrum-9.png, id=673, 256.96pt x 256.96pt>
 File: ./images/texsynth/spectrum-9.png Graphic file (type png)
 
 <use ./images/texsynth/spectrum-9.png>
@@ -1730,7 +1834,7 @@ Package pdftex.def Info: ./images/texsynth/spectrum-9.png used on input line 10
 .
 (pdftex.def)             Requested size: 46.98602pt x 46.98401pt.
 
-<./images/texsynth/synthesis-1.png, id=669, 256.96pt x 256.96pt>
+<./images/texsynth/synthesis-1.png, id=674, 256.96pt x 256.96pt>
 File: ./images/texsynth/synthesis-1.png Graphic file (type png)
 
 <use ./images/texsynth/synthesis-1.png>
@@ -1738,7 +1842,7 @@ Package pdftex.def Info: ./images/texsynth/synthesis-1.png used on input line 1
 1.
 (pdftex.def)             Requested size: 46.98602pt x 46.98401pt.
 
-<./images/texsynth/synthesis-3.png, id=670, 256.96pt x 256.96pt>
+<./images/texsynth/synthesis-3.png, id=675, 256.96pt x 256.96pt>
 File: ./images/texsynth/synthesis-3.png Graphic file (type png)
 
 <use ./images/texsynth/synthesis-3.png>
@@ -1746,7 +1850,7 @@ Package pdftex.def Info: ./images/texsynth/synthesis-3.png used on input line 1
 2.
 (pdftex.def)             Requested size: 46.98602pt x 46.98401pt.
 
-<./images/texsynth/synthesis-5.png, id=671, 256.96pt x 256.96pt>
+<./images/texsynth/synthesis-5.png, id=676, 256.96pt x 256.96pt>
 File: ./images/texsynth/synthesis-5.png Graphic file (type png)
 
 <use ./images/texsynth/synthesis-5.png>
@@ -1754,7 +1858,7 @@ Package pdftex.def Info: ./images/texsynth/synthesis-5.png used on input line 1
 3.
 (pdftex.def)             Requested size: 46.98602pt x 46.98401pt.
 
-<./images/texsynth/synthesis-7.png, id=672, 256.96pt x 256.96pt>
+<./images/texsynth/synthesis-7.png, id=677, 256.96pt x 256.96pt>
 File: ./images/texsynth/synthesis-7.png Graphic file (type png)
 
 <use ./images/texsynth/synthesis-7.png>
@@ -1762,7 +1866,7 @@ Package pdftex.def Info: ./images/texsynth/synthesis-7.png used on input line 1
 4.
 (pdftex.def)             Requested size: 46.98602pt x 46.98401pt.
 
-<./images/texsynth/synthesis-9.png, id=673, 256.96pt x 256.96pt>
+<./images/texsynth/synthesis-9.png, id=678, 256.96pt x 256.96pt>
 File: ./images/texsynth/synthesis-9.png Graphic file (type png)
 
 <use ./images/texsynth/synthesis-9.png>
@@ -1770,7 +1874,7 @@ Package pdftex.def Info: ./images/texsynth/synthesis-9.png used on input line 1
 5.
 (pdftex.def)             Requested size: 46.98602pt x 46.98401pt.
 
-<./images/texsynth/original-1.png, id=674, 256.96pt x 256.96pt>
+<./images/texsynth/original-1.png, id=679, 256.96pt x 256.96pt>
 File: ./images/texsynth/original-1.png Graphic file (type png)
 
 <use ./images/texsynth/original-1.png>
@@ -1778,7 +1882,7 @@ Package pdftex.def Info: ./images/texsynth/original-1.png used on input line 19
 .
 (pdftex.def)             Requested size: 46.98602pt x 46.98401pt.
 
-<./images/texsynth/original-2.png, id=675, 256.96pt x 256.96pt>
+<./images/texsynth/original-2.png, id=680, 256.96pt x 256.96pt>
 File: ./images/texsynth/original-2.png Graphic file (type png)
 
 <use ./images/texsynth/original-2.png>
@@ -1790,71 +1894,93 @@ Overfull \hbox (5.36617pt too wide) in paragraph at lines 5--26
  [][] 
  []
 
-) (./TensorOT.bbl [8 <./images/dti/interpol-rho1-1.png (PNG copy)> <./images/dt
-i/interpol-rho1-3.png (PNG copy)> <./images/dti/interpol-rho1-5.png (PNG copy)>
- <./images/dti/interpol-rho1-7.png (PNG copy)> <./images/dti/interpol-rho1-9.pn
-g (PNG copy)> <./images/dti/interpol-rho005-1.png (PNG copy)> <./images/dti/int
-erpol-rho005-3.png (PNG copy)> <./images/dti/interpol-rho005-5.png (PNG copy)> 
-<./images/dti/interpol-rho005-7.png (PNG copy)> <./images/dti/interpol-rho005-9
-.png (PNG copy)> <./images/dti/original-trace-1-roi.png (PNG copy)> <./images/d
-ti/original-trace-2-roi.png (PNG copy)> <./images/texsynth/spectrum-1.png (PNG 
-copy)> <./images/texsynth/spectrum-3.png (PNG copy)> <./images/texsynth/spectru
-m-5.png (PNG copy)> <./images/texsynth/spectrum-7.png (PNG copy)> <./images/tex
-synth/spectrum-9.png (PNG copy)> <./images/texsynth/synthesis-1.png (PNG copy)>
- <./images/texsynth/synthesis-3.png (PNG copy)> <./images/texsynth/synthesis-5.
-png (PNG copy)> <./images/texsynth/synthesis-7.png (PNG copy)> <./images/texsyn
-th/synthesis-9.png (PNG copy)> <./images/texsynth/original-1.png (PNG copy)> <.
-/images/texsynth/original-2.png (PNG copy)>] [9])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 129.
+)
+(C:\Users\Justin\Documents\mit\research\2016-wasserstein-tensor-valued\paper\Te
+nsorOT.bbl [8 <C:/Users/Justin/Documents/mit/research/2016-wasserstein-tensor-v
+alued/paper/images/dti/interpol-rho1-1.png (PNG copy)> <C:/Users/Justin/Documen
+ts/mit/research/2016-wasserstein-tensor-valued/paper/images/dti/interpol-rho1-3
+.png (PNG copy)> <C:/Users/Justin/Documents/mit/research/2016-wasserstein-tenso
+r-valued/paper/images/dti/interpol-rho1-5.png (PNG copy)> <C:/Users/Justin/Docu
+ments/mit/research/2016-wasserstein-tensor-valued/paper/images/dti/interpol-rho
+1-7.png (PNG copy)> <C:/Users/Justin/Documents/mit/research/2016-wasserstein-te
+nsor-valued/paper/images/dti/interpol-rho1-9.png (PNG copy)> <C:/Users/Justin/D
+ocuments/mit/research/2016-wasserstein-tensor-valued/paper/images/dti/interpol-
+rho005-1.png (PNG copy)> <C:/Users/Justin/Documents/mit/research/2016-wasserste
+in-tensor-valued/paper/images/dti/interpol-rho005-3.png (PNG copy)> <C:/Users/J
+ustin/Documents/mit/research/2016-wasserstein-tensor-valued/paper/images/dti/in
+terpol-rho005-5.png (PNG copy)> <C:/Users/Justin/Documents/mit/research/2016-wa
+sserstein-tensor-valued/paper/images/dti/interpol-rho005-7.png (PNG copy)> <C:/
+Users/Justin/Documents/mit/research/2016-wasserstein-tensor-valued/paper/images
+/dti/interpol-rho005-9.png (PNG copy)> <C:/Users/Justin/Documents/mit/research/
+2016-wasserstein-tensor-valued/paper/images/dti/original-trace-1-roi.png (PNG c
+opy)> <C:/Users/Justin/Documents/mit/research/2016-wasserstein-tensor-valued/pa
+per/images/dti/original-trace-2-roi.png (PNG copy)> <C:/Users/Justin/Documents/
+mit/research/2016-wasserstein-tensor-valued/paper/images/texsynth/spectrum-1.pn
+g (PNG copy)> <C:/Users/Justin/Documents/mit/research/2016-wasserstein-tensor-v
+alued/paper/images/texsynth/spectrum-3.png (PNG copy)> <C:/Users/Justin/Documen
+ts/mit/research/2016-wasserstein-tensor-valued/paper/images/texsynth/spectrum-5
+.png (PNG copy)> <C:/Users/Justin/Documents/mit/research/2016-wasserstein-tenso
+r-valued/paper/images/texsynth/spectrum-7.png (PNG copy)> <C:/Users/Justin/Docu
+ments/mit/research/2016-wasserstein-tensor-valued/paper/images/texsynth/spectru
+m-9.png (PNG copy)> <C:/Users/Justin/Documents/mit/research/2016-wasserstein-te
+nsor-valued/paper/images/texsynth/synthesis-1.png (PNG copy)> <C:/Users/Justin/
+Documents/mit/research/2016-wasserstein-tensor-valued/paper/images/texsynth/syn
+thesis-3.png (PNG copy)> <C:/Users/Justin/Documents/mit/research/2016-wasserste
+in-tensor-valued/paper/images/texsynth/synthesis-5.png (PNG copy)> <C:/Users/Ju
+stin/Documents/mit/research/2016-wasserstein-tensor-valued/paper/images/texsynt
+h/synthesis-7.png (PNG copy)> <C:/Users/Justin/Documents/mit/research/2016-wass
+erstein-tensor-valued/paper/images/texsynth/synthesis-9.png (PNG copy)> <C:/Use
+rs/Justin/Documents/mit/research/2016-wasserstein-tensor-valued/paper/images/te
+xsynth/original-1.png (PNG copy)> <C:/Users/Justin/Documents/mit/research/2016-
+wasserstein-tensor-valued/paper/images/texsynth/original-2.png (PNG copy)>]
+[9])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 135.
  [10
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 129.
- (./TensorOT.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 129.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 129.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 135.
+
+(C:\Users\Justin\Documents\mit\research\2016-wasserstein-tensor-valued\paper\Te
+nsorOT.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 135.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 135.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 129.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 135.
  ) 
 Here is how much of TeX's memory you used:
- 12308 strings out of 493014
- 197460 string characters out of 6133351
- 331033 words of memory out of 5000000
- 14990 multiletter control sequences out of 15000+600000
- 53948 words of font info for 299 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 44i,14n,78p,987b,442s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
-exlive/2016/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex9.pfb></usr/loca
-l/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local
-/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/t
-exlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/tex
-live/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texli
-ve/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive
-/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/20
-16/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2016/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2016/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2016/texmf
--dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2016/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2016/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2016/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2016/texmf-dist/fo
-nts/type1/public/doublestroke/dsrom8.pfb></usr/local/texlive/2016/texmf-dist/fo
-nts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2016/texmf-dist/
-fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2016/texmf-d
-ist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2016/tex
-mf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2016/texmf-dist
-/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/typ
-e1/urw/times/utmbi8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/ti
-mes/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmri8
-a.pfb>
-Output written on TensorOT.pdf (10 pages, 8004784 bytes).
+ 12112 strings out of 493706
+ 196144 string characters out of 3144580
+ 332690 words of memory out of 3000000
+ 14577 multiletter control sequences out of 15000+200000
+ 56076 words of font info for 297 fonts, out of 3000000 for 9000
+ 1025 hyphenation exceptions out of 8191
+ 43i,14n,76p,1065b,448s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program File
+s/MiKTeX 2.9/fonts/type1/public/amsfonts/cmextra/cmex9.pfb><C:/Program Files/Mi
+KTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Program Files/MiKTeX 2.9/
+fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
+e1/public/amsfonts/cm/cmmi9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
+/amsfonts/cm/cmr5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
+cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pf
+b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Pro
+gram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program File
+s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 
+2.9/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Program Files/MiKTeX 2.9/fonts
+/type1/public/dstroke/dsrom8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
+c/amsfonts/euler/eufm10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
+fonts/symbols/msam10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
+ts/symbols/msbm10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhv
+b8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Pr
+ogram Files/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTe
+X 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
+1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri
+8a.pfb>
+Output written on TensorOT.pdf (10 pages, 8104454 bytes).
 PDF statistics:
- 808 PDF objects out of 1000 (max. 8388607)
- 524 compressed objects within 6 object streams
- 140 named destinations out of 1000 (max. 500000)
- 36974 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 804 PDF objects out of 1000 (max. 8388607)
+ 141 named destinations out of 1000 (max. 500000)
+ 40558 words of extra memory for PDF output out of 42996 (max. 10000000)
 

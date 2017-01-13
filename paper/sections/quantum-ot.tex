@@ -17,13 +17,13 @@ Our goal is to propose a new definition of OT between $\mu$ and $\nu$.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Tensor Transportation}
 
-Following the initial static formulation of OT by Kantorovich~\cite{Kantorovich42}, we define a coupling $\ga = \sum_{i,j}\ga_{i,j} \de_{(x_i,y_j)}$ as a measure over the product $X \times Y$ that encodes the transport of mass between $\mu$ and $\nu$. In the matrix case, $\ga_{i,j} \in \Ss_+^d$ is now a PSD matrix, describing how much of mass is moved between $\mu_i$ and $\nu_j$. 
+Following the initial static formulation of OT by Kantorovich~\shortcite{Kantorovich42}, we define a coupling $\ga = \sum_{i,j}\ga_{i,j} \de_{(x_i,y_j)}$ as a measure over the product $X \times Y$ that encodes the transport of mass between $\mu$ and $\nu$. In the matrix case, $\ga_{i,j} \in \Ss_+^d$ is now a PSD matrix, describing how much of mass is moved between $\mu_i$ and $\nu_j$. 
 % 
-Exact (balanced) transport would mean that the marginals $(\ga \ones_J,\ga^\top \ones_I)$ must be equal to the input measures $(\mu,\nu)$. But as remarked by~\cite{ning2015matrix}, in contrast to the scalar case, in the matrix case (dimension $d>1$), in general this contraint is too strong, and there might exists no coupling satisfying these marginal constraints.
+Exact (balanced) transport would mean that the marginals $(\ga \ones_J,\ga^\top \ones_I)$ must be equal to the input measures $(\mu,\nu)$. But as remarked by Ning et al.~\shortcite{ning2015matrix}, in contrast to the scalar case, in the matrix case (dimension $d>1$), in general this constraint is too strong, and there might exists no coupling satisfying these marginal constraints.
 %
-We advocate in this work that the natural workaround for the matrix setting is in fact the unbalanced case, and following~\cite{LieroMielkeSavareLong}, we propose to use a ``relaxed'' formulation, where the discrepancy between the marginals $(\ga \ones_J,\ga^\top \ones_I)$ and the input measures $(\mu,\nu)$ is quantified according to some divergence between measures. 
+We advocate in this work that the natural workaround for the matrix setting is the unbalanced case, and following~\cite{LieroMielkeSavareLong}, we propose to use a ``relaxed'' formulation where the discrepancy between the marginals $(\ga \ones_J,\ga^\top \ones_I)$ and the input measures $(\mu,\nu)$ is quantified according to some divergence between measures. 
 
-In the scalar case, the most natural divergence is the Kulback-Leibler divergence (which in particular gives rise to a natural Riemannian structure on positive measures, as defined in~\cite{LieroMielkeSavareCourt,kondratyev2015,2016-chizat-focm}).  We thus propose to make use of its quantum counterpart~\eqref{eq-kl-quantum} %. 
+In the scalar case, the most natural divergence is the Kulback-Leibler divergence (which in particular gives rise to a natural Riemannian structure on positive measures, as defined in~\cite{LieroMielkeSavareCourt,kondratyev2015,2016-chizat-focm}).  We propose to make use of its quantum counterpart~\eqref{eq-kl-quantum} %. 
 %
 %We hence consider
 via
@@ -48,8 +48,8 @@ for some $\al>0$.  In this case, one should interpret the trace as the global ma
 
 \begin{rem}[Classical OT]
 	%Note that i
-	In the scalar case $d=1$, \eqref{eq-Kantorovich} recovers exactly the log-entropic definition~\cite{LieroMielkeSavareLong} of unbalanced optimal transport, which is studied numerically in~\cite{2016-chizat-sinkhorn}. %Note also that f
-	For isotropic tensors, i.e., all $\mu_i$ and $\nu_j$ are scalar multiples of the identity $\Id_{d \times d}$, the computation also collapses to the scalar case (the $\ga_{i,j}$ are also isotropic). More generally, if all the $(\mu_i,\nu_j)_{i,j}$ commute, they diagonalize in the same orthogonal basis, and~\eqref{eq-Kantorovich} reduces to performing $d$ independent unbalanced OT along each eigendirection. 
+	In the scalar case $d=1$, \eqref{eq-Kantorovich} recovers exactly the log-entropic definition~\cite{LieroMielkeSavareLong} of unbalanced optimal transport, which is studied numerically by Chizat et al.~\shortcite{2016-chizat-sinkhorn}. %Note also that f
+	For isotropic tensors, i.e., all $\mu_i$ and $\nu_j$ are scalar multiples of the identity $\Id_{d \times d}$, the computation also collapses to the scalar case (the $\ga_{i,j}$ are also isotropic). More generally, if all the $(\mu_i,\nu_j)_{i,j}$ commute, they diagonalize in the same orthogonal basis, and~\eqref{eq-Kantorovich} reduces to performing $d$ independent unbalanced OT computations along each eigendirection. 
 \end{rem}
 
 \begin{rem}[Cost between single Dirac masses]
@@ -83,7 +83,7 @@ for some $\al>0$.  In this case, one should interpret the trace as the global ma
 	If $(\mu,\nu)$ are defined on a non-Euclidean space $Y=X$, like a smooth manifold, then formulation~\eqref{eq-Kantorovich} should be handled with care, since it assumes all the tensors $(\mu_i,\nu_j)_{i,j}$ are defined %expressed in coordinates 
 	in some common basis. 
 	%
-	For smooth manifolds, the simplest workaround is to assume that these tensors are defined with respect to carefully selected orthogonal bases of the tangent planes, so that the field of bases is itself smooth. Unless the manifold is parallelizable, in particular if it has a trivial topology, it is not possible to obtain a globally smooth orthonormal basis; in general, any such field necessarily has a few singular points. In the following, we compute smoothly-varying orthogonal bases of the tangent planes following the method of~\cite{crane2010trivial}. 
+	For smooth manifolds, the simplest workaround is to assume that these tensors are defined with respect to carefully selected orthogonal bases of the tangent planes, so that the field of bases is itself smooth. Unless the manifold is parallelizable, in particular if it has a trivial topology, it is not possible to obtain a globally smooth orthonormal basis; in general, any such field necessarily has a few singular points. In the following, we compute smoothly-varying orthogonal bases of the tangent planes following the method of Crane et al.~\shortcite{crane2010trivial}. 
 	%
 	In this setting, the cost is usually chosen to be $c_{i,j} = d_X(x_i,x_j)^\al \Id_{d \times d}$ where $d_X$ is the geodesic distance on $X$. 
 \end{rem}
@@ -125,23 +125,23 @@ Assuming that each $\ga_{i,j}$ is represented with respect to the basis $B_i$ of
 \newcommand{\muB}{\nu}
 
 
-Given two input measures $(\muA,\muB)$, we denote $\ga$ a solution of~\eqref{eq-Kantorovich} (in practice, its regularized version, see~\eqref{eq-Kantorovich-regul} below). The coupling $\ga$ defines a (fuzzy) correspondance between the tensor fields. A typical use of this correspondance is to compute a continuous interpolation between these fields. Section~\ref{sec-numerics-interp} shows some numerical illustration of this interpolation. Note also that Section~\ref{sec-q-bary} proposes a generalization of this idea to compute an interpolation (barycenters) between more than two input fields.  
+Given two input measures $(\muA,\muB)$, we denote $\ga$ as a solution of~\eqref{eq-Kantorovich} or, in practice, its regularized version (see~\eqref{eq-Kantorovich-regul} below). The coupling $\ga$ defines a (fuzzy) correspondence between the tensor fields. A typical use of this correspondence is to compute a continuous interpolation between these fields. Section~\ref{sec-numerics-interp} shows some numerical illustration of this interpolation. Note also that Section~\ref{sec-q-bary} proposes a generalization of this idea to compute an interpolation (barycenter) between more than two input fields.  
 
 
-Mimicking the definition of the optimal transport interpolation (the so-called McCann displacement interpolation see for instance~\cite{santambrogio2015optimal}), we propose to use $\gamma$ to define a path $t \in [0,1] \mapsto \mu_t$ interpolating between $(\muA,\muB)$. 
+Mimicking the definition of the optimal transport interpolation (the so-called McCann displacement interpolation; see for instance~\cite{santambrogio2015optimal}), we propose to use $\gamma$ to define a path $t \in [0,1] \mapsto \mu_t$ interpolating between $(\muA,\muB)$. 
 %
 For simplicity, we assume the cost has the form $c_{i,j}=d_X(x_i,y_j)^\al \Id_{d \times d}$ for some ground metric $d_X$ on $X=Y$. We also suppose we can compute efficiently the interpolation between two points $(x_i,y_j) \in X^2$ as
 \eq{
 	x_{i,j}^t \eqdef \uargmin{x \in X} (1-t)d_X^2(x_i,x) + t d_X^2(y_j,x). 
 }
-For instance, over Euclidean spaces, $g_t$ is simply the linear interpolation, and over more general manifold, it is a geodesic segment.
+For instance, over Euclidean spaces, $g_t$ is simply a linear interpolation, and over more general manifold, it is a geodesic segment.
 We also denote
 \eq{
 	\bar\muA_i \eqdef \muA_i \Big( \sum_{j} \ga_{i,j} \Big)^{-1} 
 	\qandq
 	\bar\muB_j \eqdef \muB_j \Big( \sum_{i} \ga_{i,j} \Big)^{-1}
 }
-the adjustment factors which account for the imperfect match of the marginal associated to a solution of~\eqref{eq-Kantorovich-regul}, and the adjusted coupling is
+the adjustment factors which account for the imperfect match of the marginal associated to a solution of~\eqref{eq-Kantorovich-regul}; the adjusted coupling is
 \eq{
 	\ga_{i,j}^t \eqdef [(1-t) \bar\muA_i + t \bar\muB_{j}] \ga_{i,j}.
 }
@@ -154,7 +154,7 @@ Finally, the interpolating measure is then defined as
 One easily verifies that this measure indeed interpolates the two input measures, i.e. 
 $(\mu_{t=0},\mu_{t=1})=(\muA,\muB)$. 
 %
-This formula~\eqref{eq-interpolating} generates the interpolation by creating a Dirac's tensor $ \ga_{i,j}^t \de_{x_{i,j}^t}$ for each coupling entry $\ga_{i,j}$, and this tensor travels between $\mu_i \de_{x_i}$ (at $t=0$) and $\nu_j \de_{y_j}$ (at $t=1$).
+This formula~\eqref{eq-interpolating} generates the interpolation by creating a Dirac tensor $ \ga_{i,j}^t \de_{x_{i,j}^t}$ for each coupling entry $\ga_{i,j}$, and this tensor travels between $\mu_i \de_{x_i}$ (at $t=0$) and $\nu_j \de_{y_j}$ (at $t=1$).
 
 \begin{rem}[Computational cost] We observed numerically that, similarely to the scalar case, the optimal coupling $\ga$ is sparse, meaning that only of the order of $O(|I|)$ non-zero terms are involved in the interpolating measure~\eqref{eq-interpolating}. Note that the entropic regularization algorithm detailed in Section~\ref{eq-q-sink} destroys this exact sparsity, but we found numerically that that thresholding to zero the small entries of $\ga$ generates accurate approximations. 
 \end{rem}

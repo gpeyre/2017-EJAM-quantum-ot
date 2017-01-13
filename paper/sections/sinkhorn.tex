@@ -4,7 +4,7 @@
 \section{Quantum Sinkhorn}
 \label{eq-q-sink}
 
-The convex program~\eqref{eq-Kantorovich} defining quantum OT is computationally challenging because it can be very large scale (problem size is $|I| \times |J|$) for imaging applications, and it involves matrix exponential and logarithm. In this section, leveraging recent advances in computational OT initiated by~\cite{cuturi-2013}, we propose to use a similar entropy regularized strategy (see also section~\ref{sec-intro}), but this time with the quantum-entropy~\eqref{eq-h-quantum}. 
+The convex program~\eqref{eq-Kantorovich} defining quantum OT is computationally challenging because it can be very large scale (problem size is $|I| \times |J|$) for imaging applications, and it involves matrix exponential and logarithm. In this section, leveraging recent advances in computational OT initiated by Cuturi~\shortcite{cuturi-2013}, we propose to use a similar entropy regularized strategy (see also section~\ref{sec-intro}), but this time with the quantum entropy~\eqref{eq-h-quantum}. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Entropic Regularization}
@@ -80,7 +80,7 @@ The following Lengendre formula leads to the desired result:
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Quantum Sinkhorn Algorithm}
 
-It is possible to use Dykstra's algorithm~\cite{Dykstra83} (see~\cite{bauschke-lewis} for its extension to Bregman divergences) to solve~\eqref{eq-dual-pb}. This corresponds to alternatively maximizing~\eqref{eq-dual-pb} with respect to $u$ and $v$. 
+It is possible to use Dykstra's algorithm~\shortcite{Dykstra83} (see~\cite{bauschke-lewis} for its extension to Bregman divergences) to solve~\eqref{eq-dual-pb}. This corresponds to alternatively maximizing~\eqref{eq-dual-pb} with respect to $u$ and $v$. 
 %
 The following proposition states that the maximization with respect to either $u$ or $v$ leads to two fixed-point equations. 
 %
@@ -115,7 +115,7 @@ where the sum on $j$ is replaced by a sum on $i$ for $\LSE_i$.
 %	where one can typically use set $\kappa_i \eqdef \max_j \tr(K_{i,j})/d$. 
 %\end{rem}
 
-A simple fixed point algorithm is then obtained by replacing in Dykstra's the explicit alternate minimization with respect to $u$ and $v$ by just one step of fixed point iterations~\eqref{eq-fixed-point-u} and~\eqref{eq-fixed-point-v}. To make the resulting fixed point contractant and ensure linear convergence, one introduces relaxation parameters $(\tau_1,\tau_2)$. 
+A simple fixed point algorithm is then obtained by replacing in Dykstra's the explicit alternating minimization with respect to $u$ and $v$ by just one step of fixed point iterations~\eqref{eq-fixed-point-u} and~\eqref{eq-fixed-point-v}. To make the resulting fixed point contractant and ensure linear convergence, one introduces relaxation parameters $(\tau_1,\tau_2)$. 
 
 The quantum Sinkhorn algorithm is detailed in Algorithm~\ref{alg:sinkhorn}. It alternates between the updates of $u$ and $v$, using relaxed fixed point iterations associated to~\eqref{eq-fixed-point-u} and~\eqref{eq-fixed-point-v}. We use the following $\tau$-relaxed assignment notation 
 \eql{\label{eq-dfn-relaxed-assign}
@@ -176,7 +176,7 @@ For low-dimensional problems (typically for those considered in Section~\ref{sec
 %
 For large scale grids, even storing the full coupling $\ga$ becomes prohibitive. We however observed numerically that, similarly  to the usual scalar case, the optimal $\ga$ solving~\eqref{eq-Kantorovich-regul} is highly sparse (up to machine precision for small enough $\epsilon$).
 % 
-We thus found that using the multi-scale refinement strategy introduced in~\cite{} is able to make the Q-Sinkhorn scales to high resolution grids.  
+We thus found that using the multi-scale refinement strategy introduced in~\cite{} is able to make the Q-Sinkhorn scales to high resolution grids.  
 \end{rem}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -191,7 +191,7 @@ We recall that it is obtained in two steps:
 	\item Then, for any $t \in [0,1]$, one computes $\mu_t$ using this optimal $\ga$ with formula~\eqref{eq-interpolating}.
 \end{enumerate}
    
-Figure~\ref{fig:1d-interp} shows examples of interpolations on a 1-D domain $X=Y=[0,1]$ with tensors of dimension $d=2$ and $d=3$, and a ground cost $c_{i,j}=|x_i-y_j|^2\Id_{d \times d}$. It compares the OT interpolation, which achieves a ``mass displacement'' to the usual linear interpolation $(1-t)\mu+t\nu$, which only performs a pointwise interpolation of the tensors. 
+Figure~\ref{fig:1d-interp} shows examples of interpolations on a 1-D domain $X=Y=[0,1]$ with tensors of dimension $d=2$ and $d=3$, and a ground cost $c_{i,j}=|x_i-y_j|^2\Id_{d \times d}$. It compares the OT interpolation, which achieves a ``mass displacement,'' to the usual linear interpolation $(1-t)\mu+t\nu$, which only performs a pointwise interpolation of the tensors. 
 
 Figure~\ref{fig:intro} shows larger scale examples. 
 %
