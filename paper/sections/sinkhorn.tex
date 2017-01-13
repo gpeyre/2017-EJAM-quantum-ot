@@ -161,30 +161,22 @@ Moreover, it is simple to check that these iterates are contractant whenever
 % This stabilizing effect is similar to the kernel absorption technics introduced in~\cite{}.  
 \end{rem}
 
+\input{sections/sinkhorn-alg}
 
-\begin{algorithm}[t]
-\fbox{\hspace{-.1in}\parbox{\columnwidth}{%
-\begin{algorithmic}
-\Function{Quantum-Sinkhorn}{$\mu,\nu,c,\epsilon,\rho_1,\rho_2$}
-	% \LineComment{Computes minimizer $\ga$ of~\eqref{eq-Kantorovich-regul}}
-	\algspace
-	\State $\foralls k=1,2, \quad \tau_k \in ]0,\tfrac{2 \epsilon}{\epsilon+\rho_k}[$, 
-	\Let{$\foralls (i,j) \in I \times J, \quad (u_i,v_j)$}{$(0_{d \times d}, 0_{d \times d})$}
-	\For{$s=1,2,3,\ldots$}
-		\Let{$K$}{$\Kern(u,v)$}
-		\State $\foralls i \in I, \quad u_i \RelaxAssign{\tau_1} \LSE_j(K_{i,j})-\log(\mu_i)$
-		\Let{$K$}{$\Kern(u,v)$}
-		\State $\foralls j \in J, \quad v_j \RelaxAssign{\tau_2} \LSE_i(K_{i,j})-\log(\nu_j)$
-	\EndFor
-%	\algspace
-	\State\Return{$(\ga_{i,j} = \exp(K_{i,j}))_{i,j}$}
-\EndFunction
-  \end{algorithmic}
-}}
-\caption{Quantum-Sinkhorn iterations to compute the optimal coupling $\ga$ of the regularized transportation problem~\eqref{eq-Kantorovich-regul}. The operator $\Kern$ is defined in~\eqref{eq-defn-K}.\label{alg:sinkhorn}}
-\end{algorithm}
+\begin{rem}[log and exp computations]
+A major computational workload of the Q-Sinkhorn Algorithm~\eqref{alg:sinkhorn} is the repetitive computation of matrix exp and log. 
+%
+For $d \in \{2,3\}$ it is possible to use closed form expressions to diagonalize the tensors, so that the overall complexity is comparable with the usual scalar case $d=1$.
+%
+While the applications Section~\ref{sec:appli} only considers these low-dimensional settings, high dimensional problems are of interest, typically for machine learning applications.  In these cases, one has to resort to iterative procedures, such as rapidly converging squaring schemes~\cite{HighamExp,HighamLog}.
+\end{rem}
 
-\begin{rem}[log and exp computations]\todo{explain close forms}
+\begin{rem}[Computational complexity]
+For low-dimensional problems (typically for those considered in Section~\ref{sec:appli}), the Q-Sinkhorn Algorithm~\eqref{alg:sinkhorn} scales to grid sizes of roughly 10k points (with machine-precision solutions computed in about a minute on a standard laptop).
+%
+For large scale grids, even storing the full coupling $\ga$ becomes prohibitive. We however observed numerically that, similarly  to the usual scalar case, the optimal $\ga$ solving~\eqref{eq-Kantorovich-regul} is highly sparse (up to machine precision for small enough $\epsilon$).
+% 
+We thus found that using the multi-scale refinement strategy introduced in~\cite{} is able to make the Q-Sinkhorn scales to high resolution grids.  
 \end{rem}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -201,21 +193,10 @@ We recall that it is obtained in two steps:
    
 Figure~\ref{fig:1d-interp} shows examples of interpolations on a 1-D domain $X=Y=[0,1]$ with tensors of dimension $d=2$ and $d=3$, and a ground cost $c_{i,j}=|x_i-y_j|^2\Id_{d \times d}$. It compares the OT interpolation, which achieves a ``mass displacement'' to the usual linear interpolation $(1-t)\mu+t\nu$, which only performs a pointwise interpolation of the tensors. 
 
-Figure~\ref{fig:mesh} shows larger scale examples. The top row corresponds to $X=Y$ being a triangulated mesh of a surface, and the cost is proportional to the squared geodesic distance $c_{i,j}=d_X(x_i,y_j)^2 \Id_{2\times 2}$. The bottom row corresponds to $X=Y=[0,1]^2$ and $d=2$, with cost $c_{i,j}=\norm{x_i-y_j}^2\Id_{2 \times 2}$, which is a typical setup for image processing (the background shows the output of an anisotropic diffusion driven by the tensor field).
+Figure~\ref{fig:intro} shows larger scale examples. 
+%
+The first row corresponds to $X=Y=[0,1]^2$ and $d=2$, with cost $c_{i,j}=\norm{x_i-y_j}^2\Id_{2 \times 2}$, which is a typical setup for image processing.
+%
+The second row corresponds to $X=Y$ being a triangulated mesh of a surface, and the cost is proportional to the squared geodesic distance $c_{i,j}=d_X(x_i,y_j)^2 \Id_{2\times 2}$. 
 
-
-
-%%% FIG %%%
-\begin{figure}\centering
-\begin{tabular}{@{}c@{}|@{}c@{}}
-\includegraphics[width=.49\linewidth]{1d/cross-orient/linear-interp}&
-\includegraphics[width=.49\linewidth]{1d/cross-orient/interp-ellipses}\\\hline
-\includegraphics[width=.49\linewidth]{3d/plate-elong/linear-interp}&
-\includegraphics[width=.49\linewidth]{3d/plate-elong/interp-ellipses}\\\hline
-Linear interpolation & Quantum OT
-\end{tabular}
-\caption{Comparison of linear and quantum-OT interpolation (using formula~\eqref{eq-interpolating}). 
-Each row shows a field of tensors (top $d=2$, bottom $d=3$) along a linear segment from $t=0$ to $t=1$ ($t$ axis is vertical).
-} \label{fig:1d-interp}
-\end{figure}
-%%% FIG %%%
+\input{sections/sinkhorn-fig.tex}

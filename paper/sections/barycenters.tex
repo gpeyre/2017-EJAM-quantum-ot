@@ -1,6 +1,7 @@
 % !TEX root = ../TensorOT.tex
 
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Quantum Barycenters}
 \label{sec-q-bary}
@@ -48,6 +49,10 @@ in the definition~\eqref{eq-Kantorovich} of $W_\epsilon$. Note that the choice $
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
+
+\input{sections/barycenters-fig}
+
+
 Problem~\eqref{eq-defn-barycenters} is convex, and similarly to~\eqref{eq-dual-pb}, it can be re-written in dual form.
 
 \begin{prop}
@@ -68,59 +73,14 @@ where here we defined $\Kern$ as
 }
 \end{prop}
 
-%
-%Similarly to~\eqref{eq-primal-dual-scaling}, the couplings $\ga^\ell$ between each input $\mu^\ell$ and the thought after $\nu$ satisfy the usual scaling relation
-%\eq{	\ga^\ell_{i,j} = \exp( \Kern(u^\ell,v^\ell)_{i,j}  ). }
 
-
-
-%%
-\newcommand{\BaryImg}[2]{{\includegraphics[width=.095\linewidth,trim=18 160 18 160,clip]{2d-bary/barycenter-#1-#2}}}
-\newcommand{\BaryImgLine}[1]{%%%
-\BaryImg{#1}{1}&\BaryImg{#1}{2}&\BaryImg{#1}{3}&\BaryImg{#1}{4}&\BaryImg{#1}{5} %%%
-}
-%%
-\newcommand{\BarySurf}[2]{{\includegraphics[width=.095\linewidth,trim=25 10 25 10,clip]{mesh-bary/barycenter-#1-#2}}}
-\newcommand{\BarySurfLine}[1]{%%%
-\BarySurf{#1}{1}&\BarySurf{#1}{2}&\BarySurf{#1}{3}&\BarySurf{#1}{4}&\BarySurf{#1}{5} %%%
-}
-%%
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \fbox
-%%
-\begin{figure*}\centering
-%%%%%
-\begin{tabular}{@{}c@{}c@{}c@{}c@{}c@{}}
-\BaryImgLine{1}\\
-\BaryImgLine{2}\\
-\BaryImgLine{3}\\
-\BaryImgLine{4}\\
-\BaryImgLine{5}
-\end{tabular}
-%%%%%
-\hspace{5mm}
-%%%%%
-\begin{tabular}{@{}c@{}c@{}c@{}c@{}c@{}}
-\BarySurfLine{1}\\
-\BarySurfLine{2}\\
-\BarySurfLine{3}\\
-\BarySurfLine{4}\\
-\BarySurfLine{5}
-\end{tabular}
-%%%%%
-\caption{$5 \times 5$ barycenters of four input measures (displayed in the four corners). The weighs $w \in \RR^4$ corresponds to bilinear interpolation weights~\eqref{eq-bilinear} inside the square.
-} \label{fig:barycenters}
-\end{figure*}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{sections/barycenter-alg}
 
 
 %%%%
 \subsection{Quantum Barycenter Sinkhorn}
 
 Similarly to Proposition~\ref{prop-fixed-points}, the dual solutions of~\eqref{eq-dual-bary} satisfy a set of coupled fixed point equations:
-
-% maximizing~\eqref{eq-dual-bary} with respect to each $(u^\ell,v^\ell)$ leads to $\LSE$ fixed point equations similar to~\eqref{eq-fixed-point-u} and~\eqref{eq-fixed-point-v}. Minimization with respect to $\nu$ leads to the fixed point
 
 \begin{prop}
 Optimal $(u^\ell,v^\ell)_\ell$ for~\eqref{eq-dual-bary} satisfy 
@@ -130,76 +90,15 @@ Optimal $(u^\ell,v^\ell)_\ell$ for~\eqref{eq-dual-bary} satisfy
 	\foralls (j,\ell), \quad \LSE_i(\Kern(u^\ell,v^\ell)_{i,j}) \label{eq-fixed-point-v-bary}
 		&= \log(\nu_j)\\ 
 		 \textstyle \sum_\ell \weight_\ell v^\ell &= 0. \label{eq-fixed-point-nu-bary}
-	%  \exp( v_j^\ell + \log(\nu_j) )  
 \end{align}
 \end{prop}
 \begin{proof}
 The proof of~\eqref{eq-fixed-point-u-bary} and~\eqref{eq-fixed-point-v-bary} is the same as the one of Proposition~\ref{prop-fixed-points}.
 %%
 Minimization of~\eqref{eq-dual-bary} on $\nu$ leads to~\eqref{eq-fixed-point-nu-bary}. 
-% after the change of variable $\be=\log(\nu)$ reads
-%\eql{
-%	\umin{\be} \sum_{j,\ell} w_\ell \tr( e^{v_j^\ell+\be_j} - e^{\be_j} ).
-%} 
-%Since the gradient of $P \mapsto \tr(e^{P+Q})$ is $e^{P+Q}$, one obtains the desired expression~\eqref{eq-fixed-point-nu-bary}. 
 \end{proof}
 
 The extension of the quantum Sinkhorn algorithm to solve the barycenter problem~\eqref{alg:barycenter} is detailed in Algorithm~\ref{alg:barycenter}. It alternate between the update of $u$, $\nu$ and $v$, using relaxed version of the fixed point equations~\eqref{eq-fixed-point-u-bary}, \eqref{eq-fixed-point-v-bary} and~\eqref{eq-fixed-point-nu-bary}. The notation $\RelaxAssign{\tau}$ refers to a relaxed assignment as defined in~\eqref{eq-dfn-relaxed-assign}. 
-
-\if 0
-Making use of these fixed-point expressions, the quantum Sinkhorn is extended to solve for barycenters by initializing $\foralls (i,j,\ell), (u_i^\ell,v_j^\ell) \leftarrow (0,0)$, and then performing iteratively the following three steps:
-\begin{rs}
-	\item \textbf{$u$ update:}  for each $\ell$, update $K^\ell \leftarrow \Kern(u^\ell,v^\ell)$, apply
-		\eq{
-			\foralls i \in I, \quad u_i^\ell \RelaxAssign{\tau} \LSE_j(K_{i,j}^\ell)-\log(\mu_i^\ell).
-		}		
-	\item \textbf{$\nu$ update:} for each $\ell$, update $K^\ell \leftarrow \Kern(u^\ell,v^\ell)$, 
-		\eq{
-			\foralls j \in J, \quad \log(\nu_j) \leftarrow 
-			\sum_\ell w_\ell ( \LSE_i(K_{i,j}^\ell) + v^\ell_j/\epsilon ).
-		}
-	\item \textbf{$v$ update:} apply for each $\ell$
-		\eq{
-			\foralls j \in J, \quad 
-			\foralls j, \quad v_j^\ell \leftarrow \epsilon \LSE_i(K_{i,j}^\ell) + v^\ell_j - \epsilon \log(\nu_j).
-		}		
-\end{rs}
-\fi
-
-\begin{algorithm}[t]
-\fbox{\hspace{-.1in}\parbox{\columnwidth}{%
-\begin{algorithmic}
-\Function{Quantum-Barycenter}{$(\mu_\ell)_{\ell=1}^L,c,\epsilon,\rho$}
-	% \LineComment{Computes minimizer $\ga$ of~\eqref{eq-Kantorovich-regul}}
-	\algspace
-	\State Choose $\tau_1 \in ]0,\tfrac{2 \epsilon}{\epsilon+\rho}[$, 
-		$\tau_2 \in ]0,2[$.
-	\Let{$\foralls (i,j) \in I \times J, \quad (u_i,v_j)$}{$(0_{d \times d}, 0_{d \times d})$}
-	\For{$s=1,2,3,\ldots$.}
-		%%%%
-		\For{$\ell=1,\ldots,L$}
-			\Let{$K^\ell$}{$\Kern(u^\ell,v^\ell)$, }
-			\State $\foralls i \in I, \quad u_i^\ell \RelaxAssign{\tau_1} \LSE_j(K_{i,j}^\ell)-\log(\mu_i^\ell)$, 
-			\Let{$K^\ell$}{$\Kern(u^\ell,v^\ell)$.}
-		\EndFor
-		%%%%
-		\State $\foralls j \in J, \quad \log(\nu_j) \leftarrow 
-			\sum_\ell w_\ell ( \LSE_i(K_{i,j}^\ell) + v^\ell_j/\epsilon ).$
-		%%%%
-		\For{$\ell=1,\ldots,L$}
-			\State $\foralls j \in J, \quad v_j^\ell \RelaxAssign{\tau_2} \epsilon \LSE_i(K_{i,j}^\ell) + v^\ell_j - \epsilon \log(\nu_j).$	
-		\EndFor		
-	\EndFor
-%	\algspace
-	\State\Return{$\nu$}
-\EndFunction
-  \end{algorithmic}
-}}
-\caption{Quantum-Barycenter iterations to compute the optimal barycenter measure $\nu$ solving~\eqref{eq-defn-barycenters}. The operator $\Kern$ is defined in~\eqref{eq-def-k-bary}. \label{alg:barycenter}}
-\end{algorithm}
-
-
-
 
 \begin{rem}[Choice of $\tau$]
 Remarks~\ref{rem-choice-tau} also applies for this Sinkhorn-like scheme, and setting $(\tau_1,\tau_2)=(\tfrac{\epsilon}{\rho+\epsilon},1)$ leads, in the scalar case $d=1$, to the algorithm detailed in~\cite{2016-chizat-sinkhorn}. We found experimentally that this choice leads to contracting (and hence linearly converging) iterations, and that higher values of $\tau$ usually accelerates the convergence rate. 
@@ -211,15 +110,17 @@ Note that in the scalar case $d=1$ and for isotropic input tensors (multiples of
 
 
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Numerical Illustrations}
 
-Figure~\ref{fig:2d-bary} and~\ref{fig:mesh-bary} shows examples of barycenters $\nu$ solving~\eqref{eq-defn-barycenters} between four input measures $(\mu^\ell)_{\ell=1}^4$. The horizontal/vertical axes of the figures are indexed by $(t_1,t_2) \in [0,1]^2$ (on a $5 \times 5$ grids) and parameterize the weights $(w_\ell)_{\ell=1}^4$ appearing in~\eqref{eq-defn-barycenters} as
+Figure~\ref{fig:barycenters} shows examples of barycenters $\nu$ solving~\eqref{eq-defn-barycenters} between four input measures $(\mu^\ell)_{\ell=1}^4$. The horizontal/vertical axes of the figures are indexed by $(t_1,t_2) \in [0,1]^2$ (on a $5 \times 5$ grids) and parameterize the weights $(w_\ell)_{\ell=1}^4$ appearing in~\eqref{eq-defn-barycenters} as
 \eql{\label{eq-bilinear}
 	(w_1,w_2,w_3,w_4) \eqdef ( (1-t_1)(1-t_2), (1-t_1)t_2, t_1(1-t_2), t_1,t_2 ). 
 }
-Figure~\ref{fig:2d-bary} corresponds to measures on $X=Y=[0,1]^2$ with $d=2$ and ground cost $c_{i,j}=\norm{x_i-x_j}^2\Id_{2 \times 2}$.
-Figure~\ref{fig:2d-bary} corresponds to measures on $X=Y$ being a surface mesh with $d=2$ (the tensors are defined on the tangent planes) and a ground cost is $c_{i,j}=d_X(x_i,x_j)^2\Id_{2 \times 2}$ where $d_X$ is the geodesic distance on the mesh.
+The left part of Figure~\ref{fig:barycenters} corresponds to measures on $X=Y=[0,1]^2$ with $d=2$ and ground cost $c_{i,j}=\norm{x_i-x_j}^2\Id_{2 \times 2}$.
+%
+The right part of Figure~\ref{fig:barycenters} corresponds to measures on $X=Y$ being a surface mesh with $d=2$ (the tensors are defined on the tangent planes) and a ground cost is $c_{i,j}=d_X(x_i,x_j)^2\Id_{2 \times 2}$ where $d_X$ is the geodesic distance on the mesh.
 
 
 

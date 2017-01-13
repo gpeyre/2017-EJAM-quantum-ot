@@ -1,0 +1,32 @@
+
+\begin{algorithm}[t]
+\fbox{\hspace{-.1in}\parbox{\columnwidth}{%
+\begin{algorithmic}
+\Function{Quantum-Barycenter}{$(\mu_\ell)_{\ell=1}^L,c,\epsilon,\rho$}
+	% \LineComment{Computes minimizer $\ga$ of~\eqref{eq-Kantorovich-regul}}
+	\algspace
+	\State Choose $\tau_1 \in ]0,\tfrac{2 \epsilon}{\epsilon+\rho}[$, 
+		$\tau_2 \in ]0,2[$.
+	\Let{$\foralls (i,j) \in I \times J, \quad (u_i,v_j)$}{$(0_{d \times d}, 0_{d \times d})$}
+	\For{$s=1,2,3,\ldots$.}
+		%%%%
+		\For{$\ell=1,\ldots,L$}
+			\Let{$K^\ell$}{$\Kern(u^\ell,v^\ell)$, }
+			\State $\foralls i \in I, \quad u_i^\ell \RelaxAssign{\tau_1} \LSE_j(K_{i,j}^\ell)-\log(\mu_i^\ell)$, 
+			\Let{$K^\ell$}{$\Kern(u^\ell,v^\ell)$.}
+		\EndFor
+		%%%%
+		\State $\foralls j \in J, \quad \log(\nu_j) \leftarrow 
+			\sum_\ell w_\ell ( \LSE_i(K_{i,j}^\ell) + v^\ell_j/\epsilon ).$
+		%%%%
+		\For{$\ell=1,\ldots,L$}
+			\State $\foralls j \in J, \quad v_j^\ell \RelaxAssign{\tau_2} \epsilon \LSE_i(K_{i,j}^\ell) + v^\ell_j - \epsilon \log(\nu_j).$	
+		\EndFor		
+	\EndFor
+%	\algspace
+	\State\Return{$\nu$}
+\EndFunction
+  \end{algorithmic}
+}}
+\caption{Quantum-Barycenter iterations to compute the optimal barycenter measure $\nu$ solving~\eqref{eq-defn-barycenters}. The operator $\Kern$ is defined in~\eqref{eq-def-k-bary}. \label{alg:barycenter}}
+\end{algorithm}

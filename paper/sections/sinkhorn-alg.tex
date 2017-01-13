@@ -1,0 +1,19 @@
+\begin{algorithm}[t]
+\fbox{\hspace{-.1in}\parbox{\columnwidth}{%
+\begin{algorithmic}
+\Function{Quantum-Sinkhorn}{$\mu,\nu,c,\epsilon,\rho_1,\rho_2$}
+	\algspace
+	\State $\foralls k=1,2, \quad \tau_k \in ]0,\tfrac{2 \epsilon}{\epsilon+\rho_k}[$, 
+	\Let{$\foralls (i,j) \in I \times J, \quad (u_i,v_j)$}{$(0_{d \times d}, 0_{d \times d})$}
+	\For{$s=1,2,3,\ldots$}
+		\Let{$K$}{$\Kern(u,v)$}
+		\State $\foralls i \in I, \quad u_i \RelaxAssign{\tau_1} \LSE_j(K_{i,j})-\log(\mu_i)$
+		\Let{$K$}{$\Kern(u,v)$}
+		\State $\foralls j \in J, \quad v_j \RelaxAssign{\tau_2} \LSE_i(K_{i,j})-\log(\nu_j)$
+	\EndFor
+	\State\Return{$(\ga_{i,j} = \exp(K_{i,j}))_{i,j}$}
+\EndFunction
+  \end{algorithmic}
+}}
+\caption{Quantum-Sinkhorn iterations to compute the optimal coupling $\ga$ of the regularized transportation problem~\eqref{eq-Kantorovich-regul}. The operator $\Kern$ is defined in~\eqref{eq-defn-K}.\label{alg:sinkhorn}}
+\end{algorithm}

@@ -6,6 +6,19 @@
 \newblock Barycenters in the {W}asserstein space.
 \newblock {\em SIAM Journal on Mathematical Analysis 43}, 2, 904--924.
 
+\bibitem[\protect\citename{Al-Mohy and Higham }2009]{HighamExp}
+{\sc Al-Mohy, A.~H., and Higham, N.~J.}
+\newblock 2009.
+\newblock A new scaling and squaring algorithm for the matrix exponential.
+\newblock {\em SIAM J. Sci. Comput. 31}, 3, 970?--989.
+
+\bibitem[\protect\citename{Al-Mohy and Higham }2012]{HighamLog}
+{\sc Al-Mohy, A.~H., and Higham, N.~J.}
+\newblock 2012.
+\newblock Improved inverse scaling and squaring algorithms for the matrix
+  logarithm.
+\newblock {\em SIAM J. Sci. Comput. 34}, 4, C153?--C169.
+
 \bibitem[\protect\citename{Alliez et~al\mbox{.} }2003]{alliez2003anisotropic}
 {\sc Alliez, P., Cohen-Steiner, D., Devillers, O., L{\'e}vy, B., and Desbrun,
   M.}
@@ -58,13 +71,6 @@
 \newblock Polar factorization and monotone rearrangement of vector-valued
   functions.
 \newblock {\em Comm. Pure Appl. Math. 44}, 4, 375--417.
-
-\bibitem[\protect\citename{Caiafa and Pestilli }2015]{CaiafaPestilli}
-{\sc Caiafa, C.~F., and Pestilli, F.}
-\newblock 2015.
-\newblock Sparse multiway decomposition for analysis and modeling of diffusion
-  imaging and tractography.
-\newblock {\em arXiv:1505.07170\/}.
 
 \bibitem[\protect\citename{Carlen and Maas }2014]{Carlen2014}
 {\sc Carlen, E.~A., and Maas, J.}
@@ -243,6 +249,13 @@
 \newblock On matrix-valued monge--kantorovich optimal mass transport.
 \newblock {\em IEEE transactions on automatic control 60}, 2, 373--382.
 
+\bibitem[\protect\citename{Pestilli et~al\mbox{.}
+  }2014]{pestilli2014evaluation}
+{\sc Pestilli, F., Yeatman, J.~D., Rokem, A., Kay, K.~N., and Wandell, B.~A.}
+\newblock 2014.
+\newblock Evaluation and statistical inference for human connectomes.
+\newblock {\em Nature methods 11}, 10, 1058--1063.
+
 \bibitem[\protect\citename{Rockafellar }1970]{rockafellar-convex}
 {\sc Rockafellar, R.~T.}
 \newblock 1970.
@@ -283,6 +296,12 @@
 \newblock Convolutional {W}asserstein distances: Efficient optimal
   transportation on geometric domains.
 \newblock {\em TOG 34}, 4 (July), 66:1--66:11.
+
+\bibitem[\protect\citename{Takemura et~al\mbox{.} }2016]{takemura2016ensemble}
+{\sc Takemura, H., Caiafa, C.~F., Wandell, B.~A., and Pestilli, F.}
+\newblock 2016.
+\newblock Ensemble tractography.
+\newblock {\em PLoS Comput Biol 12}, 2, e1004692.
 
 \bibitem[\protect\citename{Vaxman et~al\mbox{.} }2016]{VaxmanCDPBHB16}
 {\sc Vaxman, A., Campen, M., Diamanti, O., Panozzo, D., Bommes, D.,

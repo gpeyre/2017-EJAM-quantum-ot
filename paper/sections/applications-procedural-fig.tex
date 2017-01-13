@@ -1,0 +1,23 @@
+
+%%% FIG %%%
+\newcommand{\BumpFig}[1]{\includegraphics[width=.17\linewidth,trim=140 10 125 0,clip]{mesh-bump/anisodiffus-#1}}
+\newcommand{\TextureImg}[2]{\includegraphics[width=.19\linewidth]{textures/#1/interpol-#2}}
+\begin{figure}\centering
+\begin{tabular}{@{}c@{\hspace{.5mm}}c@{\hspace{.5mm}}c@{\hspace{.5mm}}c@{\hspace{.5mm}}c@{\hspace{.5mm}}c@{}}
+\TextureImg{2d-bump-donut}{render-1}&
+\TextureImg{2d-bump-donut}{render-3}&
+\TextureImg{2d-bump-donut}{render-5}&
+\TextureImg{2d-bump-donut}{render-7}&
+\TextureImg{2d-bump-donut}{render-9}&
+\includegraphics[height=.19\linewidth]{textures/2d-bump-donut/colorbar.png} \\
+\BumpFig{1}&
+\BumpFig{3}&
+\BumpFig{5}&
+\BumpFig{7}&
+\BumpFig{9}&\\
+$t=0$ & $t=1/4$ & $t=1/2$ & $t=3/4$ & $t=1$
+\end{tabular}
+\caption{Example of interpolation between two input procedural anisotropic noise function. The PSD tensor field parameterizing the texture are displayed on Figure~\ref{fig:intro}. The colormap used to render the anisotropic texture is displayed on the last column.  
+} \label{fig:texture}
+\end{figure}
+%%% FIG %%%
