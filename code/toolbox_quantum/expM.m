@@ -22,12 +22,6 @@ if size(x,1)==1
     return;
 end
 
-% if 0 %% commented by Gabriel
-% xOrig = x;
-% xx = tensorExp2x2(reshape(x,[2 2 length(x(:))/4]));
-% xx = reshape(xx,size(x));
-% end
-
 switch logexp_fast_mode
     case 0
         % slow
@@ -47,7 +41,7 @@ switch logexp_fast_mode
         L = (a-d) .* SD / 2;
         x(1,1,:,:) = S .* ( CD + L );
         x(2,2,:,:) = S .* ( CD - L );
-        x(1,2,:,:) = S .* b .* SD;     
+        x(1,2,:,:) = S .* b .* SD;
         x(2,1,:,:) = conj(x(1,2,:,:));
     case 4
         x = tensorExp2x2(x);

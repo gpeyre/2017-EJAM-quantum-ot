@@ -66,7 +66,7 @@ function f = compute_gaussian_filter(n,s,N);
 %
 %   The filter is normalised so that it sums to 1.
 %
-%   Copyright (c) 2004 Gabriel Peyr?
+%   Copyright (c) 2004 Gabriel Peyre
 
 nd = 1;
 if length(n)>1 & n(2)>1
@@ -99,7 +99,7 @@ end
 %
 %   The filter is normalised so that it sums to 1.
 %
-%   Copyright (c) 2004 Gabriel Peyr?
+%   Copyright (c) 2004 Gabriel Peyre
 
 function f = build_gaussian_filter_2d(n,s,N)
 
@@ -135,7 +135,7 @@ end
 %
 %   f = build_gaussian_filter_1d(n,s,N);
 %
-%   Copyright (c) 2004 Gabriel Peyr?
+%   Copyright (c) 2004 Gabriel Peyre
 
 function f = build_gaussian_filter_1d(n,s,N)
 
@@ -171,7 +171,7 @@ function y = perform_convolution(x,h, bound)
 %   This works either for 1D or 2D convolution.
 %   For 2D the matrix have to be square.
 %
-%   'bound' is either 'per' (periodic extension) 
+%   'bound' is either 'per' (periodic extension)
 %   or 'sym' (symmetric extension).
 %
 %   Copyright (c) 2004 Gabriel Peyre
@@ -217,19 +217,19 @@ nd = ndims(x);
 if size(x,1)==1 || size(x,2)==1
     nd = 1;
 end
-if nd==1 
+if nd==1
     n = length(x);
     p = length(h);
 end
 
 if strcmp(bound, 'sym')
-    
+
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     % symmetric boundary conditions
-    
+
     d1 = floor( p/2 );  % padding before
     d2 = p-d1-1;            % padding after
-        
+
     if nd==1
         %%%%%%%%%%%%%%%%%%%%%%%%%%%% 1D %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
         x = x(:); h = h(:);
@@ -242,21 +242,21 @@ if strcmp(bound, 'sym')
         xx = x;
         xx = [ xx(d1(1):-1:1,:); xx; xx(end:-1:end-d2(1)+1,:) ];
         xx = [ xx(:,d1(2):-1:1), xx, xx(:,end:-1:end-d2(2)+1) ];
-        
+
         y = conv2(xx,h);
         y = y( (2*d1(1)+1):(2*d1(1)+n(1)), (2*d1(2)+1):(2*d1(2)+n(2)) );
     end
 
 else
-    
+
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     % periodic boundary conditions
-    
+
     if p>n
         error('h filter should be shorter than x.');
     end
     d = floor((p-1)/2);
-    if nd==1    
+    if nd==1
         x = x(:); h = h(:);
         h = [ h(d+1:end); zeros(n-p,1); h(1:d) ];
         y = real( ifft( fft(x).*fft(h) ) );
@@ -265,7 +265,7 @@ else
         h = [ h(:,d(2)+1:end), zeros(n(1),n(2)-p(2)), h(:,1:d(2)) ];
         y = real( ifft2( fft2(x).*fft2(h) ) );
     end
-    
+
 end
 
 end

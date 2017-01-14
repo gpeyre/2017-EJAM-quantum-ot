@@ -17,7 +17,7 @@ function h = plot_mesh(vertex,face,options)
 %
 %   See also: mesh_previewer.
 %
-%   Copyright (c) 2004 Gabriel Peyr?
+%   Copyright (c) 2004 Gabriel Peyre
 
 
 if nargin<2
@@ -56,7 +56,7 @@ if size(face,1)==4 && tmesh==1
     a = getoptions(options, 'cutting_offs', median(t(:)) );
     b = getoptions(options, 'cutting_interactive', 0);
     plot_points = getoptions(options, 'plot_points', 0);
-    
+
     while true;
 
         % in/out
@@ -82,13 +82,13 @@ if size(face,1)==4 && tmesh==1
             h{2} = plot3(vertex(1,K), vertex(2,K), vertex(3,K), 'k.');
         end
         hold off;
-        
+
         if b==0
             break;
         end
 
         [x,y,b] = ginput(1);
-        
+
         if b==1
             a = a+.03;
         elseif b==3
@@ -97,7 +97,7 @@ if size(face,1)==4 && tmesh==1
             break;
         end
     end
-    return;    
+    return;
 end
 
 vertex = vertex';
@@ -158,9 +158,9 @@ end
 
 colormap gray(256);
 lighting phong;
-% camlight infinite; 
+% camlight infinite;
 camproj('perspective');
-axis square; 
+axis square;
 axis off;
 
 
@@ -168,7 +168,7 @@ if ~isempty(normal)
     %%% plot the normals %%%
     n = size(vertex,1);
     subsample_normal = getoptions(options, 'subsample_normal', min(4000/n,1) );
-    sel = randperm(n); sel = sel(1:floor(end*subsample_normal));    
+    sel = randperm(n); sel = sel(1:floor(end*subsample_normal));
     hold on;
     quiver3(vertex(sel,1),vertex(sel,2),vertex(sel,3),normal(1,sel)',normal(2,sel)',normal(3,sel)',normal_scaling);
     hold off;
@@ -254,15 +254,15 @@ function patcht(FF,VV,TF,VT,I,Options)
 %   VV : Vertices 3 x M
 %   TF : Texture list 3 x N with texture vertex indices
 %   VT : Texture Coordinates s 2 x K, range must be [0..1] or real pixel postions
-%   I : The texture-image RGB [O x P x 3] or Grayscale [O x P] 
+%   I : The texture-image RGB [O x P x 3] or Grayscale [O x P]
 %   Options : Structure with options for the textured patch such as
 %           EdgeColor, EdgeAlpha see help "Surface Properties :: Functions"
 %
-%   Options.PSize : Special option, defines the image texturesize for each 
-%           individual  polygon, a low number gives a more block 
+%   Options.PSize : Special option, defines the image texturesize for each
+%           individual  polygon, a low number gives a more block
 %           like texture, defaults to 64;
 %
-% note: 
+% note:
 %   On a normal PC displaying 10,000 faces will take about 6 sec.
 %
 % Example,
@@ -306,7 +306,7 @@ switch(size(I,3))
         error('patcht:inputs','No valid Input texture image');
 end
 
-   
+
 if(max(VT(:))<2)
     % Remap texture coordinates to image coordinates
     VT2(:,1)=(size(I,1)-1)*(VT(:,1))+1;
@@ -317,8 +317,8 @@ end
 
 % Calculate the texture interpolation values
 [lambda1 lambda2 lambda3 jind]=calculateBarycentricInterpolationValues(sizep);
- 
-% Split texture-image in r,g,b to allow fast 1D index 
+
+% Split texture-image in r,g,b to allow fast 1D index
 Ir=I(:,:,1); if(iscolor), Ig=I(:,:,2); Ib=I(:,:,3); end
 
 % The Patch used for every triangle (rgb)
@@ -332,14 +332,14 @@ hold on;
 % Loop through all triangles of the mesh
 for i=1:size(FF,1)
     % Get current triangle vertices and current texture-vertices
-    V=VV(FF(i,:),:); 
-    Vt=VT2(TF(i,:),:); 
-    
+    V=VV(FF(i,:),:);
+    Vt=VT2(TF(i,:),:);
+
     % Define the triangle as a surface
     x=[V(1,1) V(2,1); V(3,1) V(3,1)];
     y=[V(1,2) V(2,2); V(3,2) V(3,2)];
     z=[V(1,3) V(2,3); V(3,3) V(3,3)];
-    
+
     % Define the texture coordinates of the surface
     tx=[Vt(1,1) Vt(2,1) Vt(3,1) Vt(3,1)];
     ty=[Vt(1,2) Vt(2,2) Vt(3,2) Vt(3,2)] ;
@@ -350,21 +350,21 @@ for i=1:size(FF,1)
     pos(:,2)=xy(1,2)*lambda1+xy(2,2)*lambda2+xy(3,2)*lambda3;
     pos=round(pos); pos=max(pos,1); pos(:,1)=min(pos(:,1),size(I,1)); pos(:,2)=min(pos(:,2),size(I,2));
     posind=(pos(:,1)-1)+(pos(:,2)-1)*size(I,1)+1;
-    
+
     % Map texture to surface image
     Jr(jind)=Ir(posind);
-    J(:,:,1)=Jr; 
+    J(:,:,1)=Jr;
     if(iscolor)
-        Jg(jind)=Ig(posind); 
+        Jg(jind)=Ig(posind);
         Jb(jind)=Ib(posind);
-        J(:,:,2)=Jg; 
+        J(:,:,2)=Jg;
         J(:,:,3)=Jb;
     end
-    
+
     % Show the surface
     surface(x,y,z,J,Options);
 end
-hold off; 
+hold off;
 
 function [lambda1 lambda2 lambda3 jind]=calculateBarycentricInterpolationValues(sizep)
 % Define a triangle in the upperpart of an square, because only that
@@ -380,8 +380,3 @@ lambda3=1-lambda1-lambda2;
 % Make from 2D (surface)image indices 1D image indices
 [jx jy]=ndgrid(sizep-(0:sizep)+1,sizep-(0:sizep)+1);
 jind=(jx(:)-1)+(jy(:)-1)*(sizep+1)+1;
-
-
-
-    
- 

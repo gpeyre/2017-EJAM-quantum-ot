@@ -4,7 +4,7 @@ function y = rescale(x,a,b)
 %
 %   y = rescale(x,a,b);
 %
-%   Copyright (c) 2004 Gabriel Peyr?
+%   Copyright (c) 2004 Gabriel Peyre
 
 if nargin<2
     a = 0;
@@ -21,5 +21,3 @@ if M-m<eps
 else
     y = (b-a) * (x-m)/(M-m) + a;
 end
-
-

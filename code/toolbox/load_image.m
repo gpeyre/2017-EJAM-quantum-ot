@@ -12,7 +12,7 @@ function M = load_image(type, n, options)
 %       'fnoise' (1/f^alpha noise).
 %   Natural images:
 %       'boat', 'lena', 'goldhill', 'mandrill', 'maurice', 'polygons_blurred', or your own.
-%   
+%
 %   Copyright (c) 2004 Gabriel Peyre
 
 if nargin<2
@@ -66,7 +66,7 @@ if strcmp(type(1:min(12,end)), 'square-tube-')
     if mod(k,2)==0
         sel = n/2-k/2+1:n/2+k/2;
     else
-        sel = n/2-(k-1)/2:n/2+(k-1)/2;        
+        sel = n/2-(k-1)/2:n/2+(k-1)/2;
     end
     M( round(.25*n:.75*n), sel ) = 1;
     return;
@@ -74,16 +74,16 @@ end
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 switch lower(type)
-    
+
     case 'constant'
         M = ones(n);
-    
+
     case 'ramp'
         x = linspace(0,1,n);
         [Y,M] = meshgrid(x,x);
-        
+
     case 'bump'
-        
+
         s = getoptions(options, 'bump_size', .5);
         c = getoptions(options, 'center', [0 0]);
         if length(s)==1
@@ -93,21 +93,21 @@ switch lower(type)
         [Y,X] = meshgrid(x,x);
         X = (X-c(1))/s(1); Y = (Y-c(2))/s(2);
         M = exp( -(X.^2+Y.^2)/2 );
-        
+
     case 'periodic'
         x = linspace(-pi,pi,n)/1.1;
         [Y,X] = meshgrid(x,x);
         f = getoptions(options, 'freq', 6);
         M = (1+cos(f*X)).*(1+cos(f*Y));
-        
+
     case {'letter-x' 'letter-v' 'letter-z' 'letter-y'}
         M = create_letter(type(8), radius, n);
-        
+
     case 'l'
         r1 = [.1 .1  .3 .9];
         r2 = [.1 .1 .9 .4];
         M = double( draw_rectangle(r1,n) | draw_rectangle(r2,n) );
-        
+
     case 'ellipse'
         c1 = [0.15 0.5];
         c2 = [0.85 0.5];
@@ -121,17 +121,17 @@ switch lower(type)
     case 'ellipse-fat'
         options.eccentricity = 1.3;
         M = load_image('ellipse', n, options);
-        
+
     case 'square-tube'
         c1 = [.25 .5];
         c2 = [.75 .5];
         r1 = [c1 c1] + .18*[-1 -1 1 1];
-        r2 = [c2 c2] + .18*[-1 -1 1 1];        
+        r2 = [c2 c2] + .18*[-1 -1 1 1];
         r3 = [c1(1)-w c1(2)-w c2(1)+w c2(2)+w];
         M = double( draw_rectangle(r1,n) | draw_rectangle(r2,n) | draw_rectangle(r3,n) );
     case 'square-tube-1'
         options.tube_width = 0.03;
-        M = load_image('square-tube', n, options);        
+        M = load_image('square-tube', n, options);
     case 'square-tube-2'
         options.tube_width = 0.06;
         M = load_image('square-tube', n, options);
@@ -140,9 +140,9 @@ switch lower(type)
         M = load_image('square-tube', n, options);
     case 'polygon'
         theta = sort( rand(nb_points,1)*2*pi );
-        radius = scaling*rescale(rand(nb_points,1), 0.1, 0.93);        
+        radius = scaling*rescale(rand(nb_points,1), 0.1, 0.93);
         points = [cos(theta) sin(theta)] .* repmat(radius, 1,2);
-        points = (points+1)/2*(n-1)+1; points(end+1,:) = points(1,:);        
+        points = (points+1)/2*(n-1)+1; points(end+1,:) = points(1,:);
         M = draw_polygons(zeros(n),0.8,{points'});
         [x,y] = ind2sub(size(M),find(M));
         p = 100; m = length(x);
@@ -163,17 +163,17 @@ switch lower(type)
     case 'pacman'
         options.radius = 0.45;
         options.center = [.5 .5];
-        M = load_image('disk', n, options);        
+        M = load_image('disk', n, options);
         x = linspace(-1,1,n);
         [Y,X] = meshgrid(x,x);
         T =atan2(Y,X);
         M = M .* (1-(abs(T-pi/2)<theta/2));
     case 'square-hole'
         options.radius = 0.45;
-        M = load_image('disk', n, options); 
+        M = load_image('disk', n, options);
         options.scaling = 0.5;
-        M = M - load_image('polygon-10', n, options); 
-        
+        M = M - load_image('polygon-10', n, options);
+
     case 'grid-circles'
         if isempty(n)
             n = 256;
@@ -192,17 +192,17 @@ switch lower(type)
 
         M = A1;
         M(X1>0) = A2(X1>0);
-        
+
     case 'chessboard1'
         x = -1:2/(n-1):1;
         [Y,X] = meshgrid(x,x);
         M = (2*(Y>=0)-1).*(2*(X>=0)-1);
-        
+
     case 'chessboard'
         width = getoptions(options, 'width', round(n/16) );
         [Y,X] = meshgrid(0:n-1,0:n-1);
         M = mod( floor(X/width)+floor(Y/width), 2 ) == 0;
-        
+
     case 'square'
         if ~isfield( options, 'radius' )
             radius = 0.6;
@@ -210,15 +210,15 @@ switch lower(type)
         x = linspace(-1,1,n);
         [Y,X] = meshgrid(x,x);
         M = max( abs(X),abs(Y) )<radius;
-        
+
     case 'squareregular'
         M = rescale(load_image('square',n,options));
         if not(isfield(options, 'alpha'))
             options.alpha = 3;
         end
         S = load_image('fnoise',n,options);
-        M = M + rescale(S,-0.3,0.3); 
-        
+        M = M + rescale(S,-0.3,0.3);
+
     case 'regular1'
         options.alpha = 1;
         M = load_image('fnoise',n,options);
@@ -228,14 +228,14 @@ switch lower(type)
     case 'regular3'
         options.alpha = 3;
         M = load_image('fnoise',n,options);
-        
+
     case 'sparsecurves'
         options.alpha = 3;
         M = load_image('fnoise',n,options);
         M = rescale(M);
         ncurves = 3;
         M = cos(2*pi*ncurves);
-        
+
     case 'geometrical'
 
         J = getoptions(options, 'Jgeometrical', 4);
@@ -255,9 +255,9 @@ switch lower(type)
             end
         end
         M = A;
-        
+
     case 'lic-texture'
-        
+
         disp('Computing random tensor field.');
         options.sigma_tensor = getoptions(options, 'lic_regularity', 50*n/256);
         T = compute_tensor_field_random(n,options);
@@ -275,7 +275,7 @@ switch lower(type)
         options.niter_lic = 3;
         w = 30;
         M = perform_lic(Flow, w, options);
-               
+
     case 'square_texture'
         M = load_image('square',n);
         M = rescale(M);
@@ -287,15 +287,15 @@ switch lower(type)
         c = [0.3,0.4]; r = 0.2;
         I = find( (X-c(1)).^2 + (Y-c(2)).^2 < r^2 );
         eta = 3/n; lambda = 0.3;
-        M(I) = M(I) + lambda * sin( x(I) * 2*pi / eta ); 
-        
+        M(I) = M(I) + lambda * sin( x(I) * 2*pi / eta );
+
     case 'tv-image'
         M = rand(n);
-        tau = compute_total_variation(M);        
+        tau = compute_total_variation(M);
         options.niter = 400;
         [M,err_tv,err_l2] = perform_tv_projection(M,tau/1000,options);
         M = perform_histogram_equalization(M,'linear');
-        
+
     case 'oscillatory_texture'
         x = linspace(0,1,n);
         [Y,X] = meshgrid(x,x);
@@ -304,8 +304,8 @@ switch lower(type)
         c = [0.3,0.4]; r = 0.2;
         I = find( (X-c(1)).^2 + (Y-c(2)).^2 < r^2 );
         eta = 3/n; lambda = 0.3;
-        M = sin( x * 2*pi / eta ); 
-        
+        M = sin( x * 2*pi / eta );
+
     case {'line', 'line_vertical', 'line_horizontal', 'line_diagonal'}
         x = 0:1/(n-1):1;
         [Y,X] = meshgrid(x,x);
@@ -319,13 +319,13 @@ switch lower(type)
     case 'line-windowed'
         x = 0:1/(n-1):1;
         [Y,X] = meshgrid(x,x);
-        eta = .3; 
+        eta = .3;
         gamma = getoptions(options, 'gamma', pi/10);
         parabola = getoptions(options, 'parabola', 0);
         M = (X-eta) - gamma*Y - parabola*Y.^2 < 0;
         f = sin( pi*x ).^2;
         M = M .* ( f'*f );
-        
+
     case 'grating'
         x = linspace(-1,1,n);
         [Y,X] = meshgrid(x,x);
@@ -333,7 +333,7 @@ switch lower(type)
         freq = getoptions(options, 'freq', .2);
         X = cos(theta)*X + sin(theta)*Y;
         M = sin(2*pi*X/freq);
-        
+
     case 'disk'
         if ~isfield( options, 'radius' )
             radius = 0.35;
@@ -344,12 +344,12 @@ switch lower(type)
         x = 0:1/(n-1):1;
         [Y,X] = meshgrid(x,x);
         M = (X-center(1)).^2 + (Y-center(2)).^2 < radius^2;
-        
+
     case 'twodisks'
         M = zeros(n);
-        options.center = [.25 .25]; 
+        options.center = [.25 .25];
         M = load_image('disk', n, options);
-        options.center = [.75 .75]; 
+        options.center = [.75 .75];
         M = M + load_image('disk', n, options);
     case 'diskregular'
         M = rescale(load_image('disk',n,options));
@@ -357,8 +357,8 @@ switch lower(type)
             options.alpha = 3;
         end
         S = load_image('fnoise',n,options);
-        M = M + rescale(S,-0.3,0.3); 
-        
+        M = M + rescale(S,-0.3,0.3);
+
     case 'quarterdisk'
         if ~isfield( options, 'radius' )
             radius = 0.95;
@@ -369,7 +369,7 @@ switch lower(type)
         x = 0:1/(n-1):1;
         [Y,X] = meshgrid(x,x);
         M = (X-center(1)).^2 + (Y-center(2)).^2 < radius^2;
-        
+
     case 'fading_contour'
         if ~isfield( options, 'radius' )
             radius = 0.95;
@@ -383,8 +383,8 @@ switch lower(type)
         theta = 2/pi*atan2(Y,X);
         h = 0.5;
         M = exp(-(1-theta).^2/h^2).*M;
-        
-    case '3contours'        
+
+    case '3contours'
         radius = 1.3;
         center = [-1, 1];
         radius1 = 0.8;
@@ -394,7 +394,7 @@ switch lower(type)
         f1 = (X-center(1)).^2 + (Y-center(2)).^2 < radius^2;
         f2 = (X-center1(1)).^2 + (Y-center1(2)).^2 < radius1^2;
         M = f1 + 0.5*f2.*(1-f1);
-        
+
     case 'line_circle'
 
         gamma = 1/sqrt(2);
@@ -404,15 +404,15 @@ switch lower(type)
         M1 = double( X>gamma*Y+0.25 );
         M2 = X.^2 + Y.^2 < 0.6^2;
         M = 20 + max(0.5*M1,M2) * 216;
-        
+
     case 'fnoise'
-        
-        % generate an image M whose Fourier spectrum amplitude is 
+
+        % generate an image M whose Fourier spectrum amplitude is
         %   |M^(omega)| = 1/f^{omega}
         alpha = getoptions(options, 'alpha', 1);
         M = gen_noisy_image(n,alpha);
-        
-        
+
+
     case 'gaussiannoise'
         % generate an image of filtered noise with gaussian
         sigma = getoptions(options, 'sigma', 10);
@@ -421,9 +421,9 @@ switch lower(type)
         h = compute_gaussian_filter([m m],sigma/(4*n),[n n]);
         M = perform_convolution(M,h);
         return;
-    
+
     case {'bwhorizontal','bwvertical','bwcircle'}
-        
+
         [Y,X] = meshgrid(0:n-1,0:n-1);
         if strcmp(type, 'bwhorizontal')
             d = X;
@@ -443,9 +443,9 @@ switch lower(type)
             black_prop = 0.5;
         end
         M = double( mod( d/(2*stripe_width),1 )>=black_prop );
-        
+
     case 'parabola'
-        
+
         % curvature
         c = getoptions(c, 'c', .1);
         % angle
@@ -454,14 +454,14 @@ switch lower(type)
         [Y,X] = meshgrid(x,x);
         Xs = X*cos(theta) + Y*sin(theta);
         Y =-X*sin(theta) + Y*cos(theta); X = Xs;
-        M = Y>c*X.^2; 
-        
+        M = Y>c*X.^2;
+
     case 'sin'
-        
+
         [Y,X] = meshgrid(-1:2/(n-1):1, -1:2/(n-1):1);
         M = Y >= 0.6*cos(pi*X);
         M = double(M);
-        
+
     case 'circ_oscil'
 
         x = linspace(-1,1,n);
@@ -470,13 +470,13 @@ switch lower(type)
         M = cos(R.^3*50);
 
     case 'phantom'
-        
+
         M = phantom(n);
-        
+
     case 'periodic_bumps'
         nbr_periods = getoptions(options, 'nbr_periods', 8);
         theta = getoptions(options, 'theta', 1/sqrt(2));
-        skew = getoptions(options, 'skew', 1/sqrt(2) );        
+        skew = getoptions(options, 'skew', 1/sqrt(2) );
         A = [cos(theta), -sin(theta); sin(theta), cos(theta)];
         B = [1 skew; 0 1];
         T = B*A;
@@ -486,12 +486,12 @@ switch lower(type)
         pos = T*pos;
         X = reshape(pos(1,:), n,n);
         Y = reshape(pos(2,:), n,n);
-        M = cos(X).*sin(Y);      
-        
+        M = cos(X).*sin(Y);
+
     case 'noise'
         sigma = getoptions(options, 'sigma', 1);
         M = randn(n) * sigma;
-        
+
     case 'disk-corner'
         x = linspace(0,1,n);
         [Y,X] = meshgrid(x,x);
@@ -501,7 +501,7 @@ switch lower(type)
         d = (X-c(1)).^2 + (Y-c(2)).^2;
         M2 = d<r^2;
         M = M1.*M2;
-        
+
     otherwise
         ext = {'gif', 'png', 'jpg', 'bmp', 'tiff', 'pgm', 'ppm'};
         for i=1:length(ext)
@@ -556,8 +556,8 @@ switch a
         point_list = { [p2 pu p3] };
     case 'y'
         point_list = { [p2 pc pu] [pc p3] };
-        
-        
+
+
 end
 % fit image
 for i=1:length(point_list)
@@ -609,10 +609,10 @@ function M = gen_noisy_image(n,alpha)
 %
 %   M = gen_noisy_image(n,alpha);
 %
-% generate an image M whose Fourier spectrum amplitude is 
+% generate an image M whose Fourier spectrum amplitude is
 %   |M^(omega)| = 1/f^{omega}
 %
-%   Copyright (c) 2004 Gabriel Peyr?
+%   Copyright (c) 2004 Gabriel Peyre
 
 if nargin<1
     n = 128;
@@ -641,11 +641,11 @@ M = real( ifft2(M) );
 function y = gen_signal_2d(n,alpha)
 
 % gen_signal_2d -  generate a 2D C^\alpha signal of length n x n.
-%   gen_signal_2d(n,alpha) generate a 2D signal C^alpha. 
+%   gen_signal_2d(n,alpha) generate a 2D signal C^alpha.
 %
 %   The signal is scale in [0,1].
-%   
-%   Copyright (c) 2003 Gabriel Peyr?
+%
+%   Copyright (c) 2003 Gabriel Peyre
 
 
 
@@ -680,7 +680,7 @@ return;
 
 %% old code
 
-y = rand(n,n); 
+y = rand(n,n);
 y = y - mean(mean(y));
 for i=1:alpha
     y = cumsum(cumsum(y)')';

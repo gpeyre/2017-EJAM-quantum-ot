@@ -15,15 +15,15 @@ function [Umin,Umax,Cmin,Cmax,Cmean,Cgauss,Normal] = compute_curvature(V,F,optio
 %   options.curvature_smoothing controls the size of the ring used for
 %       averaging the curvature tensor.
 %
-%   The algorithm is detailed in 
-%       David Cohen-Steiner and Jean-Marie Morvan. 
-%       Restricted Delaunay triangulations and normal cycle. 
-%       In Proc. 19th Annual ACM Symposium on Computational Geometry, 
-%       pages 237-246, 2003. 
+%   The algorithm is detailed in
+%       David Cohen-Steiner and Jean-Marie Morvan.
+%       Restricted Delaunay triangulations and normal cycle.
+%       In Proc. 19th Annual ACM Symposium on Computational Geometry,
+%       pages 237-246, 2003.
 %   and also in
-%       Pierre Alliez, David Cohen-Steiner, Olivier Devillers, Bruno Le?vy, and Mathieu Desbrun. 
-%       Anisotropic Polygonal Remeshing. 
-%       ACM Transactions on Graphics, 2003. 
+%       Pierre Alliez, David Cohen-Steiner, Olivier Devillers, Bruno Le?vy, and Mathieu Desbrun.
+%       Anisotropic Polygonal Remeshing.
+%       ACM Transactions on Graphics, 2003.
 %       Note: SIGGRAPH '2003 Conference Proceedings
 %
 %   Copyright (c) 2007 Gabriel Peyre
@@ -45,7 +45,7 @@ Af = -triangulation2adjacency(F);
 i = [F(1,:) F(2,:) F(3,:)];
 j = [F(2,:) F(3,:) F(1,:)];
 s = [1:m 1:m 1:m];
-Af = sparse(i,j,s,n,n); 
+Af = sparse(i,j,s,n,n);
 
 %% PATCH %%%
 Af(Af>m) = 0;
@@ -144,7 +144,7 @@ for k=1:n
     [u,d] = eig(Tv(:,:,k));
     d = real(diag(d));
     % sort acording to [norma,min curv, max curv]
-    [tmp,I] = sort(abs(d));    
+    [tmp,I] = sort(abs(d));
     D(:,k) = d(I);
     U(:,:,k) = real(u(:,I));
 end
@@ -165,7 +165,7 @@ Umin(:,I) = Umax(:,I); Umax(:,I) = Umin1(:,I);
 
 % try to re-orient the normals
 normal = compute_normal(V,F);
-s = sign( sum(Normal.*normal,1) ); 
+s = sign( sum(Normal.*normal,1) );
 Normal = Normal .* repmat(s, 3,1);
 
 end
@@ -191,7 +191,7 @@ function A = triangulation2adjacency(face,vertex)
 % or for getting a weighted graph
 %   A = triangulation2adjacency(face,vertex);
 %
-%   Copyright (c) 2005 Gabriel Peyr?
+%   Copyright (c) 2005 Gabriel Peyre
 
 
 [tmp,face] = check_face_vertex([],face);
@@ -213,7 +213,7 @@ function y = clamp(x,a,b)
 %
 % Default is [a,b]=[0,1].
 %
-%   Copyright (c) 2004 Gabriel Peyr?
+%   Copyright (c) 2004 Gabriel Peyre
 
 if nargin<2
     a = 0;

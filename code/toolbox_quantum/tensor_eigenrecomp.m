@@ -9,10 +9,10 @@ function T = tensor_eigenrecomp(e1,e2,l1,l2)
 %   'e2(i,j,:)' is the second eigenvector at location (i,j)
 %       with associated smallest eigenvalue 'l2(i,j)'.
 %
-%   You have 
+%   You have
 %       T = l1*e1*e1' + l2*e2*e2'
 %
-%   Copyright (c) 2004 Gabriel Peyr?
+%   Copyright (c) 2004 Gabriel Peyre
 
 if isreal(e1)
     T = zeros( [size(l1),2,2] );

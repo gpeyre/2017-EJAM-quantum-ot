@@ -7,7 +7,7 @@ function [normal,normalf] = compute_normal(vertex,face)
 %   normal(i,:) is the normal at vertex i.
 %   normalf(j,:) is the normal at face j.
 %
-%   Copyright (c) 2004 Gabriel Peyré
+%   Copyright (c) 2004 Gabriel Peyre
 
 [vertex,face] = check_face_vertex(vertex,face);
 

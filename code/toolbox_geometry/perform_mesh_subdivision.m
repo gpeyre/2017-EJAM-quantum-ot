@@ -11,7 +11,7 @@ function [f1,face1] = perform_mesh_subdivision(f, face, nsub, options)
 %           nvert=max(face(:))
 %       (can be multi dimensional like point position in R^3, d=3)
 %   f1 is the value of the function on the subdivided mesh.
-%   
+%
 %   options.sub_type is the kind of subvision applied:
 %       'linear4': 1:4 tolopoligical subivision with linear interpolation
 %       'linear3': 1:3 tolopoligical subivision with linear interpolation
@@ -33,7 +33,7 @@ function [f1,face1] = perform_mesh_subdivision(f, face, nsub, options)
 %       \sqrt{3}-subdivision, Leif Kobbelt
 %       Proc. of SIGGRAPH 2000
 %
-%   Copyright (c) 2007 Gabriel Peyr?
+%   Copyright (c) 2007 Gabriel Peyre
 
 options.null = 0;
 if nargin<2
@@ -51,7 +51,7 @@ switch lower(sub_type)
     case 'linear3'
         interpolation = 'linear';
         topology = 3;
-    case 'linear4'        
+    case 'linear4'
         interpolation = 'linear';
         topology = 4;
     case 'loop'
@@ -92,7 +92,7 @@ if nsub>1
     for i = 1:nsub
          [f1,face1] = perform_mesh_subdivision(f1,face1,1, options);
     end
-    return;    
+    return;
 end
 
 
@@ -150,8 +150,8 @@ if topology==3
                	beta = (4-2*cos(2*pi/m))/(9*m);         % warren weights
                 f1(:,k) = f(:,k)*(1-m*beta) + beta*sum(f(:,vring0{k}),2);
             end
-            
-        otherwise 
+
+        otherwise
             error('Unknown scheme for 1:3 subdivision');
     end
 else
@@ -176,15 +176,15 @@ else
         cat(1,face(2,:),v23,v12),...
         cat(1,face(3,:),v31,v23),...
         cat(1,v12,v23,v31)   ];
-    
-    
+
+
     switch interpolation
-        case 'linear'            
+        case 'linear'
             % add new vertices at the edges center
             f1 = [f, (f(:,i)+f(:,j))/2 ];
-            
+
         case 'butterfly'
-            
+
             global vring e2f fring facej;
             vring = compute_vertex_ring(face1);
             e2f = compute_edge_face_ring(face);
@@ -201,7 +201,7 @@ else
             end
 
         case 'loop'
-            
+
             global vring e2f fring facej;
             vring = compute_vertex_ring(face1);
             vring0 = compute_vertex_ring(face);
@@ -231,8 +231,8 @@ else
                 [e,v] = compute_butterfly_neighbors(k, n);
                 f1(:,k) = 3/8*sum(f(:,e),2) + 1/8*sum(f(:,v),2);
             end
-            
-        otherwise 
+
+        otherwise
             error('Unknown scheme for 1:3 subdivision');
     end
 end
@@ -256,7 +256,7 @@ function vring = compute_vertex_ring(face)
 %   vring{i} is the set of vertices that are adjacent
 %   to vertex i.
 %
-%   Copyright (c) 2004 Gabriel Peyr?
+%   Copyright (c) 2004 Gabriel Peyre
 
 [tmp,face] = check_face_vertex([],face);
 
@@ -283,7 +283,7 @@ function A = triangulation2adjacency(face,vertex)
 % or for getting a weighted graph
 %   A = triangulation2adjacency(face,vertex);
 %
-%   Copyright (c) 2005 Gabriel Peyr?
+%   Copyright (c) 2005 Gabriel Peyre
 
 
 [tmp,face] = check_face_vertex([],face);
@@ -295,7 +295,7 @@ A = sparse([f(:,1); f(:,1); f(:,2); f(:,2); f(:,3); f(:,3)], ...
 % avoid double links
 A = double(A>0);
 
-return; 
+return;
 
 
 nvert = max(max(face));
@@ -312,7 +312,7 @@ for i=1:nface
             A(face(i,k),face(i,kk)) = sqrt( sum(v.^2) );    % euclidean distance
         end
     end
-end 
+end
 % make sure that all edges are symmetric
 A = max(A,A');
 
@@ -357,7 +357,7 @@ A = sparse(i1,j1,s,n,n);
 
 % add missing points
 I = find( A'~=0 );
-I = I( A(I)==0 ); 
+I = I( A(I)==0 );
 A( I ) = -1;
 
 end
@@ -437,7 +437,7 @@ for i=1:nface
         v2= face(i,j2);
         % test if another face share the same vertices
         f = [];
-        for i1=1:nface 
+        for i1=1:nface
             for a=1:3
                 if face(i1,a)==v1 && i1~=i
                     for b=1:3
@@ -449,7 +449,7 @@ for i=1:nface
                 end
             end
         end
-        
+
     end
 end
 close(h);
@@ -469,7 +469,7 @@ function [e,v,g] = compute_butterfly_neighbors(k, nj)
 % g are the fare neighbors
 %
 %   You need to provide:
-%       for e: vring, e2f 
+%       for e: vring, e2f
 %       for v: fring
 %       for g: facej
 %
@@ -479,7 +479,7 @@ global vring e2f fring facej;
 
 % find the 2 edges in the fine subdivition
 vr = vring{k};
-I = find(vr<=nj); 
+I = find(vr<=nj);
 e = vr(I);
 % find the coarse faces associated to the edge e
 f = [e2f(e(1),e(2)) e2f(e(2),e(1))];

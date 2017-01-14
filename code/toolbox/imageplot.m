@@ -69,8 +69,8 @@ if nargin==5
     global axlist;
     global imageplot_size;
     if c==1 || isempty(imageplot_size) || imageplot_size~=size(M,1)
-        clear axlist; 
-        global axlist; 
+        clear axlist;
+        global axlist;
         axlist = [];
         imageplot_size = size(M,1);
     end
@@ -122,10 +122,10 @@ if not(isempty(str))
     title(str);
 end
 
-if nargout>0 
+if nargout>0
     if exist('h')
         h1 = h;
-    else 
+    else
         h1 = [];
     end
 end
@@ -142,7 +142,7 @@ function d = nb_dims(x)
 %
 %   d = nb_dims(x);
 %
-%   Copyright (c) 2004 Gabriel Peyré
+%   Copyright (c) 2004 Gabriel Peyre
 
 if isempty(x)
     d = 0;

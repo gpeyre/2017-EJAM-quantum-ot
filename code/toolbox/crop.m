@@ -7,7 +7,7 @@ function M = crop(M,n,c)
 %   n is the new size of the image
 %   c is the center of the grop
 %
-%   Copyright (c) 2007 Gabriel Peyr?
+%   Copyright (c) 2007 Gabriel Peyre
 
 n0 = size(M);
 
@@ -35,9 +35,9 @@ c = round(c);
 selx = c(1)-ceil(n(1)/2)+1:c(1)+floor(n(1)/2);
 sely = c(2)-ceil(n(2)/2)+1:c(2)+floor(n(2)/2);
 
-selx(selx<1) = []; 
+selx(selx<1) = [];
 selx(selx>n0(1)) = [];
-sely(sely<1) = []; 
+sely(sely<1) = [];
 sely(sely>n0(2)) = [];
 
 M = M(selx,sely,:,:);

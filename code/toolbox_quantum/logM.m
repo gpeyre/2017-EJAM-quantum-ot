@@ -52,7 +52,7 @@ switch logexp_fast_mode
         y(1,1,:,:) = uv.*C2+v;
         y(2,2,:,:) = -uv.*C2+u;
         y(1,2,:,:) = -uv.*CS;
-        y(2,1,:,:) = y(1,2,:,:); % JUSTIN CHANGED RHS FROM x TO y
+        y(2,1,:,:) = y(1,2,:,:); 
     case 4
         y = tensorLog2x2(x);
     otherwise

@@ -1,5 +1,11 @@
 function anonymize(rep, ext, str, str_new)
 
+% anonymize - anonymize all file in a given rep
+%
+%   anonymize(rep, ext, str, str_new);
+%
+% Copyright (c) Gabriel Peyre 2017
+
 if nargin<4
     str_new = '[anonymized]';
 end
@@ -34,5 +40,5 @@ for i=1:length(t)
     fwrite(fid,t{i});
 end
 fclose(fid);
-    
+
 end

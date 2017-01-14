@@ -8,7 +8,7 @@ function M1 = image_resize(M,p1,q1,r1)
 %
 %   Works for 2D, 2D 2 or 3 channels, 3D images.
 %
-%   Copyright (c) 2004 Gabriel Peyr?
+%   Copyright (c) 2004 Gabriel Peyre
 
 if nargin==2
     % size specified as an array
@@ -18,7 +18,7 @@ if nargin==2
     else
         r1 = size(M,3);
     end
-    p1 = p1(1);        
+    p1 = p1(1);
 end
 
 if nargin<4

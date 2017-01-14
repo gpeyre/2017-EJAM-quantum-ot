@@ -8,7 +8,7 @@ function [vertex,face] = read_off(filename)
 %   'face' is a 'nb.face x k' array specifying the connectivity of the mesh
 %   where k=3 for triangular mesh, and k=4 for quadmesh.
 %
-%   Copyright (c) 2012 Gabriel Peyré
+%   Copyright (c) 2012 Gabriel Peyre
 
 
 fid = fopen(filename,'r');
@@ -19,7 +19,7 @@ end
 
 str = fgets(fid);   % -1 if eof
 if ~strcmp(str(1:3), 'OFF')
-    error('The file is not a valid OFF one.');    
+    error('The file is not a valid OFF one.');
 end
 
 str = fgets(fid);
@@ -39,9 +39,9 @@ if k==3
     [a,cnt] = fscanf(fid,'%d %d %d\n', 3);
 elseif k==4
     %% quad mesh
-    [a,cnt] = fscanf(fid,'%d %d %d %d\n', 4);    
+    [a,cnt] = fscanf(fid,'%d %d %d %d\n', 4);
 else
-    error('Can only read triangular or quad meshes');    
+    error('Can only read triangular or quad meshes');
 end
 [A,cnt] = fscanf(fid,'%d %d %d %d\n', (k+1)*(nface-1));
 if cnt~=(k+1)*(nface-1)
@@ -52,4 +52,3 @@ face = [a(:)+1, A(2:(k+1),:)+1];
 
 
 fclose(fid);
-
