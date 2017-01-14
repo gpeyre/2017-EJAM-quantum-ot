@@ -41,7 +41,7 @@ Helpers functions for mesh processing are in toolbox_geometry/.
 Mex
 ------
 
-You might want to re-compile for your architecture the mex files in tensor_logexp/, which are fast C implementation of logM/expM.
+You might want to re-compile for your architecture the mex files in tensor_logexp/, which are fast C implementation of logM/expM. The script compile_mex.m should be able to make the compilation.
 
 To enable the use of these fast mex file, set
 
@@ -51,7 +51,7 @@ To enable the use of these fast mex file, set
 Sparse mode
 ------
 
-By default, the couplings gamma are explicitly stored as full matrices. To scale to large problem size, it is mandatory to use sparse matrices. This is active if you provide a sparse cost matrix c. This means that you have to "guess" beforehand roughly the location of the transport map. This is usually done by running the code in a coarse to fine way. See test_2x2_2d_sparse.m for an example of use.
+By default, the couplings gamma are explicitly stored as full matrices. To scale to large problem size, it is mandatory to use sparse matrices. This is active if you provide a sparse cost matrix c. This means that you have to "guess" beforehand roughly the location of the transport map. This is usually done by running the code in a coarse to fine way. See test_sparse.m for an example of use.
 
 Thanks
 -------

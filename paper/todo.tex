@@ -1,15 +1,26 @@
+
+- detail a bit more the dimension of the variables involved (dimension of u, v, etc).
+- introduce also a relaxation parameter tau for the v scaling of barycenters.
+- show figure with cross tranport between mixtures of 2 diracs, comparing ansiotropic vs isotropic (classical) OT. 
+
+
+- SIGGRAPH requires that we cite our own Arxiv paper, which I added in the acknowledgements section.  Please triple-check that I did this right.
+
+- Please register on the SIGGRAPH site and add the proper submission number to the paper.
+
+- In Prop 1, do we need to mention that u,v are scalars per point?  Since some of our other variables are matrices?
+
+- For some reason there's a tiny amount of space under each figure caption.  Is there a weird LaTeX option somewhere?
+
+- In Figure 7, maybe show the tensor field?  [Or if the red stuff is the tensor field, it's not too visible]
+
+- I might recommend splitting sec 5.4 into multiple paragraphs.
+
+- Figure 9 looks much nicer than the previous version!  Can we include a few more examples of the same thing on different textures?  Right now the paper contains only one example of each application, which may look suspicious to reviewers.
+
+
+===//===
+
 - discuss criteria for termination : either some form of hilbert metric between two iterates, or a primal-dual gap (or both)
 - motivate more the correcting factors A_ki in the interpolation formula, and maybe use a cleaner / more mathematically rigorous (?) formula 
 - correct warning in bibtex
-- detail a bit more the dimension of the variables involved (dimension of u, v, etc).
-- smooth a bit the barycenter section, add some comments/motivations.
-- re-do fig 6 with less trivial example (rotate input measures, etc). See how to improve display 
-- extension to non symmetric tensors
-- introduce also a relaxation parameter tau for the v scaling of barycenters.
-- insist more on extrapolation / tau selection 
-- explain sparse sinkhorn and multiscale
-- show figure with cross tranport between mixtures of 2 diracs, comparing ansiotropic vs isotropic (classical) OT. 
-- application to anisotropic meshing  (e.g. Labelle/Shewchuk method), see http://www.insight-journal.org/browse/publication/956
-- explicit formula for 2x2 and 3x3 tensor exp/log
-
-- mention trivial extension to complex hermitian matrices.
