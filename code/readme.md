@@ -12,6 +12,13 @@ The main functions are:
 - quantum_interp: use such a coupling to compute an interpolation between the tensor fields.
 - quantum_barycenter: compute a barycenter between several fields.
 
+Structure of the toolbox
+-------
+
+- test_*.m : the main scripts to reproduce the figures of the article.
+- test_simple_*.m: simple tests (display, etc), not related to optimal transport.
+
+
 Scripts
 -------
 
