@@ -1,5 +1,5 @@
 %%
-% Test for Sinkhorn and barycenters on 2x2 matrices in a 1D domain.
+% Test for Sinkhorn and Barycenrters on 2x2 matrices in a 1D domain.
 
 addpath('toolbox/');
 addpath('toolbox_quantum/');
@@ -112,13 +112,6 @@ clf; f = @(x)log10(x);
 subplot(3,1,1); plot(f(err(:,1))); axis tight;
 subplot(3,1,2); plot(f(err(:,2))); axis tight;
 subplot(3,1,3); plot(f(err(:,3))); axis tight;
-
-if 0
-    % 1D test
-trM = @(x)x(1,1,:,:)+x(2,2,:,:);
-Mu = cellfun(trM,mu,'UniformOutput', false);
-[Nu,gamma,err] = quantum_barycenters(Mu,c(1,1,:,:),rho,epsilon,w,options);
-end
 
 
 options.niter = 200; % sinkhorn #iterates

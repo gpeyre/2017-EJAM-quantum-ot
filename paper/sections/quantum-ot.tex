@@ -159,31 +159,6 @@ This formula~\eqref{eq-interpolating} generates the interpolation by creating a 
 \begin{rem}[Computational cost] We observed numerically that, similarely to the scalar case, the optimal coupling $\ga$ is sparse, meaning that only of the order of $O(|I|)$ non-zero terms are involved in the interpolating measure~\eqref{eq-interpolating}. Note that the entropic regularization algorithm detailed in Section~\ref{eq-q-sink} destroys this exact sparsity, but we found numerically that that thresholding to zero the small entries of $\ga$ generates accurate approximations. 
 \end{rem}
 
-% \fx{Maybe, one can mention other interpolation than just linear on the space of matrices. This would be something that I would comment on at least.}
-
-%Define the log-geometric mean between two PSD matrices $(P_0,P_1)$
-%\begin{align*}
-%	P_t &= \uargmin{Q} (1-t)\KL(P_0|Q) + t \KL(P_1|Q) \\
-%	&= \exp( (1-t)\log(P_0)+t\log(P_1) ).
-%\end{align*}
-%\todo{ref to the INRIA's paper}
-
-
-
-\if 0
-Lastly, once the optimal $\ga$ has been computed, the interpolation formula~\eqref{eq-interpolating} needs to be updated as
-\eq{
-	\foralls t \in [0,1], \quad
-	\mu_t = \sum_{i,j} [(1-t) A_{0,i} + t A_{1,j}] [T_{i,j}^t \ga_{i,j} T_{i,j}^{t,\top}] \de_{g_t(x_i,y_j)}
-}
-where $g_t$ parameterizes geodesics, i.e. denoting $d_X$ the geodesic distance, formally
-\eq{
-	g_t(x_0,x_1) \eqdef \uargmin{x \in X} (1-t)d_X^2(x_0,x) + t d_X^2(x_1,x). 
-}
-%and $t \in [0,1] \mapsto�T_{i,j}^t$ is an interpolation between $T_{i,j}^{t=0} = \Id$ (for $t=0$) and $T_{i,j}^{t=1}=T_{i,j}$. 
-Denoting $T_{i,j}=T(x_i,x_j)$, one defines $T_{i,j}^{t} = T(x_i,g_t(x_i,y_j))$ which interpolates between $T_{i,j}^{t=0} = \Id$ and $T_{i,j}^{t=1}=T_{i,j}$. 
-\fi
-
 \if 0
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

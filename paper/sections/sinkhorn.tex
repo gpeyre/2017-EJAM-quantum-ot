@@ -106,15 +106,6 @@ where the sum on $j$ is replaced by a sum on $i$ for $\LSE_i$.
 	which gives the desired expression. A similar expression holds for the first order conditions with respect to $v_j$.
 \end{proof}
 
-
-%\begin{rem}[Stabilization]
-%	As for the usual Sinkhorn algorithm, the straightforward implementation of the formula~\eqref{eq-dfn-lse} to compute $\LSE$ is unstable when some entries of $K_{i,j}$ are large (which is the case for small valued of $\epsilon$). A stable implementation is obtained by using the shift-invariance of this operator, namely 
-%	\eq{
-%		\LSE_j( K_{i,j} ) = \kappa_i \Id_{d \times d} + \LSE_j( K_{i,j} - \kappa_i \Id_{d \times d} )
-%	}
-%	where one can typically use set $\kappa_i \eqdef \max_j \tr(K_{i,j})/d$. 
-%\end{rem}
-
 A simple fixed point algorithm is then obtained by replacing in Dykstra's the explicit alternating minimization with respect to $u$ and $v$ by just one step of fixed point iterations~\eqref{eq-fixed-point-u} and~\eqref{eq-fixed-point-v}. To make the resulting fixed point contractant and ensure linear convergence, one introduces relaxation parameters $(\tau_1,\tau_2)$. 
 
 The quantum Sinkhorn algorithm is detailed in Algorithm~\ref{alg:sinkhorn}. It alternates between the updates of $u$ and $v$, using relaxed fixed point iterations associated to~\eqref{eq-fixed-point-u} and~\eqref{eq-fixed-point-v}. We use the following $\tau$-relaxed assignment notation 
@@ -126,20 +117,6 @@ The quantum Sinkhorn algorithm is detailed in Algorithm~\ref{alg:sinkhorn}. It a
 The algorithm outputs the scaled kernel $\ga_{i,j} = \exp(K_{i,j})$.
 
 
-
-%thus initializes $\foralls (i,j), (u_i,v_j) \leftarrow (0,0)$, then performs iteratively the following two steps.
-%\begin{rs}
-%	\item \textbf{$u$ update:}  update $K_{i,j} \leftarrow \Kern(u,v)_{i,j}$, apply
-%		\eql{\label{eq-sink-1}
-%			\foralls i \in I, \quad u_i \RelaxAssign{\tau_1} \LSE_j(K_{i,j})-\log(\mu_i).
-%		}		
-%
-%	\item \textbf{$v$ update:} update $K_{i,j} \leftarrow \Kern(u,v)_{i,j}$, apply
-%		\eql{\label{eq-sink-2}
-%			\foralls j \in J, \quad v_j \RelaxAssign{\tau_2} \LSE_i(K_{i,j})-\log(\nu_j).
-%		}		
-%\end{rs}
-
 \begin{rem}[Choice of $\tau_k$]\label{rem-choice-tau}
  In the scalar case, i.e. $d=1$ (and also for isotropic input tensors), when using $\tau_k = \tfrac{\epsilon}{\rho_k+\epsilon}$ for $k=1,2$, one retrieves exactly Sinkhorn iterations for unbalanced transport as described in~\cite{2016-chizat-sinkhorn}, and each update of $u$ (resp.\ $v$) exactly solves the fixed point~\eqref{eq-fixed-point-u} (resp.\ \eqref{eq-fixed-point-v}). 
 %
@@ -148,17 +125,31 @@ Moreover, it is simple to check that these iterates are contractant whenever
 	\tau_k \in ]0,\tfrac{2 \epsilon}{\epsilon+\rho_k}[
 	\quad\text{for } k=1,2.
 }
-%This property is simple to check for $d=1$, and is verified numerically for higher dimensions $d$. \lenaic{I reorganized here a bit} \justin{For all $d$ this holds?  How do you check numerically for \emph{all} $d$?  Should we use Mathematica?}
-%	\todo{Maybe not, apparently using different $\tau$ values can lead to huge speed up. So a comparison plot would be welcome. }
-	% 
-	and this property has been observed experimentally for higher dimensions $d=2,3$. Using higher values for $\tau_k$ actually often improves the (linear) convergence rate; we leave this interesting observation open for future theoretical investigation. 
+	and this property has been observed experimentally for higher dimensions $d=2,3$. Using higher values for $\tau_k$ actually often improves the (linear) convergence rate. Figure~\ref{fig:speed} displays a typical example of convergence, and exemplifies the usefulness of using large values of $\tau_k$.	 
 	% We thus recommend in practice using this value for $\tau$.
 	% When $d>1$, even under this choice of relaxation parameter, each update does not exactly solves the fixed point equation though. 
 \end{rem}
 
+%%% FIG %%%
+\begin{figure}\centering
+\begin{tabular}{@{}c@{\hspace{1mm}}c@{}}
+\includegraphics[width=.49\linewidth]{speed/convergence-curve}&
+\includegraphics[width=.49\linewidth]{speed/convergence-rate}\\
+$\log_{10}\norm{v^{(t+1)}-v^{(t)}}_\infty$ vs $t$ & 
+Rate $\kappa$ vs. $\al$
+\end{tabular}
+\caption{Display of convergence of Sinkhorn Algorithm~\ref{alg:sinkhorn} for the example displayed on the first row of Figure~\ref{fig:intro}. 
+%
+Denoting $u^{(t)}$ the value of the variable $u$ at iteration $t$, the left plot shows the fixed point residual error for increasing values of $\tau_1=\tau_2=\tfrac{\al\epsilon}{\epsilon+\rho}$ with $\al \in [0.5,2]$ (blue to red). 
+%
+The algorithm exhibits a linear convergence rate, $\log_{10}\norm{v^{(t+1)}-v^{(t)}}_\infty \sim - \kappa t$ for some $\kappa>0$, and the right plot displays $\kappa$ as a function of $\al$.  
+} \label{fig:speed}
+\end{figure}
+%%% FIG %%%
 
-\begin{rem}[Stability]In contrast to the usual implementation of Sinkhorn's algorithm, which is numerically unstable for small $\epsilon$ because it requires to compute $e^{u/\epsilon}$ and $e^{v/\epsilon}$, the proposed iterations using the LSE operator are stable. The algorithm can thus be run for arbitrary small $\epsilon$, although the linear speed of convergence is of course impacted. 
-% This stabilizing effect is similar to the kernel absorption technics introduced in~\cite{}.  
+
+
+\begin{rem}[Stability]In contrast to the usual implementation of Sinkhorn's algorithm, which is numerically unstable for small $\epsilon$ because it requires to compute $e^{u/\epsilon}$ and $e^{v/\epsilon}$, the proposed iterations using the LSE operator are stable. The algorithm can thus be run for arbitrary small $\epsilon$, although the linear speed of convergence is of course impacted.   
 \end{rem}
 
 \input{sections/sinkhorn-alg}

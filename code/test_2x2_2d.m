@@ -1,5 +1,5 @@
 %%
-% Test for Sinkhorn and barycenters on 2x2 matrices in a 2D domain.
+% Test for Sinkhorn on 2x2 matrices in a 2D domain.
 
 addpath('toolbox/');
 addpath('toolbox_quantum/');
@@ -58,26 +58,15 @@ if 0
 end
 
 %%
-% Parameters
-
-cost_type = 2;
-if strcmp(name, '2d-aniso-fields')
-    % cost_type = '2d-per'; %TODO: FIX THIS
-end
-
-% Ground cost
-c = ground_cost(n,cost_type);
-% regularization
-epsilon = (.15)^2;  % large
-epsilon = (.04)^2;  % small
-epsilon = (.08)^2;  % medium
-% fidelity
-rho = 10;  %large
-rho = 1;  %medium
-
-%%
 % Compute the coupling using Sinkhorn. 
 
+% Ground cost
+c = ground_cost(n,2);
+% regularization
+epsilon = (.08)^2;  % medium
+% fidelity
+rho = 1;  %medium
+% run sinkhorn
 options.niter = 500; % ok for .05^2
 options.disp_rate = NaN;
 options.tau = 1.8*epsilon/(rho+epsilon);  % prox step, use extrapolation to seed up
