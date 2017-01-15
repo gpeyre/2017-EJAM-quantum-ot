@@ -1,7 +1,9 @@
 #include "fm2dAniso.h"
 
-void mexFunction(	int nlhs, mxArray *plhs[], 
-					int nrhs, const mxArray*prhs[] ) 
+// Code of Fethallah Benmansour
+
+void mexFunction(	int nlhs, mxArray *plhs[],
+					int nrhs, const mxArray*prhs[] )
 {
 	//------------------------------------------------------------------
 	/* retrive arguments */
@@ -28,7 +30,7 @@ void mexFunction(	int nlhs, mxArray *plhs[],
 	Nx = nx+2; Ny = ny+2;
 	size = Nx*Ny; nxny = nx*ny;
 	//------------------------------------------------------------------
-	// Second argument : Anisotropy matrices 
+	// Second argument : Anisotropy matrices
 	T = mxGetPr(prhs[1]);
 	//------------------------------------------------------------------
 	// Third argument : start points
@@ -37,7 +39,7 @@ void mexFunction(	int nlhs, mxArray *plhs[],
 	//------------------------------------------------------------------
     Dmax = 0.0;
 	//------------------------------------------------------------------
-    // forth argument : max length to reach 
+    // forth argument : max length to reach
     if(nrhs==4)
     	Dmax = (float) mxGetScalar(prhs[3]);
 	//==================================================================

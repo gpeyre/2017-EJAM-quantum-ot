@@ -1,6 +1,8 @@
 #ifndef FM_H
 #define FM_H
 
+// Code of Fethallah Benmansour
+
 /////////////////////////
 // OS-independent includes
 /////////////////////////
@@ -121,7 +123,7 @@ typedef std::vector<KEYPOINT> LISTofKEYPOINT;
 inline int log2(int n)
 {
 	int x = 0;
-	while (n > 1) 
+	while (n > 1)
 	{
 		x++;
 		n /= 2;
@@ -130,7 +132,7 @@ inline int log2(int n)
 }
 
 inline int cmp(float a, float b)
-{	
+{
 	if (a < b)
 		return -1;
 	if (a == b)
