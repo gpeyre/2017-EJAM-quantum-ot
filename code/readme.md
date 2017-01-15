@@ -10,7 +10,7 @@ Structure of the toolbox
 - `quantum_*.m`: main computational functions (see bellow).
 - `toolbox/`: useful generic helper functions.
 - `toolbox_anisotropic/`: high performance resolution of anisotropic diffusions on regular grids (code of [Jean-Marie Mirebeau](https://www.math.u-psud.fr/~mirebeau/Main_page.html))
-- `toolbox_connections/`: computation of smooth vector fields on surface ([Keenan Crane](https://www.cs.cmu.edu/~kmcrane/Projects/TrivialConnections/))
+- `toolbox_connections/`: computation of smooth vector fields on surface (code of [Keenan Crane](https://www.cs.cmu.edu/~kmcrane/Projects/TrivialConnections/))
 - `toolbox_fast_marching/`: Fast-Marching for resolution of anisotropic geodesic distances (code of Fethallah Benmansour).
 
 Storage Conventions

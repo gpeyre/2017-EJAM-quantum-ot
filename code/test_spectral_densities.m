@@ -1,7 +1,6 @@
 %%
 % Interpolation of matrix-valued densities for texture synthesis.
 
-
 addpath('toolbox/');
 addpath('toolbox_quantum/');
 addpath('data/textures/');

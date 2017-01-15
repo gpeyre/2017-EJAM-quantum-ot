@@ -1,0 +1,87 @@
+%\newcommand{\AnonymMode}[2]{#2}  % uncomment for final compilation
+\newcommand{\AnonymMode}[2]{#1} % uncomment for anonymous compilation
+
+\documentclass[tog]{acmsiggraph}
+
+% \usepackage{mystyle}
+
+% \usepackage{MyMnSymbol} % fixes underbrace command
+\usepackage{xcolor}
+\usepackage{microtype}
+\usepackage{pbox}
+
+
+% papers_0417
+
+\TOGonlineid{0417}
+\TOGvolume{0}
+\TOGnumber{0}
+\TOGarticleDOI{1111111.2222222}
+% \TOGprojectURL{}
+% \TOGvideoURL{}
+% \TOGdataURL{}
+% \TOGcodeURL{}
+
+\graphicspath{{../images/}}
+
+%
+
+\title{Quantum Optimal Transport for Tensor Field Processing}
+
+\author{}\pdfauthor{}
+
+
+%\author{}
+%\pdfauthor{}
+
+\keywords{Optimal transport, tensor field, PSD matrices, quantum entropy}
+
+% \TOGonlineid{0237}
+
+\setcopyright{rightsretained}
+\copyrightyear{2017}
+
+%\setcopyright{acmlicensed}
+%\conferenceinfo{SIGGRAPH '17 Technical Paper}{2017}
+
+
+% \isbn{978-1-4503-4279-7/16/07}%\acmPrice{\$15.00}
+% \doi{http://dx.doi.org/10.1145/2897824.2925903}
+
+\begin{document}
+
+\newcommand{\meshFigIntr}[1]{\includegraphics[width=.100\linewidth,trim=140 10 120 0,clip]{mesh-intro/interpol-#1}}
+\newcommand{\imgFigIntr}[1]{\includegraphics[width=.105\linewidth,trim=80 20 80 20,clip]{2d-intro/interpol-ellipses-#1}}
+\newcommand{\DTIimg}[1]{\includegraphics[width=.100\linewidth,trim=85 20 85 20,clip]{dti/#1}}
+
+
+\teaser{
+\centering
+\begin{tabular}{@{\hspace{1mm}}c@{\hspace{1mm}}c@{\hspace{1mm}}c@{\hspace{1mm}}c@{\hspace{1mm}}c@{\hspace{1mm}}c@{\hspace{1mm}}c@{\hspace{1mm}}c@{\hspace{1mm}}c@{}}
+\imgFigIntr{1}&
+\imgFigIntr{3}&
+\imgFigIntr{5}&
+\imgFigIntr{7}&
+\imgFigIntr{9}\\
+\meshFigIntr{1}&
+\meshFigIntr{3}&
+\meshFigIntr{5}&
+\meshFigIntr{7}&
+\meshFigIntr{9}\\
+\DTIimg{interpol-rho005-1}&
+\DTIimg{interpol-rho005-3}&
+\DTIimg{interpol-rho005-5}&
+\DTIimg{interpol-rho005-7}&
+\DTIimg{interpol-rho005-9}
+%\\
+%$t=0$ & $t=1/8$ & $t=1/4$ & $t=3/8$ & $t=1/2$ & $t=5/8$ & $t=3/4$ & $t=7/8$ & $t=1$ 
+\end{tabular}
+}
+
+
+\maketitle
+
+
+
+
+\end{document}

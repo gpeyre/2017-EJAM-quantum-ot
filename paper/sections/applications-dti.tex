@@ -10,7 +10,7 @@ Diffusion tensor magnetic resonance imaging (DTI) is a popular technique to imag
 %
 A typical goal of this imaging technique is to map the brain anatomical connectivity, and in particular track the  white matter fibers. This requires a careful handling of the tensor's energy (its trace) and anisotropy, so that using Q-OT is a perfect fit for such data.
 
-Figure~\ref{fig:texsynth} shows an application of Q-OT for the interpolation (using~\ref{eq-interpolating}) between 2-D slices from DTI tensor fields $(\mu,\nu)$ acquired on two different subjects. This data is extracted from the studies~\cite{pestilli2014evaluation,takemura2016ensemble}. These two patients exhibit different anatomical connectivity geometries, and Q-OT is able to track the variation in both orientation and magnitude of the diffusion tensors. This figure also compares the different data fidelity parameters $\tau \in \{0.05,1\}$. Selecting $\tau=1$ enforces an overly-strong conservation constraint and leads to interpolation artifacts (in particular some structure are split during the interpolation). In contrast, selecting $\tau=0.05$ introduces enough mass creation/destruction during the interpolation to be able to cope with strong inter-subject variability.
+Figure~\ref{fig:dti} shows an application of Q-OT for the interpolation (using~\ref{eq-interpolating}) between 2-D slices from DTI tensor fields $(\mu,\nu)$ acquired on two different subjects. This data is extracted from the studies~\cite{pestilli2014evaluation,takemura2016ensemble}. These two patients exhibit different anatomical connectivity geometries, and Q-OT is able to track the variation in both orientation and magnitude of the diffusion tensors. This figure also compares the different data fidelity parameters $\tau \in \{0.05,1\}$. Selecting $\tau=1$ enforces an overly-strong conservation constraint and leads to interpolation artifacts (in particular some structure are split during the interpolation). In contrast, selecting $\tau=0.05$ introduces enough mass creation/destruction during the interpolation to be able to cope with strong inter-subject variability.
 
 %%% FIG %%%
 \newcommand{\DTIimg}[1]{\includegraphics[width=.195\linewidth,trim=85 20 85 20,clip]{dti/#1}}
@@ -36,6 +36,6 @@ $t=0$ & $t=1/4$ & $t=1/2$ & $t=3/4$ & $t=1$
 \textbf{First row:} interpolation obtained using $\rho=1$. 
 \textbf{Second row:} interpolation obtained using $\rho=0.5$. 
 \textbf{Third row:} anatomical MRI images indicating the region of interest where the computations are performed. 
-} \label{fig:texsynth}
+} \label{fig:dti}
 \end{figure}
 %%% FIG %%%

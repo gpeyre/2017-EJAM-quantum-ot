@@ -81,9 +81,9 @@
 \bibitem[\protect\citename{Carlen and Maas }2014]{Carlen2014}
 {\sc Carlen, E.~A., and Maas, J.}
 \newblock 2014.
-\newblock An analog of the 2-wasserstein metric in non-commutative probability
-  under which the fermionic fokker--planck equation is gradient flow for the
-  entropy.
+\newblock An analog of the 2-{W}asserstein metric in non-commutative
+  probability under which the fermionic {F}okker--{P}lanck equation is gradient
+  flow for the entropy.
 \newblock {\em Communications in Mathematical Physics 331}, 3, 887--926.
 
 \bibitem[\protect\citename{Chandrasekaran and Shah }2016]{Chandrasekaran2016}
@@ -95,7 +95,8 @@
 \bibitem[\protect\citename{Chen et~al\mbox{.} }2016]{Chen2016}
 {\sc Chen, Y., Georgiou, T.~T., , and Tannenbaum, A.}
 \newblock 2016.
-\newblock Distances and riemannian metrics for multivariate spectral densities.
+\newblock Distances and {R}iemannian metrics for multivariate spectral
+  densities.
 \newblock {\em Preprint arXiv:1610.03041\/}.
 
 \bibitem[\protect\citename{Chizat et~al\mbox{.} }2015]{2015-chizat-unbalanced}
@@ -185,7 +186,8 @@
 \bibitem[\protect\citename{Jiang et~al\mbox{.} }2012]{JiangSpectral}
 {\sc Jiang, X., Ning, L., and Georgiou, T.~T.}
 \newblock 2012.
-\newblock Distances and riemannian metrics for multivariate spectral densities.
+\newblock Distances and {R}iemannian metrics for multivariate spectral
+  densities.
 \newblock {\em IEEE Transactions on Automatic Control 57}, 7 (July),
   1723--1735.
 
@@ -281,6 +283,13 @@
 \newblock Optimal transport for applied mathematicians.
 \newblock {\em Progress in Nonlinear Differential Equations and their
   applications 87\/}.
+
+\bibitem[\protect\citename{Schmitzer }2016]{Schmitzer2016}
+{\sc Schmitzer, B.}
+\newblock 2016.
+\newblock Stabilized sparse scaling algorithms for entropy regularized
+  transport problems.
+\newblock {\em arXiv:1610.06519\/}.
 
 \bibitem[\protect\citename{Shewchuk }2002]{shewchuk2002good}
 {\sc Shewchuk, J.}

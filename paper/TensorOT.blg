@@ -1,7 +1,8 @@
-This is BibTeX, Version 0.99dThe top-level auxiliary file: TensorOT.aux
+This is BibTeX, Version 0.99d (TeX Live 2016)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: TensorOT.aux
 The style file: acmsiggraph.bst
 Database file #1: refs.bib
-Warning--I didn't find a database entry for ""
 Warning--can't use both volume and number fields in alliez2003anisotropic
 Warning--empty organization in peyre-iccv-09
 Warning--can't use both volume and number fields in crane2010trivial
@@ -11,4 +12,45 @@ Warning--empty publisher in frogner-2015
 Warning--empty booktitle in HotzFHHJJ04
 Warning--empty organization in HotzFHHJJ04
 Warning--can't use both volume and number fields in LagaeSurvey
-(There were 10 warnings)
+You've used 51 entries,
+            2748 wiz_defined-function locations,
+            922 strings with 12867 characters,
+and the built_in function-call counts, 20931 in all, are:
+= -- 2172
+> -- 930
+< -- 2
++ -- 318
+- -- 330
+* -- 1800
+:= -- 3482
+add.period$ -- 206
+call.type$ -- 51
+change.case$ -- 351
+chr.to.int$ -- 50
+cite$ -- 60
+duplicate$ -- 665
+empty$ -- 1551
+format.name$ -- 367
+if$ -- 4210
+int.to.chr$ -- 2
+int.to.str$ -- 0
+missing$ -- 51
+newline$ -- 309
+num.names$ -- 153
+pop$ -- 267
+preamble$ -- 1
+purify$ -- 302
+quote$ -- 0
+skip$ -- 460
+stack$ -- 0
+substring$ -- 1310
+swap$ -- 155
+text.length$ -- 2
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 396
+warning$ -- 9
+while$ -- 197
+width$ -- 55
+write$ -- 717
+(There were 9 warnings)
