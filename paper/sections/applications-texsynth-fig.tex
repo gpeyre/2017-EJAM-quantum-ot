@@ -1,28 +1,42 @@
+% !TEX root = ../TensorOT.tex
+
 
 %%% FIG %%%
 \newcommand{\TexSynthImg}[1]{\includegraphics[width=.195\linewidth]{texsynth/#1}}
 \begin{figure}\centering
 \begin{tabular}{@{}c@{\hspace{1mm}}c@{\hspace{1mm}}c@{\hspace{1mm}}c@{\hspace{1mm}}c@{}}
-\TexSynthImg{spectrum-1}&
-\TexSynthImg{spectrum-3}&
-\TexSynthImg{spectrum-5}&
-\TexSynthImg{spectrum-7}&
-\TexSynthImg{spectrum-9}\\
-\TexSynthImg{synthesis-1}&
-\TexSynthImg{synthesis-3}&
-\TexSynthImg{synthesis-5}&
-\TexSynthImg{synthesis-7}&
-\TexSynthImg{synthesis-9}\\
+\TexSynthImg{synth1/spectrum-1}&
+\TexSynthImg{synth1/spectrum-3}&
+\TexSynthImg{synth1/spectrum-5}&
+\TexSynthImg{synth1/spectrum-7}&
+\TexSynthImg{synth1/spectrum-9}\\
+\TexSynthImg{synth1/synthesis-1}&
+\TexSynthImg{synth1/synthesis-3}&
+\TexSynthImg{synth1/synthesis-5}&
+\TexSynthImg{synth1/synthesis-7}&
+\TexSynthImg{synth1/synthesis-9}\\
+\TexSynthImg{synth2/spectrum-1}&
+\TexSynthImg{synth2/spectrum-3}&
+\TexSynthImg{synth2/spectrum-5}&
+\TexSynthImg{synth2/spectrum-7}&
+\TexSynthImg{synth2/spectrum-9}\\
+\TexSynthImg{synth2/synthesis-1}&
+\TexSynthImg{synth2/synthesis-3}&
+\TexSynthImg{synth2/synthesis-5}&
+\TexSynthImg{synth2/synthesis-7}&
+\TexSynthImg{synth2/synthesis-9}\\
 $t=0$ & $t=1/4$ & $t=1/2$ & $t=3/4$ & $t=1$
 \end{tabular}
-\begin{tabular}{@{}c@{\hspace{5mm}}c@{}}
-\TexSynthImg{original-1}&
-\TexSynthImg{original-2}\\
-$f$  & $g$
+\begin{tabular}{@{}c@{\hspace{1mm}}c@{\hspace{5mm}}c@{\hspace{1mm}}c@{}}
+\TexSynthImg{synth1/original-1}&
+\TexSynthImg{synth1/original-2}&
+\TexSynthImg{synth2/original-1}&
+\TexSynthImg{synth2/original-2}\\
+$f$  & $g$ & $f$  & $g$ 
 \end{tabular}
-\caption{\textbf{First row:}  display $\tr(\mu_t(x))$ where $\mu_t$ are the interpolated power spectra. 
-\textbf{Second row:} realizations of the Gaussian field parameterized by the power spectra  $\mu_t$. 
-\textbf{Third row:} input texture exemplars from which $(\mu_{t=0},\mu_{t=1})=(\mu,\nu)$ are computed.
+\caption{\textbf{Row 1 and 3:}  display $\tr(\mu_t(x))$ where $\mu_t$ are the interpolated power spectra. 
+\textbf{Rows 2 and 4:} realizations of the Gaussian field parameterized by the power spectra  $\mu_t$. 
+\textbf{Row 5:} input texture exemplars from which $(\mu_{t=0},\mu_{t=1})=(\mu,\nu)$ are computed.
 } \label{fig:texsynth}
 \end{figure}
 %%% FIG %%%

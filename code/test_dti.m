@@ -1,17 +1,26 @@
 %%
 % test for DTI imaging data loading/analyzing.
 
+addpath('toolbox/');
+addpath('toolbox_quantum/');
+addpath('toolbox_quantum/tensor_logexp/');
+addpath('toolbox_anisotropic/');
 % change this to the path containing DTI data.
 addpath('/Users/gpeyre/Dropbox/work/wasserstein/wasserstein-tensor-valued/franco_brain_data');
 
-rep = 'results/dti/';
-[~,~] = mkdir(rep);
 
 subj = {'three' 'four'};
 btype = [2000 2000];
 %
 subj = {'one' 'two'};
 btype = [1000 2000];
+%
+subj = {'four' 'two'};
+btype = [2000 2000];
+
+
+rep = ['results/dti/' subj{1} '-' subj{2} '/'];
+[~,~] = mkdir(rep);
 
 d = 3; % run 3D code
 d = 2; % run 2D code
@@ -20,6 +29,7 @@ resh = @(x)reshape(x, [size(x,1) size(x,2) size(x,3)*size(x,4)]);
 iresh = @(x)reshape(x, [size(x,1) size(x,2) sqrt(size(x,3)) sqrt(size(x,3))]);
 remax = @(x)x/max(x(:));
 
+col = {};
 for k=1:2
     t = k-1;
     % loading
@@ -43,22 +53,34 @@ for k=1:2
     [l1,l2] = eigen_remaper(a,e,-1);
     mu{k} = tensor_eigenrecomp(e1,e2,l1,l2);
     
+    % color for display
+    switch subj{k}
+        case 'one'
+            col{k} = [0 0 1];
+            m=1:2;
+        case 'two'
+            col{k} = [1 0 0];
+            m=2:3;
+        case 'three'
+            col{k} = [0 1 1];
+            m = [1];
+        case 'four'
+            col{k} = [0 1 0];
+            m=[1 3];
+    end
+
+    
     % save trace
     f{k}= g{k}; % 1-max( remax(trM(Mu{k},1)), 0);
     imwrite( remax(f{k}), [rep 'original-trace-' num2str(k) '.png'], 'png' );
     a = repmat(remax(f{k}), [1 1 3]);
-    if k==1
-        m=1:2;
-    else
-        m=2:3;
-    end
     a(min(sx):max(sx),min(sy):max(sy),m) = a(min(sx):max(sx),min(sy):max(sy),m)/5;
     imwrite( remax(a), [rep 'original-trace-' num2str(k) '-roi.png'], 'png' );
     
-    % display -- need 3D display
+    % display
     opt.nb_ellipses = 25;
     opt.image = trM(iresh(mu{k}),1);
-    opt.color = [t 0 1-t];
+    opt.color = col{k};
     clf; plot_tensors_2d(iresh(mu{k}(1:2,1:2,:,:)), opt);
     saveas(gcf, [rep 'input-' num2str(k) '.png'], 'png');
     
@@ -82,7 +104,7 @@ epsilon = (.08)^2;  % medium
 % fidelity
 
 rho = 1;  %medium
-rho = .05; % low
+rho = .05; % low, usually better results
 
 options.niter = 500; % ok for .05^2
 options.disp_rate = NaN;
@@ -106,9 +128,9 @@ sx = 1:n-1; sy = 1:n-1; opt.nb_ellipses = n-1;
 for k=1:m
     t = (k-1)/(m-1);
     T = iresh(nu{k}); T = T(:,:,sx,sy);
-    opt.color = [t 0 1-t];
+    opt.color = t*col{2} + (1-t)*col{1};
     opt.image = trM(T,1);
     clf; plot_tensors_2d(T(1:2,1:2,:,:), opt); drawnow;
-    saveas(gcf, [rep 'interpol-rho' num2str(rho) '-' num2str(k) '.png']);
+    saveas(gcf, [rep 'interpol-rho' strrep(num2str(rho), '.', '') '-' num2str(k) '.png']);
 end
 

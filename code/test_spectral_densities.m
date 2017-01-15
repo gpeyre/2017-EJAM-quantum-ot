@@ -13,9 +13,9 @@ names = {'bark' 'beigefabric'};
 names = {'dune' 'fabric-blue'};
 names = {'fabric-mix' 'stonewall'};
 names = {'wood1' 'sand'};
-names = {'wood1' 'beigefabric'};
 names = {'fabric-blue' 'beigefabric'};
 names = {'fabric-blue' 'wood1'};
+names = {'wood1' 'beigefabric'};
 
 
 rep = ['results/texturesynth/' names{1} '-' names{2} '/'];
@@ -93,7 +93,7 @@ rho = 1;  % fidelity
 
 options.niter = 150; 
 options.disp_rate = NaN;
-options.tau = 1.85*epsilon/(rho+epsilon);  % prox step, use extrapolation to seed up
+options.tau = 1.7*epsilon/(rho+epsilon);  % prox step, use extrapolation to seed up
 fprintf('Sinkhorn: ');
 [gamma,u,v,err] = quantum_sinkhorn(mu{1},mu{2},c,epsilon,rho, options);
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.9.19)  15 JAN 2017 20:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.9.19)  15 JAN 2017 23:17
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1605,246 +1605,412 @@ images/textures/2d-bump-donut/interpol-render-5.png (PNG copy)> <./images/textu
 res/2d-bump-donut/interpol-render-7.png (PNG copy)> <./images/textures/2d-bump-
 donut/interpol-render-9.png (PNG copy)> <./images/textures/2d-bump-donut/colorb
 ar.png (PNG copy)>]
-<./images/dti/interpol-rho1-1.png, id=657, 362.3136pt x 248.127pt>
-File: ./images/dti/interpol-rho1-1.png Graphic file (type png)
+<./images/dti/one-two/interpol-rho1-1.png, id=657, 362.3136pt x 248.127pt>
+File: ./images/dti/one-two/interpol-rho1-1.png Graphic file (type png)
 
-<use ./images/dti/interpol-rho1-1.png>
-Package pdftex.def Info: ./images/dti/interpol-rho1-1.png used on input line 19
-.
+<use ./images/dti/one-two/interpol-rho1-1.png>
+Package pdftex.def Info: ./images/dti/one-two/interpol-rho1-1.png used on input
+ line 19.
 (pdftex.def)             Requested size: 46.98602pt x 50.98175pt.
 
-<./images/dti/interpol-rho1-3.png, id=659, 362.3136pt x 248.127pt>
-File: ./images/dti/interpol-rho1-3.png Graphic file (type png)
+<./images/dti/one-two/interpol-rho1-3.png, id=659, 362.3136pt x 248.127pt>
+File: ./images/dti/one-two/interpol-rho1-3.png Graphic file (type png)
 
-<use ./images/dti/interpol-rho1-3.png>
-Package pdftex.def Info: ./images/dti/interpol-rho1-3.png used on input line 20
-.
+<use ./images/dti/one-two/interpol-rho1-3.png>
+Package pdftex.def Info: ./images/dti/one-two/interpol-rho1-3.png used on input
+ line 20.
 (pdftex.def)             Requested size: 46.98602pt x 50.98175pt.
 
-<./images/dti/interpol-rho1-5.png, id=661, 362.3136pt x 248.127pt>
-File: ./images/dti/interpol-rho1-5.png Graphic file (type png)
+<./images/dti/one-two/interpol-rho1-5.png, id=661, 362.3136pt x 248.127pt>
+File: ./images/dti/one-two/interpol-rho1-5.png Graphic file (type png)
 
-<use ./images/dti/interpol-rho1-5.png>
-Package pdftex.def Info: ./images/dti/interpol-rho1-5.png used on input line 21
-.
+<use ./images/dti/one-two/interpol-rho1-5.png>
+Package pdftex.def Info: ./images/dti/one-two/interpol-rho1-5.png used on input
+ line 21.
 (pdftex.def)             Requested size: 46.98602pt x 50.98175pt.
 
-<./images/dti/interpol-rho1-7.png, id=663, 362.3136pt x 248.127pt>
-File: ./images/dti/interpol-rho1-7.png Graphic file (type png)
+<./images/dti/one-two/interpol-rho1-7.png, id=663, 362.3136pt x 248.127pt>
+File: ./images/dti/one-two/interpol-rho1-7.png Graphic file (type png)
 
-<use ./images/dti/interpol-rho1-7.png>
-Package pdftex.def Info: ./images/dti/interpol-rho1-7.png used on input line 22
-.
+<use ./images/dti/one-two/interpol-rho1-7.png>
+Package pdftex.def Info: ./images/dti/one-two/interpol-rho1-7.png used on input
+ line 22.
 (pdftex.def)             Requested size: 46.98602pt x 50.98175pt.
 
-<./images/dti/interpol-rho1-9.png, id=665, 362.3136pt x 248.127pt>
-File: ./images/dti/interpol-rho1-9.png Graphic file (type png)
+<./images/dti/one-two/interpol-rho1-9.png, id=665, 362.3136pt x 248.127pt>
+File: ./images/dti/one-two/interpol-rho1-9.png Graphic file (type png)
 
-<use ./images/dti/interpol-rho1-9.png>
-Package pdftex.def Info: ./images/dti/interpol-rho1-9.png used on input line 23
-.
+<use ./images/dti/one-two/interpol-rho1-9.png>
+Package pdftex.def Info: ./images/dti/one-two/interpol-rho1-9.png used on input
+ line 23.
 (pdftex.def)             Requested size: 46.98602pt x 50.98175pt.
 
-<./images/dti/interpol-rho005-1.png, id=667, 362.3136pt x 248.127pt>
-File: ./images/dti/interpol-rho005-1.png Graphic file (type png)
+<./images/dti/one-two/interpol-rho005-1.png, id=667, 362.3136pt x 248.127pt>
+File: ./images/dti/one-two/interpol-rho005-1.png Graphic file (type png)
 
-<use ./images/dti/interpol-rho005-1.png>
-Package pdftex.def Info: ./images/dti/interpol-rho005-1.png used on input line 
-24.
+<use ./images/dti/one-two/interpol-rho005-1.png>
+Package pdftex.def Info: ./images/dti/one-two/interpol-rho005-1.png used on inp
+ut line 24.
 (pdftex.def)             Requested size: 46.98602pt x 50.98175pt.
 
-<./images/dti/interpol-rho005-3.png, id=669, 362.3136pt x 248.127pt>
-File: ./images/dti/interpol-rho005-3.png Graphic file (type png)
+<./images/dti/one-two/interpol-rho005-3.png, id=669, 362.3136pt x 248.127pt>
+File: ./images/dti/one-two/interpol-rho005-3.png Graphic file (type png)
 
-<use ./images/dti/interpol-rho005-3.png>
-Package pdftex.def Info: ./images/dti/interpol-rho005-3.png used on input line 
-25.
+<use ./images/dti/one-two/interpol-rho005-3.png>
+Package pdftex.def Info: ./images/dti/one-two/interpol-rho005-3.png used on inp
+ut line 25.
 (pdftex.def)             Requested size: 46.98602pt x 50.98175pt.
 
-<./images/dti/interpol-rho005-5.png, id=671, 362.3136pt x 248.127pt>
-File: ./images/dti/interpol-rho005-5.png Graphic file (type png)
+<./images/dti/one-two/interpol-rho005-5.png, id=671, 362.3136pt x 248.127pt>
+File: ./images/dti/one-two/interpol-rho005-5.png Graphic file (type png)
 
-<use ./images/dti/interpol-rho005-5.png>
-Package pdftex.def Info: ./images/dti/interpol-rho005-5.png used on input line 
-26.
+<use ./images/dti/one-two/interpol-rho005-5.png>
+Package pdftex.def Info: ./images/dti/one-two/interpol-rho005-5.png used on inp
+ut line 26.
 (pdftex.def)             Requested size: 46.98602pt x 50.98175pt.
 
-<./images/dti/interpol-rho005-7.png, id=673, 362.3136pt x 248.127pt>
-File: ./images/dti/interpol-rho005-7.png Graphic file (type png)
+<./images/dti/one-two/interpol-rho005-7.png, id=673, 362.3136pt x 248.127pt>
+File: ./images/dti/one-two/interpol-rho005-7.png Graphic file (type png)
 
-<use ./images/dti/interpol-rho005-7.png>
-Package pdftex.def Info: ./images/dti/interpol-rho005-7.png used on input line 
-27.
+<use ./images/dti/one-two/interpol-rho005-7.png>
+Package pdftex.def Info: ./images/dti/one-two/interpol-rho005-7.png used on inp
+ut line 27.
 (pdftex.def)             Requested size: 46.98602pt x 50.98175pt.
 
-<./images/dti/interpol-rho005-9.png, id=675, 362.3136pt x 248.127pt>
-File: ./images/dti/interpol-rho005-9.png Graphic file (type png)
+<./images/dti/one-two/interpol-rho005-9.png, id=675, 362.3136pt x 248.127pt>
+File: ./images/dti/one-two/interpol-rho005-9.png Graphic file (type png)
 
-<use ./images/dti/interpol-rho005-9.png>
-Package pdftex.def Info: ./images/dti/interpol-rho005-9.png used on input line 
-28.
+<use ./images/dti/one-two/interpol-rho005-9.png>
+Package pdftex.def Info: ./images/dti/one-two/interpol-rho005-9.png used on inp
+ut line 28.
 (pdftex.def)             Requested size: 46.98602pt x 50.98175pt.
 
-<./images/dti/original-trace-1-roi.png, id=677, 169.63374pt x 129.48375pt>
-File: ./images/dti/original-trace-1-roi.png Graphic file (type png)
+<./images/dti/four-two/interpol-rho005-1.png, id=677, 362.3136pt x 248.127pt>
+File: ./images/dti/four-two/interpol-rho005-1.png Graphic file (type png)
 
-<use ./images/dti/original-trace-1-roi.png>
-Package pdftex.def Info: ./images/dti/original-trace-1-roi.png used on input li
-ne 32.
+<use ./images/dti/four-two/interpol-rho005-1.png>
+Package pdftex.def Info: ./images/dti/four-two/interpol-rho005-1.png used on in
+put line 29.
+(pdftex.def)             Requested size: 46.98602pt x 50.98175pt.
+
+<./images/dti/four-two/interpol-rho005-3.png, id=679, 362.3136pt x 248.127pt>
+File: ./images/dti/four-two/interpol-rho005-3.png Graphic file (type png)
+
+<use ./images/dti/four-two/interpol-rho005-3.png>
+Package pdftex.def Info: ./images/dti/four-two/interpol-rho005-3.png used on in
+put line 30.
+(pdftex.def)             Requested size: 46.98602pt x 50.98175pt.
+
+<./images/dti/four-two/interpol-rho005-5.png, id=681, 362.3136pt x 248.127pt>
+File: ./images/dti/four-two/interpol-rho005-5.png Graphic file (type png)
+
+<use ./images/dti/four-two/interpol-rho005-5.png>
+Package pdftex.def Info: ./images/dti/four-two/interpol-rho005-5.png used on in
+put line 31.
+(pdftex.def)             Requested size: 46.98602pt x 50.98175pt.
+
+<./images/dti/four-two/interpol-rho005-7.png, id=683, 362.3136pt x 248.127pt>
+File: ./images/dti/four-two/interpol-rho005-7.png Graphic file (type png)
+
+<use ./images/dti/four-two/interpol-rho005-7.png>
+Package pdftex.def Info: ./images/dti/four-two/interpol-rho005-7.png used on in
+put line 32.
+(pdftex.def)             Requested size: 46.98602pt x 50.98175pt.
+
+<./images/dti/four-two/interpol-rho005-9.png, id=685, 362.3136pt x 248.127pt>
+File: ./images/dti/four-two/interpol-rho005-9.png Graphic file (type png)
+
+<use ./images/dti/four-two/interpol-rho005-9.png>
+Package pdftex.def Info: ./images/dti/four-two/interpol-rho005-9.png used on in
+put line 33.
+(pdftex.def)             Requested size: 46.98602pt x 50.98175pt.
+
+<./images/dti/one-two/original-trace-1-roi.png, id=687, 169.63374pt x 129.48375
+pt>
+File: ./images/dti/one-two/original-trace-1-roi.png Graphic file (type png)
+ <use ./images/dti/one-two/original-trace-1-roi.png>
+Package pdftex.def Info: ./images/dti/one-two/original-trace-1-roi.png used on 
+input line 37.
 (pdftex.def)             Requested size: 72.28423pt x 55.17506pt.
 
-<./images/dti/original-trace-2-roi.png, id=678, 169.63374pt x 129.48375pt>
-File: ./images/dti/original-trace-2-roi.png Graphic file (type png)
-
-<use ./images/dti/original-trace-2-roi.png>
-Package pdftex.def Info: ./images/dti/original-trace-2-roi.png used on input li
-ne 33.
+<./images/dti/one-two/original-trace-2-roi.png, id=688, 169.63374pt x 129.48375
+pt>
+File: ./images/dti/one-two/original-trace-2-roi.png Graphic file (type png)
+ <use ./images/dti/one-two/original-trace-2-roi.png>
+Package pdftex.def Info: ./images/dti/one-two/original-trace-2-roi.png used on 
+input line 38.
 (pdftex.def)             Requested size: 72.28423pt x 55.17506pt.
 
-Overfull \hbox (5.36617pt too wide) in paragraph at lines 18--39
+<./images/dti/four-two/original-trace-1-roi.png, id=689, 169.63374pt x 129.4837
+5pt>
+File: ./images/dti/four-two/original-trace-1-roi.png Graphic file (type png)
+ <use ./images/dti/four-two/original-trace-1-roi.png>
+Package pdftex.def Info: ./images/dti/four-two/original-trace-1-roi.png used on
+ input line 39.
+(pdftex.def)             Requested size: 72.28423pt x 55.17506pt.
+
+Overfull \hbox (5.36617pt too wide) in paragraph at lines 18--47
  [][] 
  []
 
 ) (./sections/applications-texsynth.tex)) (./sections/conclusion.tex)
 (./sections/applications-texsynth-fig.tex
-<./images/texsynth/spectrum-1.png, id=687, 256.96pt x 256.96pt>
-File: ./images/texsynth/spectrum-1.png Graphic file (type png)
+<./images/texsynth/synth1/spectrum-1.png, id=698, 256.96pt x 256.96pt>
+File: ./images/texsynth/synth1/spectrum-1.png Graphic file (type png)
 
-<use ./images/texsynth/spectrum-1.png>
-Package pdftex.def Info: ./images/texsynth/spectrum-1.png used on input line 6.
-
+<use ./images/texsynth/synth1/spectrum-1.png>
+Package pdftex.def Info: ./images/texsynth/synth1/spectrum-1.png used on input 
+line 8.
 (pdftex.def)             Requested size: 46.98602pt x 46.98401pt.
 
-<./images/texsynth/spectrum-3.png, id=688, 256.96pt x 256.96pt>
-File: ./images/texsynth/spectrum-3.png Graphic file (type png)
+<./images/texsynth/synth1/spectrum-3.png, id=699, 256.96pt x 256.96pt>
+File: ./images/texsynth/synth1/spectrum-3.png Graphic file (type png)
 
-<use ./images/texsynth/spectrum-3.png>
-Package pdftex.def Info: ./images/texsynth/spectrum-3.png used on input line 7.
-
+<use ./images/texsynth/synth1/spectrum-3.png>
+Package pdftex.def Info: ./images/texsynth/synth1/spectrum-3.png used on input 
+line 9.
 (pdftex.def)             Requested size: 46.98602pt x 46.98401pt.
 
-<./images/texsynth/spectrum-5.png, id=689, 256.96pt x 256.96pt>
-File: ./images/texsynth/spectrum-5.png Graphic file (type png)
+<./images/texsynth/synth1/spectrum-5.png, id=700, 256.96pt x 256.96pt>
+File: ./images/texsynth/synth1/spectrum-5.png Graphic file (type png)
 
-<use ./images/texsynth/spectrum-5.png>
-Package pdftex.def Info: ./images/texsynth/spectrum-5.png used on input line 8.
-
+<use ./images/texsynth/synth1/spectrum-5.png>
+Package pdftex.def Info: ./images/texsynth/synth1/spectrum-5.png used on input 
+line 10.
 (pdftex.def)             Requested size: 46.98602pt x 46.98401pt.
 
-<./images/texsynth/spectrum-7.png, id=690, 256.96pt x 256.96pt>
-File: ./images/texsynth/spectrum-7.png Graphic file (type png)
+<./images/texsynth/synth1/spectrum-7.png, id=701, 256.96pt x 256.96pt>
+File: ./images/texsynth/synth1/spectrum-7.png Graphic file (type png)
 
-<use ./images/texsynth/spectrum-7.png>
-Package pdftex.def Info: ./images/texsynth/spectrum-7.png used on input line 9.
-
+<use ./images/texsynth/synth1/spectrum-7.png>
+Package pdftex.def Info: ./images/texsynth/synth1/spectrum-7.png used on input 
+line 11.
 (pdftex.def)             Requested size: 46.98602pt x 46.98401pt.
 
-<./images/texsynth/spectrum-9.png, id=691, 256.96pt x 256.96pt>
-File: ./images/texsynth/spectrum-9.png Graphic file (type png)
+<./images/texsynth/synth1/spectrum-9.png, id=702, 256.96pt x 256.96pt>
+File: ./images/texsynth/synth1/spectrum-9.png Graphic file (type png)
 
-<use ./images/texsynth/spectrum-9.png>
-Package pdftex.def Info: ./images/texsynth/spectrum-9.png used on input line 10
-.
+<use ./images/texsynth/synth1/spectrum-9.png>
+Package pdftex.def Info: ./images/texsynth/synth1/spectrum-9.png used on input 
+line 12.
 (pdftex.def)             Requested size: 46.98602pt x 46.98401pt.
 
-<./images/texsynth/synthesis-1.png, id=692, 256.96pt x 256.96pt>
-File: ./images/texsynth/synthesis-1.png Graphic file (type png)
+<./images/texsynth/synth1/synthesis-1.png, id=703, 256.96pt x 256.96pt>
+File: ./images/texsynth/synth1/synthesis-1.png Graphic file (type png)
 
-<use ./images/texsynth/synthesis-1.png>
-Package pdftex.def Info: ./images/texsynth/synthesis-1.png used on input line 1
-1.
+<use ./images/texsynth/synth1/synthesis-1.png>
+Package pdftex.def Info: ./images/texsynth/synth1/synthesis-1.png used on input
+ line 13.
 (pdftex.def)             Requested size: 46.98602pt x 46.98401pt.
 
-<./images/texsynth/synthesis-3.png, id=693, 256.96pt x 256.96pt>
-File: ./images/texsynth/synthesis-3.png Graphic file (type png)
+<./images/texsynth/synth1/synthesis-3.png, id=704, 256.96pt x 256.96pt>
+File: ./images/texsynth/synth1/synthesis-3.png Graphic file (type png)
 
-<use ./images/texsynth/synthesis-3.png>
-Package pdftex.def Info: ./images/texsynth/synthesis-3.png used on input line 1
-2.
+<use ./images/texsynth/synth1/synthesis-3.png>
+Package pdftex.def Info: ./images/texsynth/synth1/synthesis-3.png used on input
+ line 14.
 (pdftex.def)             Requested size: 46.98602pt x 46.98401pt.
 
-<./images/texsynth/synthesis-5.png, id=694, 256.96pt x 256.96pt>
-File: ./images/texsynth/synthesis-5.png Graphic file (type png)
+<./images/texsynth/synth1/synthesis-5.png, id=705, 256.96pt x 256.96pt>
+File: ./images/texsynth/synth1/synthesis-5.png Graphic file (type png)
 
-<use ./images/texsynth/synthesis-5.png>
-Package pdftex.def Info: ./images/texsynth/synthesis-5.png used on input line 1
-3.
+<use ./images/texsynth/synth1/synthesis-5.png>
+Package pdftex.def Info: ./images/texsynth/synth1/synthesis-5.png used on input
+ line 15.
 (pdftex.def)             Requested size: 46.98602pt x 46.98401pt.
 
-<./images/texsynth/synthesis-7.png, id=695, 256.96pt x 256.96pt>
-File: ./images/texsynth/synthesis-7.png Graphic file (type png)
+<./images/texsynth/synth1/synthesis-7.png, id=706, 256.96pt x 256.96pt>
+File: ./images/texsynth/synth1/synthesis-7.png Graphic file (type png)
 
-<use ./images/texsynth/synthesis-7.png>
-Package pdftex.def Info: ./images/texsynth/synthesis-7.png used on input line 1
-4.
+<use ./images/texsynth/synth1/synthesis-7.png>
+Package pdftex.def Info: ./images/texsynth/synth1/synthesis-7.png used on input
+ line 16.
 (pdftex.def)             Requested size: 46.98602pt x 46.98401pt.
 
-<./images/texsynth/synthesis-9.png, id=696, 256.96pt x 256.96pt>
-File: ./images/texsynth/synthesis-9.png Graphic file (type png)
+<./images/texsynth/synth1/synthesis-9.png, id=707, 256.96pt x 256.96pt>
+File: ./images/texsynth/synth1/synthesis-9.png Graphic file (type png)
 
-<use ./images/texsynth/synthesis-9.png>
-Package pdftex.def Info: ./images/texsynth/synthesis-9.png used on input line 1
-5.
+<use ./images/texsynth/synth1/synthesis-9.png>
+Package pdftex.def Info: ./images/texsynth/synth1/synthesis-9.png used on input
+ line 17.
 (pdftex.def)             Requested size: 46.98602pt x 46.98401pt.
 
-<./images/texsynth/original-1.png, id=697, 256.96pt x 256.96pt>
-File: ./images/texsynth/original-1.png Graphic file (type png)
+<./images/texsynth/synth2/spectrum-1.png, id=708, 256.96pt x 256.96pt>
+File: ./images/texsynth/synth2/spectrum-1.png Graphic file (type png)
 
-<use ./images/texsynth/original-1.png>
-Package pdftex.def Info: ./images/texsynth/original-1.png used on input line 19
-.
+<use ./images/texsynth/synth2/spectrum-1.png>
+Package pdftex.def Info: ./images/texsynth/synth2/spectrum-1.png used on input 
+line 18.
 (pdftex.def)             Requested size: 46.98602pt x 46.98401pt.
 
-<./images/texsynth/original-2.png, id=698, 256.96pt x 256.96pt>
-File: ./images/texsynth/original-2.png Graphic file (type png)
+<./images/texsynth/synth2/spectrum-3.png, id=709, 256.96pt x 256.96pt>
+File: ./images/texsynth/synth2/spectrum-3.png Graphic file (type png)
 
-<use ./images/texsynth/original-2.png>
-Package pdftex.def Info: ./images/texsynth/original-2.png used on input line 20
-.
+<use ./images/texsynth/synth2/spectrum-3.png>
+Package pdftex.def Info: ./images/texsynth/synth2/spectrum-3.png used on input 
+line 19.
 (pdftex.def)             Requested size: 46.98602pt x 46.98401pt.
 
-Overfull \hbox (5.36617pt too wide) in paragraph at lines 5--26
+<./images/texsynth/synth2/spectrum-5.png, id=710, 256.96pt x 256.96pt>
+File: ./images/texsynth/synth2/spectrum-5.png Graphic file (type png)
+
+<use ./images/texsynth/synth2/spectrum-5.png>
+Package pdftex.def Info: ./images/texsynth/synth2/spectrum-5.png used on input 
+line 20.
+(pdftex.def)             Requested size: 46.98602pt x 46.98401pt.
+
+<./images/texsynth/synth2/spectrum-7.png, id=711, 256.96pt x 256.96pt>
+File: ./images/texsynth/synth2/spectrum-7.png Graphic file (type png)
+
+<use ./images/texsynth/synth2/spectrum-7.png>
+Package pdftex.def Info: ./images/texsynth/synth2/spectrum-7.png used on input 
+line 21.
+(pdftex.def)             Requested size: 46.98602pt x 46.98401pt.
+
+<./images/texsynth/synth2/spectrum-9.png, id=712, 256.96pt x 256.96pt>
+File: ./images/texsynth/synth2/spectrum-9.png Graphic file (type png)
+
+<use ./images/texsynth/synth2/spectrum-9.png>
+Package pdftex.def Info: ./images/texsynth/synth2/spectrum-9.png used on input 
+line 22.
+(pdftex.def)             Requested size: 46.98602pt x 46.98401pt.
+
+<./images/texsynth/synth2/synthesis-1.png, id=713, 256.96pt x 256.96pt>
+File: ./images/texsynth/synth2/synthesis-1.png Graphic file (type png)
+
+<use ./images/texsynth/synth2/synthesis-1.png>
+Package pdftex.def Info: ./images/texsynth/synth2/synthesis-1.png used on input
+ line 23.
+(pdftex.def)             Requested size: 46.98602pt x 46.98401pt.
+
+<./images/texsynth/synth2/synthesis-3.png, id=714, 256.96pt x 256.96pt>
+File: ./images/texsynth/synth2/synthesis-3.png Graphic file (type png)
+
+<use ./images/texsynth/synth2/synthesis-3.png>
+Package pdftex.def Info: ./images/texsynth/synth2/synthesis-3.png used on input
+ line 24.
+(pdftex.def)             Requested size: 46.98602pt x 46.98401pt.
+
+<./images/texsynth/synth2/synthesis-5.png, id=715, 256.96pt x 256.96pt>
+File: ./images/texsynth/synth2/synthesis-5.png Graphic file (type png)
+
+<use ./images/texsynth/synth2/synthesis-5.png>
+Package pdftex.def Info: ./images/texsynth/synth2/synthesis-5.png used on input
+ line 25.
+(pdftex.def)             Requested size: 46.98602pt x 46.98401pt.
+
+<./images/texsynth/synth2/synthesis-7.png, id=716, 256.96pt x 256.96pt>
+File: ./images/texsynth/synth2/synthesis-7.png Graphic file (type png)
+
+<use ./images/texsynth/synth2/synthesis-7.png>
+Package pdftex.def Info: ./images/texsynth/synth2/synthesis-7.png used on input
+ line 26.
+(pdftex.def)             Requested size: 46.98602pt x 46.98401pt.
+
+<./images/texsynth/synth2/synthesis-9.png, id=717, 256.96pt x 256.96pt>
+File: ./images/texsynth/synth2/synthesis-9.png Graphic file (type png)
+
+<use ./images/texsynth/synth2/synthesis-9.png>
+Package pdftex.def Info: ./images/texsynth/synth2/synthesis-9.png used on input
+ line 27.
+(pdftex.def)             Requested size: 46.98602pt x 46.98401pt.
+
+<./images/texsynth/synth1/original-1.png, id=718, 256.96pt x 256.96pt>
+File: ./images/texsynth/synth1/original-1.png Graphic file (type png)
+
+<use ./images/texsynth/synth1/original-1.png>
+Package pdftex.def Info: ./images/texsynth/synth1/original-1.png used on input 
+line 31.
+(pdftex.def)             Requested size: 46.98602pt x 46.98401pt.
+
+<./images/texsynth/synth1/original-2.png, id=719, 256.96pt x 256.96pt>
+File: ./images/texsynth/synth1/original-2.png Graphic file (type png)
+
+<use ./images/texsynth/synth1/original-2.png>
+Package pdftex.def Info: ./images/texsynth/synth1/original-2.png used on input 
+line 32.
+(pdftex.def)             Requested size: 46.98602pt x 46.98401pt.
+
+<./images/texsynth/synth2/original-1.png, id=720, 256.96pt x 256.96pt>
+File: ./images/texsynth/synth2/original-1.png Graphic file (type png)
+
+<use ./images/texsynth/synth2/original-1.png>
+Package pdftex.def Info: ./images/texsynth/synth2/original-1.png used on input 
+line 33.
+(pdftex.def)             Requested size: 46.98602pt x 46.98401pt.
+
+<./images/texsynth/synth2/original-2.png, id=721, 256.96pt x 256.96pt>
+File: ./images/texsynth/synth2/original-2.png Graphic file (type png)
+
+<use ./images/texsynth/synth2/original-2.png>
+Package pdftex.def Info: ./images/texsynth/synth2/original-2.png used on input 
+line 34.
+(pdftex.def)             Requested size: 46.98602pt x 46.98401pt.
+
+Overfull \hbox (5.36617pt too wide) in paragraph at lines 7--40
  [][] 
  []
 
-) (./TensorOT.bbl [8 <./images/dti/interpol-rho1-1.png (PNG copy)> <./images/dt
-i/interpol-rho1-3.png (PNG copy)> <./images/dti/interpol-rho1-5.png (PNG copy)>
- <./images/dti/interpol-rho1-7.png (PNG copy)> <./images/dti/interpol-rho1-9.pn
-g (PNG copy)> <./images/dti/interpol-rho005-1.png (PNG copy)> <./images/dti/int
-erpol-rho005-3.png (PNG copy)> <./images/dti/interpol-rho005-5.png (PNG copy)> 
-<./images/dti/interpol-rho005-7.png (PNG copy)> <./images/dti/interpol-rho005-9
-.png (PNG copy)> <./images/meshing/2d-bump-donut/input-mesh-1.png> <./images/me
-shing/2d-bump-donut/input-mesh-3.png> <./images/meshing/2d-bump-donut/input-mes
-h-5.png> <./images/meshing/2d-bump-donut/input-mesh-7.png> <./images/meshing/2d
--bump-donut/input-mesh-9.png> <./images/meshing/images/input-mesh-1.png> <./ima
-ges/meshing/images/input-mesh-3.png> <./images/meshing/images/input-mesh-5.png>
- <./images/meshing/images/input-mesh-7.png> <./images/meshing/images/input-mesh
--9.png> <./images/meshing/images/input-images-1.png> <./images/meshing/images/i
-nput-mesh-1-img.png> <./images/meshing/images/input-images-2.png> <./images/mes
-hing/images/input-mesh-9-img.png> <./images/dti/original-trace-1-roi.png (PNG c
-opy)> <./images/dti/original-trace-2-roi.png (PNG copy)>] [9 <./images/texsynth
-/spectrum-1.png (PNG copy)> <./images/texsynth/spectrum-3.png (PNG copy)> <./im
-ages/texsynth/spectrum-5.png (PNG copy)> <./images/texsynth/spectrum-7.png (PNG
- copy)> <./images/texsynth/spectrum-9.png (PNG copy)> <./images/texsynth/synthe
-sis-1.png (PNG copy)> <./images/texsynth/synthesis-3.png (PNG copy)> <./images/
-texsynth/synthesis-5.png (PNG copy)> <./images/texsynth/synthesis-7.png (PNG co
-py)> <./images/texsynth/synthesis-9.png (PNG copy)> <./images/texsynth/original
--1.png (PNG copy)> <./images/texsynth/original-2.png (PNG copy)>])
+) (./TensorOT.bbl
+Underfull \vbox (badness 1072) has occurred while \output is active []
+
+ [8 <./images/dti/one-two/interpol-rho1-1.png (PNG copy)> <./images/dti/one-two
+/interpol-rho1-3.png (PNG copy)> <./images/dti/one-two/interpol-rho1-5.png (PNG
+ copy)> <./images/dti/one-two/interpol-rho1-7.png (PNG copy)> <./images/dti/one
+-two/interpol-rho1-9.png (PNG copy)> <./images/dti/one-two/interpol-rho005-1.pn
+g (PNG copy)> <./images/dti/one-two/interpol-rho005-3.png (PNG copy)> <./images
+/dti/one-two/interpol-rho005-5.png (PNG copy)> <./images/dti/one-two/interpol-r
+ho005-7.png (PNG copy)> <./images/dti/one-two/interpol-rho005-9.png (PNG copy)>
+ <./images/dti/four-two/interpol-rho005-1.png (PNG copy)> <./images/dti/four-tw
+o/interpol-rho005-3.png (PNG copy)> <./images/dti/four-two/interpol-rho005-5.pn
+g (PNG copy)> <./images/dti/four-two/interpol-rho005-7.png (PNG copy)> <./image
+s/dti/four-two/interpol-rho005-9.png (PNG copy)> <./images/meshing/2d-bump-donu
+t/input-mesh-1.png> <./images/meshing/2d-bump-donut/input-mesh-3.png> <./images
+/meshing/2d-bump-donut/input-mesh-5.png> <./images/meshing/2d-bump-donut/input-
+mesh-7.png> <./images/meshing/2d-bump-donut/input-mesh-9.png> <./images/meshing
+/images/input-mesh-1.png> <./images/meshing/images/input-mesh-3.png> <./images/
+meshing/images/input-mesh-5.png> <./images/meshing/images/input-mesh-7.png> <./
+images/meshing/images/input-mesh-9.png> <./images/meshing/images/input-images-1
+.png> <./images/meshing/images/input-mesh-1-img.png> <./images/meshing/images/i
+nput-images-2.png> <./images/meshing/images/input-mesh-9-img.png> <./images/dti
+/one-two/original-trace-1-roi.png (PNG copy)> <./images/dti/one-two/original-tr
+ace-2-roi.png (PNG copy)> <./images/dti/four-two/original-trace-1-roi.png (PNG 
+copy)>]
+[9 <./images/texsynth/synth1/spectrum-1.png (PNG copy)> <./images/texsynth/synt
+h1/spectrum-3.png (PNG copy)> <./images/texsynth/synth1/spectrum-5.png (PNG cop
+y)> <./images/texsynth/synth1/spectrum-7.png (PNG copy)> <./images/texsynth/syn
+th1/spectrum-9.png (PNG copy)> <./images/texsynth/synth1/synthesis-1.png (PNG c
+opy)> <./images/texsynth/synth1/synthesis-3.png (PNG copy)> <./images/texsynth/
+synth1/synthesis-5.png (PNG copy)> <./images/texsynth/synth1/synthesis-7.png (P
+NG copy)> <./images/texsynth/synth1/synthesis-9.png (PNG copy)> <./images/texsy
+nth/synth2/spectrum-1.png (PNG copy)> <./images/texsynth/synth2/spectrum-3.png 
+(PNG copy)> <./images/texsynth/synth2/spectrum-5.png (PNG copy)> <./images/texs
+ynth/synth2/spectrum-7.png (PNG copy)> <./images/texsynth/synth2/spectrum-9.png
+ (PNG copy)> <./images/texsynth/synth2/synthesis-1.png (PNG copy)> <./images/te
+xsynth/synth2/synthesis-3.png (PNG copy)> <./images/texsynth/synth2/synthesis-5
+.png (PNG copy)> <./images/texsynth/synth2/synthesis-7.png (PNG copy)> <./image
+s/texsynth/synth2/synthesis-9.png (PNG copy)> <./images/texsynth/synth1/origina
+l-1.png (PNG copy)> <./images/texsynth/synth1/original-2.png (PNG copy)> <./ima
+ges/texsynth/synth2/original-1.png (PNG copy)> <./images/texsynth/synth2/origin
+al-2.png (PNG copy)>])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 137.
  [10]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 137.
-
-(./TensorOT.aux)
+ (./TensorOT.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 137.
 Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 137.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 137.
  ) 
 Here is how much of TeX's memory you used:
- 12327 strings out of 493014
- 197838 string characters out of 6133351
- 339952 words of memory out of 5000000
- 14989 multiletter control sequences out of 15000+600000
- 56207 words of font info for 297 fonts, out of 8000000 for 9000
+ 12397 strings out of 493014
+ 201954 string characters out of 6133351
+ 341236 words of memory out of 5000000
+ 15061 multiletter control sequences out of 15000+600000
+ 55805 words of font info for 293 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  43i,14n,78p,984b,455s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
@@ -1869,10 +2035,10 @@ onts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1
 /urw/times/utmbi8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/time
 s/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmri8a.
 pfb>
-Output written on TensorOT.pdf (10 pages, 8071179 bytes).
+Output written on TensorOT.pdf (10 pages, 9589982 bytes).
 PDF statistics:
- 843 PDF objects out of 1000 (max. 8388607)
- 555 compressed objects within 6 object streams
+ 871 PDF objects out of 1000 (max. 8388607)
+ 560 compressed objects within 6 object streams
  143 named destinations out of 1000 (max. 500000)
- 40568 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 40688 words of extra memory for PDF output out of 42996 (max. 10000000)
 
