@@ -1,6 +1,7 @@
 %%
 % test for DTI imaging data loading/analyzing.
 
+% change this to the path containing DTI data.
 addpath('/Users/gpeyre/Dropbox/work/wasserstein/wasserstein-tensor-valued/franco_brain_data');
 
 rep = 'results/dti/';
@@ -8,7 +9,7 @@ rep = 'results/dti/';
 
 subj = {'three' 'four'};
 btype = [2000 2000];
-
+%
 subj = {'one' 'two'};
 btype = [1000 2000];
 
@@ -27,8 +28,8 @@ for k=1:2
     N0 = [size(slice,1), size(slice,2)];
     Mu{k} = permute( reshape( slice, [N0 3 3] ), [3 4 1 2]);
     g{k} = rescale( crop(anatomySlice,N0) );
+
     % cropping
-    
     n1 = 50; sub = 2;
     sx = 20 + (0:sub:n1-1);
     sy = 40 + (0:sub:n1-1);    
@@ -81,7 +82,7 @@ epsilon = (.08)^2;  % medium
 % fidelity
 
 rho = 1;  %medium
-rho = .05;
+rho = .05; % low
 
 options.niter = 500; % ok for .05^2
 options.disp_rate = NaN;

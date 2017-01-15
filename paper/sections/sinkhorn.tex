@@ -29,6 +29,7 @@ This is a strongly convex program, with a unique solution. The crux of this appr
 					+    \epsilon \sum_{i,j}  e^{ \Kern(u,v)_{i,j} }
 			 \Big], 
 	\end{multline}	
+	where $u=(u_i)_{i \in I}, v=(v_j)_{j \in J}$ are collection of symmetric (not necessarily positive) matrices $u_i, v_j \in \Ss^d$, 
 	where we define
 	\eql{\label{eq-defn-K}
 		\Kern(u,v)_{i,j} \eqdef -\frac{c_{i,j} + \rho_1 u_i + \rho_2 v_j}{\epsilon}.
@@ -155,7 +156,7 @@ The algorithm exhibits a linear convergence rate, $\log_{10}\norm{v^{(t+1)}-v^{(
 \input{sections/sinkhorn-alg}
 
 \begin{rem}[log and exp computations]
-A major computational workload of the Q-Sinkhorn Algorithm~\eqref{alg:sinkhorn} is the repetitive computation of matrix exp and log. 
+A major computational workload of the Q-Sinkhorn Algorithm~\ref{alg:sinkhorn} is the repetitive computation of matrix exp and log. 
 %
 For $d \in \{2,3\}$ it is possible to use closed form expressions to diagonalize the tensors, so that the overall complexity is comparable with the usual scalar case $d=1$.
 %
@@ -163,11 +164,11 @@ While the applications Section~\ref{sec:appli} only considers these low-dimensio
 \end{rem}
 
 \begin{rem}[Computational complexity]
-For low-dimensional problems (typically for those considered in Section~\ref{sec:appli}), the Q-Sinkhorn Algorithm~\eqref{alg:sinkhorn} scales to grid sizes of roughly 10k points (with machine-precision solutions computed in about a minute on a standard laptop).
+For low-dimensional problems (typically for those considered in Section~\ref{sec:appli}), the Q-Sinkhorn Algorithm~\ref{alg:sinkhorn} scales to grid sizes of roughly 6k points (with machine-precision solutions computed in a few minutes on a standard laptop).
 %
 For large scale grids, even storing the full coupling $\ga$ becomes prohibitive. We however observed numerically that, similarly  to the usual scalar case, the optimal $\ga$ solving~\eqref{eq-Kantorovich-regul} is highly sparse (up to machine precision for small enough $\epsilon$).
 % 
-We thus found that using the multi-scale refinement strategy introduced in~\cite{Schmitzer2016} is able to make the Q-Sinkhorn scales to high resolution grids.  It was not used to produce the figure of this article, but it is available in the companion computational toolbox.
+We thus found that using the multi-scale refinement strategy introduced in~\cite{Schmitzer2016} is able to make the Q-Sinkhorn scales to high resolution grids.  It is not used to produce the figures of this article, but it is available in the companion computational toolbox.
 \end{rem}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

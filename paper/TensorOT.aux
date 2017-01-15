@@ -45,8 +45,11 @@
 \@writefile{toc}{\contentsline {paragraph}{Scalar-valued optimal transport.}{1}{section*.2}}
 \@writefile{toc}{\contentsline {paragraph}{Unbalanced transport.}{1}{section*.3}}
 \@writefile{toc}{\contentsline {paragraph}{Entropic regularization.}{1}{section*.4}}
+\citation{wandell2016clarifying}
 \citation{Dryden2009,Deriche2006}
 \citation{weickert1998anisotropic}
+\citation{alliez2003anisotropic,demaret2006image,peyre-iccv-09}
+\citation{LagaImproving}
 \citation{VaxmanCDPBHB16}
 \citation{HotzFHHJJ04}
 \citation{Ning2014metrics}
@@ -87,7 +90,6 @@
 \citation{bauschke-lewis}
 \citation{2016-chizat-sinkhorn}
 \citation{HighamExp,HighamLog}
-\citation{Schmitzer2016}
 \@LN@col{1}
 \@writefile{toc}{\contentsline {section}{\numberline {3}Quantum Sinkhorn}{4}{section.3}}
 \newlabel{eq-q-sink}{{3}{4}{Quantum Sinkhorn}{section.3}{}}
@@ -96,14 +98,15 @@
 \newlabel{eq-dual-pb}{{8}{4}{}{equation.3.8}{}}
 \newlabel{eq-defn-K}{{9}{4}{}{equation.3.9}{}}
 \newlabel{eq-primal-dual-scaling}{{10}{4}{}{equation.3.10}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Quantum Sinkhorn Algorithm}{4}{subsection.3.2}}
 \@LN@col{2}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Quantum Sinkhorn Algorithm}{4}{subsection.3.2}}
 \newlabel{eq-dfn-lse}{{11}{4}{Quantum Sinkhorn Algorithm}{equation.3.11}{}}
 \newlabel{prop-fixed-points}{{2}{4}{}{prop.2}{}}
 \newlabel{eq-fixed-point-u}{{12}{4}{}{equation.3.12}{}}
 \newlabel{eq-fixed-point-v}{{13}{4}{}{equation.3.13}{}}
 \newlabel{eq-dfn-relaxed-assign}{{14}{4}{Quantum Sinkhorn Algorithm}{equation.3.14}{}}
 \newlabel{rem-choice-tau}{{5}{4}{Choice of $\tau _k$}{rem.5}{}}
+\citation{Schmitzer2016}
 \citation{agueh-2011}
 \citation{benamou-2015,solomon-2015}
 \@LN@col{1}
@@ -120,7 +123,6 @@
 \newlabel{sec-q-bary}{{4}{5}{Quantum Barycenters}{section.4}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Barycenter Optimization Problem}{5}{subsection.4.1}}
 \newlabel{eq-defn-barycenters}{{15}{5}{Barycenter Optimization Problem}{equation.4.15}{}}
-\newlabel{eq-barycentric-matrix}{{16}{5}{Barycenters between single Dirac masses}{equation.4.16}{}}
 \citation{2016-chizat-sinkhorn}
 \citation{2016-chizat-sinkhorn}
 \citation{LagaeSurvey}
@@ -131,6 +133,7 @@
 \newlabel{fig:interp}{{5}{6}{Two examples of pointwise (without transportation) interpolations~\eqref {eq-barycentric-matrix}. Here $P_1$ and $P_2$ are represented using the blue/red ellipses on the left/right, and weights are $(w_1,w_2)=(1-t,t)$ for $t \in [0,1]$ from left to right.\relax }{figure.caption.10}{}}
 \@writefile{loa}{\contentsline {algorithm}{\numberline {2}{\ignorespaces Quantum-Barycenter iterations to compute the optimal barycenter measure $\nu $ solving\nobreakspace  {}\textup  {\hbox {\mathsurround \z@ \normalfont  (\ignorespaces \ref  {eq-defn-barycenters}\unskip \@@italiccorr )}}. The operator $\mathcal  {K}$ is defined in\nobreakspace  {}\textup  {\hbox {\mathsurround \z@ \normalfont  (\ignorespaces \ref  {eq-def-k-bary}\unskip \@@italiccorr )}}. \relax }}{6}{algorithm.2}}
 \newlabel{alg:barycenter}{{2}{6}{Quantum-Barycenter iterations to compute the optimal barycenter measure $\nu $ solving~\eqref {eq-defn-barycenters}. The operator $\Kern $ is defined in~\eqref {eq-def-k-bary}. \relax }{algorithm.2}{}}
+\newlabel{eq-barycentric-matrix}{{16}{6}{Barycenters between single Dirac masses}{equation.4.16}{}}
 \newlabel{eq-dual-bary}{{17}{6}{}{equation.4.17}{}}
 \newlabel{eq-def-k-bary}{{18}{6}{}{equation.4.18}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Quantum Barycenter Sinkhorn}{6}{subsection.4.2}}
@@ -166,13 +169,14 @@
 \bibcite{HighamExp}{\citename {Al-Mohy and Higham }2009}
 \bibcite{HighamLog}{\citename {Al-Mohy and Higham }2012}
 \bibcite{alliez2003anisotropic}{\citename {Alliez et\nobreakspace  {}al\unhbox \voidb@x \hbox {.} }2003}
+\@LN@col{1}
 \@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Two examples of interpolation between two input sizing fields $(\mu _{t=0},\mu _{t=1})=(\mu ,\nu )$. \textbf  {First row:} triangulation evolution for the sizing fields displayed on Figure\nobreakspace  {}\ref  {fig:intro}. \textbf  {Second row:} the input sizing fields $(\mu _{t=0},\mu _{t=1})=(\mu ,\nu )$ are displayed on the third row, and are defined using the absolute valued ($\alpha =1$) of the Hessian of the underlying images $(f,g)$. \relax }}{8}{figure.caption.13}}
 \newlabel{fig:meshing}{{8}{8}{Two examples of interpolation between two input sizing fields $(\mu _{t=0},\mu _{t=1})=(\mu ,\nu )$. \textbf {First row:} triangulation evolution for the sizing fields displayed on Figure~\ref {fig:intro}. \textbf {Second row:} the input sizing fields $(\mu _{t=0},\mu _{t=1})=(\mu ,\nu )$ are displayed on the third row, and are defined using the absolute valued ($\al =1$) of the Hessian of the underlying images $(f,g)$. \relax }{figure.caption.13}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Interpolation between two 2-D slices of 3-D DTI tensor fields $(\mu ,\nu )=(\mu _{t=0},\mu _{t=1})$. For readability, only the X/Y components of the tensors are displayed. \textbf  {First row:} interpolation obtained using $\rho =1$. \textbf  {Second row:} interpolation obtained using $\rho =0.5$. \textbf  {Third row:} anatomical MRI images indicating the region of interest where the computations are performed. \relax }}{8}{figure.caption.14}}
-\newlabel{fig:texsynth}{{9}{8}{Interpolation between two 2-D slices of 3-D DTI tensor fields $(\mu ,\nu )=(\mu _{t=0},\mu _{t=1})$. For readability, only the X/Y components of the tensors are displayed. \textbf {First row:} interpolation obtained using $\rho =1$. \textbf {Second row:} interpolation obtained using $\rho =0.5$. \textbf {Third row:} anatomical MRI images indicating the region of interest where the computations are performed. \relax }{figure.caption.14}{}}
-\@LN@col{2}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.4}Spectral Color Texture Synthesis}{8}{subsection.5.4}}
 \newlabel{eq-power-spectrum}{{23}{8}{Spectral Color Texture Synthesis}{equation.5.23}{}}
+\@LN@col{2}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Interpolation between two 2-D slices of 3-D DTI tensor fields $(\mu ,\nu )=(\mu _{t=0},\mu _{t=1})$. For readability, only the X/Y components of the tensors are displayed. \textbf  {First row:} interpolation obtained using $\rho =1$. \textbf  {Second row:} interpolation obtained using $\rho =0.5$. \textbf  {Third row:} anatomical MRI images indicating the region of interest where the computations are performed. \relax }}{8}{figure.caption.14}}
+\newlabel{fig:texsynth}{{9}{8}{Interpolation between two 2-D slices of 3-D DTI tensor fields $(\mu ,\nu )=(\mu _{t=0},\mu _{t=1})$. For readability, only the X/Y components of the tensors are displayed. \textbf {First row:} interpolation obtained using $\rho =1$. \textbf {Second row:} interpolation obtained using $\rho =0.5$. \textbf {Third row:} anatomical MRI images indicating the region of interest where the computations are performed. \relax }{figure.caption.14}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {6}Conclusion}{8}{section.6}}
 \bibcite{peyre2016quantum}{\citename {Anonymous }2016}
 \bibcite{bauschke-lewis}{\citename {Bauschke and Lewis }2000}

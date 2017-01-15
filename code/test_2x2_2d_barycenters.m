@@ -17,7 +17,7 @@ if not(exist(rep))
     mkdir(rep);
 end
 
-n = 12; % width of images
+n = 12*4; % width of images
 N = n*n; % #pixels
 op = load_helpers(n);
 
@@ -52,11 +52,8 @@ c = resh( tensor_diag(c0(:),c0(:)) );
 % Parameters
 
 % regularization
-epsilon = (.15)^2;  % large
-epsilon = (.04)^2;  % small
 epsilon = (.08)^2;  % medium
 % fidelity
-rho = 10;  %large
 rho = 1;  %medium
 % prox param
 lambda = rho/epsilon;
@@ -69,9 +66,9 @@ lambda = rho/epsilon;
 options.niter = 5;
 options.disp_rate = NaN;
 options.over_iterations = 10; % seems important to avoid oscilations
-options.niter = 200; % sinkhorn #iterates
-options.niter = 100;
+options.niter = 100; % sinkhorn #iterates
 
+% computations
 m = 5; % number of barycenters
 nu = {};
 for k1=1:m
@@ -84,7 +81,7 @@ for k1=1:m
     end
 end
 
-
+% display
 for k1=1:m
     for k2=1:m
         t1 = (k1-1)/(m-1);

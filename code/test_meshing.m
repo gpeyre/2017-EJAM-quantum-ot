@@ -17,7 +17,7 @@ rep = ['results/meshing/' name '/'];
 %%
 % Load input measures.
 
-n = 32; % Size for Sinkhorn computation
+n = 60; % Size for Sinkhorn computation
 n1 = 256*2; % Size of the underlying grid for FM computation.
 P = 500; % #sampling points, high density
 

@@ -7,10 +7,6 @@ addpath('toolbox_quantum/');
 addpath('toolbox_quantum/tensor_logexp/');
 addpath('data/images/');
 
-global logexp_fast_mode;
-logexp_fast_mode = 1; % slow
-logexp_fast_mode = 4; % fast mex
-
 name = '2d-bump-donut';
 name = 'struct-tensors';
 
@@ -68,30 +64,36 @@ c = resh( tensor_diag(c0(:),c0(:)) );
 % Parameters
 
 % regularization
-epsilon = (.15)^2;  % large
-epsilon = (.08)^2;  % medium
-epsilon = (.06)^2;  % small
+epsilon = (.06)^2; 
 % fidelity
-rho = 10;  %large
 rho = 1;  %medium
 
 
 %%
 % Full sinkhorn
 
-options.niter = 2*4000; % ok for .05^2
+
+global logexp_fast_mode;
+logexp_fast_mode = 1; % slow
+logexp_fast_mode = 4; % fast mex
+
+options.niter = 3000;
 options.disp_rate = NaN;
 options.tau = 1.8 * epsilon/(rho+epsilon); % use extrapolation to speed-up
 options.tol = 1e-13;
 [gamma,u,v,err] = quantum_sinkhorn(mu{1},mu{2},c,epsilon,rho, options);
 
+%%
 % Compute McCann interpolation.
+
 m = 9; % number of barycenters
 opt.sparse_mult = 10; % sparsification of the coupling, to speed up
 nu = quantum_interp(gamma, mu, m, 2, opt);
 rendering_tensors_2d(nu{(m+1)/2},n_render, [rep 'isobary']);
 
-% sparse cost
+%% 
+% Build sparse cost.
+
 E = trM(gamma,1);
 if 1
     sparsity = 6; % sparsity factor
@@ -101,7 +103,9 @@ else
 end
 cS = sparse(c0 .* (E>v));
 
-% same, but on a sparse grid
+%%
+% Same, but on a sparse grid.
+
 [gammaS,u,v,err2] = quantum_sinkhorn(mu{1},mu{2},cS,epsilon,rho, options);
 nu = quantum_interp(gammaS, mu, m, 2);
 rendering_tensors_2d(nu{(m+1)/2},n_render, [rep 'isobary-sparse']);

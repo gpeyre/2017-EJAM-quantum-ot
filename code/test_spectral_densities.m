@@ -1,50 +1,50 @@
 %%
-% Test for matrix-valued densities.
-% Need to implement a windowing estimator. 
+% Interpolation of matrix-valued densities for texture synthesis.
 
 
 addpath('toolbox/');
 addpath('toolbox_quantum/');
 addpath('data/textures/');
 
-
 names = {'beigefabric' 'fabric1'};
 names = {'wood' 'fabric'};
 names = {'rera' 'grunge'};
 names = {'rera' 'fabric'};
-
 names = {'bark' 'beigefabric'};
 names = {'dune' 'fabric-blue'};
-
 names = {'fabric-mix' 'stonewall'};
+names = {'wood1' 'sand'};
+names = {'wood1' 'beigefabric'};
+names = {'fabric-blue' 'beigefabric'};
+names = {'fabric-blue' 'wood1'};
 
 
 rep = ['results/texturesynth/' names{1} '-' names{2} '/'];
 [~,~] = mkdir(rep);
 
+%%
+% Parameters. 
+
 % target size for synthesis
 n = 128*2;
 % number of transported diracs
-q = 400*4;
-
+q = 400*4*2;
 % size for loading
 n0 = n;
-
-img = @(x)imagesc(fftshift(x));
-
-
-remap = @(x)log10(A+1e-5);
-maxdiv = @(x)1-x/max(x(:));
-remap = @(x)maxdiv(x.^.5);
-
-options.estimator_type = 'periodic';
 % number of samples to populate the covariance, increase to avoid rank
 % defficiency problems.
 options.samples =  1;
+options.estimator_type = 'periodic';
 
+%%
+% Useful helpers.
+
+img = @(x)imagesc(fftshift(x));
+remap = @(x)log10(A+1e-5);
+maxdiv = @(x)1-x/max(x(:));
+remap = @(x)maxdiv(x.^.5);
 perm = @(x)permute(x, [3 4 1 2]);
 resh = @(x)reshape(x, [2 2 n n]);
-
 fshift1 = @(x)[x(end/2+1:end,end/2+1:end,:,:), x(end/2+1:end,1:end/2,:,:); ...
               x(1:end/2,end/2+1:end,:,:), x(1:end/2,1:end/2,:,:)];
 fshift = @(x)perm( fshift1( perm(x) ) );
@@ -73,11 +73,11 @@ for k=1:2
     imwrite(remap(A), [rep 'spectrum-input-' num2str(k) '.png'], 'png');
     % only retain most energetic positions in fftshift domain.    
     x = (0:n-1)'/n; [Y,X] = meshgrid(x,x);
-    E = trM( Hs{k}, 1); [~,I] = sort(E(:), 'descend'); I = I(1:q);
+    E = real( trM( Hs{k}, 1) ); [~,I] = sort(E(:), 'descend'); I = I(1:q);
     xy{k} = [X(I) Y(I)];
     mu{k} = Hs{k}(:,:,I);
     % avoid singularity
-    mu{k} = mu{k} + 1e-3*max(A(:)) * tensor_id(ones(q,1), 2);
+    mu{k} = mu{k} + 1e-1*max(A(:)) * tensor_id(ones(q,1), 2);
 end
 
 
@@ -92,9 +92,9 @@ c = reshape(tensor_id(c0(:), 2), [2 2 q q]);
 epsilon = (.08)^2;  % regularization
 rho = 1;  % fidelity
 
-options.niter = 250; 
+options.niter = 150; 
 options.disp_rate = NaN;
-options.tau = 1.8*epsilon/(rho+epsilon);  % prox step, use extrapolation to seed up
+options.tau = 1.85*epsilon/(rho+epsilon);  % prox step, use extrapolation to seed up
 fprintf('Sinkhorn: ');
 [gamma,u,v,err] = quantum_sinkhorn(mu{1},mu{2},c,epsilon,rho, options);
 
@@ -105,6 +105,9 @@ m = 9;
 opt.sparse_mult = 40;
 fprintf('Interpolation: ');
 nu = quantum_interp_free(gamma, mu, xy, n, m, opt);
+
+%%
+% Synthesize new textures. 
 
 % residual
 R = { Hs{1}-resh(nu{1}), Hs{end}-resh(nu{end}) };
@@ -126,7 +129,3 @@ for k=1:m
     f_k = texture_synth(Ts_k,f0_k,U_k,m_k, 123);
     imwrite(clamp(f_k), [rep 'synthesis-' num2str(k) '.png'], 'png');
 end
- 
-
-imageplot( {f_k texture_synth(Ts{2},f0{2},U{2},m0{2}, 123), ...
-        texture_synth(TsF{2},f0F{2},eye(3),zeros(3,1), 123) } );

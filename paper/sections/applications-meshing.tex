@@ -6,10 +6,10 @@
 
 Approximation with anisotropic piecewise linear finite elements on a triangulated mesh is a fundamental tool to address tasks such as discretizing partial differential equations, performing surface remeshing~\cite{alliez2003anisotropic} and image compression~\cite{demaret2006image}.
 %
-A common practice is to generate triangulations complying with a PSD tensor field $\mu$, i.e. such that a triangle centered at $x$ should be inscribed in the ellipsoid $\enscond{u}{(u-x)^\top \mu(x) (u-x) \leq \de }$ for some $\de$ controlling the triangulation density. 
+A common practice is to generate triangulations complying with a PSD tensor sizing field $\mu$, i.e. such that a triangle centered at $x \in X$ should be inscribed in the ellipsoid $\enscond{u \in X}{(u-x)^\top \mu(x) (u-x) \leq \de }$ for some $\de$ controlling the triangulation density. 
 %
 A well-known result is that, to locally approximate a smooth convex $C^2$ function $f$,  the optimal shapes of triangles is dictated by the Hessian $H f$ of the function (see~\cite{shewchuk2002good}). In practice, people use $\mu(x) = |H f(x)|^\al$ for some exponent $\al > 0$ (which is related to the quality measure of the approximation), where $|\cdot|^\al$ indicates the spectral application of the exponentiation (as for matrix exp or log).
-%
+
 Figure~\eqref{fig:meshing} shows that Q-OT can be used (using formula~\eqref{eq-interpolating}) to interpolate between two sizing fields $(\mu,\nu)$, which are computed from the Hessians (with here $\al=1$) of two initial input images $(f,g)$.
 %
 The resulting anisotropic triangulations are defined as geodesic Delaunay triangulations for the Riemannian metric defined by the tensor field, and are computed using the method detailed in~\cite{peyre-iccv-09}

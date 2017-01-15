@@ -7,10 +7,6 @@ addpath('toolbox_quantum/tensor_logexp/');
 addpath('toolbox_anisotropic/');
 addpath('data/images/');
 
-global logexp_fast_mode;
-logexp_fast_mode = 1; % slow
-logexp_fast_mode = 4; % fast mex
-
 name = '2d-smooth-rand';
 name = '2d-iso-bump';
 name = '2d-mixt-bump';
@@ -20,7 +16,7 @@ name = '2d-bump-donut';
 rep = ['results/interpolation-2d/' name '/'];
 [~,~] = mkdir(rep);
 
-n = 32; % width of images
+n = 50; % width of images
 N = n*n; % #pixels
 op = load_helpers(n);
 
@@ -60,6 +56,11 @@ end
 %%
 % Compute the coupling using Sinkhorn. 
 
+
+global logexp_fast_mode;
+logexp_fast_mode = 1; % slow
+logexp_fast_mode = 4; % fast mex
+
 % Ground cost
 c = ground_cost(n,2);
 % regularization
@@ -68,7 +69,7 @@ epsilon = (.08)^2;  % medium
 rho = 1;  %medium
 % run sinkhorn
 options.niter = 500; % ok for .05^2
-options.disp_rate = NaN;
+options.disp_rate = NaN; % no display
 options.tau = 1.8*epsilon/(rho+epsilon);  % prox step, use extrapolation to seed up
 fprintf('Sinkhorn: ');
 [gamma,u,v,err] = quantum_sinkhorn(mu{1},mu{2},c,epsilon,rho, options);

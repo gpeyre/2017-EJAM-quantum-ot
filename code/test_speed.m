@@ -15,7 +15,7 @@ name = '2d-bump-donut';
 rep = 'results/speed/';
 [~,~] = mkdir(rep);
 
-n = 20; % width of images
+n = 20*2; % width of images
 N = n*n; % #pixels
 op = load_helpers(n);
 

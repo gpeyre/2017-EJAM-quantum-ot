@@ -47,8 +47,6 @@ relax = @(x,y,tau)x*(1-tau)+y*tau;
 notnan = @(x)x(not(isnan(x(:))));
 mynorm = @(x)norm(notnan(x));
 
-use_sparse_code = 1; % use new code 
-
 err = [];
 for it=1:niter
     progressbar(it,niter);
