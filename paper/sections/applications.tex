@@ -5,6 +5,11 @@
 \section{Applications}
 \label{sec:appli}
 
+This section showcases four different applications of Q-OT to register and interpolate tensor fields.
+%
+Unless otherwise stated, the data is normalized to the unit cube $[0,1]^d$ (here $d=2$ for images) and discretized on grids of $N=80^d$ points. 
+%
+The regularization parameter is set to $\epsilon=0.08^2$, the fidelity penalty to $\rho=1$, and the relaxation parameter for Sinkhorn to $\tau_k=\tfrac{1.8 \epsilon}{\epsilon+\rho_k}$. 
 
 \input{sections/applications-procedural}
 
@@ -13,10 +18,4 @@
 \input{sections/applications-dti}
 
 \input{sections/applications-texsynth}
-
-% \subsection{Anisotropic Material Modification}
-% SVBRDF~\cite{Aittala2015}
-
-
-
 
