@@ -79,10 +79,10 @@ end
 function mydisplay(gamma,mu,nu)
 
 % compares trace
-A0 = trM(mu);
-B0 = trM(nu);
-A = trM(sum(gamma,4));
-B = trM(sum(gamma,3));
+A0 = trM(mu,1);
+B0 = trM(nu,1);
+A = trM(sum(gamma,4),1);
+B = trM(sum(gamma,3),1);
 clf;
 subplot(2,1,1);
 plot([A A0]); legend('gamma1', 'mu');

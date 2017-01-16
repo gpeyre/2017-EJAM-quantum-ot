@@ -48,7 +48,9 @@ for i=1:N
     % principal direction of the tensor in R^3
     A = U(:,1,i) * E1(i,1) + U(:,2,i) * E1(i,2);
     B = U(:,1,i) * E2(i,1) + U(:,2,i) * E2(i,2);
-    ellipse3d_fill(r*A.*C1(i),r*B.*C2(i), V(:,i) + offs*U(:,3,i),color_ellipses,'k');
+    ec = 'k';
+    ec = color_ellipses;
+    ellipse3d_fill(r*A.*C1(i),r*B.*C2(i), V(:,i) + offs*U(:,3,i),color_ellipses,ec);
 end
 shading interp;
 colormap jet(256);

@@ -6,7 +6,6 @@
 
 As advocated initially in~\cite{galerne2011random}, a specific class of textured images (so-called micro-textures) is well-modeled using stationary Gaussian fields. In the following, we denote $p$ the pixel positions and $x$ the Fourier frequency indices. For color images, these fields are fully characterized by their mean $m \in \RR^3$ and their Fourier power spectrum, which is a tensor valued field $\mu(x)$ where, for each frequency $x$ (defined on a 2-D grid) $\mu(x) \in \CC^{3 \times 3}$ is a complex positive semi-definite hermitian matrix. 
 
-
 In practice, $\mu(x)$ is estimated from an exemplar color image $f(p) \in \RR^3$ using an empirical spectrogram 
 \eql{\label{eq-power-spectrum}
 	\mu(x) \eqdef \frac{1}{K} \sum_{k=1}^K \hat f_k(x) \hat f_k(x)^* \in \CC^{3 \times 3}
@@ -21,4 +20,5 @@ Figure~\ref{fig:texsynth} shows an application where two input power spectra $(\
 %
 Note that while the Q-Sinkhorn Algorithm~\ref{alg:sinkhorn} is provided for real PSD matrices, it extends verbatim to complex positive hermitian matrices (the matrix logarithm and exponential being defined the same way as for real matrices).
 
+\input{sections/applications-texsynth-fig}
 

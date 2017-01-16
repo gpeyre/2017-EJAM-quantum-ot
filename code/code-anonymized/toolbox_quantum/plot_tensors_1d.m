@@ -34,7 +34,8 @@ x = linspace(0,1,q);
 [e1,e2,l1,l2] = tensor_eigendecomp(Nu);
 theta = atan2(e2(:,:,2), e2(:,:,1));
 l_max = max(l1(I));
-s = .8*1/q;
+scaling = getoptions(options, 'scaling', .8);
+s = scaling*1/q;
 hold on;
 for k=1:q
     i = I(k);
@@ -44,8 +45,9 @@ for k=1:q
     else
         c = col;
     end
+    ec = c;
     if fill_ellipses
-        ellipse_fill(s*l1(i)/l_max,s*l2(i)/l_max,theta(i),x(k),y,c);
+        ellipse_fill(s*l1(i)/l_max,s*l2(i)/l_max,theta(i),x(k),y,c, ec);
     else
         ellipse(s*l1(i)/l_max,s*l2(i)/l_max,theta(i),x(k),y,c);
     end

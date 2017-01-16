@@ -126,7 +126,7 @@ Moreover, it is simple to check that these iterates are contractant whenever
 	\tau_k \in ]0,\tfrac{2 \epsilon}{\epsilon+\rho_k}[
 	\quad\text{for } k=1,2.
 }
-	and this property has been observed experimentally for higher dimensions $d=2,3$. Using higher values for $\tau_k$ actually often improves the (linear) convergence rate. Figure~\ref{fig:speed} displays a typical example of convergence, and exemplifies the usefulness of using large values of?$\tau_k$, which leads to a speed-up of a factor 6 with respect to the usual Sinkhorn's choice $\tau_k=\tfrac{\epsilon}{\epsilon+\rho_k}$.
+	and this property has been observed experimentally for higher dimensions $d=2,3$. Using higher values for $\tau_k$ actually often improves the (linear) convergence rate. Figure~\ref{fig:speed} displays a typical example of convergence, and exemplifies the usefulness of using large values of $\tau_k$, which leads to a speed-up of a factor 6 with respect to the usual Sinkhorn's choice $\tau_k=\tfrac{\epsilon}{\epsilon+\rho_k}$.
 \end{rem}
 
 %%% FIG %%%
@@ -147,7 +147,6 @@ The algorithm exhibits a linear convergence rate, $\log_{10}\norm{v^{(t+1)}-v^{(
 %%% FIG %%%
 
 
-
 \begin{rem}[Stability]In contrast to the usual implementation of Sinkhorn's algorithm, which is numerically unstable for small $\epsilon$ because it requires to compute $e^{u/\epsilon}$ and $e^{v/\epsilon}$, the proposed iterations using the LSE operator are stable. The algorithm can thus be run for arbitrary small $\epsilon$, although the linear speed of convergence is of course impacted.   
 \end{rem}
 
@@ -162,7 +161,7 @@ While the applications Section~\ref{sec:appli} only considers these low-dimensio
 \end{rem}
 
 \begin{rem}[Computational complexity]
-For low-dimensional problems (typically for those considered in Section~\ref{sec:appli}), the Q-Sinkhorn Algorithm~\ref{alg:sinkhorn} scales to grid sizes of roughly 6k points (with machine-precision solutions computed in a few minutes on a standard laptop).
+For low-dimensional problems (typically for those considered in Section~\ref{sec:appli}), the Q-Sinkhorn Algorithm~\ref{alg:sinkhorn} scales to grid sizes of roughly 5k points (with machine-precision solutions computed in a few minutes on a standard laptop).
 %
 For large scale grids, even storing the full coupling $\ga$ becomes prohibitive. We however observed numerically that, similarly  to the usual scalar case, the optimal $\ga$ solving~\eqref{eq-Kantorovich-regul} is highly sparse (up to machine precision for small enough $\epsilon$).
 % 
@@ -173,7 +172,7 @@ We thus found that using the multi-scale refinement strategy introduced in~\cite
 \subsection{Numerical Illustrations}
 \label{sec-numerics-interp}
 
-Figures~\ref{fig:intro} and~\ref{fig:1d-interp} illustrates on synthetic examples of input tensor fields $(\muA,\muB)$ our interpolation method. 
+Figures~\ref{fig:intro},~\ref{fig:1d-interp} and~\ref{fig:qot-vs-ot} illustrates on synthetic examples of input tensor fields $(\muA,\muB)$ the Q-OT interpolation method. 
 %
 We recall that it is obtained in two steps:
 \begin{enumerate}
@@ -182,6 +181,8 @@ We recall that it is obtained in two steps:
 \end{enumerate}
    
 Figure~\ref{fig:1d-interp} shows examples of interpolations on a 1-D domain $X=Y=[0,1]$ with tensors of dimension $d=2$ and $d=3$, and a ground cost $c_{i,j}=|x_i-y_j|^2\Id_{d \times d}$. It compares the OT interpolation, which achieves a ``mass displacement,'' to the usual linear interpolation $(1-t)\mu+t\nu$, which only performs a pointwise interpolation of the tensors. 
+
+Figure~\ref{fig:qot-vs-ot} shows the effect of taking into account the anisotropy of tensors into the definition of OT. In the case of isotropic tensors (see Remark~\ref{rem-classical-ot}), the method reduces to the usual scalar OT, and in 1-D it corresponds to the monotone re-arengment~\cite{santambrogio2015optimal}. In contrast, the Q-OT of anisotropic tensors is forced to reverse the ordering of the transport map in order for tensors with similar orientations to be matched together. 
 
 Figure~\ref{fig:intro} shows larger scale examples. 
 %

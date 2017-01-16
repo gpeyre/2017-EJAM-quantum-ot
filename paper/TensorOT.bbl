@@ -26,12 +26,6 @@
 \newblock Anisotropic polygonal remeshing.
 \newblock In {\em ACM Transactions on Graphics (TOG)}, vol.~22, ACM, 485--493.
 
-\bibitem[\protect\citename{Anonymous }2016]{peyre2016quantum}
-{\sc Anonymous}.
-\newblock 2016.
-\newblock Quantum optimal transport for tensor field processing.
-\newblock {\em arXiv:1612.08731\/}.
-
 \bibitem[\protect\citename{Bauschke and Lewis }2000]{bauschke-lewis}
 {\sc Bauschke, H.~H., and Lewis, A.~S.}
 \newblock 2000.

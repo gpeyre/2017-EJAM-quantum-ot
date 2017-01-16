@@ -85,7 +85,7 @@ for k=1:m
         switch d
             case 1
                 %% 1D %%
-                pi = floor(p*N)+1;
+                pi = floor(p*N(1))+1;
             case 2
                 %% 2D %%
                 pi = floor(p*n)+1;

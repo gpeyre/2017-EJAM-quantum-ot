@@ -10,9 +10,9 @@ A common practice is to generate triangulations complying with a PSD tensor sizi
 %
 A well-known result is that, to locally approximate a smooth convex $C^2$ function $f$,  the optimal shapes of triangles is dictated by the Hessian $H f$ of the function (see~\cite{shewchuk2002good}). In practice, people use $\mu(x) = |H f(x)|^\al$ for some exponent $\al > 0$ (which is related to the quality measure of the approximation), where $|\cdot|^\al$ indicates the spectral application of the exponentiation (as for matrix exp or log).
 
-Figure~\eqref{fig:meshing} shows that Q-OT can be used (using formula~\eqref{eq-interpolating}) to interpolate between two sizing fields $(\mu,\nu)$, which are computed from the Hessians (with here $\al=1$) of two initial input images $(f,g)$.
+Figure~\ref{fig:meshing} shows that Q-OT can be used (using formula~\eqref{eq-interpolating}) to interpolate between two sizing fields $(\mu,\nu)$, which are computed from the Hessians (with here $\al=1$) of two initial input images $(f,g)$.
 %
-The resulting anisotropic triangulations are defined as geodesic Delaunay triangulations for the Riemannian metric defined by the tensor field, and are computed using the method detailed in~\cite{peyre-iccv-09}
+The resulting anisotropic triangulations are computed using the method detailed in~\cite{peyre-iccv-09}. They corresponds to geodesic Delaunay triangulations for the Riemannian metric defined by the tensor field. 
 %
 This interpolation could typically be used to track the evolution of the solution of some PDE. 
 

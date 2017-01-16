@@ -6,9 +6,10 @@ addpath('toolbox_quantum/');
 
 name = 'split';
 name = 'multi-orient';
-name = 'dirac-pairs';
 name = 'iso-orient';
 name = 'cross-orient';
+name = 'dirac-pairs';
+name = 'dirac-pairs-smooth';
 
 trM = @(x)squeeze( x(1,1,:,:)+x(2,2,:,:) );
 
@@ -20,22 +21,23 @@ end
 % number of tensors in each measure
 N = [1,1]*200;
 N = [1,1]*60;
+N = [1,1]*30;
 % number of barycenters
-m = 8; 
+m = 9; 
 % for display purposes
 options.nb_ellipses = 30;
-
 if strcmp(name, 'dirac-pairs')
     N = [1,1]*25;
     options.nb_ellipses = 25;
 end
 
-mu = load_tensors_pair(name,N);
+options.aniso = .95;
+% options.aniso = 0; % un-comment this to force isotropic tensors.
+mu = load_tensors_pair(name,N, options);
 
 % display
 clf;
 plot_tensors_1d(mu, options);
-saveas(gcf,[rep 'input.eps'], 'epsc');
 saveas(gcf,[rep 'input.png'], 'png');
 % linear interplations
 muL = {};
@@ -45,7 +47,6 @@ for k=1:m
 end
 clf;
 plot_tensors_1d(muL, options);
-saveas(gcf,[rep 'linear-interp.eps'], 'epsc');
 saveas(gcf,[rep 'linear-interp.png'], 'png');
 
 %%
@@ -59,21 +60,20 @@ logexp_fast_mode = 1;
 c = ground_cost(N,1);
 % regularization
 epsilon = (.15)^2;  % large
-epsilon = (.08)^2;  % medium
 epsilon = (.04)^2;  % small
+epsilon = (.01)^2;  % small
+epsilon = (.06)^2;  % medium
 % fidelity
-rho = 10;  %large
 rho = 1;  %medium
-% prox param
-lambda = rho/epsilon;
+rho = 10;  %medium
 
 %%
 % Run Sinkhorn.
 
-options.niter = 300; 
+options.niter = 5000; 
 options.disp_rate = 10;
-options.tau = 1.8/(lambda+1);
-
+options.disp_rate = NaN;
+options.tau = 1.8*epsilon/(rho+epsilon);  % prox step, use extrapolation to seed up
 [gamma,u,v,err] = quantum_sinkhorn(mu{1},mu{2},c,epsilon,rho, options);
 
 % trace of the couplings, to see where mass is flowing
@@ -86,11 +86,11 @@ imageplot({G G1+G2 G1 G2},'',2,2);
 %%
 % Compute interpolation using an heuristic formula.
 
-nu = quantum_interp(gamma, mu, m, 1);
+options.sparse_mult = 30;
+nu = quantum_interp(gamma, mu, m, 1, options);
 % display 1D evolution as ellipses
 clf;
 plot_tensors_1d(nu, options);
-saveas(gcf,[rep 'interp-ellipses.eps'], 'epsc');
 saveas(gcf,[rep 'interp-ellipses.png'], 'png');
 
 %%

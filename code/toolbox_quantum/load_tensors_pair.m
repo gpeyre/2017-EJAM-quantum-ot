@@ -16,7 +16,8 @@ n = N(1);
 % helpers 1D
 x = linspace(0,1,n)';
 vmin = .03;
-gaussian = @(m,s)normalize(vmin + exp(-(x-m).^2/(2*s^2)));
+gaussian1 = @(m,s)exp(-(x-m).^2/(2*s^2));
+gaussian  = @(m,s)normalize(vmin + exp(-(x-m).^2/(2*s^2)));
 dirac = @(i)[zeros(i-1,1); 1; zeros(n-i,1)];
 
 % helpers 2D
@@ -65,6 +66,7 @@ switch name
         t{2} = x*pi + .3;
         r{2} = 1-(.5 + 1-x )/1.5;
         s{2} = gaussian(.8,.05);
+        
     case 'multi-orient'
         % first
         t{1} = x*pi;
@@ -102,6 +104,23 @@ switch name
         s = {vmin + u+v, vmin + u+v};
         t = {.3*pi*u + 1.3*pi*v, .3*pi*v + 1.3*pi*u};
         r = {.95*ones(n,1) .95*ones(n,1)};
+        
+    case 'dirac-pairs-smooth'        
+        % orient / aniso / scale 
+        aniso = getoptions(options, 'aniso', .9);
+        vmin = 1e-5;
+        sigma = .075;
+        m = .12;
+        u = gaussian1(m,sigma); v = gaussian1(1-m,sigma);
+        a = [ones(n/2,1); zeros(n/2,1)]; b = 1-a;
+        t{1} = .3*pi*b + 1.3*pi*a; 
+        r{1} = aniso*ones(n,1); 
+        s{1} = vmin + u + v; 
+        %
+        u = gaussian1(m,sigma); v = gaussian1(1-m,sigma);
+        t{2} = .3*pi*a + 1.3*pi*b; 
+        r{2} = aniso*ones(n,1); 
+        s{2} = vmin + u + v; 
         
     case '2d-smooth-rand'
         sigma = getoptions(options, 'sigma', 50);
