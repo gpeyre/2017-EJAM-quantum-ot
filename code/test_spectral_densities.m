@@ -17,6 +17,8 @@ names = {'fabric-blue' 'beigefabric'};
 names = {'fabric-blue' 'wood1'};
 names = {'wood1' 'beigefabric'};
 
+names = {'fabric-red' 'sand'};
+
 
 rep = ['results/texturesynth/' names{1} '-' names{2} '/'];
 [~,~] = mkdir(rep);
@@ -27,9 +29,9 @@ rep = ['results/texturesynth/' names{1} '-' names{2} '/'];
 % target size for synthesis
 n = 128*2;
 % number of transported diracs
-q = 400*4*2;
+q = 400*2*4;
 % size for loading
-n0 = n;
+n0 = [];
 % number of samples to populate the covariance, increase to avoid rank
 % defficiency problems.
 options.samples =  1;
@@ -41,7 +43,7 @@ options.estimator_type = 'periodic';
 img = @(x)imagesc(fftshift(x));
 remap = @(x)log10(A+1e-5);
 maxdiv = @(x)1-x/max(x(:));
-remap = @(x)maxdiv(x.^.5);
+remap = @(x)maxdiv(max(x,0).^.5);
 perm = @(x)permute(x, [3 4 1 2]);
 resh = @(x)reshape(x, [2 2 n n]);
 fshift1 = @(x)[x(end/2+1:end,end/2+1:end,:,:), x(end/2+1:end,1:end/2,:,:); ...
@@ -123,7 +125,7 @@ for k=1:m
     U_k = orthogonalize_mat( lint(t, U{1}, U{2} ) );
     % display the log of energy
     A = real(trM(Hs_k,1)); A(end/2+1,end/2+1) = Inf; A(end/2+1,end/2+1) = min(A(:));
-    imwrite(remap(A), [rep 'spectrum-' num2str(k) '.png'], 'png');
+    imwrite((remap(A)), [rep 'spectrum-' num2str(k) '.png'], 'png');
     % synthesize the texture
     f_k = texture_synth(Ts_k,f0_k,U_k,m_k, 123);
     imwrite(clamp(f_k), [rep 'synthesis-' num2str(k) '.png'], 'png');
