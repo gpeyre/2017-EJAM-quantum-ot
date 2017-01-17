@@ -19,7 +19,7 @@ Our goal is to propose a new definition of OT between $\mu$ and $\nu$.
 
 Following the initial static formulation of OT by Kantorovich~\shortcite{Kantorovich42}, we define a coupling $\ga = \sum_{i,j}\ga_{i,j} \de_{(x_i,y_j)}$ as a measure over the product $X \times Y$ that encodes the transport of mass between $\mu$ and $\nu$. In the matrix case, $\ga_{i,j} \in \Ss_+^d$ is now a PSD matrix, describing how much of mass is moved between $\mu_i$ and $\nu_j$. 
 % 
-Exact (balanced) transport would mean that the marginals $(\ga \ones_J,\ga^\top \ones_I)$ must be equal to the input measures $(\mu,\nu)$. But as remarked by Ning et al.~\shortcite{ning2015matrix}, in contrast to the scalar case, in the matrix case (dimension $d>1$), this constraint is in general too strong, and there might exists no coupling satisfying these marginal constraints.
+Exact (balanced) transport would mean that the marginals $(\ga \ones_J,\ga^\top \ones_I)$ must be equal to the input measures $(\mu,\nu)$. But as remarked by Ning et al.~\shortcite{ning2015matrix}, in contrast to the scalar case, in the matrix case (dimension $d>1$), this constraint is in general too strong, and there might exist no coupling satisfying these marginal constraints.
 %
 We advocate in this work that the natural workaround for the matrix setting is the unbalanced case, and following~\cite{LieroMielkeSavareLong}, we propose to use a ``relaxed'' formulation where the discrepancy between the marginals $(\ga \ones_J,\ga^\top \ones_I)$ and the input measures $(\mu,\nu)$ is quantified according to some divergence between measures. 
 
@@ -125,7 +125,7 @@ Assuming that each $\ga_{i,j}$ is represented with respect to the basis $B_i$ of
 \newcommand{\muB}{\nu}
 
 
-Given two input measures $(\muA,\muB)$, we denote $\ga$ as a solution of~\eqref{eq-Kantorovich} or, in practice, its regularized version (see~\eqref{eq-Kantorovich-regul} below). The coupling $\ga$ defines a (fuzzy) correspondence between the tensor fields. A typical use of this correspondence is to compute a continuous interpolation between these fields. Section~\ref{sec-numerics-interp} shows some numerical illustrations of this interpolation. Note also that Section~\ref{sec-q-bary} proposes a generalization of this idea to compute an interpolation (barycenter) between more than two input fields.  
+Given two input measures $(\muA,\muB)$, we denote by $\ga$ a solution of~\eqref{eq-Kantorovich} or, in practice, its regularized version (see~\eqref{eq-Kantorovich-regul} below). The coupling $\ga$ defines a (fuzzy) correspondence between the tensor fields. A typical use of this correspondence is to compute a continuous interpolation between these fields. Section~\ref{sec-numerics-interp} shows some numerical illustrations of this interpolation. Note also that Section~\ref{sec-q-bary} proposes a generalization of this idea to compute an interpolation (barycenter) between more than two input fields.  
 
 
 Mimicking the definition of the optimal transport interpolation (the so-called McCann displacement interpolation; see for instance~\cite{santambrogio2015optimal}), we propose to use $\gamma$ to define a path $t \in [0,1] \mapsto \mu_t$ interpolating between $(\muA,\muB)$. 
@@ -156,7 +156,7 @@ $(\mu_{t=0},\mu_{t=1})=(\muA,\muB)$.
 %
 This formula~\eqref{eq-interpolating} generates the interpolation by creating a Dirac tensor $ \ga_{i,j}^t \de_{x_{i,j}^t}$ for each coupling entry $\ga_{i,j}$, and this tensor travels between $\mu_i \de_{x_i}$ (at $t=0$) and $\nu_j \de_{y_j}$ (at $t=1$).
 
-\begin{rem}[Computational cost] We observed numerically that, similarely to the scalar case, the optimal coupling $\ga$ is sparse, meaning that only of the order of $O(|I|)$ non-zero terms are involved in the interpolating measure~\eqref{eq-interpolating}. Note that the entropic regularization algorithm detailed in Section~\ref{eq-q-sink} destroys this exact sparsity, but we found numerically that that thresholding to zero the small entries of $\ga$ generates accurate approximations. 
+\begin{rem}[Computational cost] We observed numerically that, similarly to the scalar case, the optimal coupling $\ga$ is sparse, meaning that only of the order of $O(|I|)$ non-zero terms are involved in the interpolating measure~\eqref{eq-interpolating}. Note that the entropic regularization algorithm detailed in Section~\ref{eq-q-sink} destroys this exact sparsity, but we found numerically that thresholding to zero the small entries of $\ga$ generates accurate approximations. 
 \end{rem}
 
 \if 0

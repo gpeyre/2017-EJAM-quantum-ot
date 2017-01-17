@@ -41,7 +41,7 @@ Our work extends this static unbalanced formulation to tensor-valued measures.
 %%%
 \paragraph{Entropic regularization.}
 
-The current state-of-the-art OT approximation for arbitrary ground costs uses entropic regularization of the transport plan. This leads to strictly convex programs that can be solved using a simple class of highly parallelizable ``diagonal scaling'' algorithms. The landmark paper of Cuturi~\shortcite{cuturi-2013} inspired detailed study of these solvers, leading to various generalizations of Sinkhorn's algorithm~\shortcite{Sinkhorn64}. This includes for instance the use fast convolutional structures~\cite{solomon-2015}, extensions to barycenters~\cite{benamou-2015} and to unbalanced OT~\cite{frogner-2015,2016-chizat-sinkhorn}.
+The current state-of-the-art OT approximation for arbitrary ground costs uses entropic regularization of the transport plan. This leads to strictly convex programs that can be solved using a simple class of highly parallelizable ``diagonal scaling'' algorithms. The landmark paper of Cuturi~\shortcite{cuturi-2013} inspired detailed study of these solvers, leading to various generalizations of Sinkhorn's algorithm~\shortcite{Sinkhorn64}. This includes for instance the use of fast convolutional structures~\cite{solomon-2015}, extensions to barycenters~\cite{benamou-2015} and to unbalanced OT~\cite{frogner-2015,2016-chizat-sinkhorn}.
 %
 These entropic regularization techniques correspond to the use of projection and proximal maps for the Kullback--Leibler Bregman divergence and are equivalent to iterative projections~\cite{bregman-1967} and Dykstra's algorithm~\cite{Dykstra83,bauschke-lewis}. 
 %
@@ -51,7 +51,7 @@ An important contribution of the present work is to extend these techniques to t
 %%%
 \paragraph{Tensor field processing.}
 
-Tensor-valued data are ubiquitous in various areas of imaging science, computer graphics and vision. In medical imaging, diffusion tensor imaging (DTI)~\cite{wandell2016clarifying} directly maps observed data to fields of tensors, and specific processing methods have been developped (see e.g.~\cite{Dryden2009,Deriche2006}. Tensor fields are also at the heart of anisotropic diffusions techniques in image processing~\cite{weickert1998anisotropic}, anisotropic meshing~\cite{alliez2003anisotropic,demaret2006image,peyre-iccv-09}, anisotropic texture generation~\cite{LagaImproving}, and find applications to line drawing~\cite{VaxmanCDPBHB16} and data visualization~\cite{HotzFHHJJ04}. 
+Tensor-valued data are ubiquitous in various areas of imaging science, computer graphics and vision. In medical imaging, diffusion tensor imaging (DTI)~\cite{wandell2016clarifying} directly maps observed data to fields of tensors, and specific processing methods have been developed (see e.g.~\cite{Dryden2009,Deriche2006}. Tensor fields are also at the heart of anisotropic diffusions techniques in image processing~\cite{weickert1998anisotropic}, anisotropic meshing~\cite{alliez2003anisotropic,demaret2006image,peyre-iccv-09}, anisotropic texture generation~\cite{LagaImproving}, and find applications to line drawing~\cite{VaxmanCDPBHB16} and data visualization~\cite{HotzFHHJJ04}. 
 
 %%%
 \paragraph{OT on tensor fields.}
@@ -115,7 +115,7 @@ $X=[0,1]$, $d=3$
  $X=[0,1]^2$ & $X=$surface \\
 \end{tabular}
    \end{minipage}
-\caption{Displays of various types of tensor-valued measures $\mu$. The principal directions of an ellipse at some $x_i \in X$ are the eigenvectors of $\mu_i \in \Ss_+^d$, while the principal width are given by its eigenvalues. 
+\caption{Displays of various types of tensor-valued measures $\mu$. The principal directions of an ellipse at some $x_i \in X$ are the eigenvectors of $\mu_i \in \Ss_+^d$, while the principal widths are given by its eigenvalues. 
 } \label{fig:display}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

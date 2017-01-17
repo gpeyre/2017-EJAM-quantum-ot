@@ -157,7 +157,7 @@ A major computational workload of the Q-Sinkhorn Algorithm~\ref{alg:sinkhorn} is
 %
 For $d \in \{2,3\}$ it is possible to use closed form expressions to diagonalize the tensors, so that the overall complexity is comparable with the usual scalar case $d=1$.
 %
-While the applications Section~\ref{sec:appli} only considers these low-dimensional settings, high dimensional problems are of interest, typically for machine learning applications.  In these cases, one has to resort to iterative procedures, such as rapidly converging squaring schemes~\cite{HighamExp,HighamLog}.
+While the applications in Section~\ref{sec:appli} only considers these low-dimensional settings, high dimensional problems are of interest, typically for machine learning applications.  In these cases, one has to resort to iterative procedures, such as rapidly converging squaring schemes~\cite{HighamExp,HighamLog}.
 \end{rem}
 
 \begin{rem}[Computational complexity]
@@ -165,7 +165,7 @@ For low-dimensional problems (typically for those considered in Section~\ref{sec
 %
 For large scale grids, even storing the full coupling $\ga$ becomes prohibitive. We however observed numerically that, similarly  to the usual scalar case, the optimal $\ga$ solving~\eqref{eq-Kantorovich-regul} is highly sparse (up to machine precision for small enough $\epsilon$).
 % 
-We thus found that using the multi-scale refinement strategy introduced in~\cite{Schmitzer2016} is able to make the Q-Sinkhorn scales to high resolution grids.  It is not used to produce the figures of this article, but it is available in the companion computational toolbox.
+We thus found that the use of the multi-scale refinement strategy introduced in~\cite{Schmitzer2016} is able to make the Q-Sinkhorn scale to high resolution grids.  It is not used to produce the figures of this article, but it is available in the companion computational toolbox.
 \end{rem}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -182,7 +182,7 @@ We recall that it is obtained in two steps:
    
 Figure~\ref{fig:1d-interp} shows examples of interpolations on a 1-D domain $X=Y=[0,1]$ with tensors of dimension $d=2$ and $d=3$, and a ground cost $c_{i,j}=|x_i-y_j|^2\Id_{d \times d}$. It compares the OT interpolation, which achieves a ``mass displacement,'' to the usual linear interpolation $(1-t)\mu+t\nu$, which only performs a pointwise interpolation of the tensors. 
 
-Figure~\ref{fig:qot-vs-ot} shows the effect of taking into account the anisotropy of tensors into the definition of OT. In the case of isotropic tensors (see Remark~\ref{rem-classical-ot}), the method reduces to the usual scalar OT, and in 1-D it corresponds to the monotone re-arengment~\cite{santambrogio2015optimal}. In contrast, the Q-OT of anisotropic tensors is forced to reverse the ordering of the transport map in order for tensors with similar orientations to be matched together. 
+Figure~\ref{fig:qot-vs-ot} shows the effect of taking into account the anisotropy of tensors into the definition of OT. In the case of isotropic tensors (see Remark~\ref{rem-classical-ot}), the method reduces to the usual scalar OT, and in 1-D it corresponds to the monotone re-arrangement~\cite{santambrogio2015optimal}. In contrast, the Q-OT of anisotropic tensors is forced to reverse the ordering of the transport map in order for tensors with similar orientations to be matched together. 
 
 Figure~\ref{fig:intro} shows larger scale examples. 
 %
