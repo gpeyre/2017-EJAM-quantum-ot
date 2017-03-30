@@ -1,6 +1,6 @@
 This Matlab toolbox reproduces the numerical illustrations of the paper:
 
-> Quantum Optimal Transport for Tensor Field Processing, 2016
+G. Peyré, L. Chizat, F-X. Vialard, J. Solomon, [Quantum Optimal Transport for Tensor Field Processing](http://arxiv.org/abs/1612.08731), Arxiv:1612.08731, 2016
 
 Structure of the toolbox
 -------
@@ -102,4 +102,4 @@ Thanks
 Copyright
 -------
 
-Copyright (c) 2016 [anonymized]
+Copyright (c) 2016 Gabriel Peyre

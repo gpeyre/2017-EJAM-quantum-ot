@@ -14,7 +14,9 @@ Figure~\ref{fig:dti} shows an application of Q-OT for the interpolation (using~\
 
 %%% FIG %%%
 \newcommand{\DTIimg}[1]{\includegraphics[width=.195\linewidth,trim=85 20 85 20,clip]{dti/#1}}
+
 \begin{figure}\centering
+\HighResFig{
 \begin{tabular}{@{}c@{\hspace{1mm}}c@{\hspace{1mm}}c@{\hspace{1mm}}c@{\hspace{1mm}}c@{}}
 \DTIimg{one-two/interpol-rho1-1}&
 \DTIimg{one-two/interpol-rho1-3}&
@@ -39,6 +41,7 @@ $t=0$ & $t=1/4$ & $t=1/2$ & $t=3/4$ & $t=1$
 \includegraphics[width=.3\linewidth]{dti/four-two/original-trace-1-roi}\\
 Subject $A$ & Subject $B$ & Subject $C$  
 \end{tabular}
+}{\includegraphics[width=\linewidth]{dti-all}}
 \caption{Interpolation between two 2-D slices of 3-D DTI tensor fields $(\mu,\nu)=(\mu_{t=0},\mu_{t=1})$. For readability, only the X/Y components of the tensors are displayed. 
 \textbf{First row:} interpolation between subjects $(A,B)$ obtained using $\rho=1$. 
 \textbf{Second row:} interpolation between subjects $(A,B)$ obtained using $\rho=0.05$. 
