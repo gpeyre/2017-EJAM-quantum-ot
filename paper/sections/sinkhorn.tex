@@ -76,8 +76,6 @@ The following Lengendre formula leads to the desired result:
 \end{proof}
 
 
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Quantum Sinkhorn Algorithm}
 
@@ -168,6 +166,17 @@ For large scale grids, even storing the full coupling $\ga$ becomes prohibitive.
 We thus found that the use of the multi-scale refinement strategy introduced in~\cite{Schmitzer2016} is able to make the Q-Sinkhorn scale to high resolution grids.  It is not used to produce the figures of this article, but it is available in the companion computational toolbox.
 \end{rem}
 
+\begin{rem}[Gurvits' non-commutative Sinkhorn]
+\todo{Explain that this is un-related!} Although both generalize Sinkhorn?s algorithm for PSD matrices, they have nothing in common: the unknown for Gurvits is an \emph{endomorphism} on PSD matrices while our gamma (Algorithm 1) is a \emph{family of} PSD matrices. Gurvits' generalization is applied to quantum states, while ours applies to graphics. 
+\todo{Maybe say a word on the fact that the wording ``quantum'' refers to the notion of Q-entropy, and is not inspired by quantum physics. } 
+\end{rem}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Trace-constrained Extension}
+
+\todo{Explain here how to handle exact trace (mass) conservation (so somehow a balanced formulation).}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Numerical Illustrations}
 \label{sec-numerics-interp}
@@ -191,3 +200,17 @@ The first row corresponds to $X=Y=[0,1]^2$ and $d=2$, with cost $c_{i,j}=\norm{x
 The second row corresponds to $X=Y$ being a triangulated mesh of a surface, and the cost is proportional to the squared geodesic distance $c_{i,j}=d_X(x_i,y_j)^2 \Id_{2\times 2}$. 
 
 \input{sections/sinkhorn-fig.tex}
+
+\todo{G: explain once again to insists that only transporting the trace using usual OT will leads to a totally different behavior, ignoring anisotropy. }
+
+
+\todo{G: explain that computing a classical OT over lifted space will leads to a very different behavior.
+%
+One could indeed do classical OT in product space, this would not increase the number of variable (everything would be represented with an $N \times N$ scalar matrix, this would on contrary reduce it and we would use classical sinkhorn). But this would totally destroy the geometry of tensor-valued measures (in particular, this would not metrize weak convergence). Two nearby diracs 
+\eq{
+  A \delta_0 + B \delta_s   \qwhereq   
+  A \eqdef \begin{pmatrix}1 & 0 \\ 0 & 0\end{pmatrix} 
+  \qandq 
+  B \eqdef \begin{pmatrix}0 & 0\\0 & 1\end{pmatrix}
+ }
+would be lifted to two very far away point $(0,A)$ and $(s,B)$, whether for our method, it is almost treated as being $\Id_2 \delta_0$ (which is the correct behaviour of a \emph{measure}).}

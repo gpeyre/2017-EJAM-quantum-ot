@@ -1,0 +1,52 @@
+% See if the author has AMS Euler fonts installed: If they have, attempt
+% to use the 'upmath' package to provide upright math.
+
+\ifprodtf \else
+  \checkfont{eurm10}
+  \iffontfound
+    \IfFileExists{upmath.sty}
+      {\typeout{^^JFound AMS Euler Roman fonts on the system,
+                   using the 'upmath' package.^^J}%
+       \usepackage{upmath}}
+      {\typeout{^^JFound AMS Euler Roman fonts on the system, but you
+                   don't seem to have the}%
+       \typeout{'upmath' package installed. EJM.cls can take advantage
+                 of these fonts,^^Jif you use 'upmath' package.^^J}%
+       \providecommand\mathup[1]{##1}%
+       \providecommand\mathbup[1]{##1}%
+       \providecommand\upi{\pi}%
+       \providecommand\upartial{\partial}%
+      }
+  \else
+    \providecommand\mathup[1]{#1}%
+    \providecommand\mathbup[1]{#1}%
+    \providecommand\upi{\pi}%
+    \providecommand\upartial{\partial}%
+  \fi
+\fi
+
+% See if the author has AMS symbol fonts installed: If they have, attempt
+% to use the 'amssymb' package to provide the AMS symbol characters.
+
+\ifprodtf \else
+  \checkfont{msam10}
+  \iffontfound
+    \IfFileExists{amssymb.sty}
+      {\typeout{^^JFound AMS Symbol fonts on the system, using the
+                'amssymb' package.^^J}%
+       \usepackage{amssymb}%
+       \let\le=\leqslant  \let\leq=\leqslant
+       \let\ge=\geqslant  \let\geq=\geqslant
+      }{}
+  \fi
+\fi
+
+% See if the author has the AMS 'amsbsy' package installed: If they have,
+% use it to provide better bold math support (with \boldsymbol).
+
+\ifprodtf \else
+  \IfFileExists{amsbsy.sty}
+    {\typeout{^^JFound the 'amsbsy' package on the system, using it.^^J}%
+     \usepackage{amsbsy}}
+    {\providecommand\boldsymbol[1]{\mbox{\boldmath $##1$}}}
+\fi

@@ -1,335 +1,288 @@
-\begin{thebibliography}{\protect\citename{Kondratyev et~al\mbox{.} }2015}
+\begin{thebibliography}{10}
 
-\bibitem[\protect\citename{Agueh and Carlier }2011]{agueh-2011}
-{\sc Agueh, M., and Carlier, G.}
-\newblock 2011.
+\bibitem{agueh-2011}
+M.~Agueh and G.~Carlier.
 \newblock Barycenters in the {W}asserstein space.
-\newblock {\em SIAM Journal on Mathematical Analysis 43}, 2, 904--924.
+\newblock {\em SIAM Journal on Mathematical Analysis}, 43(2):904--924, 2011.
 
-\bibitem[\protect\citename{Al-Mohy and Higham }2009]{HighamExp}
-{\sc Al-Mohy, A.~H., and Higham, N.~J.}
-\newblock 2009.
+\bibitem{HighamExp}
+A.~H. Al-Mohy and N.~J. Higham.
 \newblock A new scaling and squaring algorithm for the matrix exponential.
-\newblock {\em SIAM J. Sci. Comput. 31}, 3, 970--989.
+\newblock {\em SIAM J. Sci. Comput.}, 31(3):970--989, 2009.
 
-\bibitem[\protect\citename{Al-Mohy and Higham }2012]{HighamLog}
-{\sc Al-Mohy, A.~H., and Higham, N.~J.}
-\newblock 2012.
+\bibitem{HighamLog}
+A.~H. Al-Mohy and N.~J. Higham.
 \newblock Improved inverse scaling and squaring algorithms for the matrix
   logarithm.
-\newblock {\em SIAM J. Sci. Comput. 34}, 4, C153--C169.
+\newblock {\em SIAM J. Sci. Comput.}, 34(4):C153--C169, 2012.
 
-\bibitem[\protect\citename{Alliez et~al\mbox{.} }2003]{alliez2003anisotropic}
-{\sc Alliez, P., Cohen-Steiner, D., Devillers, O., L{\'e}vy, B., and Desbrun,
-  M.}
-\newblock 2003.
+\bibitem{alliez2003anisotropic}
+Pierre Alliez, David Cohen-Steiner, Olivier Devillers, Bruno L{\'e}vy, and
+  Mathieu Desbrun.
 \newblock Anisotropic polygonal remeshing.
-\newblock In {\em ACM Transactions on Graphics (TOG)}, vol.~22, ACM, 485--493.
+\newblock In {\em ACM Transactions on Graphics (TOG)}, volume~22, pages
+  485--493. ACM, 2003.
 
-\bibitem[\protect\citename{Bauschke and Lewis }2000]{bauschke-lewis}
-{\sc Bauschke, H.~H., and Lewis, A.~S.}
-\newblock 2000.
+\bibitem{bauschke-lewis}
+H.~H. Bauschke and A.~S. Lewis.
 \newblock Dykstra's algorithm with {B}regman projections: a convergence proof.
-\newblock {\em Optimization 48}, 4, 409--427.
+\newblock {\em Optimization}, 48(4):409--427, 2000.
 
-\bibitem[\protect\citename{Benamou and Brenier }2000]{benamou2000computational}
-{\sc Benamou, J.-D., and Brenier, Y.}
-\newblock 2000.
+\bibitem{benamou2000computational}
+J-D. Benamou and Y.~Brenier.
 \newblock A computational fluid mechanics solution to the {M}onge-{K}antorovich
   mass transfer problem.
-\newblock {\em Numerische Mathematik 84}, 3, 375--393.
+\newblock {\em Numerische Mathematik}, 84(3):375--393, 2000.
 
-\bibitem[\protect\citename{Benamou et~al\mbox{.} }2015]{benamou-2015}
-{\sc Benamou, J.-D., Carlier, G., Cuturi, M., Nenna, L., and Peyr\'e, G.}
-\newblock 2015.
+\bibitem{benamou-2015}
+J-D. Benamou, G.~Carlier, M.~Cuturi, L.~Nenna, and G.~Peyr\'e.
 \newblock Iterative {B}regman projections for regularized transportation
   problems.
-\newblock {\em SIAM J. Sci. Comp. 37}, 2, A1111--A1138.
+\newblock {\em SIAM J. Sci. Comp.}, 37(2):A1111--A1138, 2015.
 
-\bibitem[\protect\citename{Bonneel et~al\mbox{.} }2011]{bonneel-2011}
-{\sc Bonneel, N., van~de Panne, M., Paris, S., and Heidrich, W.}
-\newblock 2011.
+\bibitem{bonneel-2011}
+N.~Bonneel, M.~van~de Panne, S.~Paris, and W.~Heidrich.
 \newblock Displacement interpolation using {L}agrangian mass transport.
-\newblock {\em ACM Trans. Graph. 30}, 6 (Dec.), 158:1--158:12.
+\newblock {\em ACM Trans. Graph.}, 30(6):158:1--158:12, December 2011.
 
-\bibitem[\protect\citename{Bougleux et~al\mbox{.} }2009]{peyre-iccv-09}
-{\sc Bougleux, S., Peyr{\'e}, G., and Cohen, L.~D.}
-\newblock 2009.
+\bibitem{peyre-iccv-09}
+S.~Bougleux, G.~Peyr{\'e}, and L.~D. Cohen.
 \newblock Image compression with anisotropic geodesic triangulations.
-\newblock In {\em Proc. of ICCV'09}, 2343--2348.
+\newblock In {\em Proc. of ICCV'09}, pages 2343--2348, 2009.
 
-\bibitem[\protect\citename{Bregman }1967]{bregman-1967}
-{\sc Bregman, L.~M.}
-\newblock 1967.
+\bibitem{bregman-1967}
+L.~M. Bregman.
 \newblock The relaxation method of finding the common point of convex sets and
   its application to the solution of problems in convex programming.
-\newblock {\em {USSR} comp. math. and math. phys. 7}, 3, 200--217.
+\newblock {\em {USSR} comp. math. and math. phys.}, 7(3):200--217, 1967.
 
-\bibitem[\protect\citename{Brenier }1991]{Brenier91}
-{\sc Brenier, Y.}
-\newblock 1991.
+\bibitem{Brenier91}
+Y.~Brenier.
 \newblock Polar factorization and monotone rearrangement of vector-valued
   functions.
-\newblock {\em Comm. Pure Appl. Math. 44}, 4, 375--417.
+\newblock {\em Comm. Pure Appl. Math.}, 44(4):375--417, 1991.
 
-\bibitem[\protect\citename{Carlen and Maas }2014]{Carlen2014}
-{\sc Carlen, E.~A., and Maas, J.}
-\newblock 2014.
+\bibitem{Carlen2014}
+Eric~A. Carlen and J.~Maas.
 \newblock An analog of the 2-{W}asserstein metric in non-commutative
   probability under which the fermionic {F}okker--{P}lanck equation is gradient
   flow for the entropy.
-\newblock {\em Communications in Mathematical Physics 331}, 3, 887--926.
+\newblock {\em Communications in Mathematical Physics}, 331(3):887--926, 2014.
 
-\bibitem[\protect\citename{Chandrasekaran and Shah }2016]{Chandrasekaran2016}
-{\sc Chandrasekaran, V., and Shah, P.}
-\newblock 2016.
+\bibitem{Chandrasekaran2016}
+V.~Chandrasekaran and P.~Shah.
 \newblock Relative entropy optimization and its applications.
-\newblock {\em Mathematical Programming\/}, 1--32.
+\newblock {\em Mathematical Programming}, pages 1--32, 2016.
 
-\bibitem[\protect\citename{Chen et~al\mbox{.} }2016]{Chen2016}
-{\sc Chen, Y., Georgiou, T.~T., , and Tannenbaum, A.}
-\newblock 2016.
+\bibitem{Chen2016}
+Yongxin Chen, Tryphon~T. Georgiou, , and Allen Tannenbaum.
 \newblock Distances and {R}iemannian metrics for multivariate spectral
   densities.
-\newblock {\em Preprint arXiv:1610.03041\/}.
+\newblock {\em Preprint arXiv:1610.03041}, 2016.
 
-\bibitem[\protect\citename{Chizat et~al\mbox{.} }2015]{2015-chizat-unbalanced}
-{\sc Chizat, L., Peyr{\'e}, G., Schmitzer, B., and Vialard, F.-X.}
-\newblock 2015.
+\bibitem{2015-chizat-unbalanced}
+L.~Chizat, G.~Peyr{\'e}, B.~Schmitzer, and F-X. Vialard.
 \newblock Unbalanced optimal transport: Geometry and {K}antorovich formulation.
-\newblock Preprint 1508.05216, Arxiv.
+\newblock Preprint 1508.05216, Arxiv, 2015.
 
-\bibitem[\protect\citename{Chizat et~al\mbox{.} }2016a]{2016-chizat-sinkhorn}
-{\sc Chizat, L., Peyr{\'e}, G., Schmitzer, B., and Vialard, F.-X.}
-\newblock 2016.
+\bibitem{2016-chizat-sinkhorn}
+L.~Chizat, G.~Peyr{\'e}, B.~Schmitzer, and F-X. Vialard.
 \newblock Scaling algorithms for unbalanced transport problems.
-\newblock Preprint 1607.05816, Arxiv.
+\newblock Preprint 1607.05816, Arxiv, 2016.
 
-\bibitem[\protect\citename{Chizat et~al\mbox{.} }2016b]{2016-chizat-focm}
-{\sc Chizat, L., Schmitzer, B., Peyr{\'e}, G., and Vialard, F.-X.}
-\newblock 2016.
+\bibitem{2016-chizat-focm}
+L.~Chizat, B.~Schmitzer, G.~Peyr{\'e}, and F-X. Vialard.
 \newblock An interpolating distance between optimal transport and
   {Fisher--Rao}.
-\newblock {\em to appear in Foundations of Computational Mathematics\/}.
+\newblock {\em to appear in Foundations of Computational Mathematics}, 2016.
 
-\bibitem[\protect\citename{Crane et~al\mbox{.} }2010]{crane2010trivial}
-{\sc Crane, K., Desbrun, M., and Schr{\"o}der, P.}
-\newblock 2010.
+\bibitem{crane2010trivial}
+Keenan Crane, Mathieu Desbrun, and Peter Schr{\"o}der.
 \newblock Trivial connections on discrete surfaces.
-\newblock In {\em Computer Graphics Forum}, vol.~29, Wiley Online Library,
-  1525--1533.
+\newblock In {\em Computer Graphics Forum}, volume~29, pages 1525--1533. Wiley
+  Online Library, 2010.
 
-\bibitem[\protect\citename{Cuturi }2013]{cuturi-2013}
-{\sc Cuturi, M.}
-\newblock 2013.
+\bibitem{cuturi-2013}
+M.~Cuturi.
 \newblock Sinkhorn distances: Lightspeed computation of optimal transportation.
-\newblock In {\em Proc. NIPS}, vol.~26. 2292--2300.
+\newblock In {\em Proc. NIPS}, volume~26, pages 2292--2300. 2013.
 
-\bibitem[\protect\citename{Demaret et~al\mbox{.} }2006]{demaret2006image}
-{\sc Demaret, L., Dyn, N., and Iske, A.}
-\newblock 2006.
+\bibitem{demaret2006image}
+Laurent Demaret, Nira Dyn, and Armin Iske.
 \newblock Image compression by linear splines over adaptive triangulations.
-\newblock {\em Signal Processing 86}, 7, 1604--1616.
+\newblock {\em Signal Processing}, 86(7):1604--1616, 2006.
 
-\bibitem[\protect\citename{Deriche et~al\mbox{.} }2006]{Deriche2006}
-{\sc Deriche, R., Tschumpel{\'e}, D., Lenglet, C., and Rousson, M.}
-\newblock 2006.
+\bibitem{Deriche2006}
+R.~Deriche, D.~Tschumpel{\'e}, C.~Lenglet, and M.~Rousson.
 \newblock {\em Variational Approaches to the Estimation, Regularizatinn and
-  Segmentation of Diffusion Tensor Images}.
-\newblock Springer US, Boston, MA, 517--530.
+  Segmentation of Diffusion Tensor Images}, pages 517--530.
+\newblock Springer US, Boston, MA, 2006.
 
-\bibitem[\protect\citename{Dhillon and Tropp }2008]{Dhillon2008}
-{\sc Dhillon, I.~S., and Tropp, J.~A.}
-\newblock 2008.
+\bibitem{Dhillon2008}
+I.~S. Dhillon and J.~A. Tropp.
 \newblock Matrix nearness problems with {B}regman divergences.
-\newblock {\em SIAM Journal on Matrix Analysis and Applications 29}, 4,
-  1120--1146.
+\newblock {\em SIAM Journal on Matrix Analysis and Applications},
+  29(4):1120--1146, 2008.
 
-\bibitem[\protect\citename{Dryden et~al\mbox{.} }2009]{Dryden2009}
-{\sc Dryden, I.~L., Koloydenko, A., and Zhou, D.}
-\newblock 2009.
+\bibitem{Dryden2009}
+I.~L Dryden, A.~Koloydenko, and D.~Zhou.
 \newblock Non-{E}uclidean statistics for covariance matrices, with applications
   to diffusion tensor imaging.
-\newblock {\em The Annals of Applied Statistics\/}, 1102--1123.
+\newblock {\em The Annals of Applied Statistics}, pages 1102--1123, 2009.
 
-\bibitem[\protect\citename{Dykstra }1983]{Dykstra83}
-{\sc Dykstra, R.~L.}
-\newblock 1983.
+\bibitem{Dykstra83}
+R.~L. Dykstra.
 \newblock An algorithm for restricted least squares regression.
-\newblock {\em J. Amer. Stat. 78}, 384, 839--842.
+\newblock {\em J. Amer. Stat.}, 78(384):839--842, 1983.
 
-\bibitem[\protect\citename{Frogner et~al\mbox{.} }2015]{frogner-2015}
-{\sc Frogner, C., Zhang, C., Mobahi, H., Araya, M., and Poggio, T.}
-\newblock 2015.
+\bibitem{frogner-2015}
+C.~Frogner, C.~Zhang, H.~Mobahi, M.~Araya, and T.~Poggio.
 \newblock Learning with a {W}asserstein loss.
-\newblock In {\em Advances in Neural Information Processing Systems}, vol.~28.
-  2044--2052.
+\newblock In {\em Advances in Neural Information Processing Systems},
+  volume~28, pages 2044--2052. 2015.
 
-\bibitem[\protect\citename{Galerne et~al\mbox{.} }2011]{galerne2011random}
-{\sc Galerne, B., Gousseau, Y., and Morel, J.-M.}
-\newblock 2011.
+\bibitem{galerne2011random}
+Bruno Galerne, Yann Gousseau, and Jean-Michel Morel.
 \newblock Random phase textures: Theory and synthesis.
-\newblock {\em IEEE Transactions on image processing 20}, 1, 257--267.
+\newblock {\em IEEE Transactions on image processing}, 20(1):257--267, 2011.
 
-\bibitem[\protect\citename{Hotz et~al\mbox{.} }2004]{HotzFHHJJ04}
-{\sc Hotz, I., Feng, L., Hagen, H., Hamann, B., Joy, K.~I., and Jeremic, B.}
-\newblock 2004.
+\bibitem{HotzFHHJJ04}
+I.~Hotz, L.~Feng, H.~Hagen, B.~Hamann, K.~I. Joy, and B.~Jeremic.
 \newblock Physically based methods for tensor field visualization.
-\newblock IEEE Computer Society, 123--130.
+\newblock pages 123--130. IEEE Computer Society, 2004.
 
-\bibitem[\protect\citename{Jiang et~al\mbox{.} }2012]{JiangSpectral}
-{\sc Jiang, X., Ning, L., and Georgiou, T.~T.}
-\newblock 2012.
+\bibitem{JiangSpectral}
+X.~Jiang, L.~Ning, and T.~T. Georgiou.
 \newblock Distances and {R}iemannian metrics for multivariate spectral
   densities.
-\newblock {\em IEEE Transactions on Automatic Control 57}, 7 (July),
-  1723--1735.
+\newblock {\em IEEE Transactions on Automatic Control}, 57(7):1723--1735, July
+  2012.
 
-\bibitem[\protect\citename{Kantorovich }1942]{Kantorovich42}
-{\sc Kantorovich, L.}
-\newblock 1942.
+\bibitem{Kantorovich42}
+L.~Kantorovich.
 \newblock On the transfer of masses (in {R}ussian).
-\newblock {\em Doklady Akademii Nauk 37}, 2, 227--229.
+\newblock {\em Doklady Akademii Nauk}, 37(2):227--229, 1942.
 
-\bibitem[\protect\citename{Kondratyev et~al\mbox{.} }2015]{kondratyev2015}
-{\sc Kondratyev, S., Monsaingeon, L., and Vorotnikov, D.}
-\newblock 2015.
+\bibitem{kondratyev2015}
+S.~Kondratyev, L.~Monsaingeon, and D.~Vorotnikov.
 \newblock A new optimal transport distance on the space of finite {R}adon
   measures.
-\newblock Tech. rep., Pre-print.
+\newblock Technical report, Pre-print, 2015.
 
-\bibitem[\protect\citename{Kulis et~al\mbox{.} }2009]{Kulis2009}
-{\sc Kulis, B., Sustik, M.~A., and Dhillon, I.~S.}
-\newblock 2009.
+\bibitem{Kulis2009}
+B.~Kulis, M.~A. Sustik, and I.~S. Dhillon.
 \newblock Low-rank kernel learning with {B}regman matrix divergences.
-\newblock {\em J. Mach. Learn. Res. 10\/} (June), 341--376.
+\newblock {\em J. Mach. Learn. Res.}, 10:341--376, June 2009.
 
-\bibitem[\protect\citename{Lagae et~al\mbox{.} }2010]{LagaeSurvey}
-{\sc Lagae, A., Lefebvre, S., Cook, R., DeRose, T., Drettakis, G., Ebert,
-  D.~S., Lewis, J., Perlin, K., and Zwicker, M.}
-\newblock 2010.
+\bibitem{LagaeSurvey}
+Ares Lagae, Sylvain Lefebvre, Rob Cook, Tony DeRose, George Drettakis, David~S
+  Ebert, JP~Lewis, Ken Perlin, and Matthias Zwicker.
 \newblock A survey of procedural noise functions.
-\newblock In {\em Computer Graphics Forum}, vol.~29, Wiley Online Library,
-  2579--2600.
+\newblock In {\em Computer Graphics Forum}, volume~29, pages 2579--2600. Wiley
+  Online Library, 2010.
 
-\bibitem[\protect\citename{Lagae et~al\mbox{.} }2011]{LagaImproving}
-{\sc Lagae, A., Lefebvre, S., and Dutr{\'e}, P.}
-\newblock 2011.
+\bibitem{LagaImproving}
+Ares Lagae, Sylvain Lefebvre, and Philip Dutr{\'e}.
 \newblock Improving {G}abor noise.
-\newblock {\em IEEE Transactions on Visualization and Computer Graphics 17}, 8,
-  1096--1107.
+\newblock {\em IEEE Transactions on Visualization and Computer Graphics},
+  17(8):1096--1107, 2011.
 
-\bibitem[\protect\citename{{Liero} et~al\mbox{.} }2015]{LieroMielkeSavareLong}
-{\sc {Liero}, M., {Mielke}, A., and {Savar{\'e}}, G.}
-\newblock 2015.
+\bibitem{LieroMielkeSavareLong}
+M.~{Liero}, A.~{Mielke}, and G.~{Savar{\'e}}.
 \newblock Optimal entropy-transport problems and a new {Hellinger--Kantorovich}
   distance between positive measures.
-\newblock {\em ArXiv e-prints\/}.
+\newblock {\em ArXiv e-prints}, 2015.
 
-\bibitem[\protect\citename{Liero et~al\mbox{.} }2016]{LieroMielkeSavareCourt}
-{\sc Liero, M., Mielke, A., and Savar\'e, G.}
-\newblock 2016.
+\bibitem{LieroMielkeSavareCourt}
+M.~Liero, A.~Mielke, and G.~Savar\'e.
 \newblock Optimal transport in competition with reaction: The
   {Hellinger--Kantorovich} distance and geodesic curves.
-\newblock {\em SIAM Journal on Mathematical Analysis 48}, 4, 2869--2911.
+\newblock {\em SIAM Journal on Mathematical Analysis}, 48(4):2869--2911, 2016.
 
-\bibitem[\protect\citename{Monge }1781]{Monge1781}
-{\sc Monge, G.}
-\newblock 1781.
+\bibitem{Monge1781}
+G.~Monge.
 \newblock M{\'e}moire sur la th{\'e}orie des d{\'e}blais et des remblais.
-\newblock {\em Histoire de l'Acad{\'e}mie Royale des Sciences\/}, 666--704.
+\newblock {\em Histoire de l'Acad{\'e}mie Royale des Sciences}, pages 666--704,
+  1781.
 
-\bibitem[\protect\citename{Ning and Georgiou }2014]{Ning2014metrics}
-{\sc Ning, L., and Georgiou, T.~T.}
-\newblock 2014.
+\bibitem{Ning2014metrics}
+L.~Ning and T.~T. Georgiou.
 \newblock Metrics for matrix-valued measures via test functions.
-\newblock In {\em 53rd IEEE Conference on Decision and Control}, IEEE,
-  2642--2647.
+\newblock In {\em 53rd IEEE Conference on Decision and Control}, pages
+  2642--2647. IEEE, 2014.
 
-\bibitem[\protect\citename{Ning et~al\mbox{.} }2015]{ning2015matrix}
-{\sc Ning, L., Georgiou, T.~T., and Tannenbaum, A.}
-\newblock 2015.
+\bibitem{ning2015matrix}
+L.~Ning, T.~T. Georgiou, and A.~Tannenbaum.
 \newblock On matrix-valued {M}onge--{K}antorovich optimal mass transport.
-\newblock {\em IEEE transactions on automatic control 60}, 2, 373--382.
+\newblock {\em IEEE transactions on automatic control}, 60(2):373--382, 2015.
 
-\bibitem[\protect\citename{Pestilli et~al\mbox{.}
-  }2014]{pestilli2014evaluation}
-{\sc Pestilli, F., Yeatman, J.~D., Rokem, A., Kay, K.~N., and Wandell, B.~A.}
-\newblock 2014.
+\bibitem{pestilli2014evaluation}
+Franco Pestilli, Jason~D Yeatman, Ariel Rokem, Kendrick~N Kay, and Brian~A
+  Wandell.
 \newblock Evaluation and statistical inference for human connectomes.
-\newblock {\em Nature methods 11}, 10, 1058--1063.
+\newblock {\em Nature methods}, 11(10):1058--1063, 2014.
 
-\bibitem[\protect\citename{Rockafellar }1970]{rockafellar-convex}
-{\sc Rockafellar, R.~T.}
-\newblock 1970.
+\bibitem{rockafellar-convex}
+Ralph~Tyrell Rockafellar.
 \newblock {\em Convex analysis}.
-\newblock Princeton University Press.
+\newblock Princeton University Press, 1970.
 
-\bibitem[\protect\citename{Rubner et~al\mbox{.} }2000]{rubner-2000}
-{\sc Rubner, Y., Tomasi, C., and Guibas, L.~J.}
-\newblock 2000.
+\bibitem{rubner-2000}
+Yossi Rubner, Carlo Tomasi, and Leonidas~J. Guibas.
 \newblock The earth mover's distance as a metric for image retrieval.
-\newblock {\em International Journal of Computer Vision 40}, 2 (Nov.), 99--121.
+\newblock {\em International Journal of Computer Vision}, 40(2):99--121,
+  November 2000.
 
-\bibitem[\protect\citename{Santambrogio }2015]{santambrogio2015optimal}
-{\sc Santambrogio, F.}
-\newblock 2015.
+\bibitem{santambrogio2015optimal}
+F.~Santambrogio.
 \newblock Optimal transport for applied mathematicians.
 \newblock {\em Progress in Nonlinear Differential Equations and their
-  applications 87\/}.
+  applications}, 87, 2015.
 
-\bibitem[\protect\citename{Schmitzer }2016]{Schmitzer2016}
-{\sc Schmitzer, B.}
-\newblock 2016.
+\bibitem{Schmitzer2016}
+B.~Schmitzer.
 \newblock Stabilized sparse scaling algorithms for entropy regularized
   transport problems.
-\newblock {\em arXiv:1610.06519\/}.
+\newblock {\em arXiv:1610.06519}, 2016.
 
-\bibitem[\protect\citename{Shewchuk }2002]{shewchuk2002good}
-{\sc Shewchuk, J.}
-\newblock 2002.
+\bibitem{shewchuk2002good}
+J~Shewchuk.
 \newblock What is a good linear finite element? {I}nterpolation, conditioning,
   anisotropy, and quality measures (preprint).
-\newblock {\em University of California at Berkeley 73\/}.
+\newblock {\em University of California at Berkeley}, 73, 2002.
 
-\bibitem[\protect\citename{Sinkhorn }1964]{Sinkhorn64}
-{\sc Sinkhorn, R.}
-\newblock 1964.
+\bibitem{Sinkhorn64}
+R.~Sinkhorn.
 \newblock A relationship between arbitrary positive matrices and doubly
   stochastic matrices.
-\newblock {\em Ann. Math. Statist. 35\/}, 876--879.
+\newblock {\em Ann. Math. Statist.}, 35:876--879, 1964.
 
-\bibitem[\protect\citename{Solomon et~al\mbox{.} }2015]{solomon-2015}
-{\sc Solomon, J., de~Goes, F., Peyr{\'e}, G., Cuturi, M., Butscher, A., Nguyen,
-  A., Du, T., and Guibas, L.}
-\newblock 2015.
+\bibitem{solomon-2015}
+J.~Solomon, F.~de~Goes, G.~Peyr{\'e}, M.~Cuturi, A.~Butscher, A.~Nguyen, T.~Du,
+  and L.~Guibas.
 \newblock Convolutional {W}asserstein distances: Efficient optimal
   transportation on geometric domains.
-\newblock {\em TOG 34}, 4 (July), 66:1--66:11.
+\newblock {\em TOG}, 34(4):66:1--66:11, July 2015.
 
-\bibitem[\protect\citename{Takemura et~al\mbox{.} }2016]{takemura2016ensemble}
-{\sc Takemura, H., Caiafa, C.~F., Wandell, B.~A., and Pestilli, F.}
-\newblock 2016.
+\bibitem{takemura2016ensemble}
+Hiromasa Takemura, Cesar~F Caiafa, Brian~A Wandell, and Franco Pestilli.
 \newblock Ensemble tractography.
-\newblock {\em PLoS Comput Biol 12}, 2, e1004692.
+\newblock {\em PLoS Comput Biol}, 12(2):e1004692, 2016.
 
-\bibitem[\protect\citename{Vaxman et~al\mbox{.} }2016]{VaxmanCDPBHB16}
-{\sc Vaxman, A., Campen, M., Diamanti, O., Panozzo, D., Bommes, D.,
-  Hildebrandt, K., and Ben-Chen, M.}
-\newblock 2016.
+\bibitem{VaxmanCDPBHB16}
+A.~Vaxman, M.~Campen, O.~Diamanti, D.~Panozzo, D.~Bommes, K.~Hildebrandt, and
+  M.~Ben-Chen.
 \newblock Directional field synthesis, design, and processing.
-\newblock {\em Comput. Graph. Forum 35}, 2, 545--572.
+\newblock {\em Comput. Graph. Forum}, 35(2):545--572, 2016.
 
-\bibitem[\protect\citename{Wandell }2016]{wandell2016clarifying}
-{\sc Wandell, B.~A.}
-\newblock 2016.
+\bibitem{wandell2016clarifying}
+Brian~A Wandell.
 \newblock Clarifying human white matter.
-\newblock {\em Annual Review of Neuroscience\/}.
+\newblock {\em Annual Review of Neuroscience}, 2016.
 
-\bibitem[\protect\citename{Weickert }1998]{weickert1998anisotropic}
-{\sc Weickert, J.}
-\newblock 1998.
-\newblock {\em Anisotropic diffusion in image processing}, vol.~1.
-\newblock Teubner Stuttgart.
+\bibitem{weickert1998anisotropic}
+J.~Weickert.
+\newblock {\em Anisotropic diffusion in image processing}, volume~1.
+\newblock Teubner Stuttgart, 1998.
 
 \end{thebibliography}

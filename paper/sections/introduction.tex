@@ -16,8 +16,8 @@ OT offers a canonical way to lift a ground distance on some metric space to a me
 \subsection{Previous Work}
 
 %%%
-\paragraph{Scalar-valued optimal transport.}
-
+\subsubsection{Scalar-valued optimal transport.}
+%
 Dating back to the eighteenth century, classical instances of the optimal transport problem seek a minimal-cost matching between two distributions defined over a geometric domain, e.g.\ matching supply to demand while incurring minimal cost. 
 Initially formulated by Monge in terms of an unknown map transporting mass~\shortcite{Monge1781}, its reformulation by Kantorovich~\shortcite{Kantorovich42} as a linear program (static formulation) enables the use of convex analysis to study its structure and develop numerical solvers. 
 % 
@@ -30,7 +30,7 @@ OT has found numerous applications, for instance in computer vision (under the n
 
 
 %%%
-\paragraph{Unbalanced transport.}
+\subsubsection{Unbalanced transport.}
 
 While the initial formulations of OT are restricted to positive measures of equal mass (normalized probability distributions), a recent wave of activity has proposed and studied a family of ``canonical'' extensions %of the initial OT formulations 
 to the ``unbalanced'' setting of arbitrary positive measures. This covers both a dynamic formulation~\cite{LieroMielkeSavareCourt,kondratyev2015,2016-chizat-focm} and a static one~\cite{LieroMielkeSavareLong,2015-chizat-unbalanced} and has been applied in machine learning~\cite{frogner-2015}. 
@@ -39,7 +39,7 @@ Our work extends this static unbalanced formulation to tensor-valued measures.
 
 
 %%%
-\paragraph{Entropic regularization.}
+\subsubsection{Entropic regularization.}
 
 The current state-of-the-art OT approximation for arbitrary ground costs uses entropic regularization of the transport plan. This leads to strictly convex programs that can be solved using a simple class of highly parallelizable ``diagonal scaling'' algorithms. The landmark paper of Cuturi~\shortcite{cuturi-2013} inspired detailed study of these solvers, leading to various generalizations of Sinkhorn's algorithm~\shortcite{Sinkhorn64}. This includes for instance the use of fast convolutional structures~\cite{solomon-2015}, extensions to barycenters~\cite{benamou-2015} and to unbalanced OT~\cite{frogner-2015,2016-chizat-sinkhorn}.
 %
@@ -49,12 +49,17 @@ An important contribution of the present work is to extend these techniques to t
 
 
 %%%
-\paragraph{Tensor field processing.}
+\subsubsection{Tensor field processing.}
 
 Tensor-valued data are ubiquitous in various areas of imaging science, computer graphics and vision. In medical imaging, diffusion tensor imaging (DTI)~\cite{wandell2016clarifying} directly maps observed data to fields of tensors, and specific processing methods have been developed (see e.g.~\cite{Dryden2009,Deriche2006}. Tensor fields are also at the heart of anisotropic diffusions techniques in image processing~\cite{weickert1998anisotropic}, anisotropic meshing~\cite{alliez2003anisotropic,demaret2006image,peyre-iccv-09}, anisotropic texture generation~\cite{LagaImproving}, and find applications to line drawing~\cite{VaxmanCDPBHB16} and data visualization~\cite{HotzFHHJJ04}. 
 
 %%%
-\paragraph{OT on tensor fields.}
+\subsubsection{OT and Sinkhorn on pairs of tensors.}
+
+\todo{Explain here Gurvits + dynamical.}
+
+%%%
+\subsubsection{OT on tensor fields.}
 
 The simplest way to define OT-like distances between arbitrary vector-valued measures is to use dual norms~\cite{Ning2014metrics}, which correspond to generalizations of $W_1$ OT for which transport cost equals ground distance. The corresponding metrics, however, have degenerate behavior in interpolation and barycenter problems (much like the $L^1$ norm on functions) and only use the linear structure of matrices rather than their multiplicative structure.
 %
@@ -80,10 +85,7 @@ Our second contribution is a fast entropic scaling algorithm generalizing the ce
 %
 Our third contribution is the extension of this approach to compute barycenters between several tensor fields. 
 %
-The Matlab code to reproduce the results of this article is available online.\footnote{
-\AnonymMode{\emph{Available as supplementary material.}}{\url{https://github.com/gpeyre/2016-wasserstein-tensor-valued}}
-}
-%\justin{Of course we'll have to remove these links for SIGGRAPH submission}\gabriel{Indeed. I just thought it was a good idea for the arxiv paper, so that people can start playing with it and see that it really works (as opposed to alternative solution by Georgiou et al., which I think would not scale and are complex to implement). Is it ok ?}
+The Matlab code to reproduce the results of this article is available online.\footnote{\url{https://github.com/gpeyre/2016-wasserstein-tensor-valued}}
 
 % 
 % Applications to several problem in imaging and graphics ...
