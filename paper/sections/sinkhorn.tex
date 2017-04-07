@@ -22,14 +22,14 @@ This is a strongly convex program, with a unique solution. The crux of this appr
 	\begin{multline}\label{eq-dual-pb}
 		W_\epsilon(\mu,\nu)
 		= 
-		\umax{u,v} - 
+		\umax{u,v} -\!
 				\tr\Big[
 						\rho_1 \sum_i (e^{u_i+\log(\mu_i)} - \mu_i) \\
 					+   \rho_2 \sum_j (e^{v_j+\log(\nu_j)} - \nu_j)
 					+    \epsilon \sum_{i,j}  e^{ \Kern(u,v)_{i,j} }
 			 \Big], 
 	\end{multline}	
-	where $u=(u_i)_{i \in I}, v=(v_j)_{j \in J}$ are collection of symmetric (not necessarily positive) matrices $u_i, v_j \in \Ss^d$, 
+	where $u=(u_i)_{i \in I}, v=(v_j)_{j \in J}$ are collection of symmetric (not necessarily positive \justin{definite?}) matrices $u_i, v_j \in \Ss^d$, 
 	where we define
 	\eql{\label{eq-defn-K}
 		\Kern(u,v)_{i,j} \eqdef -\frac{c_{i,j} + \rho_1 u_i + \rho_2 v_j}{\epsilon}.
@@ -105,7 +105,7 @@ where the sum on $j$ is replaced by a sum on $i$ for $\LSE_i$.
 	which gives the desired expression. A similar expression holds for the first order conditions with respect to $v_j$.
 \end{proof}
 
-A simple fixed point algorithm is then obtained by replacing in Dykstra's the explicit alternating minimization with respect to $u$ and $v$ by just one step of fixed point iterations~\eqref{eq-fixed-point-u} and~\eqref{eq-fixed-point-v}. To make the resulting fixed point contractant and ensure linear convergence, one introduces relaxation parameters $(\tau_1,\tau_2)$. 
+A simple fixed point algorithm is then obtained by replacing the explicit alternating minimization with respect to $u$ and $v$ in Dykstra's with just one step of fixed point iteration~\eqref{eq-fixed-point-u} and~\eqref{eq-fixed-point-v}. To make the resulting fixed point contractant and ensure linear convergence, one introduces relaxation parameters $(\tau_1,\tau_2)$. 
 
 The quantum Sinkhorn algorithm is detailed in Algorithm~\ref{alg:sinkhorn}. It alternates between the updates of $u$ and $v$, using relaxed fixed point iterations associated to~\eqref{eq-fixed-point-u} and~\eqref{eq-fixed-point-v}. We use the following $\tau$-relaxed assignment notation 
 \eql{\label{eq-dfn-relaxed-assign}
@@ -153,9 +153,9 @@ The algorithm exhibits a linear convergence rate, $\log_{10}\norm{v^{(t+1)}-v^{(
 \begin{rem}[log and exp computations]
 A major computational workload of the Q-Sinkhorn Algorithm~\ref{alg:sinkhorn} is the repetitive computation of matrix exp and log. 
 %
-For $d \in \{2,3\}$ it is possible to use closed form expressions to diagonalize the tensors, so that the overall complexity is comparable with the usual scalar case $d=1$.
+For $d \in \{2,3\}$ it is possible to use closed-form expressions to diagonalize the tensors, so that the overall complexity is comparable with the usual scalar case $d=1$.
 %
-While the applications in Section~\ref{sec:appli} only considers these low-dimensional settings, high dimensional problems are of interest, typically for machine learning applications.  In these cases, one has to resort to iterative procedures, such as rapidly converging squaring schemes~\cite{HighamExp,HighamLog}.
+While the applications in Section~\ref{sec:appli} only require these low-dimensional settings, high dimensional problems are of interest, typically for machine learning applications.  In these cases, one has to resort to iterative procedures, such as rapidly converging squaring schemes~\cite{HighamExp,HighamLog}.
 \end{rem}
 
 \begin{rem}[Computational complexity]
@@ -167,7 +167,7 @@ We thus found that the use of the multi-scale refinement strategy introduced in~
 \end{rem}
 
 \begin{rem}[Gurvits' non-commutative Sinkhorn]
-\todo{Explain that this is un-related!} Although both generalize Sinkhorn?s algorithm for PSD matrices, they have nothing in common: the unknown for Gurvits is an \emph{endomorphism} on PSD matrices while our gamma (Algorithm 1) is a \emph{family of} PSD matrices. Gurvits' generalization is applied to quantum states, while ours applies to graphics. 
+\todo{Explain that this is un-related!} Although both generalize Sinkhorn's algorithm for PSD matrices, they have nothing in common: the unknown for Gurvits is an \emph{endomorphism} on PSD matrices while our gamma (Algorithm 1) is a \emph{family of} PSD matrices. Gurvits' generalization is applied to quantum states, while ours applies to graphics and imaging. 
 \todo{Maybe say a word on the fact that the wording ``quantum'' refers to the notion of Q-entropy, and is not inspired by quantum physics. } 
 \end{rem}
 
@@ -181,7 +181,7 @@ We thus found that the use of the multi-scale refinement strategy introduced in~
 \subsection{Numerical Illustrations}
 \label{sec-numerics-interp}
 
-Figures~\ref{fig:intro},~\ref{fig:1d-interp} and~\ref{fig:qot-vs-ot} illustrates on synthetic examples of input tensor fields $(\muA,\muB)$ the Q-OT interpolation method. 
+Figures~\ref{fig:intro},~\ref{fig:1d-interp} and~\ref{fig:qot-vs-ot} illustrate on synthetic examples of input tensor fields $(\muA,\muB)$ the Q-OT interpolation method. 
 %
 We recall that it is obtained in two steps:
 \begin{enumerate}

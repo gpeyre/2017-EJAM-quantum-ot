@@ -17,7 +17,7 @@ Our goal is to propose a new definition of OT between $\mu$ and $\nu$.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Tensor Transportation}
 
-Following the initial static formulation of OT by Kantorovich~\shortcite{Kantorovich42}, we define a coupling $\ga = \sum_{i,j}\ga_{i,j} \de_{(x_i,y_j)}$ as a measure over the product $X \times Y$ that encodes the transport of mass between $\mu$ and $\nu$. In the matrix case, $\ga_{i,j} \in \Ss_+^d$ is now a PSD matrix, describing how much of mass is moved between $\mu_i$ and $\nu_j$. 
+Following the initial static formulation of OT by Kantorovich~\shortcite{Kantorovich42}, we define a coupling $\ga = \sum_{i,j}\ga_{i,j} \de_{(x_i,y_j)}$ as a measure over the product $X \times Y$ that encodes the transport of mass between $\mu$ and $\nu$. In the matrix case, $\ga_{i,j} \in \Ss_+^d$ is now a PSD matrix, describing how much mass is moved between $\mu_i$ and $\nu_j$. 
 % 
 Exact (balanced) transport would mean that the marginals $(\ga \ones_J,\ga^\top \ones_I)$ must be equal to the input measures $(\mu,\nu)$. But as remarked by Ning et al.~\shortcite{ning2015matrix}, in contrast to the scalar case, in the matrix case (dimension $d>1$), this constraint is in general too strong, and there might exist no coupling satisfying these marginal constraints.
 %
@@ -83,7 +83,7 @@ for some $\al>0$.  In this case, one should interpret the trace as the global ma
 	If $(\mu,\nu)$ are defined on a non-Euclidean space $Y=X$, like a smooth manifold, then formulation~\eqref{eq-Kantorovich} should be handled with care, since it assumes all the tensors $(\mu_i,\nu_j)_{i,j}$ are defined %expressed in coordinates 
 	in some common basis. 
 	%
-	For smooth manifolds, the simplest workaround is to assume that these tensors are defined with respect to carefully selected orthogonal bases of the tangent planes, so that the field of bases is itself smooth. Unless the manifold is parallelizable, in particular if it has a trivial topology, it is not possible to obtain a globally smooth orthonormal basis; in general, any such field necessarily has a few singular points. In the following, we compute smoothly-varying orthogonal bases of the tangent planes following the method of Crane et al.~\shortcite{crane2010trivial}. 
+	For smooth manifolds, the simplest workaround is to assume that these tensors are defined with respect to carefully selected orthogonal bases of the tangent planes, so that the field of bases is itself smooth. Unless the manifold is parallelizable, in particular if it has a trivial topology, it is not possible to obtain a globally smooth orthonormal basis; in general, any such field necessarily has a few singular points. In the following, we compute smoothly-varying orthogonal bases of the tangent planes (away from singular points) \justin{added this parenthetical} following the method of Crane et al.~\shortcite{crane2010trivial}. 
 	%
 	In this setting, the cost is usually chosen to be $c_{i,j} = d_X(x_i,x_j)^\al \Id_{d \times d}$ where $d_X$ is the geodesic distance on $X$. 
 \end{rem}
