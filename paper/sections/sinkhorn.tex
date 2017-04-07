@@ -29,7 +29,7 @@ This is a strongly convex program, with a unique solution. The crux of this appr
 					+    \epsilon \sum_{i,j}  e^{ \Kern(u,v)_{i,j} }
 			 \Big], 
 	\end{multline}	
-	where $u=(u_i)_{i \in I}, v=(v_j)_{j \in J}$ are collection of symmetric (not necessarily positive \justin{definite?}) matrices $u_i, v_j \in \Ss^d$, 
+	where $u=(u_i)_{i \in I}, v=(v_j)_{j \in J}$ are collections of arbitrary symmetric (not necessarily in $\Ss_+^d$) matrices $u_i, v_j \in \Ss^d$, 
 	where we define
 	\eql{\label{eq-defn-K}
 		\Kern(u,v)_{i,j} \eqdef -\frac{c_{i,j} + \rho_1 u_i + \rho_2 v_j}{\epsilon}.
@@ -85,15 +85,15 @@ The following proposition states that the maximization with respect to either $u
 %
 These fixed points are conveniently written using the log-sum-exp operator, 
 \eql{\label{eq-dfn-lse}
-	\LSE_j( K_{i,j} ) \eqdef \log \sum_j \exp(K_{i,j}), 
+	\LSE_j( K ) \eqdef \Big( \log \sum_j \exp(K_{i,j}) \Big)_i, 
 }
 where the sum on $j$ is replaced by a sum on $i$ for $\LSE_i$. 
 
 \begin{prop}\label{prop-fixed-points}
 	For $v$ fixed (resp.\ $u$ fixed), the minimizer $u$ (resp.\ $v$) of~\eqref{eq-dual-pb} satisfies
 	\begin{align}\label{eq-fixed-point-u}
-		\foralls i, \quad u_i = \LSE_j(\Kern(u,v)_{i,j})-\log(\mu_i), \\
-		\foralls j, \quad v_j = \LSE_i(\Kern(u,v)_{i,j})-\log(\nu_j), \label{eq-fixed-point-v}
+		\foralls i, \quad u_i = \LSE_j(\Kern(u,v))_i-\log(\mu_i), \\
+		\foralls j, \quad v_j = \LSE_i(\Kern(u,v))_j-\log(\nu_j), \label{eq-fixed-point-v}
 	\end{align}
 	where $\Kern(u,v)$ is defined in~\eqref{eq-defn-K}.
 \end{prop}
@@ -167,15 +167,40 @@ We thus found that the use of the multi-scale refinement strategy introduced in~
 \end{rem}
 
 \begin{rem}[Gurvits' non-commutative Sinkhorn]
-\todo{Explain that this is un-related!} Although both generalize Sinkhorn's algorithm for PSD matrices, they have nothing in common: the unknown for Gurvits is an \emph{endomorphism} on PSD matrices while our gamma (Algorithm 1) is a \emph{family of} PSD matrices. Gurvits' generalization is applied to quantum states, while ours applies to graphics and imaging. 
-\todo{Maybe say a word on the fact that the wording ``quantum'' refers to the notion of Q-entropy, and is not inspired by quantum physics. } 
+Let us insist on the fact that the proposed Q-Sinkhorn Algorithm~\ref{alg:sinkhorn} is unrelated to Gurvits' Sinkhorn algorithm~\cite{gurvits2004classical}. While Gurvits' iterations compute a coupling between a pair of input tensors, our method rather couples two \textit{fields} of tensors (viewed as tensor-valued measures). Our usage of the wording  ``quantum'' refers to the notion of quantum entropy~\eqref{eq-h-quantum}, and is not inspired by quantum physics.
 \end{rem}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Trace-constrained Extension}
 
-\todo{Explain here how to handle exact trace (mass) conservation (so somehow a balanced formulation).}
+The quantum OT problem~\eqref{eq-Kantorovich} does not impose that the marginals of the coupling $\gamma$ match exactly the inputs $(\mu,\nu)$. It is only in the limit $(\rho_1,\rho_2) \rightarrow (+\infty,+\infty)$ that an exact match is obtained, but as explained in Section~\ref{sec-tensor-ot}, this might leads to an empty constraint set.
+
+To address this potential issue, we propose to rather only impose the \textit{trace} of the marginals to match the trace of the input measures, in order to guarantee conservation of mass (as measured by the trace of the tensors). We thus propose to solve the entropy regularized problem~\eqref{eq-Kantorovich-regul} with the extra constraint
+\eq{
+	\foralls i \in I, \quad \sum_j \tr(\ga_{i,j}) = \tr(\mu_i) \qandq
+	\foralls j \in J, \quad \sum_i \tr(\ga_{i,j}) = \tr(\nu_j).
+}
+These two extra constraints introduce two dual Lagrange multipliers $(\al,\be) \in \RR^I \times \RR^J$ and the optimal coupling relation~\eqref{eq-primal-dual-scaling} is replaced by 
+\eql{\label{eq-primal-dual-scaling}
+		\foralls (i,j), \quad \ga_{i,j} = \exp\pa{ \Kern(u,v,\al,\be)_{i,j} }
+}
+\eq{
+		\qwhereq
+		\Kern(u,v,\al,\be)_{i,j} \eqdef -\frac{c_{i,j} + \rho_1 u_i + \rho_2 v_j + \al_i + \be_j}{\epsilon}.
+}
+
+Q-Sinkhorn algorithm~\ref{alg:sinkhorn} is extended to handle these two extra variables $(\al,\be)$ by simply adding two steps to update these variables
+\begin{align*}
+	\foralls i \in I, \quad \al_i \leftarrow \al_i + \epsilon \LSTE_j( K )_i \qwhereq K \eqdef \Kern(u,v,\al,\be), \\
+	\foralls j \in J, \quad \be_j \leftarrow \be_j + \epsilon \LSTE_i( K )_j \qwhereq K \eqdef \Kern(u,v,\al,\be).
+\end{align*}
+where we introduced the log-sum-trace-exp operator
+\eq{
+	\LSTE_j( K ) \eqdef \Big( \log \sum_j \tr( \exp(K_{i,j}) ) \Big)_i
+}
+(and similarly for $\LSTE_i$). Note that in this expression, the $\exp$ is matrix-valued, whereas the $\log$ is real-valued.
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Numerical Illustrations}
@@ -192,6 +217,8 @@ We recall that it is obtained in two steps:
 Figure~\ref{fig:1d-interp} shows examples of interpolations on a 1-D domain $X=Y=[0,1]$ with tensors of dimension $d=2$ and $d=3$, and a ground cost $c_{i,j}=|x_i-y_j|^2\Id_{d \times d}$. It compares the OT interpolation, which achieves a ``mass displacement,'' to the usual linear interpolation $(1-t)\mu+t\nu$, which only performs a pointwise interpolation of the tensors. 
 
 Figure~\ref{fig:qot-vs-ot} shows the effect of taking into account the anisotropy of tensors into the definition of OT. In the case of isotropic tensors (see Remark~\ref{rem-classical-ot}), the method reduces to the usual scalar OT, and in 1-D it corresponds to the monotone re-arrangement~\cite{santambrogio2015optimal}. In contrast, the Q-OT of anisotropic tensors is forced to reverse the ordering of the transport map in order for tensors with similar orientations to be matched together. 
+%
+This example illustrates that the behaviour of our tensor interpolation is radically different from only applying classical scalar-valued OT to the trace of the tensor (which would result in the same coupling as the one obtained with isotropic tensors, Figure~\ref{fig:qot-vs-ot}, left). 
 
 Figure~\ref{fig:intro} shows larger scale examples. 
 %
@@ -200,17 +227,3 @@ The first row corresponds to $X=Y=[0,1]^2$ and $d=2$, with cost $c_{i,j}=\norm{x
 The second row corresponds to $X=Y$ being a triangulated mesh of a surface, and the cost is proportional to the squared geodesic distance $c_{i,j}=d_X(x_i,y_j)^2 \Id_{2\times 2}$. 
 
 \input{sections/sinkhorn-fig.tex}
-
-\todo{G: explain once again to insists that only transporting the trace using usual OT will leads to a totally different behavior, ignoring anisotropy. }
-
-
-\todo{G: explain that computing a classical OT over lifted space will leads to a very different behavior.
-%
-One could indeed do classical OT in product space, this would not increase the number of variable (everything would be represented with an $N \times N$ scalar matrix, this would on contrary reduce it and we would use classical sinkhorn). But this would totally destroy the geometry of tensor-valued measures (in particular, this would not metrize weak convergence). Two nearby diracs 
-\eq{
-  A \delta_0 + B \delta_s   \qwhereq   
-  A \eqdef \begin{pmatrix}1 & 0 \\ 0 & 0\end{pmatrix} 
-  \qandq 
-  B \eqdef \begin{pmatrix}0 & 0\\0 & 1\end{pmatrix}
- }
-would be lifted to two very far away point $(0,A)$ and $(s,B)$, whether for our method, it is almost treated as being $\Id_2 \delta_0$ (which is the correct behaviour of a \emph{measure}).}

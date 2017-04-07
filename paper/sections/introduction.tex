@@ -56,14 +56,18 @@ Tensor-valued data are ubiquitous in various areas of imaging science, computer 
 %%%
 \subsubsection{OT and Sinkhorn on pairs of tensors.}
 
-\todo{Explain here Gurvits + dynamical.}
+Although this is not the topics of this paper, let us note that several approaches have been proposed to define notions of OT between two tensors (without any spatial displacement). Gurvits introduced in~\cite{gurvits2004classical} a Sinkhorn-like algorithm to couple two tensors by an endomorphism that preserves positivity. This algorithm is however only known to converge in the case where the to involved tensors are the identity matrices, see~\cite{georgiou2015positive} for a detailed analysis. 
+%
+In contrast to this ``static'' formulation that seeks for a joint coupling between the tensors, a geodesic dynamic formulation is proposed in~\cite{Carlen2014}, see also~\cite{Chen2016,ChenGangbo17} for a related approach.
+
+
 
 %%%
 \subsubsection{OT on tensor fields.}
 
 The simplest way to define OT-like distances between arbitrary vector-valued measures is to use dual norms~\cite{Ning2014metrics}, which correspond to generalizations of $W_1$ OT for which transport cost equals ground distance. The corresponding metrics, however, have degenerate behavior in interpolation and barycenter problems (much like the $L^1$ norm on functions) and only use the linear structure of matrices rather than their multiplicative structure.
 %
-More satisfying notions of OT have recently been proposed in a dynamical (geodesic) way~\cite{JiangSpectral,Carlen2014,Chen2016}. 
+More satisfying notions of OT have recently been proposed in a dynamical (geodesic) way~\cite{JiangSpectral}. 
 %
 A static formulation of a tensor-valued OT is proposed in~\cite{ning2015matrix}, but it differs significantly from ours. It is initially motivated using a lifting that squares the number of variables, but a particular choice of cost reduces the computation to the optimization of a pair of couplings. In contrast, the formulation we propose in the present article is a direct generalization of unbalanced OT to matrices, which in turn enables the use of a Sinkhorn algorithm. 
 

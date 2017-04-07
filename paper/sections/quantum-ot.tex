@@ -16,6 +16,7 @@ Our goal is to propose a new definition of OT between $\mu$ and $\nu$.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Tensor Transportation}
+\label{sec-tensor-ot}
 
 Following the initial static formulation of OT by Kantorovich~\shortcite{Kantorovich42}, we define a coupling $\ga = \sum_{i,j}\ga_{i,j} \de_{(x_i,y_j)}$ as a measure over the product $X \times Y$ that encodes the transport of mass between $\mu$ and $\nu$. In the matrix case, $\ga_{i,j} \in \Ss_+^d$ is now a PSD matrix, describing how much mass is moved between $\mu_i$ and $\nu_j$. 
 % 
@@ -83,10 +84,25 @@ for some $\al>0$.  In this case, one should interpret the trace as the global ma
 	If $(\mu,\nu)$ are defined on a non-Euclidean space $Y=X$, like a smooth manifold, then formulation~\eqref{eq-Kantorovich} should be handled with care, since it assumes all the tensors $(\mu_i,\nu_j)_{i,j}$ are defined %expressed in coordinates 
 	in some common basis. 
 	%
-	For smooth manifolds, the simplest workaround is to assume that these tensors are defined with respect to carefully selected orthogonal bases of the tangent planes, so that the field of bases is itself smooth. Unless the manifold is parallelizable, in particular if it has a trivial topology, it is not possible to obtain a globally smooth orthonormal basis; in general, any such field necessarily has a few singular points. In the following, we compute smoothly-varying orthogonal bases of the tangent planes (away from singular points) \justin{added this parenthetical} following the method of Crane et al.~\shortcite{crane2010trivial}. 
+	For smooth manifolds, the simplest workaround is to assume that these tensors are defined with respect to carefully selected orthogonal bases of the tangent planes, so that the field of bases is itself smooth. Unless the manifold is parallelizable, in particular if it has a trivial topology, it is not possible to obtain a globally smooth orthonormal basis; in general, any such field necessarily has a few singular points. In the following, we compute smoothly-varying orthogonal bases of the tangent planes (away from singular points) following the method of Crane et al.~\shortcite{crane2010trivial}. 
 	%
 	In this setting, the cost is usually chosen to be $c_{i,j} = d_X(x_i,x_j)^\al \Id_{d \times d}$ where $d_X$ is the geodesic distance on $X$. 
 \end{rem}
+
+\begin{rem}[Measure lifting]
+An alternative to compute OT between tensor fields would be to rather lift the input measure $\mu$ to a measures $\bar \mu \eqdef \sum_{i \in I}  \de_{(\mu_i,x_i)}$ defined over the space $X \times \Ss_+^d$ (and similarly for the lifting $\bar\nu$ of $\nu$) and then use traditional scalar OT over this lifted space (using a ground cost taking into account both space and tensor variations). 
+%
+Such a naive approach would destroy the geometry of tensor-valued measures (which corresponds to the topology of weak convergence of measures), and result in very different interpolations. For example, a sum of two nearby Diracs on $X=\RR$  
+\eq{
+  \mu = P \delta_0 + Q \delta_s   \qwhereq   
+  P \eqdef \begin{pmatrix}1 & 0 \\ 0 & 0\end{pmatrix} 
+  \qandq 
+  Q \eqdef \begin{pmatrix}0 & 0\\0 & 1\end{pmatrix}
+}
+is treated by our method as being very close to $\de_{\Id_{2\times 2}}$ (which is the correct behaviour of a \emph{measure}), whereas it would be lifted to 
+$\bar\mu=\de_{(0,A)}+\de_{(s,B)}$ over $\RR \times \Ss_2^+$, which is in contrast very far from $\de_{(0,\Id_{2\times 2})}$.
+\end{rem}
+
 
 \if 0
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -97,7 +113,7 @@ for some $\al>0$.  In this case, one should interpret the trace as the global ma
 
 The formulation so far assumed that measures $\mu$ and $\nu$ are defined on an Euclidean spaces $(X,Y)$. The usual choice of metric, assuming $X=Y$ is some $d$-dimensional smooth manifolds, is to use $c_{i,j} = d(x_i,x_j)_X^\al \Id_{d \times d}$ where $d_X$ is the geodesic distance between $(x_i,x_j) \in X^2$. 
 %
-In our setting of tensor-valued measures, an extra difficulty, with respect to the usual scalar OT case, is that each tensors $\mu_i \in \Ss_d$ is now defined with respect to some particular choice of basis $B_i$ of the tangent space $\Tt_i$ of $X$ at $x_i \in X$. 
+In our setting of tensor-valued measures, an extra difficulty, with respect to the usual scalar OT case, is that each tensors $\mu_i \in \Ss_+^d$ is now defined with respect to some particular choice of basis $B_i$ of the tangent space $\Tt_i$ of $X$ at $x_i \in X$. 
 % 
 This implies that one needs to settle a change of basis when transport such a tensor over a different tangent plane $\Tt_j$ at $x_j$. We name $T_{i,j}$ this change of basis, which corresponds to the notion of parallel transport from differential geometry.
 
