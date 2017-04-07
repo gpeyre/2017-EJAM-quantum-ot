@@ -7,7 +7,7 @@
 
 Optimal transport (OT) is an active field of research at the intersection of probability theory, PDEs, convex optimization and numerical analysis. 
 %
-OT offers a canonical way to lift a ground distance on some metric space to a metric between arbitrary probability measures defined over this base space. OT distances offer many interesting  features, and in particular lead to a geometrically faithful way to manipulate and interpolate probability distributions.
+OT offers a canonical way to lift a ground distance on some metric space to a metric between arbitrary probability measures defined over this base space. OT distances offer many interesting  features and in particular lead to a geometrically faithful way to manipulate and interpolate probability distributions.
 
 
 
@@ -26,14 +26,14 @@ The equivalence between these two formulations was introduced by Brenier~\shortc
 
 The basic OT problem has been extended in various ways, a typical illustration of which being the computation of a barycenter (Fr\'echet mean) of input measures, a convex program studied by Agueh and Carlier~\shortcite{agueh-2011}.
 %
-OT has found numerous applications, for instance in computer vision (under the name ``earth mover distance'')~\cite{rubner-2000} or computer graphics~\cite{bonneel-2011}. % sampling~\cite{deGoes-2012}, matching~\cite{solomon2016entropic}.
+OT also has found numerous applications, for instance in computer vision (under the name ``earth mover's distance'')~\cite{rubner-2000} and computer graphics~\cite{bonneel-2011}. % sampling~\cite{deGoes-2012}, matching~\cite{solomon2016entropic}.
 
 
 %%%
 \subsubsection{Unbalanced transport.}
 
 While the initial formulations of OT are restricted to positive measures of equal mass (normalized probability distributions), a recent wave of activity has proposed and studied a family of ``canonical'' extensions %of the initial OT formulations 
-to the ``unbalanced'' setting of arbitrary positive measures. This covers both a dynamic formulation~\cite{LieroMielkeSavareCourt,kondratyev2015,2016-chizat-focm} and a static one~\cite{LieroMielkeSavareLong,2015-chizat-unbalanced} and has been applied in machine learning~\cite{frogner-2015}. 
+to the \emph{unbalanced} setting of arbitrary positive measures. This covers both a dynamic formulation~\cite{LieroMielkeSavareCourt,kondratyev2015,2016-chizat-focm} and a static one~\cite{LieroMielkeSavareLong,2015-chizat-unbalanced} and has been applied in machine learning~\cite{frogner-2015}. 
 %
 Our work extends this static unbalanced formulation to tensor-valued measures. 
 
@@ -41,7 +41,7 @@ Our work extends this static unbalanced formulation to tensor-valued measures.
 %%%
 \subsubsection{Entropic regularization.}
 
-The current state-of-the-art OT approximation for arbitrary ground costs uses entropic regularization of the transport plan. This leads to strictly convex programs that can be solved using a simple class of highly parallelizable ``diagonal scaling'' algorithms. The landmark paper of Cuturi~\shortcite{cuturi-2013} inspired detailed study of these solvers, leading to various generalizations of Sinkhorn's algorithm~\shortcite{Sinkhorn64}. This includes for instance the use of fast convolutional structures~\cite{solomon-2015}, extensions to barycenters~\cite{benamou-2015} and to unbalanced OT~\cite{frogner-2015,2016-chizat-sinkhorn}.
+The current state-of-the-art OT approximation for arbitrary ground costs uses entropic regularization of the transport plan. This leads to strictly convex programs that can be solved using a simple class of highly parallelizable diagonal scaling algorithms. The landmark paper of Cuturi~\shortcite{cuturi-2013} inspired detailed study of these solvers, leading to various generalizations of Sinkhorn's algorithm~\shortcite{Sinkhorn64}. This includes for instance the use of fast convolutional structures~\cite{solomon-2015}, extensions to barycenters~\cite{benamou-2015} and application to unbalanced OT~\cite{frogner-2015,2016-chizat-sinkhorn}.
 %
 These entropic regularization techniques correspond to the use of projection and proximal maps for the Kullback--Leibler Bregman divergence and are equivalent to iterative projections~\cite{bregman-1967} and Dykstra's algorithm~\cite{Dykstra83,bauschke-lewis}. 
 %
