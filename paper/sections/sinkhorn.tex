@@ -167,12 +167,12 @@ We thus found that the use of the multi-scale refinement strategy introduced in~
 \end{rem}
 
 \begin{rem}[Gurvits' non-commutative Sinkhorn]
-Let us insist on the fact that the proposed Q-Sinkhorn Algorithm~\ref{alg:sinkhorn} is unrelated to Gurvits' Sinkhorn algorithm~\cite{gurvits2004classical}. While Gurvits' iterations compute a coupling between a pair of input tensors, our method rather couples two \textit{fields} of tensors (viewed as tensor-valued measures). Our usage of the wording  ``quantum'' refers to the notion of quantum entropy~\eqref{eq-h-quantum}, and is not inspired by quantum physics.
+Let us insist on the fact that the proposed Q-Sinkhorn Algorithm~\ref{alg:sinkhorn} is unrelated to Gurvits' Sinkhorn algorithm~\cite{gurvits2004classical}. While Gurvits' iterations compute a coupling between a pair of input tensors, our method rather couples two \textit{fields} of tensors (viewed as tensor-valued measures). Our usage of the wording  ``quantum'' refers to the notion of quantum entropy~\eqref{eq-h-quantum} and is not inspired by quantum physics.
 \end{rem}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Trace-constrained Extension}
+\subsection{Trace-Constrained Extension}
 
 The quantum OT problem~\eqref{eq-Kantorovich} does not impose that the marginals of the coupling $\gamma$ match exactly the inputs $(\mu,\nu)$. It is only in the limit $(\rho_1,\rho_2) \rightarrow (+\infty,+\infty)$ that an exact match is obtained, but as explained in Section~\ref{sec-tensor-ot}, this might leads to an empty constraint set.
 
