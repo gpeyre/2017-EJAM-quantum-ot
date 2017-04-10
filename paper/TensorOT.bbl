@@ -74,10 +74,14 @@ V.~Chandrasekaran and P.~Shah.
 \newblock Relative entropy optimization and its applications.
 \newblock {\em Mathematical Programming}, pages 1--32, 2016.
 
+\bibitem{ChenGangbo17}
+Yongxin Chen, Wilfrid Gangbo, Tryphon~T. Georgiou, and Allen Tannenbaum.
+\newblock On the matrix {M}onge-{K}antorovich problem.
+\newblock {\em Preprint arXiv:1701.02826}, 2017.
+
 \bibitem{Chen2016}
-Yongxin Chen, Tryphon~T. Georgiou, , and Allen Tannenbaum.
-\newblock Distances and {R}iemannian metrics for multivariate spectral
-  densities.
+Yongxin Chen, Tryphon~T. Georgiou, and Allen Tannenbaum.
+\newblock Matrix optimal mass transport: A quantum mechanical approach.
 \newblock {\em Preprint arXiv:1610.03041}, 2016.
 
 \bibitem{2015-chizat-unbalanced}
@@ -145,6 +149,17 @@ C.~Frogner, C.~Zhang, H.~Mobahi, M.~Araya, and T.~Poggio.
 Bruno Galerne, Yann Gousseau, and Jean-Michel Morel.
 \newblock Random phase textures: Theory and synthesis.
 \newblock {\em IEEE Transactions on image processing}, 20(1):257--267, 2011.
+
+\bibitem{georgiou2015positive}
+T.~T. Georgiou and M.~Pavon.
+\newblock Positive contraction mappings for classical and quantum
+  {S}chr{\"o}dinger systems.
+\newblock {\em Journal of Mathematical Physics}, 56(3):033301, 2015.
+
+\bibitem{gurvits2004classical}
+L.~Gurvits.
+\newblock Classical complexity and quantum entanglement.
+\newblock {\em Journal of Computer and System Sciences}, 69(3):448--484, 2004.
 
 \bibitem{HotzFHHJJ04}
 I.~Hotz, L.~Feng, H.~Hagen, B.~Hamann, K.~I. Joy, and B.~Jeremic.
@@ -246,9 +261,9 @@ B.~Schmitzer.
 \newblock {\em arXiv:1610.06519}, 2016.
 
 \bibitem{shewchuk2002good}
-J~Shewchuk.
+J.~Shewchuk.
 \newblock What is a good linear finite element? {I}nterpolation, conditioning,
-  anisotropy, and quality measures (preprint).
+  anisotropy and quality measures (preprint).
 \newblock {\em University of California at Berkeley}, 73, 2002.
 
 \bibitem{Sinkhorn64}

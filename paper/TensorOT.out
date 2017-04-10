@@ -8,7 +8,7 @@
 \BOOKMARK [1][-]{section.3}{Quantum Sinkhorn}{}% 8
 \BOOKMARK [2][-]{subsection.3.1}{Entropic Regularization}{section.3}% 9
 \BOOKMARK [2][-]{subsection.3.2}{Quantum Sinkhorn Algorithm}{section.3}% 10
-\BOOKMARK [2][-]{subsection.3.3}{Trace-constrained Extension}{section.3}% 11
+\BOOKMARK [2][-]{subsection.3.3}{Trace-Constrained Extension}{section.3}% 11
 \BOOKMARK [2][-]{subsection.3.4}{Numerical Illustrations}{section.3}% 12
 \BOOKMARK [1][-]{section.4}{Quantum Barycenters}{}% 13
 \BOOKMARK [2][-]{subsection.4.1}{Barycenter Optimization Problem}{section.4}% 14

@@ -1,4 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2016)
+This is BibTeX, Version 0.99d (TeX Live 2015)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: TensorOT.aux
 The style file: plain.bst
@@ -10,45 +10,45 @@ Warning--can't use both author and editor fields in Deriche2006
 Warning--empty publisher in frogner-2015
 Warning--empty booktitle in HotzFHHJJ04
 Warning--can't use both volume and number fields in LagaeSurvey
-You've used 50 entries,
+You've used 53 entries,
             2118 wiz_defined-function locations,
-            820 strings with 12383 characters,
-and the built_in function-call counts, 18914 in all, are:
-= -- 1913
-> -- 877
+            839 strings with 12880 characters,
+and the built_in function-call counts, 19793 in all, are:
+= -- 2000
+> -- 915
 < -- 20
-+ -- 356
-- -- 296
-* -- 1407
-:= -- 3069
-add.period$ -- 157
-call.type$ -- 50
-change.case$ -- 296
++ -- 371
+- -- 308
+* -- 1470
+:= -- 3222
+add.period$ -- 166
+call.type$ -- 53
+change.case$ -- 311
 chr.to.int$ -- 0
-cite$ -- 57
-duplicate$ -- 683
-empty$ -- 1411
-format.name$ -- 296
-if$ -- 3952
+cite$ -- 60
+duplicate$ -- 715
+empty$ -- 1481
+format.name$ -- 308
+if$ -- 4130
 int.to.chr$ -- 0
-int.to.str$ -- 50
-missing$ -- 50
-newline$ -- 253
-num.names$ -- 100
-pop$ -- 267
+int.to.str$ -- 53
+missing$ -- 53
+newline$ -- 268
+num.names$ -- 106
+pop$ -- 278
 preamble$ -- 1
-purify$ -- 248
+purify$ -- 260
 quote$ -- 0
-skip$ -- 511
+skip$ -- 533
 stack$ -- 0
-substring$ -- 1399
-swap$ -- 182
+substring$ -- 1457
+swap$ -- 185
 text.length$ -- 20
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 194
+type$ -- 206
 warning$ -- 7
-while$ -- 184
-width$ -- 52
-write$ -- 556
+while$ -- 193
+width$ -- 55
+write$ -- 588
 (There were 7 warnings)
