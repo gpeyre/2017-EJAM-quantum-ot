@@ -45,7 +45,7 @@ The current state-of-the-art OT approximation for arbitrary ground costs uses en
 %
 These entropic regularization techniques correspond to the use of projection and proximal maps for the Kullback--Leibler Bregman divergence and are equivalent to iterative projections~\cite{bregman-1967} and Dykstra's algorithm~\cite{Dykstra83,bauschke-lewis}. 
 %
-An important contribution of the present work is to extend these techniques to the matrix setting (i.e., using quantum divergences). Note that quantum divergences have been recently used to solve some machine learning problems~\cite{Dhillon2008,Kulis2009,Chandrasekaran2016}.% \justin{is applicable to machine learning applications?}\gabriel{what do you mean? Here I simply wanted to point to other work that also use Quantum-KL, but they are not using OT.  Maybe I should clarify ? This is not super important though. I rephrased a bit. }\justin{aha, this makes sense!  I wasn't sure if you meant quantum OT}
+An important contribution of the present work is to extend these techniques to the matrix setting (i.e., using quantum divergences). Note that quantum divergences have been recently used to solve some machine learning problems~\cite{Dhillon2008,Kulis2009,Chandrasekaran2017}.% \justin{is applicable to machine learning applications?}\gabriel{what do you mean? Here I simply wanted to point to other work that also use Quantum-KL, but they are not using OT.  Maybe I should clarify ? This is not super important though. I rephrased a bit. }\justin{aha, this makes sense!  I wasn't sure if you meant quantum OT}
 
 
 %%%
@@ -143,7 +143,7 @@ The quantum entropy (also called von Neumann entropy) of a tensor-valued measure
 }
 \eq{
 	\foralls P \in \Ss^d, \quad
-	H(P) \eqdef -\tr( P \log(P)-P) - \iota_{\Ss_{+}^d}(P), 
+	H(P) \eqdef -\tr( P \log(P)-P) - \iota_{\Ss_{+}^d}(P),
 }
 where $\iota_C$ is the indicator function of a closed convex set $C$, i.e. $\iota_C(P)=0$ if $P \in C$ and $\iota_C(P)=+\infty$ otherwise.
 Note that $H$ is a concave function. 

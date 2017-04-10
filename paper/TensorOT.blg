@@ -6,49 +6,48 @@ Database file #1: refs.bib
 Warning--can't use both volume and number fields in alliez2003anisotropic
 Warning--can't use both volume and number fields in crane2010trivial
 Warning--empty publisher in cuturi-2013
-Warning--can't use both author and editor fields in Deriche2006
 Warning--empty publisher in frogner-2015
 Warning--empty booktitle in HotzFHHJJ04
 Warning--can't use both volume and number fields in LagaeSurvey
 You've used 53 entries,
             2118 wiz_defined-function locations,
-            839 strings with 12880 characters,
-and the built_in function-call counts, 19793 in all, are:
-= -- 2000
+            842 strings with 13250 characters,
+and the built_in function-call counts, 19975 in all, are:
+= -- 2022
 > -- 915
 < -- 20
 + -- 371
 - -- 308
-* -- 1470
-:= -- 3222
+* -- 1497
+:= -- 3240
 add.period$ -- 166
 call.type$ -- 53
-change.case$ -- 311
+change.case$ -- 310
 chr.to.int$ -- 0
-cite$ -- 60
-duplicate$ -- 715
-empty$ -- 1481
+cite$ -- 59
+duplicate$ -- 719
+empty$ -- 1502
 format.name$ -- 308
-if$ -- 4130
+if$ -- 4170
 int.to.chr$ -- 0
 int.to.str$ -- 53
-missing$ -- 53
+missing$ -- 54
 newline$ -- 268
 num.names$ -- 106
-pop$ -- 278
+pop$ -- 276
 preamble$ -- 1
 purify$ -- 260
 quote$ -- 0
-skip$ -- 533
+skip$ -- 535
 stack$ -- 0
-substring$ -- 1457
+substring$ -- 1504
 swap$ -- 185
 text.length$ -- 20
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 206
-warning$ -- 7
-while$ -- 193
+warning$ -- 6
+while$ -- 197
 width$ -- 55
-write$ -- 588
-(There were 7 warnings)
+write$ -- 589
+(There were 6 warnings)

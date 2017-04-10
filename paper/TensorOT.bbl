@@ -1,17 +1,17 @@
 \begin{thebibliography}{10}
 
 \bibitem{agueh-2011}
-M.~Agueh and G.~Carlier.
+Martial Agueh and Guillaume Carlier.
 \newblock Barycenters in the {W}asserstein space.
 \newblock {\em SIAM Journal on Mathematical Analysis}, 43(2):904--924, 2011.
 
 \bibitem{HighamExp}
-A.~H. Al-Mohy and N.~J. Higham.
+Awad~H Al-Mohy and Nicholas~J Higham.
 \newblock A new scaling and squaring algorithm for the matrix exponential.
 \newblock {\em SIAM J. Sci. Comput.}, 31(3):970--989, 2009.
 
 \bibitem{HighamLog}
-A.~H. Al-Mohy and N.~J. Higham.
+Awad~H Al-Mohy and Nicholas~J Higham.
 \newblock Improved inverse scaling and squaring algorithms for the matrix
   logarithm.
 \newblock {\em SIAM J. Sci. Comput.}, 34(4):C153--C169, 2012.
@@ -24,81 +24,85 @@ Pierre Alliez, David Cohen-Steiner, Olivier Devillers, Bruno L{\'e}vy, and
   485--493. ACM, 2003.
 
 \bibitem{bauschke-lewis}
-H.~H. Bauschke and A.~S. Lewis.
+Heinz~H Bauschke and Adrian~S. Lewis.
 \newblock Dykstra's algorithm with {B}regman projections: a convergence proof.
 \newblock {\em Optimization}, 48(4):409--427, 2000.
 
 \bibitem{benamou2000computational}
-J-D. Benamou and Y.~Brenier.
+Jean-David Benamou and Yann Brenier.
 \newblock A computational fluid mechanics solution to the {M}onge-{K}antorovich
   mass transfer problem.
 \newblock {\em Numerische Mathematik}, 84(3):375--393, 2000.
 
 \bibitem{benamou-2015}
-J-D. Benamou, G.~Carlier, M.~Cuturi, L.~Nenna, and G.~Peyr\'e.
+Jean-David Benamou, Guillaume Carlier, Marco Cuturi, Luca Nenna, and Gabriel
+  Peyr\'e.
 \newblock Iterative {B}regman projections for regularized transportation
   problems.
 \newblock {\em SIAM J. Sci. Comp.}, 37(2):A1111--A1138, 2015.
 
 \bibitem{bonneel-2011}
-N.~Bonneel, M.~van~de Panne, S.~Paris, and W.~Heidrich.
+Nicolas Bonneel, Michiel Van De~Panne, Sylvain Paris, and Wolfgang Heidrich.
 \newblock Displacement interpolation using {L}agrangian mass transport.
 \newblock {\em ACM Trans. Graph.}, 30(6):158:1--158:12, December 2011.
 
 \bibitem{peyre-iccv-09}
-S.~Bougleux, G.~Peyr{\'e}, and L.~D. Cohen.
+S{\'e}bastien Bougleux, Gabriel Peyr{\'e}, and Laurent~D Cohen.
 \newblock Image compression with anisotropic geodesic triangulations.
 \newblock In {\em Proc. of ICCV'09}, pages 2343--2348, 2009.
 
 \bibitem{bregman-1967}
-L.~M. Bregman.
+Lev~M Bregman.
 \newblock The relaxation method of finding the common point of convex sets and
   its application to the solution of problems in convex programming.
 \newblock {\em {USSR} comp. math. and math. phys.}, 7(3):200--217, 1967.
 
 \bibitem{Brenier91}
-Y.~Brenier.
+Yann Brenier.
 \newblock Polar factorization and monotone rearrangement of vector-valued
   functions.
 \newblock {\em Comm. Pure Appl. Math.}, 44(4):375--417, 1991.
 
 \bibitem{Carlen2014}
-Eric~A. Carlen and J.~Maas.
+Eric~A Carlen and Jan Maas.
 \newblock An analog of the 2-{W}asserstein metric in non-commutative
   probability under which the fermionic {F}okker--{P}lanck equation is gradient
   flow for the entropy.
 \newblock {\em Communications in Mathematical Physics}, 331(3):887--926, 2014.
 
-\bibitem{Chandrasekaran2016}
-V.~Chandrasekaran and P.~Shah.
+\bibitem{Chandrasekaran2017}
+Venkat Chandrasekaran and Parikshit Shah.
 \newblock Relative entropy optimization and its applications.
-\newblock {\em Mathematical Programming}, pages 1--32, 2016.
+\newblock {\em Mathematical Programming}, 161(1):1--32, 2017.
 
 \bibitem{ChenGangbo17}
-Yongxin Chen, Wilfrid Gangbo, Tryphon~T. Georgiou, and Allen Tannenbaum.
+Yongxin Chen, Wilfrid Gangbo, Tryphon~T Georgiou, and Allen Tannenbaum.
 \newblock On the matrix {M}onge-{K}antorovich problem.
 \newblock {\em Preprint arXiv:1701.02826}, 2017.
 
 \bibitem{Chen2016}
-Yongxin Chen, Tryphon~T. Georgiou, and Allen Tannenbaum.
+Yongxin Chen, Tryphon~T Georgiou, and Allen Tannenbaum.
 \newblock Matrix optimal mass transport: A quantum mechanical approach.
 \newblock {\em Preprint arXiv:1610.03041}, 2016.
 
 \bibitem{2015-chizat-unbalanced}
-L.~Chizat, G.~Peyr{\'e}, B.~Schmitzer, and F-X. Vialard.
+L{\'e}na{\"i}c Chizat, Gabriel Peyr{\'e}, Bernhard Schmitzer, and
+  Fran{\c{c}}ois-Xavier Vialard.
 \newblock Unbalanced optimal transport: Geometry and {K}antorovich formulation.
 \newblock Preprint 1508.05216, Arxiv, 2015.
 
+\bibitem{2016-chizat-focm}
+L{\'e}na{\"i}c Chizat, Gabriel Peyr{\'e}, Bernhard Schmitzer, and
+  Fran{\c{c}}ois-Xavier Vialard.
+\newblock An interpolating distance between optimal transport and
+  {F}isher--{R}ao metrics.
+\newblock {\em Foundations of Computational Mathematics}, pages 1--44, 2016.
+
 \bibitem{2016-chizat-sinkhorn}
-L.~Chizat, G.~Peyr{\'e}, B.~Schmitzer, and F-X. Vialard.
+L{\'e}na{\"i}c Chizat, Gabriel Peyr{\'e}, Bernhard Schmitzer, and
+  Fran{\c{c}}ois-Xavier Vialard.
 \newblock Scaling algorithms for unbalanced transport problems.
 \newblock Preprint 1607.05816, Arxiv, 2016.
-
-\bibitem{2016-chizat-focm}
-L.~Chizat, B.~Schmitzer, G.~Peyr{\'e}, and F-X. Vialard.
-\newblock An interpolating distance between optimal transport and
-  {Fisher--Rao}.
-\newblock {\em to appear in Foundations of Computational Mathematics}, 2016.
 
 \bibitem{crane2010trivial}
 Keenan Crane, Mathieu Desbrun, and Peter Schr{\"o}der.
@@ -107,7 +111,7 @@ Keenan Crane, Mathieu Desbrun, and Peter Schr{\"o}der.
   Online Library, 2010.
 
 \bibitem{cuturi-2013}
-M.~Cuturi.
+Marco Cuturi.
 \newblock Sinkhorn distances: Lightspeed computation of optimal transportation.
 \newblock In {\em Proc. NIPS}, volume~26, pages 2292--2300. 2013.
 
@@ -117,30 +121,31 @@ Laurent Demaret, Nira Dyn, and Armin Iske.
 \newblock {\em Signal Processing}, 86(7):1604--1616, 2006.
 
 \bibitem{Deriche2006}
-R.~Deriche, D.~Tschumpel{\'e}, C.~Lenglet, and M.~Rousson.
-\newblock {\em Variational Approaches to the Estimation, Regularizatinn and
+Rachid Deriche, D~Tschumpel{\'e}, Christophe Lenglet, and Mika{\"e}l Rousson.
+\newblock {\em Variational Approaches to the Estimation, Regularizatinn, and
   Segmentation of Diffusion Tensor Images}, pages 517--530.
 \newblock Springer US, Boston, MA, 2006.
 
 \bibitem{Dhillon2008}
-I.~S. Dhillon and J.~A. Tropp.
+Inderjit~S Dhillon and Joel~A Tropp.
 \newblock Matrix nearness problems with {B}regman divergences.
 \newblock {\em SIAM Journal on Matrix Analysis and Applications},
   29(4):1120--1146, 2008.
 
 \bibitem{Dryden2009}
-I.~L Dryden, A.~Koloydenko, and D.~Zhou.
+Ian~L Dryden, Alexey Koloydenko, and Diwei Zhou.
 \newblock Non-{E}uclidean statistics for covariance matrices, with applications
   to diffusion tensor imaging.
 \newblock {\em The Annals of Applied Statistics}, pages 1102--1123, 2009.
 
 \bibitem{Dykstra83}
-R.~L. Dykstra.
+Richard~L Dykstra.
 \newblock An algorithm for restricted least squares regression.
 \newblock {\em J. Amer. Stat.}, 78(384):839--842, 1983.
 
 \bibitem{frogner-2015}
-C.~Frogner, C.~Zhang, H.~Mobahi, M.~Araya, and T.~Poggio.
+Charlie Frogner, Chiyuan Zhang, Hossein Mobahi, Mauricio Araya, and Tomaso~A.
+  Poggio.
 \newblock Learning with a {W}asserstein loss.
 \newblock In {\em Advances in Neural Information Processing Systems},
   volume~28, pages 2044--2052. 2015.
@@ -151,41 +156,42 @@ Bruno Galerne, Yann Gousseau, and Jean-Michel Morel.
 \newblock {\em IEEE Transactions on image processing}, 20(1):257--267, 2011.
 
 \bibitem{georgiou2015positive}
-T.~T. Georgiou and M.~Pavon.
+Tryphon~T Georgiou and Michele Pavon.
 \newblock Positive contraction mappings for classical and quantum
   {S}chr{\"o}dinger systems.
 \newblock {\em Journal of Mathematical Physics}, 56(3):033301, 2015.
 
 \bibitem{gurvits2004classical}
-L.~Gurvits.
+Leonid Gurvits.
 \newblock Classical complexity and quantum entanglement.
 \newblock {\em Journal of Computer and System Sciences}, 69(3):448--484, 2004.
 
 \bibitem{HotzFHHJJ04}
-I.~Hotz, L.~Feng, H.~Hagen, B.~Hamann, K.~I. Joy, and B.~Jeremic.
+Ingrid Hotz, Louis Feng, Hans Hagen, Bernd Hamann, Kenneth Joy, and Boris
+  Jeremic.
 \newblock Physically based methods for tensor field visualization.
 \newblock pages 123--130. IEEE Computer Society, 2004.
 
 \bibitem{JiangSpectral}
-X.~Jiang, L.~Ning, and T.~T. Georgiou.
+Xianhua Jiang, Lipeng Ning, and Tryphon~T Georgiou.
 \newblock Distances and {R}iemannian metrics for multivariate spectral
   densities.
 \newblock {\em IEEE Transactions on Automatic Control}, 57(7):1723--1735, July
   2012.
 
 \bibitem{Kantorovich42}
-L.~Kantorovich.
+Leonid~V Kantorovich.
 \newblock On the transfer of masses (in {R}ussian).
 \newblock {\em Doklady Akademii Nauk}, 37(2):227--229, 1942.
 
 \bibitem{kondratyev2015}
-S.~Kondratyev, L.~Monsaingeon, and D.~Vorotnikov.
-\newblock A new optimal transport distance on the space of finite {R}adon
+Stanislav Kondratyev, Léonard Monsaingeon, and Dmitry Vorotnikov.
+\newblock A new optimal transport distance on the space of finite radon
   measures.
-\newblock Technical report, Pre-print, 2015.
+\newblock {\em Adv. Differential Equations}, 21(11/12):1117--1164, 11 2016.
 
 \bibitem{Kulis2009}
-B.~Kulis, M.~A. Sustik, and I.~S. Dhillon.
+Brian Kulis, M{\'a}ty{\'a}s~A. Sustik, and Inderjit~S. Dhillon.
 \newblock Low-rank kernel learning with {B}regman matrix divergences.
 \newblock {\em J. Mach. Learn. Res.}, 10:341--376, June 2009.
 
@@ -203,31 +209,31 @@ Ares Lagae, Sylvain Lefebvre, and Philip Dutr{\'e}.
   17(8):1096--1107, 2011.
 
 \bibitem{LieroMielkeSavareLong}
-M.~{Liero}, A.~{Mielke}, and G.~{Savar{\'e}}.
+Matthias Liero, Alexander Mielke, and Giuseppe Savar{\'e}.
 \newblock Optimal entropy-transport problems and a new {Hellinger--Kantorovich}
   distance between positive measures.
 \newblock {\em ArXiv e-prints}, 2015.
 
 \bibitem{LieroMielkeSavareCourt}
-M.~Liero, A.~Mielke, and G.~Savar\'e.
+Matthias Liero, Alexander Mielke, and Giuseppe Savar{\'e}.
 \newblock Optimal transport in competition with reaction: The
   {Hellinger--Kantorovich} distance and geodesic curves.
 \newblock {\em SIAM Journal on Mathematical Analysis}, 48(4):2869--2911, 2016.
 
 \bibitem{Monge1781}
-G.~Monge.
+Gaspard Monge.
 \newblock M{\'e}moire sur la th{\'e}orie des d{\'e}blais et des remblais.
 \newblock {\em Histoire de l'Acad{\'e}mie Royale des Sciences}, pages 666--704,
   1781.
 
 \bibitem{Ning2014metrics}
-L.~Ning and T.~T. Georgiou.
+Lipeng Ning and Tryphon~T Georgiou.
 \newblock Metrics for matrix-valued measures via test functions.
 \newblock In {\em 53rd IEEE Conference on Decision and Control}, pages
   2642--2647. IEEE, 2014.
 
 \bibitem{ning2015matrix}
-L.~Ning, T.~T. Georgiou, and A.~Tannenbaum.
+Lipeng Ning, Tryphon~T Georgiou, and Allen Tannenbaum.
 \newblock On matrix-valued {M}onge--{K}antorovich optimal mass transport.
 \newblock {\em IEEE transactions on automatic control}, 60(2):373--382, 2015.
 
@@ -249,32 +255,32 @@ Yossi Rubner, Carlo Tomasi, and Leonidas~J. Guibas.
   November 2000.
 
 \bibitem{santambrogio2015optimal}
-F.~Santambrogio.
+Filippo Santambrogio.
 \newblock Optimal transport for applied mathematicians.
 \newblock {\em Progress in Nonlinear Differential Equations and their
   applications}, 87, 2015.
 
 \bibitem{Schmitzer2016}
-B.~Schmitzer.
+Bernhard Schmitzer.
 \newblock Stabilized sparse scaling algorithms for entropy regularized
   transport problems.
 \newblock {\em arXiv:1610.06519}, 2016.
 
 \bibitem{shewchuk2002good}
-J.~Shewchuk.
+Jonathan Shewchuk.
 \newblock What is a good linear finite element? {I}nterpolation, conditioning,
   anisotropy and quality measures (preprint).
 \newblock {\em University of California at Berkeley}, 73, 2002.
 
 \bibitem{Sinkhorn64}
-R.~Sinkhorn.
+Richard Sinkhorn.
 \newblock A relationship between arbitrary positive matrices and doubly
   stochastic matrices.
 \newblock {\em Ann. Math. Statist.}, 35:876--879, 1964.
 
 \bibitem{solomon-2015}
-J.~Solomon, F.~de~Goes, G.~Peyr{\'e}, M.~Cuturi, A.~Butscher, A.~Nguyen, T.~Du,
-  and L.~Guibas.
+Justin Solomon, Fernando De~Goes, Gabriel Peyr{\'e}, Marco Cuturi, Adrian
+  Butscher, Andy Nguyen, Tao Du, and Leonidas Guibas.
 \newblock Convolutional {W}asserstein distances: Efficient optimal
   transportation on geometric domains.
 \newblock {\em TOG}, 34(4):66:1--66:11, July 2015.
@@ -285,8 +291,8 @@ Hiromasa Takemura, Cesar~F Caiafa, Brian~A Wandell, and Franco Pestilli.
 \newblock {\em PLoS Comput Biol}, 12(2):e1004692, 2016.
 
 \bibitem{VaxmanCDPBHB16}
-A.~Vaxman, M.~Campen, O.~Diamanti, D.~Panozzo, D.~Bommes, K.~Hildebrandt, and
-  M.~Ben-Chen.
+Amir Vaxman, Marcel Campen, Olga Diamanti, Daniele Panozzo, David Bommes, Klaus
+  Hildebrandt, and Mirela Ben-Chen.
 \newblock Directional field synthesis, design, and processing.
 \newblock {\em Comput. Graph. Forum}, 35(2):545--572, 2016.
 
@@ -296,7 +302,7 @@ Brian~A Wandell.
 \newblock {\em Annual Review of Neuroscience}, 2016.
 
 \bibitem{weickert1998anisotropic}
-J.~Weickert.
+Joachim Weickert.
 \newblock {\em Anisotropic diffusion in image processing}, volume~1.
 \newblock Teubner Stuttgart, 1998.
 

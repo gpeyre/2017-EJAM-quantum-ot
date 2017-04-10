@@ -45,7 +45,7 @@
 \citation{bauschke-lewis}
 \citation{Dhillon2008}
 \citation{Kulis2009}
-\citation{Chandrasekaran2016}
+\citation{Chandrasekaran2017}
 \@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Given two input fields of positive semidefinite matrices (displayed at times $t \in \{0,1\}$ using ellipses) on some domain (here, a 2-D planar square and a surface mesh), our Quantum Optimal Transport (Q-OT) method defines a continuous interpolating path for $t \in [0,1]$. Unlike linear interpolation schemes, Q-OT transports the ``mass'' of the tensors (size of the ellipses) as well as their anisotropy and orientation. This interpolation, and its extension to finding the barycenter of several input fields, is computed using a fast extension of the well-known Sinkhorn algorithm. \relax }}{2}{figure.caption.1}}
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
 \newlabel{fig:intro}{{1}{2}{Given two input fields of positive semidefinite matrices (displayed at times $t \in \{0,1\}$ using ellipses) on some domain (here, a 2-D planar square and a surface mesh), our Quantum Optimal Transport (Q-OT) method defines a continuous interpolating path for $t \in [0,1]$. Unlike linear interpolation schemes, Q-OT transports the ``mass'' of the tensors (size of the ellipses) as well as their anisotropy and orientation. This interpolation, and its extension to finding the barycenter of several input fields, is computed using a fast extension of the well-known Sinkhorn algorithm. \relax }{figure.caption.1}{}}
@@ -109,52 +109,52 @@
 \newlabel{eq-primal-dual-scaling}{{3.4}{8}{Entropic Regularization}{equation.3.4}{}}
 \citation{Dykstra83}
 \citation{bauschke-lewis}
+\citation{2016-chizat-sinkhorn}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.2.}Quantum Sinkhorn Algorithm}{9}{subsection.3.2}}
 \newlabel{eq-dfn-lse}{{3.5}{9}{Quantum Sinkhorn Algorithm}{equation.3.5}{}}
 \newlabel{prop-fixed-points}{{2}{9}{Quantum Sinkhorn Algorithm}{prop.2}{}}
 \newlabel{eq-fixed-point-u}{{3.6}{9}{Quantum Sinkhorn Algorithm}{equation.3.6}{}}
 \newlabel{eq-fixed-point-v}{{3.7}{9}{Quantum Sinkhorn Algorithm}{equation.3.7}{}}
 \newlabel{eq-dfn-relaxed-assign}{{3.8}{9}{Quantum Sinkhorn Algorithm}{equation.3.8}{}}
-\citation{2016-chizat-sinkhorn}
+\newlabel{rem-choice-tau}{{6}{9}{Choice of $\tau _k$}{rem.6}{}}
 \citation{HighamExp}
 \citation{HighamLog}
 \citation{Schmitzer2016}
 \@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Display of convergence of Sinkhorn Algorithm\nobreakspace  {}\ref  {alg:sinkhorn} for the example displayed on the first row of Figure\nobreakspace  {}\ref  {fig:intro}. Denoting $v^{(t)}$ the value of the variable $v$ at iteration $t$, the left plot shows the fixed point residual error for increasing values of $\tau _1=\tau _2=\genfrac  {}{}{}1{\alpha \varepsilon }{\varepsilon +\rho }$ with $\alpha \in [0.5,2]$ (blue to red). The algorithm exhibits a linear convergence rate, $\qopname  \relax o{log}_{10}|\tmspace  -\thinmuskip {.1667em}| v^{(t+1)}-v^{(t)} |\tmspace  -\thinmuskip {.1667em}|_\infty \sim - \kappa t$ for some $\kappa >0$, and the right plot displays $\kappa $ as a function of $\alpha $. \relax }}{10}{figure.caption.3}}
 \newlabel{fig:speed}{{3}{10}{Display of convergence of Sinkhorn Algorithm~\ref {alg:sinkhorn} for the example displayed on the first row of Figure~\ref {fig:intro}. Denoting $v^{(t)}$ the value of the variable $v$ at iteration $t$, the left plot shows the fixed point residual error for increasing values of $\tau _1=\tau _2=\tfrac {\al \epsilon }{\epsilon +\rho }$ with $\al \in [0.5,2]$ (blue to red). The algorithm exhibits a linear convergence rate, $\log _{10}\norm {v^{(t+1)}-v^{(t)}}_\infty \sim - \kappa t$ for some $\kappa >0$, and the right plot displays $\kappa $ as a function of $\al $. \relax }{figure.caption.3}{}}
-\newlabel{rem-choice-tau}{{6}{10}{Choice of $\tau _k$}{rem.6}{}}
 \citation{gurvits2004classical}
 \@writefile{loa}{\contentsline {algorithm}{\numberline {1}{\ignorespaces Quantum-Sinkhorn iterations to compute the optimal coupling $\gamma $ of the regularized transportation problem\nobreakspace  {}\textup  {\hbox {\mathsurround \z@ \normalfont  (\ignorespaces \ref  {eq-Kantorovich-regul}\unskip \@@italiccorr )}}. The operator $\mathcal  {K}$ is defined in\nobreakspace  {}\textup  {\hbox {\mathsurround \z@ \normalfont  (\ignorespaces \ref  {eq-defn-K}\unskip \@@italiccorr )}}.\relax }}{11}{algorithm.1}}
 \newlabel{alg:sinkhorn}{{1}{11}{Quantum-Sinkhorn iterations to compute the optimal coupling $\ga $ of the regularized transportation problem~\eqref {eq-Kantorovich-regul}. The operator $\Kern $ is defined in~\eqref {eq-defn-K}.\relax }{algorithm.1}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.3.}Trace-Constrained Extension}{11}{subsection.3.3}}
+\newlabel{eq-primal-dual-scaling_bis}{{3.3}{11}{Trace-Constrained Extension}{subsection.3.3}{}}
 \citation{santambrogio2015optimal}
 \citation{agueh-2011}
 \citation{benamou-2015}
 \citation{solomon-2015}
-\newlabel{eq-primal-dual-scaling}{{3.9}{12}{Trace-Constrained Extension}{equation.3.9}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.4.}Numerical Illustrations}{12}{subsection.3.4}}
 \newlabel{sec-numerics-interp}{{3.4}{12}{Numerical Illustrations}{subsection.3.4}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.}Quantum Barycenters}{12}{section.4}}
+\newlabel{sec-q-bary}{{4}{12}{Quantum Barycenters}{section.4}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Comparison of linear and quantum-OT interpolation (using formula\nobreakspace  {}\textup  {\hbox {\mathsurround \z@ \normalfont  (\ignorespaces \ref  {eq-interpolating}\unskip \@@italiccorr )}}). Each row shows a tensor field $\mu _t$ (top $d=2$, bottom $d=3$) along a linear segment from $t=0$ to $t=1$ ($t$ axis is vertical). \relax }}{13}{figure.caption.4}}
 \newlabel{fig:1d-interp}{{4}{13}{Comparison of linear and quantum-OT interpolation (using formula~\eqref {eq-interpolating}). Each row shows a tensor field $\mu _t$ (top $d=2$, bottom $d=3$) along a linear segment from $t=0$ to $t=1$ ($t$ axis is vertical). \relax }{figure.caption.4}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Comparison of classical OT (i.e. between isotropic tensors) and quantum-OT (between anisotropic tensors) interpolation (using formula\nobreakspace  {}\textup  {\hbox {\mathsurround \z@ \normalfont  (\ignorespaces \ref  {eq-interpolating}\unskip \@@italiccorr )}}), using the same display as Figure\nobreakspace  {}\ref  {fig:1d-interp}. \relax }}{13}{figure.caption.5}}
 \newlabel{fig:qot-vs-ot}{{5}{13}{Comparison of classical OT (i.e. between isotropic tensors) and quantum-OT (between anisotropic tensors) interpolation (using formula~\eqref {eq-interpolating}), using the same display as Figure~\ref {fig:1d-interp}. \relax }{figure.caption.5}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.}Quantum Barycenters}{13}{section.4}}
-\newlabel{sec-q-bary}{{4}{13}{Quantum Barycenters}{section.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.}Barycenter Optimization Problem}{13}{subsection.4.1}}
+\newlabel{eq-defn-barycenters}{{4.1}{13}{Barycenter Optimization Problem}{equation.4.1}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Two examples of pointwise (without transportation) interpolations, using formula\nobreakspace  {}\textup  {\hbox {\mathsurround \z@ \normalfont  (\ignorespaces \ref  {eq-barycentric-matrix}\unskip \@@italiccorr )}}. Here $P_1$ and $P_2$ are represented using the blue/red ellipses on the left/right, and weights are $(w_1,w_2)=(1-t,t)$ for $t \in [0,1]$ from left to right.\relax }}{14}{figure.caption.6}}
 \newlabel{fig:interp}{{6}{14}{Two examples of pointwise (without transportation) interpolations, using formula~\eqref {eq-barycentric-matrix}. Here $P_1$ and $P_2$ are represented using the blue/red ellipses on the left/right, and weights are $(w_1,w_2)=(1-t,t)$ for $t \in [0,1]$ from left to right.\relax }{figure.caption.6}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.}Barycenter Optimization Problem}{14}{subsection.4.1}}
-\newlabel{eq-defn-barycenters}{{4.1}{14}{Barycenter Optimization Problem}{equation.4.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces $5 \times 5$ barycenters of four input measures (displayed in the four corners). The weighs $w \in \mathbb  {R}^4$ correspond to bilinear interpolation weights\nobreakspace  {}\textup  {\hbox {\mathsurround \z@ \normalfont  (\ignorespaces \ref  {eq-bilinear}\unskip \@@italiccorr )}} inside the square. \relax }}{14}{figure.caption.7}}
+\newlabel{fig:barycenters}{{7}{14}{$5 \times 5$ barycenters of four input measures (displayed in the four corners). The weighs $w \in \RR ^4$ correspond to bilinear interpolation weights~\eqref {eq-bilinear} inside the square. \relax }{figure.caption.7}{}}
 \newlabel{eq-barycentric-matrix}{{4.2}{14}{Barycenters between single Dirac masses}{equation.4.2}{}}
-\newlabel{eq-dual-bary}{{4.3}{14}{Barycenter Optimization Problem}{equation.4.3}{}}
-\newlabel{eq-def-k-bary}{{4.4}{14}{Barycenter Optimization Problem}{equation.4.4}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces $5 \times 5$ barycenters of four input measures (displayed in the four corners). The weighs $w \in \mathbb  {R}^4$ correspond to bilinear interpolation weights\nobreakspace  {}\textup  {\hbox {\mathsurround \z@ \normalfont  (\ignorespaces \ref  {eq-bilinear}\unskip \@@italiccorr )}} inside the square. \relax }}{15}{figure.caption.7}}
-\newlabel{fig:barycenters}{{7}{15}{$5 \times 5$ barycenters of four input measures (displayed in the four corners). The weighs $w \in \RR ^4$ correspond to bilinear interpolation weights~\eqref {eq-bilinear} inside the square. \relax }{figure.caption.7}{}}
+\citation{2016-chizat-sinkhorn}
 \@writefile{loa}{\contentsline {algorithm}{\numberline {2}{\ignorespaces Quantum-Barycenter iterations to compute the optimal barycenter measure $\nu $ solving\nobreakspace  {}\textup  {\hbox {\mathsurround \z@ \normalfont  (\ignorespaces \ref  {eq-defn-barycenters}\unskip \@@italiccorr )}}. The operator $\mathcal  {K}$ is defined in\nobreakspace  {}\textup  {\hbox {\mathsurround \z@ \normalfont  (\ignorespaces \ref  {eq-def-k-bary}\unskip \@@italiccorr )}}. \relax }}{15}{algorithm.2}}
 \newlabel{alg:barycenter}{{2}{15}{Quantum-Barycenter iterations to compute the optimal barycenter measure $\nu $ solving~\eqref {eq-defn-barycenters}. The operator $\Kern $ is defined in~\eqref {eq-def-k-bary}. \relax }{algorithm.2}{}}
+\newlabel{eq-dual-bary}{{4.3}{15}{Barycenter Optimization Problem}{equation.4.3}{}}
+\newlabel{eq-def-k-bary}{{4.4}{15}{Barycenter Optimization Problem}{equation.4.4}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.2.}Quantum Barycenter Sinkhorn}{15}{subsection.4.2}}
 \newlabel{eq-fixed-point-u-bary}{{4.5}{15}{Quantum Barycenter Sinkhorn}{equation.4.5}{}}
 \newlabel{eq-fixed-point-v-bary}{{4.6}{15}{Quantum Barycenter Sinkhorn}{equation.4.6}{}}
 \newlabel{eq-fixed-point-nu-bary}{{4.7}{15}{Quantum Barycenter Sinkhorn}{equation.4.7}{}}
-\citation{2016-chizat-sinkhorn}
 \citation{2016-chizat-sinkhorn}
 \citation{LagaeSurvey}
 \citation{LagaImproving}
@@ -167,28 +167,28 @@
 \citation{alliez2003anisotropic}
 \citation{demaret2006image}
 \citation{shewchuk2002good}
+\citation{peyre-iccv-09}
 \@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Example of interpolation between two input procedural anisotropic noise functions. The PSD tensor field parameterizing the texture are displayed on Figure\nobreakspace  {}\ref  {fig:intro}. The colormap used to render the anisotropic texture is displayed on the last column. \relax }}{17}{figure.caption.8}}
 \newlabel{fig:texture}{{8}{17}{Example of interpolation between two input procedural anisotropic noise functions. The PSD tensor field parameterizing the texture are displayed on Figure~\ref {fig:intro}. The colormap used to render the anisotropic texture is displayed on the last column. \relax }{figure.caption.8}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.2.}Anisotropic Meshing}{17}{subsection.5.2}}
-\citation{peyre-iccv-09}
 \citation{wandell2016clarifying}
+\citation{pestilli2014evaluation}
+\citation{takemura2016ensemble}
 \@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Two examples of interpolation between two input sizing fields $(\mu _{t=0},\mu _{t=1})=(\mu ,\nu )$. \textbf  {First row:} triangulation evolution for the sizing fields displayed on Figure\nobreakspace  {}\ref  {fig:intro}. \textbf  {Second row:} the input sizing fields $(\mu _{t=0},\mu _{t=1})=(\mu ,\nu )$ are displayed on the third row, and are defined using the absolute value ($\alpha =1$) of the Hessian of the underlying images $(f,g)$. \relax }}{18}{figure.caption.9}}
 \newlabel{fig:meshing}{{9}{18}{Two examples of interpolation between two input sizing fields $(\mu _{t=0},\mu _{t=1})=(\mu ,\nu )$. \textbf {First row:} triangulation evolution for the sizing fields displayed on Figure~\ref {fig:intro}. \textbf {Second row:} the input sizing fields $(\mu _{t=0},\mu _{t=1})=(\mu ,\nu )$ are displayed on the third row, and are defined using the absolute value ($\al =1$) of the Hessian of the underlying images $(f,g)$. \relax }{figure.caption.9}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.3.}Diffusion Tensor Imaging}{18}{subsection.5.3}}
-\citation{pestilli2014evaluation}
-\citation{takemura2016ensemble}
 \citation{galerne2011random}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Interpolation between two 2-D slices of 3-D DTI tensor fields $(\mu ,\nu )=(\mu _{t=0},\mu _{t=1})$. For readability, only the X/Y components of the tensors are displayed. \textbf  {First row:} interpolation between subjects $(A,B)$ obtained using $\rho =1$. \textbf  {Second row:} interpolation between subjects $(A,B)$ obtained using $\rho =0.05$. \textbf  {Third row:} interpolation between subjects $(C,B)$ obtained using $\rho =0.05$. \textbf  {Fourth row:} anatomical MRI images of subjects $(A,B,C)$ indicating the region of interest where the computations are performed. \relax }}{19}{figure.caption.10}}
+\newlabel{fig:dti}{{10}{19}{Interpolation between two 2-D slices of 3-D DTI tensor fields $(\mu ,\nu )=(\mu _{t=0},\mu _{t=1})$. For readability, only the X/Y components of the tensors are displayed. \textbf {First row:} interpolation between subjects $(A,B)$ obtained using $\rho =1$. \textbf {Second row:} interpolation between subjects $(A,B)$ obtained using $\rho =0.05$. \textbf {Third row:} interpolation between subjects $(C,B)$ obtained using $\rho =0.05$. \textbf {Fourth row:} anatomical MRI images of subjects $(A,B,C)$ indicating the region of interest where the computations are performed. \relax }{figure.caption.10}{}}
 \citation{galerne2011random}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.}Spectral Color Texture Synthesis}{19}{subsection.5.4}}
-\newlabel{eq-power-spectrum}{{5.1}{19}{Spectral Color Texture Synthesis}{equation.5.1}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Interpolation between two 2-D slices of 3-D DTI tensor fields $(\mu ,\nu )=(\mu _{t=0},\mu _{t=1})$. For readability, only the X/Y components of the tensors are displayed. \textbf  {First row:} interpolation between subjects $(A,B)$ obtained using $\rho =1$. \textbf  {Second row:} interpolation between subjects $(A,B)$ obtained using $\rho =0.05$. \textbf  {Third row:} interpolation between subjects $(C,B)$ obtained using $\rho =0.05$. \textbf  {Fourth row:} anatomical MRI images of subjects $(A,B,C)$ indicating the region of interest where the computations are performed. \relax }}{20}{figure.caption.10}}
-\newlabel{fig:dti}{{10}{20}{Interpolation between two 2-D slices of 3-D DTI tensor fields $(\mu ,\nu )=(\mu _{t=0},\mu _{t=1})$. For readability, only the X/Y components of the tensors are displayed. \textbf {First row:} interpolation between subjects $(A,B)$ obtained using $\rho =1$. \textbf {Second row:} interpolation between subjects $(A,B)$ obtained using $\rho =0.05$. \textbf {Third row:} interpolation between subjects $(C,B)$ obtained using $\rho =0.05$. \textbf {Fourth row:} anatomical MRI images of subjects $(A,B,C)$ indicating the region of interest where the computations are performed. \relax }{figure.caption.10}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.}Spectral Color Texture Synthesis}{20}{subsection.5.4}}
+\newlabel{eq-power-spectrum}{{5.1}{20}{Spectral Color Texture Synthesis}{equation.5.1}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {6.}Conclusion}{20}{section.6}}
-\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces \textbf  {Row 1 and 3:} display $\tr  (\mu _t(x))$ where $\mu _t$ are the interpolated power spectra. \textbf  {Rows 2 and 4:} realizations of the Gaussian field parameterized by the power spectra $\mu _t$. \textbf  {Row 5:} input texture exemplars from which $(\mu _{t=0},\mu _{t=1})=(\mu ,\nu )$ are computed. \relax }}{21}{figure.caption.11}}
-\newlabel{fig:texsynth}{{11}{21}{\textbf {Row 1 and 3:} display $\tr (\mu _t(x))$ where $\mu _t$ are the interpolated power spectra. \textbf {Rows 2 and 4:} realizations of the Gaussian field parameterized by the power spectra $\mu _t$. \textbf {Row 5:} input texture exemplars from which $(\mu _{t=0},\mu _{t=1})=(\mu ,\nu )$ are computed. \relax }{figure.caption.11}{}}
 \bibstyle{plain}
 \bibdata{refs}
 \bibcite{agueh-2011}{1}
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces \textbf  {Row 1 and 3:} display $\tr  (\mu _t(x))$ where $\mu _t$ are the interpolated power spectra. \textbf  {Rows 2 and 4:} realizations of the Gaussian field parameterized by the power spectra $\mu _t$. \textbf  {Row 5:} input texture exemplars from which $(\mu _{t=0},\mu _{t=1})=(\mu ,\nu )$ are computed. \relax }}{21}{figure.caption.11}}
+\newlabel{fig:texsynth}{{11}{21}{\textbf {Row 1 and 3:} display $\tr (\mu _t(x))$ where $\mu _t$ are the interpolated power spectra. \textbf {Rows 2 and 4:} realizations of the Gaussian field parameterized by the power spectra $\mu _t$. \textbf {Row 5:} input texture exemplars from which $(\mu _{t=0},\mu _{t=1})=(\mu ,\nu )$ are computed. \relax }{figure.caption.11}{}}
 \bibcite{HighamExp}{2}
 \bibcite{HighamLog}{3}
 \bibcite{alliez2003anisotropic}{4}
@@ -200,17 +200,17 @@
 \bibcite{bregman-1967}{10}
 \bibcite{Brenier91}{11}
 \bibcite{Carlen2014}{12}
-\bibcite{Chandrasekaran2016}{13}
+\bibcite{Chandrasekaran2017}{13}
 \bibcite{ChenGangbo17}{14}
 \bibcite{Chen2016}{15}
 \bibcite{2015-chizat-unbalanced}{16}
-\bibcite{2016-chizat-sinkhorn}{17}
-\bibcite{2016-chizat-focm}{18}
+\bibcite{2016-chizat-focm}{17}
+\bibcite{2016-chizat-sinkhorn}{18}
 \bibcite{crane2010trivial}{19}
 \bibcite{cuturi-2013}{20}
-\@writefile{toc}{\contentsline {section}{References}{22}{section*.13}}
 \bibcite{demaret2006image}{21}
 \bibcite{Deriche2006}{22}
+\@writefile{toc}{\contentsline {section}{References}{22}{section*.13}}
 \bibcite{Dhillon2008}{23}
 \bibcite{Dryden2009}{24}
 \bibcite{Dykstra83}{25}

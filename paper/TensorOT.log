@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.4.4)  10 APR 2017 14:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.4.4)  10 APR 2017 19:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -444,11 +444,7 @@ Found AMS Symbol fonts on the system, using the 'amssymb' package.
 
 Found the 'amsbsy' package on the system, using it.
 
-) (./TensorOT.aux
-
-LaTeX Warning: Label `eq-primal-dual-scaling' multiply defined.
-
-)
+) (./TensorOT.aux)
 \openout1 = `TensorOT.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 47.
@@ -854,15 +850,11 @@ Package pdftex.def Info: ./images-all/1d/dirac-pairs/interp-qot.png used on inp
 ut line 22.
 (pdftex.def)             Requested size: 188.16211pt x 93.2542pt.
 )) (./sections/barycenters.tex
-Underfull \vbox (badness 4441) has occurred while \output is active []
-
- [12]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [13 <./images-all/1d/dirac-pairs/interp-ot.png (PNG copy)> <./images-all/1d/di
-rac-pairs/interp-qot.png (PNG copy)> <./images-all/1d/cross-orient/linear-inter
-p.png> <./images-all/1d/cross-orient/interp-ellipses.png> <./images-all/3d/plat
-e-elong/linear-interp.png> <./images-all/3d/plate-elong/interp-ellipses.png>]
+[12] [13 <./images-all/1d/dirac-pairs/interp-ot.png (PNG copy)> <./images-all/1
+d/dirac-pairs/interp-qot.png (PNG copy)> <./images-all/1d/cross-orient/linear-i
+nterp.png> <./images-all/1d/cross-orient/interp-ellipses.png> <./images-all/3d/
+plate-elong/linear-interp.png> <./images-all/3d/plate-elong/interp-ellipses.png
+>]
 <./images-all/pointwise-interp/interp-rot_small-hard.png, id=504, 277.9986pt x 
 45.771pt>
 File: ./images-all/pointwise-interp/interp-rot_small-hard.png Graphic file (typ
@@ -1288,43 +1280,47 @@ Underfull \hbox (badness 3713) detected at line 68
 " [] e[][];$ [][][]  
  []
 
-(./sections/barycenter-alg.tex) [14 <./images-all/pointwise-interp/interp-rot_s
-mall-hard.png> <./images-all/pointwise-interp/interp-ortho-hard.png>] [15 <./im
-ages-all/2d-bary/barycenter-1-1.png (PNG copy)> <./images-all/2d-bary/barycente
-r-1-2.png (PNG copy)> <./images-all/2d-bary/barycenter-1-3.png (PNG copy)> <./i
-mages-all/2d-bary/barycenter-1-4.png (PNG copy)> <./images-all/2d-bary/barycent
-er-1-5.png (PNG copy)> <./images-all/2d-bary/barycenter-2-1.png (PNG copy)> <./
-images-all/2d-bary/barycenter-2-2.png (PNG copy)> <./images-all/2d-bary/barycen
-ter-2-3.png (PNG copy)> <./images-all/2d-bary/barycenter-2-4.png (PNG copy)> <.
-/images-all/2d-bary/barycenter-2-5.png (PNG copy)> <./images-all/2d-bary/baryce
-nter-3-1.png (PNG copy)> <./images-all/2d-bary/barycenter-3-2.png (PNG copy)> <
-./images-all/2d-bary/barycenter-3-3.png (PNG copy)> <./images-all/2d-bary/baryc
-enter-3-4.png (PNG copy)> <./images-all/2d-bary/barycenter-3-5.png (PNG copy)> 
-<./images-all/2d-bary/barycenter-4-1.png (PNG copy)> <./images-all/2d-bary/bary
-center-4-2.png (PNG copy)> <./images-all/2d-bary/barycenter-4-3.png (PNG copy)>
- <./images-all/2d-bary/barycenter-4-4.png (PNG copy)> <./images-all/2d-bary/bar
-ycenter-4-5.png (PNG copy)> <./images-all/2d-bary/barycenter-5-1.png (PNG copy)
-> <./images-all/2d-bary/barycenter-5-2.png (PNG copy)> <./images-all/2d-bary/ba
-rycenter-5-3.png (PNG copy)> <./images-all/2d-bary/barycenter-5-4.png (PNG copy
-)> <./images-all/2d-bary/barycenter-5-5.png (PNG copy)> <./images-all/mesh-bary
-/barycenter-1-1.png (PNG copy)> <./images-all/mesh-bary/barycenter-1-2.png (PNG
- copy)> <./images-all/mesh-bary/barycenter-1-3.png (PNG copy)> <./images-all/me
-sh-bary/barycenter-1-4.png (PNG copy)> <./images-all/mesh-bary/barycenter-1-5.p
-ng (PNG copy)> <./images-all/mesh-bary/barycenter-2-1.png (PNG copy)> <./images
--all/mesh-bary/barycenter-2-2.png (PNG copy)> <./images-all/mesh-bary/barycente
-r-2-3.png (PNG copy)> <./images-all/mesh-bary/barycenter-2-4.png (PNG copy)> <.
-/images-all/mesh-bary/barycenter-2-5.png (PNG copy)> <./images-all/mesh-bary/ba
-rycenter-3-1.png (PNG copy)> <./images-all/mesh-bary/barycenter-3-2.png (PNG co
-py)> <./images-all/mesh-bary/barycenter-3-3.png (PNG copy)> <./images-all/mesh-
-bary/barycenter-3-4.png (PNG copy)> <./images-all/mesh-bary/barycenter-3-5.png 
-(PNG copy)> <./images-all/mesh-bary/barycenter-4-1.png (PNG copy)> <./images-al
-l/mesh-bary/barycenter-4-2.png (PNG copy)> <./images-all/mesh-bary/barycenter-4
--3.png (PNG copy)> <./images-all/mesh-bary/barycenter-4-4.png (PNG copy)> <./im
-ages-all/mesh-bary/barycenter-4-5.png (PNG copy)> <./images-all/mesh-bary/baryc
-enter-5-1.png (PNG copy)> <./images-all/mesh-bary/barycenter-5-2.png (PNG copy)
-> <./images-all/mesh-bary/barycenter-5-3.png (PNG copy)> <./images-all/mesh-bar
-y/barycenter-5-4.png (PNG copy)> <./images-all/mesh-bary/barycenter-5-5.png (PN
-G copy)>]) (./sections/applications.tex (./sections/applications-procedural.tex
+
+Underfull \vbox (badness 1895) has occurred while \output is active []
+
+ [14 <./images-all/2d-bary/barycenter-1-1.png (PNG copy)> <./images-all/2d-bary
+/barycenter-1-2.png (PNG copy)> <./images-all/2d-bary/barycenter-1-3.png (PNG c
+opy)> <./images-all/2d-bary/barycenter-1-4.png (PNG copy)> <./images-all/2d-bar
+y/barycenter-1-5.png (PNG copy)> <./images-all/2d-bary/barycenter-2-1.png (PNG 
+copy)> <./images-all/2d-bary/barycenter-2-2.png (PNG copy)> <./images-all/2d-ba
+ry/barycenter-2-3.png (PNG copy)> <./images-all/2d-bary/barycenter-2-4.png (PNG
+ copy)> <./images-all/2d-bary/barycenter-2-5.png (PNG copy)> <./images-all/2d-b
+ary/barycenter-3-1.png (PNG copy)> <./images-all/2d-bary/barycenter-3-2.png (PN
+G copy)> <./images-all/2d-bary/barycenter-3-3.png (PNG copy)> <./images-all/2d-
+bary/barycenter-3-4.png (PNG copy)> <./images-all/2d-bary/barycenter-3-5.png (P
+NG copy)> <./images-all/2d-bary/barycenter-4-1.png (PNG copy)> <./images-all/2d
+-bary/barycenter-4-2.png (PNG copy)> <./images-all/2d-bary/barycenter-4-3.png (
+PNG copy)> <./images-all/2d-bary/barycenter-4-4.png (PNG copy)> <./images-all/2
+d-bary/barycenter-4-5.png (PNG copy)> <./images-all/2d-bary/barycenter-5-1.png 
+(PNG copy)> <./images-all/2d-bary/barycenter-5-2.png (PNG copy)> <./images-all/
+2d-bary/barycenter-5-3.png (PNG copy)> <./images-all/2d-bary/barycenter-5-4.png
+ (PNG copy)> <./images-all/2d-bary/barycenter-5-5.png (PNG copy)> <./images-all
+/mesh-bary/barycenter-1-1.png (PNG copy)> <./images-all/mesh-bary/barycenter-1-
+2.png (PNG copy)> <./images-all/mesh-bary/barycenter-1-3.png (PNG copy)> <./ima
+ges-all/mesh-bary/barycenter-1-4.png (PNG copy)> <./images-all/mesh-bary/baryce
+nter-1-5.png (PNG copy)> <./images-all/mesh-bary/barycenter-2-1.png (PNG copy)>
+ <./images-all/mesh-bary/barycenter-2-2.png (PNG copy)> <./images-all/mesh-bary
+/barycenter-2-3.png (PNG copy)> <./images-all/mesh-bary/barycenter-2-4.png (PNG
+ copy)> <./images-all/mesh-bary/barycenter-2-5.png (PNG copy)> <./images-all/me
+sh-bary/barycenter-3-1.png (PNG copy)> <./images-all/mesh-bary/barycenter-3-2.p
+ng (PNG copy)> <./images-all/mesh-bary/barycenter-3-3.png (PNG copy)> <./images
+-all/mesh-bary/barycenter-3-4.png (PNG copy)> <./images-all/mesh-bary/barycente
+r-3-5.png (PNG copy)> <./images-all/mesh-bary/barycenter-4-1.png (PNG copy)> <.
+/images-all/mesh-bary/barycenter-4-2.png (PNG copy)> <./images-all/mesh-bary/ba
+rycenter-4-3.png (PNG copy)> <./images-all/mesh-bary/barycenter-4-4.png (PNG co
+py)> <./images-all/mesh-bary/barycenter-4-5.png (PNG copy)> <./images-all/mesh-
+bary/barycenter-5-1.png (PNG copy)> <./images-all/mesh-bary/barycenter-5-2.png 
+(PNG copy)> <./images-all/mesh-bary/barycenter-5-3.png (PNG copy)> <./images-al
+l/mesh-bary/barycenter-5-4.png (PNG copy)> <./images-all/mesh-bary/barycenter-5
+-5.png (PNG copy)> <./images-all/pointwise-interp/interp-rot_small-hard.png> <.
+/images-all/pointwise-interp/interp-ortho-hard.png>] (./sections/barycenter-alg
+.tex)
+[15]) (./sections/applications.tex (./sections/applications-procedural.tex
 (./sections/applications-procedural-fig.tex
 <./images-all/textures/2d-bump-donut/interpol-render-1.png, id=715, 256.96pt x 
 256.96pt>
@@ -1429,7 +1425,7 @@ s/2d-bump-donut/interpol-render-5.png (PNG copy)> <./images-all/textures/2d-bum
 p-donut/interpol-render-7.png (PNG copy)> <./images-all/textures/2d-bump-donut/
 interpol-render-9.png (PNG copy)> <./images-all/textures/2d-bump-donut/colorbar
 .png (PNG copy)>]
-<./images-all/meshing/2d-bump-donut/input-mesh-1.png, id=763, 180.1932pt x 180.
+<./images-all/meshing/2d-bump-donut/input-mesh-1.png, id=765, 180.1932pt x 180.
 1932pt>
 File: ./images-all/meshing/2d-bump-donut/input-mesh-1.png Graphic file (type pn
 g)
@@ -1438,7 +1434,7 @@ Package pdftex.def Info: ./images-all/meshing/2d-bump-donut/input-mesh-1.png us
 ed on input line 23.
 (pdftex.def)             Requested size: 74.88281pt x 74.88326pt.
 
-<./images-all/meshing/2d-bump-donut/input-mesh-3.png, id=764, 178.7478pt x 178.
+<./images-all/meshing/2d-bump-donut/input-mesh-3.png, id=766, 178.7478pt x 178.
 7478pt>
 File: ./images-all/meshing/2d-bump-donut/input-mesh-3.png Graphic file (type pn
 g)
@@ -1447,7 +1443,7 @@ Package pdftex.def Info: ./images-all/meshing/2d-bump-donut/input-mesh-3.png us
 ed on input line 24.
 (pdftex.def)             Requested size: 74.88281pt x 74.88263pt.
 
-<./images-all/meshing/2d-bump-donut/input-mesh-5.png, id=765, 179.7114pt x 179.
+<./images-all/meshing/2d-bump-donut/input-mesh-5.png, id=767, 179.7114pt x 179.
 7114pt>
 File: ./images-all/meshing/2d-bump-donut/input-mesh-5.png Graphic file (type pn
 g)
@@ -1456,7 +1452,7 @@ Package pdftex.def Info: ./images-all/meshing/2d-bump-donut/input-mesh-5.png us
 ed on input line 25.
 (pdftex.def)             Requested size: 74.88281pt x 74.88046pt.
 
-<./images-all/meshing/2d-bump-donut/input-mesh-7.png, id=766, 179.7114pt x 179.
+<./images-all/meshing/2d-bump-donut/input-mesh-7.png, id=768, 179.7114pt x 179.
 7114pt>
 File: ./images-all/meshing/2d-bump-donut/input-mesh-7.png Graphic file (type pn
 g)
@@ -1465,7 +1461,7 @@ Package pdftex.def Info: ./images-all/meshing/2d-bump-donut/input-mesh-7.png us
 ed on input line 26.
 (pdftex.def)             Requested size: 74.88281pt x 74.88046pt.
 
-<./images-all/meshing/2d-bump-donut/input-mesh-9.png, id=767, 178.7478pt x 178.
+<./images-all/meshing/2d-bump-donut/input-mesh-9.png, id=769, 178.7478pt x 178.
 7478pt>
 File: ./images-all/meshing/2d-bump-donut/input-mesh-9.png Graphic file (type pn
 g)
@@ -1474,7 +1470,7 @@ Package pdftex.def Info: ./images-all/meshing/2d-bump-donut/input-mesh-9.png us
 ed on input line 27.
 (pdftex.def)             Requested size: 74.88281pt x 74.88263pt.
 
-<./images-all/meshing/images/input-mesh-1.png, id=768, 274.626pt x 274.626pt>
+<./images-all/meshing/images/input-mesh-1.png, id=770, 274.626pt x 274.626pt>
 File: ./images-all/meshing/images/input-mesh-1.png Graphic file (type png)
 
 <use ./images-all/meshing/images/input-mesh-1.png>
@@ -1482,7 +1478,7 @@ Package pdftex.def Info: ./images-all/meshing/images/input-mesh-1.png used on i
 nput line 28.
 (pdftex.def)             Requested size: 74.88281pt x 74.87914pt.
 
-<./images-all/meshing/images/input-mesh-3.png, id=769, 274.626pt x 274.626pt>
+<./images-all/meshing/images/input-mesh-3.png, id=771, 274.626pt x 274.626pt>
 File: ./images-all/meshing/images/input-mesh-3.png Graphic file (type png)
 
 <use ./images-all/meshing/images/input-mesh-3.png>
@@ -1490,28 +1486,28 @@ Package pdftex.def Info: ./images-all/meshing/images/input-mesh-3.png used on i
 nput line 29.
 (pdftex.def)             Requested size: 74.88281pt x 74.87914pt.
 
-<./images-all/meshing/images/input-mesh-5.png, id=770, 275.5896pt x 275.5896pt>
+<./images-all/meshing/images/input-mesh-5.png, id=772, 275.5896pt x 275.5896pt>
 File: ./images-all/meshing/images/input-mesh-5.png Graphic file (type png)
 <use ./images-all/meshing/images/input-mesh-5.png>
 Package pdftex.def Info: ./images-all/meshing/images/input-mesh-5.png used on i
 nput line 30.
 (pdftex.def)             Requested size: 74.88281pt x 74.88115pt.
 
-<./images-all/meshing/images/input-mesh-7.png, id=771, 275.5896pt x 275.5896pt>
+<./images-all/meshing/images/input-mesh-7.png, id=773, 275.5896pt x 275.5896pt>
 File: ./images-all/meshing/images/input-mesh-7.png Graphic file (type png)
 <use ./images-all/meshing/images/input-mesh-7.png>
 Package pdftex.def Info: ./images-all/meshing/images/input-mesh-7.png used on i
 nput line 31.
 (pdftex.def)             Requested size: 74.88281pt x 74.88115pt.
 
-<./images-all/meshing/images/input-mesh-9.png, id=772, 275.1078pt x 275.1078pt>
+<./images-all/meshing/images/input-mesh-9.png, id=774, 275.1078pt x 275.1078pt>
 File: ./images-all/meshing/images/input-mesh-9.png Graphic file (type png)
 <use ./images-all/meshing/images/input-mesh-9.png>
 Package pdftex.def Info: ./images-all/meshing/images/input-mesh-9.png used on i
 nput line 32.
 (pdftex.def)             Requested size: 74.88281pt x 74.88037pt.
 
-<./images-all/meshing/images/input-images-1.png, id=773, 266.9172pt x 266.9172p
+<./images-all/meshing/images/input-images-1.png, id=775, 266.9172pt x 266.9172p
 t>
 File: ./images-all/meshing/images/input-images-1.png Graphic file (type png)
  <use ./images-all/meshing/images/input-images-1.png>
@@ -1519,7 +1515,7 @@ Package pdftex.def Info: ./images-all/meshing/images/input-images-1.png used on
  input line 36.
 (pdftex.def)             Requested size: 74.88281pt x 74.88292pt.
 
-<./images-all/meshing/images/input-mesh-1-img.png, id=774, 273.1806pt x 273.180
+<./images-all/meshing/images/input-mesh-1-img.png, id=776, 273.1806pt x 273.180
 6pt>
 File: ./images-all/meshing/images/input-mesh-1-img.png Graphic file (type png)
  <use ./images-all/meshing/images/input-mesh-1-img.png>
@@ -1527,7 +1523,7 @@ Package pdftex.def Info: ./images-all/meshing/images/input-mesh-1-img.png used
 on input line 37.
 (pdftex.def)             Requested size: 74.88281pt x 74.88104pt.
 
-<./images-all/meshing/images/input-images-2.png, id=775, 268.8444pt x 268.8444p
+<./images-all/meshing/images/input-images-2.png, id=777, 268.8444pt x 268.8444p
 t>
 File: ./images-all/meshing/images/input-images-2.png Graphic file (type png)
  <use ./images-all/meshing/images/input-images-2.png>
@@ -1535,7 +1531,7 @@ Package pdftex.def Info: ./images-all/meshing/images/input-images-2.png used on
  input line 38.
 (pdftex.def)             Requested size: 74.88281pt x 74.8821pt.
 
-<./images-all/meshing/images/input-mesh-9-img.png, id=776, 273.6624pt x 273.662
+<./images-all/meshing/images/input-mesh-9-img.png, id=778, 273.6624pt x 273.662
 4pt>
 File: ./images-all/meshing/images/input-mesh-9-img.png Graphic file (type png)
  <use ./images-all/meshing/images/input-mesh-9-img.png>
@@ -1553,7 +1549,7 @@ es/input-mesh-7.png> <./images-all/meshing/images/input-mesh-9.png> <./images-a
 ll/meshing/images/input-images-1.png> <./images-all/meshing/images/input-mesh-1
 -img.png> <./images-all/meshing/images/input-images-2.png> <./images-all/meshin
 g/images/input-mesh-9-img.png>]
-<./images-all/dti/one-two/interpol-rho1-1.png, id=806, 362.3136pt x 248.127pt>
+<./images-all/dti/one-two/interpol-rho1-1.png, id=808, 362.3136pt x 248.127pt>
 File: ./images-all/dti/one-two/interpol-rho1-1.png Graphic file (type png)
 
 <use ./images-all/dti/one-two/interpol-rho1-1.png>
@@ -1561,7 +1557,7 @@ Package pdftex.def Info: ./images-all/dti/one-two/interpol-rho1-1.png used on i
 nput line 44.
 (pdftex.def)             Requested size: 74.88281pt x 81.25029pt.
 
-<./images-all/dti/one-two/interpol-rho1-3.png, id=808, 362.3136pt x 248.127pt>
+<./images-all/dti/one-two/interpol-rho1-3.png, id=810, 362.3136pt x 248.127pt>
 File: ./images-all/dti/one-two/interpol-rho1-3.png Graphic file (type png)
 
 <use ./images-all/dti/one-two/interpol-rho1-3.png>
@@ -1569,7 +1565,7 @@ Package pdftex.def Info: ./images-all/dti/one-two/interpol-rho1-3.png used on i
 nput line 44.
 (pdftex.def)             Requested size: 74.88281pt x 81.25029pt.
 
-<./images-all/dti/one-two/interpol-rho1-5.png, id=810, 362.3136pt x 248.127pt>
+<./images-all/dti/one-two/interpol-rho1-5.png, id=812, 362.3136pt x 248.127pt>
 File: ./images-all/dti/one-two/interpol-rho1-5.png Graphic file (type png)
 
 <use ./images-all/dti/one-two/interpol-rho1-5.png>
@@ -1577,7 +1573,7 @@ Package pdftex.def Info: ./images-all/dti/one-two/interpol-rho1-5.png used on i
 nput line 44.
 (pdftex.def)             Requested size: 74.88281pt x 81.25029pt.
 
-<./images-all/dti/one-two/interpol-rho1-7.png, id=812, 362.3136pt x 248.127pt>
+<./images-all/dti/one-two/interpol-rho1-7.png, id=814, 362.3136pt x 248.127pt>
 File: ./images-all/dti/one-two/interpol-rho1-7.png Graphic file (type png)
 
 <use ./images-all/dti/one-two/interpol-rho1-7.png>
@@ -1585,7 +1581,7 @@ Package pdftex.def Info: ./images-all/dti/one-two/interpol-rho1-7.png used on i
 nput line 44.
 (pdftex.def)             Requested size: 74.88281pt x 81.25029pt.
 
-<./images-all/dti/one-two/interpol-rho1-9.png, id=814, 362.3136pt x 248.127pt>
+<./images-all/dti/one-two/interpol-rho1-9.png, id=816, 362.3136pt x 248.127pt>
 File: ./images-all/dti/one-two/interpol-rho1-9.png Graphic file (type png)
 
 <use ./images-all/dti/one-two/interpol-rho1-9.png>
@@ -1593,7 +1589,7 @@ Package pdftex.def Info: ./images-all/dti/one-two/interpol-rho1-9.png used on i
 nput line 44.
 (pdftex.def)             Requested size: 74.88281pt x 81.25029pt.
 
-<./images-all/dti/one-two/interpol-rho005-1.png, id=816, 362.3136pt x 248.127pt
+<./images-all/dti/one-two/interpol-rho005-1.png, id=818, 362.3136pt x 248.127pt
 >
 File: ./images-all/dti/one-two/interpol-rho005-1.png Graphic file (type png)
  <use ./images-all/dti/one-two/interpol-rho005-1.png>
@@ -1601,7 +1597,7 @@ Package pdftex.def Info: ./images-all/dti/one-two/interpol-rho005-1.png used on
  input line 44.
 (pdftex.def)             Requested size: 74.88281pt x 81.25029pt.
 
-<./images-all/dti/one-two/interpol-rho005-3.png, id=818, 362.3136pt x 248.127pt
+<./images-all/dti/one-two/interpol-rho005-3.png, id=820, 362.3136pt x 248.127pt
 >
 File: ./images-all/dti/one-two/interpol-rho005-3.png Graphic file (type png)
  <use ./images-all/dti/one-two/interpol-rho005-3.png>
@@ -1609,7 +1605,7 @@ Package pdftex.def Info: ./images-all/dti/one-two/interpol-rho005-3.png used on
  input line 44.
 (pdftex.def)             Requested size: 74.88281pt x 81.25029pt.
 
-<./images-all/dti/one-two/interpol-rho005-5.png, id=820, 362.3136pt x 248.127pt
+<./images-all/dti/one-two/interpol-rho005-5.png, id=822, 362.3136pt x 248.127pt
 >
 File: ./images-all/dti/one-two/interpol-rho005-5.png Graphic file (type png)
  <use ./images-all/dti/one-two/interpol-rho005-5.png>
@@ -1617,7 +1613,7 @@ Package pdftex.def Info: ./images-all/dti/one-two/interpol-rho005-5.png used on
  input line 44.
 (pdftex.def)             Requested size: 74.88281pt x 81.25029pt.
 
-<./images-all/dti/one-two/interpol-rho005-7.png, id=822, 362.3136pt x 248.127pt
+<./images-all/dti/one-two/interpol-rho005-7.png, id=824, 362.3136pt x 248.127pt
 >
 File: ./images-all/dti/one-two/interpol-rho005-7.png Graphic file (type png)
  <use ./images-all/dti/one-two/interpol-rho005-7.png>
@@ -1625,7 +1621,7 @@ Package pdftex.def Info: ./images-all/dti/one-two/interpol-rho005-7.png used on
  input line 44.
 (pdftex.def)             Requested size: 74.88281pt x 81.25029pt.
 
-<./images-all/dti/one-two/interpol-rho005-9.png, id=824, 362.3136pt x 248.127pt
+<./images-all/dti/one-two/interpol-rho005-9.png, id=826, 362.3136pt x 248.127pt
 >
 File: ./images-all/dti/one-two/interpol-rho005-9.png Graphic file (type png)
  <use ./images-all/dti/one-two/interpol-rho005-9.png>
@@ -1633,7 +1629,7 @@ Package pdftex.def Info: ./images-all/dti/one-two/interpol-rho005-9.png used on
  input line 44.
 (pdftex.def)             Requested size: 74.88281pt x 81.25029pt.
 
-<./images-all/dti/four-two/interpol-rho005-1.png, id=826, 362.3136pt x 248.127p
+<./images-all/dti/four-two/interpol-rho005-1.png, id=828, 362.3136pt x 248.127p
 t>
 File: ./images-all/dti/four-two/interpol-rho005-1.png Graphic file (type png)
  <use ./images-all/dti/four-two/interpol-rho005-1.png>
@@ -1641,7 +1637,7 @@ Package pdftex.def Info: ./images-all/dti/four-two/interpol-rho005-1.png used o
 n input line 44.
 (pdftex.def)             Requested size: 74.88281pt x 81.25029pt.
 
-<./images-all/dti/four-two/interpol-rho005-3.png, id=828, 362.3136pt x 248.127p
+<./images-all/dti/four-two/interpol-rho005-3.png, id=830, 362.3136pt x 248.127p
 t>
 File: ./images-all/dti/four-two/interpol-rho005-3.png Graphic file (type png)
  <use ./images-all/dti/four-two/interpol-rho005-3.png>
@@ -1649,7 +1645,7 @@ Package pdftex.def Info: ./images-all/dti/four-two/interpol-rho005-3.png used o
 n input line 44.
 (pdftex.def)             Requested size: 74.88281pt x 81.25029pt.
 
-<./images-all/dti/four-two/interpol-rho005-5.png, id=830, 362.3136pt x 248.127p
+<./images-all/dti/four-two/interpol-rho005-5.png, id=832, 362.3136pt x 248.127p
 t>
 File: ./images-all/dti/four-two/interpol-rho005-5.png Graphic file (type png)
  <use ./images-all/dti/four-two/interpol-rho005-5.png>
@@ -1657,7 +1653,7 @@ Package pdftex.def Info: ./images-all/dti/four-two/interpol-rho005-5.png used o
 n input line 44.
 (pdftex.def)             Requested size: 74.88281pt x 81.25029pt.
 
-<./images-all/dti/four-two/interpol-rho005-7.png, id=832, 362.3136pt x 248.127p
+<./images-all/dti/four-two/interpol-rho005-7.png, id=834, 362.3136pt x 248.127p
 t>
 File: ./images-all/dti/four-two/interpol-rho005-7.png Graphic file (type png)
  <use ./images-all/dti/four-two/interpol-rho005-7.png>
@@ -1665,7 +1661,7 @@ Package pdftex.def Info: ./images-all/dti/four-two/interpol-rho005-7.png used o
 n input line 44.
 (pdftex.def)             Requested size: 74.88281pt x 81.25029pt.
 
-<./images-all/dti/four-two/interpol-rho005-9.png, id=834, 362.3136pt x 248.127p
+<./images-all/dti/four-two/interpol-rho005-9.png, id=836, 362.3136pt x 248.127p
 t>
 File: ./images-all/dti/four-two/interpol-rho005-9.png Graphic file (type png)
  <use ./images-all/dti/four-two/interpol-rho005-9.png>
@@ -1673,7 +1669,7 @@ Package pdftex.def Info: ./images-all/dti/four-two/interpol-rho005-9.png used o
 n input line 44.
 (pdftex.def)             Requested size: 74.88281pt x 81.25029pt.
 
-<./images-all/dti/one-two/original-trace-1-roi.png, id=836, 169.63374pt x 129.4
+<./images-all/dti/one-two/original-trace-1-roi.png, id=838, 169.63374pt x 129.4
 8375pt>
 File: ./images-all/dti/one-two/original-trace-1-roi.png Graphic file (type png)
 
@@ -1682,7 +1678,7 @@ Package pdftex.def Info: ./images-all/dti/one-two/original-trace-1-roi.png used
  on input line 44.
 (pdftex.def)             Requested size: 115.20117pt x 87.93317pt.
 
-<./images-all/dti/one-two/original-trace-2-roi.png, id=837, 169.63374pt x 129.4
+<./images-all/dti/one-two/original-trace-2-roi.png, id=839, 169.63374pt x 129.4
 8375pt>
 File: ./images-all/dti/one-two/original-trace-2-roi.png Graphic file (type png)
 
@@ -1691,7 +1687,7 @@ Package pdftex.def Info: ./images-all/dti/one-two/original-trace-2-roi.png used
  on input line 44.
 (pdftex.def)             Requested size: 115.20117pt x 87.93317pt.
 
-<./images-all/dti/four-two/original-trace-1-roi.png, id=838, 169.63374pt x 129.
+<./images-all/dti/four-two/original-trace-1-roi.png, id=840, 169.63374pt x 129.
 48375pt>
 File: ./images-all/dti/four-two/original-trace-1-roi.png Graphic file (type png
 )
@@ -1705,8 +1701,24 @@ Overfull \hbox (1.7951pt too wide) in paragraph at lines 44--50
  []
 
 ) (./sections/applications-texsynth.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [19 <./images-all/dti/one-two/interpol-rho1-1.png (PNG copy)> <./images-all/dt
+i/one-two/interpol-rho1-3.png (PNG copy)> <./images-all/dti/one-two/interpol-rh
+o1-5.png (PNG copy)> <./images-all/dti/one-two/interpol-rho1-7.png (PNG copy)> 
+<./images-all/dti/one-two/interpol-rho1-9.png (PNG copy)> <./images-all/dti/one
+-two/interpol-rho005-1.png (PNG copy)> <./images-all/dti/one-two/interpol-rho00
+5-3.png (PNG copy)> <./images-all/dti/one-two/interpol-rho005-5.png (PNG copy)>
+ <./images-all/dti/one-two/interpol-rho005-7.png (PNG copy)> <./images-all/dti/
+one-two/interpol-rho005-9.png (PNG copy)> <./images-all/dti/four-two/interpol-r
+ho005-1.png (PNG copy)> <./images-all/dti/four-two/interpol-rho005-3.png (PNG c
+opy)> <./images-all/dti/four-two/interpol-rho005-5.png (PNG copy)> <./images-al
+l/dti/four-two/interpol-rho005-7.png (PNG copy)> <./images-all/dti/four-two/int
+erpol-rho005-9.png (PNG copy)> <./images-all/dti/one-two/original-trace-1-roi.p
+ng (PNG copy)> <./images-all/dti/one-two/original-trace-2-roi.png (PNG copy)> <
+./images-all/dti/four-two/original-trace-1-roi.png (PNG copy)>]
 (./sections/applications-texsynth-fig.tex
-<./images-all/texsynth/synth1/spectrum-1.png, id=845, 256.96pt x 256.96pt>
+<./images-all/texsynth/synth1/spectrum-1.png, id=867, 256.96pt x 256.96pt>
 File: ./images-all/texsynth/synth1/spectrum-1.png Graphic file (type png)
 
 <use ./images-all/texsynth/synth1/spectrum-1.png>
@@ -1714,7 +1726,7 @@ Package pdftex.def Info: ./images-all/texsynth/synth1/spectrum-1.png used on in
 put line 8.
 (pdftex.def)             Requested size: 74.88281pt x 74.88112pt.
 
-<./images-all/texsynth/synth1/spectrum-3.png, id=846, 256.96pt x 256.96pt>
+<./images-all/texsynth/synth1/spectrum-3.png, id=868, 256.96pt x 256.96pt>
 File: ./images-all/texsynth/synth1/spectrum-3.png Graphic file (type png)
 
 <use ./images-all/texsynth/synth1/spectrum-3.png>
@@ -1722,7 +1734,7 @@ Package pdftex.def Info: ./images-all/texsynth/synth1/spectrum-3.png used on in
 put line 9.
 (pdftex.def)             Requested size: 74.88281pt x 74.88112pt.
 
-<./images-all/texsynth/synth1/spectrum-5.png, id=847, 256.96pt x 256.96pt>
+<./images-all/texsynth/synth1/spectrum-5.png, id=869, 256.96pt x 256.96pt>
 File: ./images-all/texsynth/synth1/spectrum-5.png Graphic file (type png)
 
 <use ./images-all/texsynth/synth1/spectrum-5.png>
@@ -1730,7 +1742,7 @@ Package pdftex.def Info: ./images-all/texsynth/synth1/spectrum-5.png used on in
 put line 10.
 (pdftex.def)             Requested size: 74.88281pt x 74.88112pt.
 
-<./images-all/texsynth/synth1/spectrum-7.png, id=848, 256.96pt x 256.96pt>
+<./images-all/texsynth/synth1/spectrum-7.png, id=870, 256.96pt x 256.96pt>
 File: ./images-all/texsynth/synth1/spectrum-7.png Graphic file (type png)
 
 <use ./images-all/texsynth/synth1/spectrum-7.png>
@@ -1738,7 +1750,7 @@ Package pdftex.def Info: ./images-all/texsynth/synth1/spectrum-7.png used on in
 put line 11.
 (pdftex.def)             Requested size: 74.88281pt x 74.88112pt.
 
-<./images-all/texsynth/synth1/spectrum-9.png, id=849, 256.96pt x 256.96pt>
+<./images-all/texsynth/synth1/spectrum-9.png, id=871, 256.96pt x 256.96pt>
 File: ./images-all/texsynth/synth1/spectrum-9.png Graphic file (type png)
 
 <use ./images-all/texsynth/synth1/spectrum-9.png>
@@ -1746,7 +1758,7 @@ Package pdftex.def Info: ./images-all/texsynth/synth1/spectrum-9.png used on in
 put line 12.
 (pdftex.def)             Requested size: 74.88281pt x 74.88112pt.
 
-<./images-all/texsynth/synth1/synthesis-1.png, id=850, 256.96pt x 256.96pt>
+<./images-all/texsynth/synth1/synthesis-1.png, id=872, 256.96pt x 256.96pt>
 File: ./images-all/texsynth/synth1/synthesis-1.png Graphic file (type png)
 
 <use ./images-all/texsynth/synth1/synthesis-1.png>
@@ -1754,7 +1766,7 @@ Package pdftex.def Info: ./images-all/texsynth/synth1/synthesis-1.png used on i
 nput line 13.
 (pdftex.def)             Requested size: 74.88281pt x 74.88112pt.
 
-<./images-all/texsynth/synth1/synthesis-3.png, id=851, 256.96pt x 256.96pt>
+<./images-all/texsynth/synth1/synthesis-3.png, id=873, 256.96pt x 256.96pt>
 File: ./images-all/texsynth/synth1/synthesis-3.png Graphic file (type png)
 
 <use ./images-all/texsynth/synth1/synthesis-3.png>
@@ -1762,7 +1774,7 @@ Package pdftex.def Info: ./images-all/texsynth/synth1/synthesis-3.png used on i
 nput line 14.
 (pdftex.def)             Requested size: 74.88281pt x 74.88112pt.
 
-<./images-all/texsynth/synth1/synthesis-5.png, id=852, 256.96pt x 256.96pt>
+<./images-all/texsynth/synth1/synthesis-5.png, id=874, 256.96pt x 256.96pt>
 File: ./images-all/texsynth/synth1/synthesis-5.png Graphic file (type png)
 
 <use ./images-all/texsynth/synth1/synthesis-5.png>
@@ -1770,7 +1782,7 @@ Package pdftex.def Info: ./images-all/texsynth/synth1/synthesis-5.png used on i
 nput line 15.
 (pdftex.def)             Requested size: 74.88281pt x 74.88112pt.
 
-<./images-all/texsynth/synth1/synthesis-7.png, id=853, 256.96pt x 256.96pt>
+<./images-all/texsynth/synth1/synthesis-7.png, id=875, 256.96pt x 256.96pt>
 File: ./images-all/texsynth/synth1/synthesis-7.png Graphic file (type png)
 
 <use ./images-all/texsynth/synth1/synthesis-7.png>
@@ -1778,7 +1790,7 @@ Package pdftex.def Info: ./images-all/texsynth/synth1/synthesis-7.png used on i
 nput line 16.
 (pdftex.def)             Requested size: 74.88281pt x 74.88112pt.
 
-<./images-all/texsynth/synth1/synthesis-9.png, id=854, 256.96pt x 256.96pt>
+<./images-all/texsynth/synth1/synthesis-9.png, id=876, 256.96pt x 256.96pt>
 File: ./images-all/texsynth/synth1/synthesis-9.png Graphic file (type png)
 
 <use ./images-all/texsynth/synth1/synthesis-9.png>
@@ -1786,7 +1798,7 @@ Package pdftex.def Info: ./images-all/texsynth/synth1/synthesis-9.png used on i
 nput line 17.
 (pdftex.def)             Requested size: 74.88281pt x 74.88112pt.
 
-<./images-all/texsynth/synth2/spectrum-1.png, id=855, 256.96pt x 256.96pt>
+<./images-all/texsynth/synth2/spectrum-1.png, id=877, 256.96pt x 256.96pt>
 File: ./images-all/texsynth/synth2/spectrum-1.png Graphic file (type png)
 
 <use ./images-all/texsynth/synth2/spectrum-1.png>
@@ -1794,7 +1806,7 @@ Package pdftex.def Info: ./images-all/texsynth/synth2/spectrum-1.png used on in
 put line 18.
 (pdftex.def)             Requested size: 74.88281pt x 74.88112pt.
 
-<./images-all/texsynth/synth2/spectrum-3.png, id=856, 256.96pt x 256.96pt>
+<./images-all/texsynth/synth2/spectrum-3.png, id=878, 256.96pt x 256.96pt>
 File: ./images-all/texsynth/synth2/spectrum-3.png Graphic file (type png)
 
 <use ./images-all/texsynth/synth2/spectrum-3.png>
@@ -1802,7 +1814,7 @@ Package pdftex.def Info: ./images-all/texsynth/synth2/spectrum-3.png used on in
 put line 19.
 (pdftex.def)             Requested size: 74.88281pt x 74.88112pt.
 
-<./images-all/texsynth/synth2/spectrum-5.png, id=857, 256.96pt x 256.96pt>
+<./images-all/texsynth/synth2/spectrum-5.png, id=879, 256.96pt x 256.96pt>
 File: ./images-all/texsynth/synth2/spectrum-5.png Graphic file (type png)
 
 <use ./images-all/texsynth/synth2/spectrum-5.png>
@@ -1810,7 +1822,7 @@ Package pdftex.def Info: ./images-all/texsynth/synth2/spectrum-5.png used on in
 put line 20.
 (pdftex.def)             Requested size: 74.88281pt x 74.88112pt.
 
-<./images-all/texsynth/synth2/spectrum-7.png, id=858, 256.96pt x 256.96pt>
+<./images-all/texsynth/synth2/spectrum-7.png, id=880, 256.96pt x 256.96pt>
 File: ./images-all/texsynth/synth2/spectrum-7.png Graphic file (type png)
 
 <use ./images-all/texsynth/synth2/spectrum-7.png>
@@ -1818,7 +1830,7 @@ Package pdftex.def Info: ./images-all/texsynth/synth2/spectrum-7.png used on in
 put line 21.
 (pdftex.def)             Requested size: 74.88281pt x 74.88112pt.
 
-<./images-all/texsynth/synth2/spectrum-9.png, id=859, 256.96pt x 256.96pt>
+<./images-all/texsynth/synth2/spectrum-9.png, id=881, 256.96pt x 256.96pt>
 File: ./images-all/texsynth/synth2/spectrum-9.png Graphic file (type png)
 
 <use ./images-all/texsynth/synth2/spectrum-9.png>
@@ -1826,7 +1838,7 @@ Package pdftex.def Info: ./images-all/texsynth/synth2/spectrum-9.png used on in
 put line 22.
 (pdftex.def)             Requested size: 74.88281pt x 74.88112pt.
 
-<./images-all/texsynth/synth2/synthesis-1.png, id=860, 256.96pt x 256.96pt>
+<./images-all/texsynth/synth2/synthesis-1.png, id=882, 256.96pt x 256.96pt>
 File: ./images-all/texsynth/synth2/synthesis-1.png Graphic file (type png)
 
 <use ./images-all/texsynth/synth2/synthesis-1.png>
@@ -1834,7 +1846,7 @@ Package pdftex.def Info: ./images-all/texsynth/synth2/synthesis-1.png used on i
 nput line 23.
 (pdftex.def)             Requested size: 74.88281pt x 74.88112pt.
 
-<./images-all/texsynth/synth2/synthesis-3.png, id=861, 256.96pt x 256.96pt>
+<./images-all/texsynth/synth2/synthesis-3.png, id=883, 256.96pt x 256.96pt>
 File: ./images-all/texsynth/synth2/synthesis-3.png Graphic file (type png)
 
 <use ./images-all/texsynth/synth2/synthesis-3.png>
@@ -1842,7 +1854,7 @@ Package pdftex.def Info: ./images-all/texsynth/synth2/synthesis-3.png used on i
 nput line 24.
 (pdftex.def)             Requested size: 74.88281pt x 74.88112pt.
 
-<./images-all/texsynth/synth2/synthesis-5.png, id=862, 256.96pt x 256.96pt>
+<./images-all/texsynth/synth2/synthesis-5.png, id=884, 256.96pt x 256.96pt>
 File: ./images-all/texsynth/synth2/synthesis-5.png Graphic file (type png)
 
 <use ./images-all/texsynth/synth2/synthesis-5.png>
@@ -1850,7 +1862,7 @@ Package pdftex.def Info: ./images-all/texsynth/synth2/synthesis-5.png used on i
 nput line 25.
 (pdftex.def)             Requested size: 74.88281pt x 74.88112pt.
 
-<./images-all/texsynth/synth2/synthesis-7.png, id=863, 256.96pt x 256.96pt>
+<./images-all/texsynth/synth2/synthesis-7.png, id=885, 256.96pt x 256.96pt>
 File: ./images-all/texsynth/synth2/synthesis-7.png Graphic file (type png)
 
 <use ./images-all/texsynth/synth2/synthesis-7.png>
@@ -1858,7 +1870,7 @@ Package pdftex.def Info: ./images-all/texsynth/synth2/synthesis-7.png used on i
 nput line 26.
 (pdftex.def)             Requested size: 74.88281pt x 74.88112pt.
 
-<./images-all/texsynth/synth2/synthesis-9.png, id=864, 256.96pt x 256.96pt>
+<./images-all/texsynth/synth2/synthesis-9.png, id=886, 256.96pt x 256.96pt>
 File: ./images-all/texsynth/synth2/synthesis-9.png Graphic file (type png)
 
 <use ./images-all/texsynth/synth2/synthesis-9.png>
@@ -1866,7 +1878,7 @@ Package pdftex.def Info: ./images-all/texsynth/synth2/synthesis-9.png used on i
 nput line 27.
 (pdftex.def)             Requested size: 74.88281pt x 74.88112pt.
 
-<./images-all/texsynth/synth1/original-1.png, id=865, 256.96pt x 256.96pt>
+<./images-all/texsynth/synth1/original-1.png, id=887, 256.96pt x 256.96pt>
 File: ./images-all/texsynth/synth1/original-1.png Graphic file (type png)
 
 <use ./images-all/texsynth/synth1/original-1.png>
@@ -1874,7 +1886,7 @@ Package pdftex.def Info: ./images-all/texsynth/synth1/original-1.png used on in
 put line 31.
 (pdftex.def)             Requested size: 74.88281pt x 74.88112pt.
 
-<./images-all/texsynth/synth1/original-2.png, id=866, 256.96pt x 256.96pt>
+<./images-all/texsynth/synth1/original-2.png, id=888, 256.96pt x 256.96pt>
 File: ./images-all/texsynth/synth1/original-2.png Graphic file (type png)
 
 <use ./images-all/texsynth/synth1/original-2.png>
@@ -1882,7 +1894,7 @@ Package pdftex.def Info: ./images-all/texsynth/synth1/original-2.png used on in
 put line 32.
 (pdftex.def)             Requested size: 74.88281pt x 74.88112pt.
 
-<./images-all/texsynth/synth2/original-1.png, id=867, 256.96pt x 256.96pt>
+<./images-all/texsynth/synth2/original-1.png, id=889, 256.96pt x 256.96pt>
 File: ./images-all/texsynth/synth2/original-1.png Graphic file (type png)
 
 <use ./images-all/texsynth/synth2/original-1.png>
@@ -1890,7 +1902,7 @@ Package pdftex.def Info: ./images-all/texsynth/synth2/original-1.png used on in
 put line 33.
 (pdftex.def)             Requested size: 74.88281pt x 74.88112pt.
 
-<./images-all/texsynth/synth2/original-2.png, id=868, 256.96pt x 256.96pt>
+<./images-all/texsynth/synth2/original-2.png, id=890, 256.96pt x 256.96pt>
 File: ./images-all/texsynth/synth2/original-2.png Graphic file (type png)
 
 <use ./images-all/texsynth/synth2/original-2.png>
@@ -1902,42 +1914,33 @@ Overfull \hbox (1.7951pt too wide) in paragraph at lines 7--40
  [][] 
  []
 
-))) (./sections/conclusion.tex
-Underfull \vbox (badness 2582) has occurred while \output is active []
+))) (./sections/conclusion.tex) [20] (./TensorOT.bbl
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [19]
-[20 <./images-all/dti/one-two/interpol-rho1-1.png (PNG copy)> <./images-all/dti
-/one-two/interpol-rho1-3.png (PNG copy)> <./images-all/dti/one-two/interpol-rho
-1-5.png (PNG copy)> <./images-all/dti/one-two/interpol-rho1-7.png (PNG copy)> <
-./images-all/dti/one-two/interpol-rho1-9.png (PNG copy)> <./images-all/dti/one-
-two/interpol-rho005-1.png (PNG copy)> <./images-all/dti/one-two/interpol-rho005
--3.png (PNG copy)> <./images-all/dti/one-two/interpol-rho005-5.png (PNG copy)> 
-<./images-all/dti/one-two/interpol-rho005-7.png (PNG copy)> <./images-all/dti/o
-ne-two/interpol-rho005-9.png (PNG copy)> <./images-all/dti/four-two/interpol-rh
-o005-1.png (PNG copy)> <./images-all/dti/four-two/interpol-rho005-3.png (PNG co
-py)> <./images-all/dti/four-two/interpol-rho005-5.png (PNG copy)> <./images-all
-/dti/four-two/interpol-rho005-7.png (PNG copy)> <./images-all/dti/four-two/inte
-rpol-rho005-9.png (PNG copy)> <./images-all/dti/one-two/original-trace-1-roi.pn
-g (PNG copy)> <./images-all/dti/one-two/original-trace-2-roi.png (PNG copy)> <.
-/images-all/dti/four-two/original-trace-1-roi.png (PNG copy)>]) [21 <./images-a
-ll/texsynth/synth1/spectrum-1.png (PNG copy)> <./images-all/texsynth/synth1/spe
-ctrum-3.png (PNG copy)> <./images-all/texsynth/synth1/spectrum-5.png (PNG copy)
-> <./images-all/texsynth/synth1/spectrum-7.png (PNG copy)> <./images-all/texsyn
-th/synth1/spectrum-9.png (PNG copy)> <./images-all/texsynth/synth1/synthesis-1.
-png (PNG copy)> <./images-all/texsynth/synth1/synthesis-3.png (PNG copy)> <./im
-ages-all/texsynth/synth1/synthesis-5.png (PNG copy)> <./images-all/texsynth/syn
-th1/synthesis-7.png (PNG copy)> <./images-all/texsynth/synth1/synthesis-9.png (
-PNG copy)> <./images-all/texsynth/synth2/spectrum-1.png (PNG copy)> <./images-a
-ll/texsynth/synth2/spectrum-3.png (PNG copy)> <./images-all/texsynth/synth2/spe
-ctrum-5.png (PNG copy)> <./images-all/texsynth/synth2/spectrum-7.png (PNG copy)
-> <./images-all/texsynth/synth2/spectrum-9.png (PNG copy)> <./images-all/texsyn
-th/synth2/synthesis-1.png (PNG copy)> <./images-all/texsynth/synth2/synthesis-3
-.png (PNG copy)> <./images-all/texsynth/synth2/synthesis-5.png (PNG copy)> <./i
-mages-all/texsynth/synth2/synthesis-7.png (PNG copy)> <./images-all/texsynth/sy
-nth2/synthesis-9.png (PNG copy)> <./images-all/texsynth/synth1/original-1.png (
-PNG copy)> <./images-all/texsynth/synth1/original-2.png (PNG copy)> <./images-a
-ll/texsynth/synth2/original-1.png (PNG copy)> <./images-all/texsynth/synth2/ori
-ginal-2.png (PNG copy)>] (./TensorOT.bbl [22] [23])
+ [21 <./images-all/texsynth/synth1/spectrum-1.png (PNG copy)> <./images-all/tex
+synth/synth1/spectrum-3.png (PNG copy)> <./images-all/texsynth/synth1/spectrum-
+5.png (PNG copy)> <./images-all/texsynth/synth1/spectrum-7.png (PNG copy)> <./i
+mages-all/texsynth/synth1/spectrum-9.png (PNG copy)> <./images-all/texsynth/syn
+th1/synthesis-1.png (PNG copy)> <./images-all/texsynth/synth1/synthesis-3.png (
+PNG copy)> <./images-all/texsynth/synth1/synthesis-5.png (PNG copy)> <./images-
+all/texsynth/synth1/synthesis-7.png (PNG copy)> <./images-all/texsynth/synth1/s
+ynthesis-9.png (PNG copy)> <./images-all/texsynth/synth2/spectrum-1.png (PNG co
+py)> <./images-all/texsynth/synth2/spectrum-3.png (PNG copy)> <./images-all/tex
+synth/synth2/spectrum-5.png (PNG copy)> <./images-all/texsynth/synth2/spectrum-
+7.png (PNG copy)> <./images-all/texsynth/synth2/spectrum-9.png (PNG copy)> <./i
+mages-all/texsynth/synth2/synthesis-1.png (PNG copy)> <./images-all/texsynth/sy
+nth2/synthesis-3.png (PNG copy)> <./images-all/texsynth/synth2/synthesis-5.png 
+(PNG copy)> <./images-all/texsynth/synth2/synthesis-7.png (PNG copy)> <./images
+-all/texsynth/synth2/synthesis-9.png (PNG copy)> <./images-all/texsynth/synth1/
+original-1.png (PNG copy)> <./images-all/texsynth/synth1/original-2.png (PNG co
+py)> <./images-all/texsynth/synth2/original-1.png (PNG copy)> <./images-all/tex
+synth/synth2/original-2.png (PNG copy)>]
+Underfull \vbox (badness 3108) has occurred while \output is active []
+
+ [22]
+Missing character: There is no é in font cmr9!
+
+[23])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 68.
  [24]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 68.
@@ -1946,20 +1949,16 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 68.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 68.
 Package rerunfilecheck Info: File `TensorOT.out' has not changed.
 (rerunfilecheck)             Checksum: FBEBC347373365D1F7989EEBC0C66B57;1554.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 68.
  ) 
 Here is how much of TeX's memory you used:
- 11712 strings out of 493089
- 192651 string characters out of 6134843
- 303083 words of memory out of 5000000
- 14483 multiletter control sequences out of 15000+600000
- 23614 words of font info for 157 fonts, out of 8000000 for 9000
+ 11736 strings out of 493089
+ 192829 string characters out of 6134843
+ 292780 words of memory out of 5000000
+ 14486 multiletter control sequences out of 15000+600000
+ 24232 words of font info for 168 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 37i,14n,59p,984b,470s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 37i,14n,59p,984b,472s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb>
@@ -1985,10 +1984,10 @@ onts/type1/public/doublestroke/dsrom10.pfb></usr/local/texlive/2015/texmf-dist/
 fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2015/texmf-dis
 t/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2015/texmf
 -dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on TensorOT.pdf (24 pages, 9444236 bytes).
+Output written on TensorOT.pdf (24 pages, 9444820 bytes).
 PDF statistics:
- 1036 PDF objects out of 1200 (max. 8388607)
- 691 compressed objects within 7 object streams
- 166 named destinations out of 1000 (max. 500000)
+ 1035 PDF objects out of 1200 (max. 8388607)
+ 690 compressed objects within 7 object streams
+ 165 named destinations out of 1000 (max. 500000)
  17854 words of extra memory for PDF output out of 20736 (max. 10000000)
 
