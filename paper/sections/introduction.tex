@@ -103,7 +103,18 @@ In the following, we denote $\Ss^d \subset \RR^{d \times d}$ the space of symmet
 %
 We denote $\exp: \Ss^d \to \Ss_{++}^d$ the matrix exponential, which is defined as $\exp(P)=U \diag_s(e^{\si_s})U^\top$ where $P=U \diag_s(\si_s) U^\top$ is an eigendecomposition of $P$.
 We denote $\log: \Ss_{++}^d \to \Ss^d$ the matrix logarithm $\log(P)=U \diag_s(\log \si_s)U^\top$, which is the inverse of $\exp$ on $\Ss_{++}^d$. % added "on S++" because graphics people are sensitive about matrix log/exp being nonunique outside the semidefinite cone 
-
+We adopt some conventions in order to deal conveniently with singular matrices.
+%
+We extend $(P,Q) \mapsto P \log (Q)$ by lower semicontinuity on $(\Ss_+^d)^2$, i.e.\ writing $Q = U \diag_s(\si_s) U^\top$ and $\tilde{P}=U^\top P U$, 
+\eq{
+P \log Q :=
+\begin{cases}
+P \log Q &\text{if $\ker Q=\emptyset$},\\
+U[\tilde{P}\diag_s(\log \si_s)]U^\top & \text{if $\ker Q \subset \ker P $,}\\
++\infty & \text{otherwise,}
+\end{cases}
+}
+with the convention $0\log 0 = 0$ when computing the matrix product in square brackets. Moreover, for $(P,(Q_i)_{i\in I}) \in\Ss^d \times (\Ss_+^d)^I$, the matrix $\exp(P + \sum_i \log Q_i)$ is by convention the matrix in $\Ss_+^d$ which kernel is $\sum_i \ker Q_i$ (and is unambiguously defined on the orthogonal of this space).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}\centering
@@ -148,14 +159,14 @@ The quantum entropy (also called von Neumann entropy) of a tensor-valued measure
 where $\iota_C$ is the indicator function of a closed convex set $C$, i.e. $\iota_C(P)=0$ if $P \in C$ and $\iota_C(P)=+\infty$ otherwise.
 Note that $H$ is a concave function. 
 %
-The quantum Kullback-Leibler divergence (also called quantum relative entropy) is the Bregman divergence associated to $-H$. For a collection of PSD matrices $\mu=(\mu_i)_i, \xi=(\xi_i)_i$ in $\Ss_+^d$ corresponding to measures defined on the same grid, assuming $\xi_i \in \Ss_{++}^d$, it is defined as
+The quantum Kullback-Leibler divergence (also called quantum relative entropy) is the Bregman divergence associated to $-H$. For a collection of PSD matrices $\mu=(\mu_i)_i, \xi=(\xi_i)_i$ in $\Ss_+^d$ corresponding to measures defined on the same grid, it is defined as %assuming $\xi_i \in \Ss_{++}^d$,
 \eql{\label{eq-kl-quantum}
 	\KL(\mu|\xi) \eqdef \sum_i \KL(\mu_i|\xi_i), 
 }
-where for all $(P,Q) \in \Ss_{+}^d \times \Ss_{++}^d$, we denote
+where for all $(P,Q) \in \Ss_{+}^d \times \Ss_{+}^d$, we denote
 \eq{	
 	\KL(P|Q) \eqdef 
-	\tr( P (\log(P)-\log(Q)) - P+Q ) + \iota_{\Ss_{++}^d}(P)
+	\tr( P \log (P) - P\log (Q) - P + Q ) + \iota_{\Ss_{++}^d}(P)
 }
 which is convex with respect to both arguments. 
 %
